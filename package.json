@@ -1,7 +1,7 @@
 {
-  "name": "pcpb-backend",
+  "name": "equest-backend",
   "version": "0.0.1",
-  "description": "Backend API of PCPartBuilder",
+  "description": "Backend API of Equest Pro",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
@@ -17,9 +17,6 @@
     "db:uncommit": "npm run gm uncommit",
     "db:reset": "npm run gm reset",
     "dump-schema": "pg_dump -s -v -f data/schema.sql postgres://postgres@postgres/dev --no-sync --schema-only --no-owner --exclude-schema=graphile_migrate --exclude-schema=graphile_worker"
-  },
-  "repository": {
-    "url": "https://github.com/PCPartBuilder/pcpb-backend.git"
   },
   "dependencies": {
     "@cloudnative/health-connect": "^2.1.0",

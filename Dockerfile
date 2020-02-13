@@ -7,9 +7,9 @@ FROM node:12
 ARG USER_UID=${UID:-1000}
 ARG SETUP_MODE=normal
 
-COPY scripts/setup.sh /setup.sh
-RUN /setup.sh $SETUP_MODE
-
+# COPY scripts/setup.sh /setup.sh
+# RUN /setup.sh $SETUP_MODE
+EXPOSE 3000
 
 
 # # #Taken from Bret Fisher's Dockercon Example
