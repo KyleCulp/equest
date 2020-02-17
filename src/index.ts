@@ -22,8 +22,8 @@ checkEnvironmentVariables();
   const app: Express = express();
 
   /*
-   *	Getting access to the HTTP server directly means that we can do things
-   *	with websockets if we need to (e.g. GraphQL subscriptions).
+   * Getting access to the HTTP server directly means that we can do things
+   * with websockets if we need to (e.g. GraphQL subscriptions).
    */
   const httpServer = createServer(app);
   app.set('httpServer', httpServer);
@@ -32,16 +32,16 @@ checkEnvironmentVariables();
   installMiddleware(app);
 
   /*
-   *	Cloud Health Liveliness & Readiness Endpoints
-   *	Handled by Cloud Health Connect
+   * Cloud Health Liveliness & Readiness Endpoints
+   * Handled by Cloud Health Connect
    */
   app.use('/live', health.LivenessEndpoint(healthcheck));
   app.use('/ready', health.ReadinessEndpoint(healthcheck));
   app.use('/health', health.HealthEndpoint(healthcheck));
 
   /*
-   * 	Shutdown processes
-   * 	for clean ends or something
+   * Shutdown processes
+   * for clean ends or something
    */
   const shutdownActions = makeShutdownActions();
 

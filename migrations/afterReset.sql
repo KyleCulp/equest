@@ -1,19 +1,8 @@
 BEGIN;
 
 -- Create role if not exist
-DO $do$
-BEGIN
-  IF NOT EXISTS (
-    SELECT
-    FROM
-      pg_catalog.pg_roles
-    WHERE
-      rolname = 'devadmin') THEN
-  CREATE ROLE devadmin SUPERUSER LOGIN PASSWORD ':DEVADMIN_PASSWORD';
-END IF;
-END
-$do$;
-
+-- It's actually rolname, not a typo 
+-- https://www.postgresql.org/docs/11/view-pg-roles.html
 DO $do$
 BEGIN
   IF NOT EXISTS (

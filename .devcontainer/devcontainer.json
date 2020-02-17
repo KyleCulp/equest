@@ -14,19 +14,15 @@
   // Add the IDs of extensions you want installed when the container is created.
   // Add the IDs of extensions you want installed when the container is created in the array below.
   "extensions": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "msjsdiag.debugger-for-chrome",
-    "mikestead.dotenv",
-    "ms-azuretools.vscode-docker",
-    "p1c2u.docker-compose",
-    "tombonnike.vscode-status-bar-format-toggle",
-    "ckolkman.vscode-postgres"
-    // "dzannotti.vscode-babel-coloring",
-    // "codemooseus.vscode-devtools-for-chrome",
-    // "cancerberosgx.vscode-typescript-refactors",
-    // "steoates.autoimport"
-  ],
+	"dbaeumer.vscode-eslint",
+	"esbenp.prettier-vscode",
+	"mikestead.dotenv",
+	"ms-azuretools.vscode-docker",
+	"p1c2u.docker-compose",
+	"tombonnike.vscode-status-bar-format-toggle",
+	"ckolkman.vscode-postgres",
+	"shd101wyy.markdown-preview-enhanced"
+],
   // Uncomment the next line if you want start specific services in your Docker Compose config.
   "runServices": ["postgres", "redis", "backend"],
   // Uncomment the next line if you want to keep your containers running after VS Code shuts down.

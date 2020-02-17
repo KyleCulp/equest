@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 11.6 (Debian 11.6-1.pgdg90+1)
--- Dumped by pg_dump version 11.5 (Debian 11.5-1+deb10u1)
+-- Dumped from database version 11.7 (Debian 11.7-1.pgdg90+1)
+-- Dumped by pg_dump version 11.7 (Debian 11.7-1.pgdg90+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -77,16 +77,6 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 --
 
 COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UUIDs)';
-
-
---
--- Name: jwt_token; Type: TYPE; Schema: app_public; Owner: -
---
-
-CREATE TYPE app_public.jwt_token AS (
-	role text,
-	user_id uuid
-);
 
 
 SET default_tablespace = '';

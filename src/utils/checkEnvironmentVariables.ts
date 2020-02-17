@@ -2,7 +2,7 @@ require('dotenv').config();
 
 /*
  *	Check that all environmental variables are present, and throw
- *   an error before continuing if checks fail. This prevents
+ *  an error before continuing if checks fail. This prevents
  *	needless connections to the database, and a faster restart
  */
 
@@ -25,18 +25,35 @@ enum EnvironmentalVariables {
   JWT_SECRET
 }
 
-// Enum helper. Honestly not sure why I use enums but yeah
-// https://stackoverflow.com/questions/43100718/typescript-enum-to-object-array
-const StringIsNumber = (value: string | number) =>
-  isNaN(Number(value)) === false;
-function ToArray(enumme: typeof EnvironmentalVariables) {
-  return Object.keys(enumme)
-    .filter(StringIsNumber)
-    .map(key => enumme[key]);
+/**
+ * Helpful string/number filter for mapping objects
+ *
+ * @param value
+ * @returns True if string; False if number
+ */
+const isString = (value: string | number) => isNaN(Number(value)) === false;
+
+/**
+ * Convert enum into an array
+ *
+ * @remarks
+ * https://stackoverflow.com/questions/43100718/typescript-enum-to-object-array/51536142#51536142
+ *
+ * @param value - The first input number
+ * @returns The arithmetic mean of `x` and `y`
+ *
+ */
+export function enumToArray(value: typeof EnvironmentalVariables) {
+  return Object.keys(value)
+    .filter(isString)
+    .map(key => value[key]);
 }
 
+/**
+ * Checks if needed environmental variables are available. Throws error at any missing
+ */
 export const checkEnvironmentVariables = () => {
-  for (const envVar of ToArray(EnvironmentalVariables)) {
+  for (const envVar of enumToArray(EnvironmentalVariables)) {
     if (!process.env[envVar]) {
       throw new Error('Missing environment variable: ' + envVar);
     }

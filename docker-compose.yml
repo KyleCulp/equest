@@ -28,53 +28,46 @@ services:
       - .:/workspace
       # Uncomment the next line to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-in-docker-compose for details.
       - /var/run/docker.sock:/var/run/docker.sock
-    # Uncomment the next four lines if you will use a ptrace-based debugger like C++, Go, and Rust.
-    # cap_add:
-    #   - SYS_PTRACE
-    # security_opt:
-    #   - seccomp:unconfined
-
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
 
   postgres:
     image: postgres:11
-    container_name: postgres
+    container_name: equest-postgres
     user: $UID
     working_dir: /
     volumes:
-      - db-volume:/var/lib/postgresql/data
+      - equest-postgres-volume:/var/lib/postgresql/data
       - ./data:/data
     ports:
       - '5432:5432'
     restart: unless-stopped
-    networks:
-      - default
+    # networks:
+    #   - default
+    env_file: .devcontainer/.docker.env
     command: postgres -c logging_collector=on -c log_destination=stderr -c log_directory=/var/lib/postgresql/data/logs -c log_rotation_age=60 -c log_truncate_on_rotation=on -c log_filename=server_log.hour.%H%M
 
   redis:
     image: redis:alpine
-    container_name: redis
+    container_name: equest-redis
     ports:
       - '6379:6379'
     volumes:
-      - /srv/docker/redis:/var/lib/redis
-    networks:
-      - default
+      - equest-redis-volume:/var/lib/redis
+    # networks:
+    #   - default
     restart: unless-stopped
 
   pgadmin:
-    container_name: pgadmin
+    container_name: equest-pgadmin
     image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin@pgadmin.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    env_file: .devcontainer/.docker.env
     volumes:
-      - pgadmin-volume:/root/.pgadmin
+      - equest-pgadmin-volume:/root/.pgadmin
     ports:
-      - '${PGADMIN_PORT:-5050}:80'
-    networks:
-      - default
+      - '5050:80'
+    # networks:
+    #   - default
     restart: unless-stopped
 
 networks:
@@ -83,12 +76,12 @@ networks:
 
 volumes:
   # Postgres' data
-  db-volume:
+  equest-postgres-volume:
   # Redis' data
-  redis-volume:
+  equest-redis-volume:
   # PGAdmin's data
-  pgadmin-volume:
+  equest-pgadmin-volume:
   # Node modules
-  nm_root:
+  equest-nm_root:
   # used for keeeping vscode-extensions while rebuilding
-  vscode-extensions:
+  equest-vscode-extensions:
