@@ -2,7 +2,9 @@ import { PostGraphileOptions } from 'postgraphile';
 
 require('dotenv').config();
 
-const schemas = ['app_public', 'parts'];
+const { join } = require('path');
+
+const schemas = ['app_public'];
 // const pluginHook = makePluginHook([PgPubSub].filter(_ => _));
 
 const {
@@ -36,8 +38,8 @@ export const postgraphileOptionsDevelopment: PostGraphileOptions = {
   // skipPlugins: , // Skip core plugins
   // readCache: , // production only
   // writeCache: , // production only
-  // exportJsonSchemaPath: , // export schema file
-  // exportGqlSchemaPath: , // export schema file
+  exportJsonSchemaPath: join(__dirname, '../../../data/schema.json'), // export schema file
+  exportGqlSchemaPath: join(__dirname, '../../../data/schema.gql'), // export schema file
   // sortExport: false,
   graphqlRoute: '/postgraphile',
   graphiqlRoute: '/graphiql',

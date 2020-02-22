@@ -12,11 +12,12 @@
     "format": "eslint . --ext .ts --fix --quiet",
     "gm": "node -r dotenv/config ./node_modules/.bin/graphile-migrate",
     "tsc": "./node_modules/.bin/tsc",
-    "db:init": "node -r dotenv/config scripts/install-schema.js",
+    "db:init": "node -r dotenv/config scripts/createDBOwner.js",
     "db:migrate": "npm run gm migrate",
     "db:watch": "npm run gm watch",
     "db:commit": "npm run gm commit",
     "db:uncommit": "npm run gm uncommit",
+    "db:indexCheck": "node -r dotenv/config scripts/check-indexes.js",
     "db:reset": "npm run gm reset",
     "dump-schema": "pg_dump -s -v -f data/schema.sql postgres://postgres@postgres/dev --no-sync --schema-only --no-owner --exclude-schema=graphile_migrate --exclude-schema=graphile_worker"
   },

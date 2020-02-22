@@ -1,35 +1,27 @@
 import { Pool } from 'pg';
-import { redisInstance } from '../database';
+import {
+  redisInstance,
+  pgMasterPoolConfig,
+  pgMasterAdminPoolConfig
+} from '../database';
 import { Application } from 'express';
 
-const {
-  PG_MASTER_ADMIN_USERNAME,
-  PG_MASTER_ADMIN_PASSWORD,
-  PG_MASTER_HOST,
-  PG_MASTER_PORT,
-  PG_MASTER_USERNAME,
-  PG_MASTER_PASSWORD,
-  PG_MASTER_NAME
-} = process.env;
-
-const pgMasterString = `postgres://${PG_MASTER_USERNAME}@${PG_MASTER_HOST}:${PG_MASTER_PORT}/${PG_MASTER_NAME}`;
-const pgMasterAdminString = `postgres://${PG_MASTER_ADMIN_USERNAME}@${PG_MASTER_HOST}:${PG_MASTER_PORT}/${PG_MASTER_NAME}`;
-// const pgMasterString = `postgres://${PG_MASTER_USERNAME}:${PG_MASTER_PASSWORD}@${PG_MASTER_HOST}:${PG_MASTER_PORT}/${PG_MASTER_NAME}`;
-// const pgMasterAdminString = `postgres://${PG_MASTER_ADMIN_USERNAME}:${PG_MASTER_ADMIN_PASSWORD}@${PG_MASTER_HOST}:${PG_MASTER_PORT}/${PG_MASTER_NAME}`;
+const { REDIS_SESSION_DB, REDIS_QUEUE_DB } = process.env;
 
 export const installDatabasePools = async (app: Application) => {
   // User Account Connection
-  const pgMasterPool = new Pool({
-    connectionString: pgMasterString
-  });
-  app.set('pgMasterString', pgMasterPool);
+  const pgMasterPool = new Pool(pgMasterPoolConfig);
+  app.set('pgMasterPool', pgMasterPool);
 
   // Admin Account Connection
-  const pgMasterAdminPool = new Pool({
-    connectionString: pgMasterAdminString
-  });
+  const pgMasterAdminPool = new Pool(pgMasterAdminPoolConfig);
   app.set('pgMasterAdminPool', pgMasterAdminPool);
 
-  const redisSession = await redisInstance();
+  // Redis client instance for sessions
+  const redisSession = await redisInstance(parseInt(REDIS_SESSION_DB!));
   app.set('redisSession', redisSession);
+
+  // Redis client instance for queue/pubsub
+  const redisQueue = await redisInstance(parseInt(REDIS_QUEUE_DB!));
+  app.set('redisQueue', redisQueue);
 };

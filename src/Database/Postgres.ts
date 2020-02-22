@@ -12,9 +12,9 @@ const {
   PG_MASTER_NAME
 } = process.env;
 
-export const pgMasterPool: PoolConfig = {
-  user: PG_MASTER_USERNAME,
-  password: PG_MASTER_PASSWORD,
+export const pgMasterAdminPoolConfig: PoolConfig = {
+  user: PG_MASTER_ADMIN_USERNAME,
+  password: PG_MASTER_ADMIN_PASSWORD,
   host: PG_MASTER_HOST,
   port: parseInt(PG_MASTER_PORT!),
   database: PG_MASTER_NAME,
@@ -29,9 +29,9 @@ export const pgMasterPool: PoolConfig = {
   // },
 };
 
-export const pgMasterAdminPool: PoolConfig = {
-  user: PG_MASTER_ADMIN_USERNAME,
-  password: PG_MASTER_ADMIN_PASSWORD,
+export const pgMasterPoolConfig: PoolConfig = {
+  user: PG_MASTER_USERNAME,
+  password: PG_MASTER_PASSWORD,
   host: PG_MASTER_HOST,
   port: parseInt(PG_MASTER_PORT!),
   database: PG_MASTER_NAME,

@@ -11,7 +11,7 @@ export const installSession = async (app: Application) => {
   });
 
   const sessionMiddleware = session({
-    name: 'pcpbsid',
+    name: 'equestsid',
     rolling: false,
     saveUninitialized: false,
     resave: false,
@@ -21,7 +21,7 @@ export const installSession = async (app: Application) => {
       httpOnly: true
     },
     store: sessionStore,
-    secret: process.env.JWT_SECRET! //process.env.JWT_SECRET!,
+    secret: process.env.JWT_SECRET!
   });
 
   app.use(sessionMiddleware);

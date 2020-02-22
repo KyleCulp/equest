@@ -19,7 +19,8 @@ enum EnvironmentalVariables {
   REDIS_PORT,
   REDIS_FAMILY,
   REDIS_PASSWORD,
-  REDIS_DB,
+  REDIS_SESSION_DB,
+  REDIS_QUEUE_DB,
   SERVER_URL,
   SERVER_PORT,
   JWT_SECRET
@@ -41,7 +42,6 @@ const isString = (value: string | number) => isNaN(Number(value)) === false;
  *
  * @param value - The first input number
  * @returns The arithmetic mean of `x` and `y`
- *
  */
 export function enumToArray(value: typeof EnvironmentalVariables) {
   return Object.keys(value)
