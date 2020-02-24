@@ -23,6 +23,7 @@ services:
     depends_on:
       - postgres
       - redis
+      - pgadmin
     volumes:
       # Update this to wherever you want VS Code to mount the folder of your project
       - .:/workspace
@@ -65,7 +66,7 @@ services:
     volumes:
       - equest-pgadmin-volume:/root/.pgadmin
     ports:
-      - '5050:80'
+      - '4050:80'
     # networks:
     #   - default
     restart: unless-stopped

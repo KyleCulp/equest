@@ -8,8 +8,12 @@ async function main() {
   // const sqlFile = readFileSync('./migrations/afterReset.sql').toString();
   const databaseOwner = process.env.PG_MASTER_ADMIN_USERNAME;
   const databaseOwnerPassword = process.env.PG_MASTER_ADMIN_PASSWORD;
+
   const databaseUser = process.env.PG_MASTER_USERNAME;
   const databaseUserPassword = process.env.PG_MASTER_PASSWORD;
+
+  const databaseRocketLeagueUser = process.env.PG_MASTER_RL_USERNAME;
+  const databaseRocketLeagueUserPassword = process.env.PG_MASTER_RL_PASSWORD;
 
   const sqlFile = `
     DO $do$
@@ -24,6 +28,7 @@ async function main() {
       END IF;
     END
     $do$;
+
     DO $do$
       BEGIN
         IF NOT EXISTS (
@@ -33,6 +38,19 @@ async function main() {
           WHERE
             rolname = '${databaseUser}') THEN
         CREATE ROLE ${databaseUser} LOGIN PASSWORD '${databaseUserPassword}';
+      END IF;
+    END
+    $do$;
+
+    DO $do$
+      BEGIN
+        IF NOT EXISTS (
+          SELECT
+          FROM
+            pg_catalog.pg_roles
+          WHERE
+            rolname = '${databaseRocketLeagueUser}') THEN
+        CREATE ROLE ${databaseRocketLeagueUser} LOGIN PASSWORD '${databaseRocketLeagueUserPassword}';
       END IF;
     END
     $do$;
