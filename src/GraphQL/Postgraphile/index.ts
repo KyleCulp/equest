@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const { join } = require('path');
 
-const schemas = ['app_public'];
+const schemas = ['app_public', 'rocket_league', 'csgo'];
 // const pluginHook = makePluginHook([PgPubSub].filter(_ => _));
 
 const {

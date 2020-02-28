@@ -145,6 +145,213 @@
               "deprecationReason": null
             },
             {
+              "name": "allMetasList",
+              "description": "Reads a set of `Meta`.",
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Only read the first `n` values of the set.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "offset",
+                  "description": "Skip the first `n` values.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "orderBy",
+                  "description": "The method to use when ordering `Meta`.",
+                  "type": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "ENUM",
+                        "name": "MetasOrderBy",
+                        "ofType": null
+                      }
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "condition",
+                  "description": "A condition to be used in determining which values should be returned by the collection.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "MetaCondition",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Meta",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "allPlayersList",
+              "description": "Reads a set of `Player`.",
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Only read the first `n` values of the set.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "offset",
+                  "description": "Skip the first `n` values.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "orderBy",
+                  "description": "The method to use when ordering `Player`.",
+                  "type": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "ENUM",
+                        "name": "PlayersOrderBy",
+                        "ofType": null
+                      }
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "condition",
+                  "description": "A condition to be used in determining which values should be returned by the collection.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PlayerCondition",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Player",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "allPlayerStatsList",
+              "description": "Reads a set of `PlayerStat`.",
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Only read the first `n` values of the set.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "offset",
+                  "description": "Skip the first `n` values.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "orderBy",
+                  "description": "The method to use when ordering `PlayerStat`.",
+                  "type": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "ENUM",
+                        "name": "PlayerStatsOrderBy",
+                        "ofType": null
+                      }
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "condition",
+                  "description": "A condition to be used in determining which values should be returned by the collection.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PlayerStatCondition",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "PlayerStat",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "userAccountByUserId",
               "description": null,
               "args": [
@@ -199,6 +406,101 @@
               "deprecationReason": null
             },
             {
+              "name": "metaByReplayId",
+              "description": null,
+              "args": [
+                {
+                  "name": "replayId",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Meta",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerByPlayerId",
+              "description": null,
+              "args": [
+                {
+                  "name": "playerId",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Player",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerStatByReplayIdAndPlayerName",
+              "description": null,
+              "args": [
+                {
+                  "name": "replayId",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "playerName",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "PlayerStat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "currentPerson",
               "description": "Returns the user currently in the session.",
               "args": [],
@@ -232,6 +534,87 @@
               "type": {
                 "kind": "OBJECT",
                 "name": "UserAccount",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "meta",
+              "description": "Reads a single `Meta` using its globally unique `ID`.",
+              "args": [
+                {
+                  "name": "nodeId",
+                  "description": "The globally unique `ID` to be used in selecting a single `Meta`.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Meta",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "player",
+              "description": "Reads a single `Player` using its globally unique `ID`.",
+              "args": [
+                {
+                  "name": "nodeId",
+                  "description": "The globally unique `ID` to be used in selecting a single `Player`.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Player",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerStat",
+              "description": "Reads a single `PlayerStat` using its globally unique `ID`.",
+              "args": [
+                {
+                  "name": "nodeId",
+                  "description": "The globally unique `ID` to be used in selecting a single `PlayerStat`.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "PlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -283,6 +666,21 @@
             {
               "kind": "OBJECT",
               "name": "UserAccount",
+              "ofType": null
+            },
+            {
+              "kind": "OBJECT",
+              "name": "Meta",
+              "ofType": null
+            },
+            {
+              "kind": "OBJECT",
+              "name": "Player",
+              "ofType": null
+            },
+            {
+              "kind": "OBJECT",
+              "name": "PlayerStat",
               "ofType": null
             }
           ]
@@ -549,6 +947,1041 @@
           "possibleTypes": null
         },
         {
+          "kind": "ENUM",
+          "name": "MetasOrderBy",
+          "description": "Methods to use when ordering `Meta`.",
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "NATURAL",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "REPLAY_ID_ASC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "REPLAY_ID_DESC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PRIMARY_KEY_ASC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PRIMARY_KEY_DESC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "MetaCondition",
+          "description": "A condition to be used against `Meta` object types. All fields are tested for equality and combined with a logical ‘and.’",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "replayId",
+              "description": "Checks for equality with the object’s `replayId` field.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "Meta",
+          "description": null,
+          "fields": [
+            {
+              "name": "nodeId",
+              "description": "A globally unique identifier. Can be used in various places throughout the system to identify this single value.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "replayDate",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "replayId",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "mapName",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "serverName",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "team0Score",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "team1Score",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "replayLength",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [
+            {
+              "kind": "INTERFACE",
+              "name": "Node",
+              "ofType": null
+            }
+          ],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "ENUM",
+          "name": "PlayersOrderBy",
+          "description": "Methods to use when ordering `Player`.",
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "NATURAL",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PLAYER_ID_ASC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PLAYER_ID_DESC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PRIMARY_KEY_ASC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PRIMARY_KEY_DESC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "PlayerCondition",
+          "description": "A condition to be used against `Player` object types. All fields are tested for equality and combined with a logical ‘and.’",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "playerId",
+              "description": "Checks for equality with the object’s `playerId` field.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "Player",
+          "description": null,
+          "fields": [
+            {
+              "name": "nodeId",
+              "description": "A globally unique identifier. Can be used in various places throughout the system to identify this single value.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "name",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerId",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "appearsIn",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [
+            {
+              "kind": "INTERFACE",
+              "name": "Node",
+              "ofType": null
+            }
+          ],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "ENUM",
+          "name": "PlayerStatsOrderBy",
+          "description": "Methods to use when ordering `PlayerStat`.",
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "NATURAL",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "REPLAY_ID_ASC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "REPLAY_ID_DESC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PRIMARY_KEY_ASC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PRIMARY_KEY_DESC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "PlayerStatCondition",
+          "description": "A condition to be used against `PlayerStat` object types. All fields are tested for equality and combined with a logical ‘and.’",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "replayId",
+              "description": "Checks for equality with the object’s `replayId` field.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "PlayerStat",
+          "description": null,
+          "fields": [
+            {
+              "name": "nodeId",
+              "description": "A globally unique identifier. Can be used in various places throughout the system to identify this single value.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "replayId",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerName",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerId",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "score",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "goals",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "assists",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "saves",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "shots",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "boostUsage",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "smallBoosts",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "largeBoosts",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "wastedCollection",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "wastedUsage",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeFullBoost",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeLowBoost",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeNoBoost",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "numStolenBoosts",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averageBoostLevel",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "wastedBig",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "wastedSmall",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ballHitForward",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ballHitBackward",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeClosestToBall",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeCloseToBall",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeClosestToTeamCenter",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "possessionTime",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "turnovers",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "turnoversOnMyHalf",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "turnoversOnTheirHalf",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeLowInAir",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeHighInAir",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeInDefendingHalf",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeInAttackingHalf",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeInDefendingThird",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeInNeutralThird",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeInAttackingThird",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeBehindBall",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeInFrontBall",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeNearWall",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeInCorner",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averageSpeed",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averageHitDistance",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "totalHits",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "totalPasses",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeAtSlowSpeed",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeAtSuperSonic",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeAtBoostSpeed",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeMostForwardPlayer",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeMostBackPlayer",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeBetweenPlayers",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [
+            {
+              "kind": "INTERFACE",
+              "name": "Node",
+              "ofType": null
+            }
+          ],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "SCALAR",
+          "name": "BigFloat",
+          "description": "A floating point number that requires more precision than IEEE 754 binary 64",
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
           "kind": "OBJECT",
           "name": "Mutation",
           "description": "The root mutation type which contains root level fields which mutate data.",
@@ -575,6 +2008,87 @@
               "type": {
                 "kind": "OBJECT",
                 "name": "CreateUserAccountPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "createMeta",
+              "description": "Creates a single `Meta`.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "CreateMetaInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "CreateMetaPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "createPlayer",
+              "description": "Creates a single `Player`.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "CreatePlayerInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "CreatePlayerPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "createPlayerStat",
+              "description": "Creates a single `PlayerStat`.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "CreatePlayerStatInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "CreatePlayerStatPayload",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -662,6 +2176,168 @@
               "deprecationReason": null
             },
             {
+              "name": "updateMeta",
+              "description": "Updates a single `Meta` using its globally unique id and a patch.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "UpdateMetaInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "UpdateMetaPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "updateMetaByReplayId",
+              "description": "Updates a single `Meta` using a unique key and a patch.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "UpdateMetaByReplayIdInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "UpdateMetaPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "updatePlayer",
+              "description": "Updates a single `Player` using its globally unique id and a patch.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "UpdatePlayerInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "UpdatePlayerPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "updatePlayerByPlayerId",
+              "description": "Updates a single `Player` using a unique key and a patch.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "UpdatePlayerByPlayerIdInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "UpdatePlayerPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "updatePlayerStat",
+              "description": "Updates a single `PlayerStat` using its globally unique id and a patch.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "UpdatePlayerStatInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "UpdatePlayerStatPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "updatePlayerStatByReplayIdAndPlayerName",
+              "description": "Updates a single `PlayerStat` using a unique key and a patch.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "UpdatePlayerStatByReplayIdAndPlayerNameInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "UpdatePlayerStatPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "deleteUserAccount",
               "description": "Deletes a single `UserAccount` using its globally unique id.",
               "args": [
@@ -737,6 +2413,195 @@
               "type": {
                 "kind": "OBJECT",
                 "name": "DeleteUserAccountPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deleteMeta",
+              "description": "Deletes a single `Meta` using its globally unique id.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "DeleteMetaInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "DeleteMetaPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deleteMetaByReplayId",
+              "description": "Deletes a single `Meta` using a unique key.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "DeleteMetaByReplayIdInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "DeleteMetaPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deletePlayer",
+              "description": "Deletes a single `Player` using its globally unique id.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "DeletePlayerInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "DeletePlayerPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deletePlayerByPlayerId",
+              "description": "Deletes a single `Player` using a unique key.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "DeletePlayerByPlayerIdInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "DeletePlayerPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deletePlayerStat",
+              "description": "Deletes a single `PlayerStat` using its globally unique id.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "DeletePlayerStatInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "DeletePlayerStatPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deletePlayerStatByReplayIdAndPlayerName",
+              "description": "Deletes a single `PlayerStat` using a unique key.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "DeletePlayerStatByReplayIdAndPlayerNameInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "DeletePlayerStatPayload",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "createConstraintIfNotExists",
+              "description": null,
+              "args": [
+                {
+                  "name": "input",
+                  "description": "The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "CreateConstraintIfNotExistsInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "CreateConstraintIfNotExistsPayload",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -959,6 +2824,905 @@
               "type": {
                 "kind": "OBJECT",
                 "name": "UserAccount",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "CreateMetaInput",
+          "description": "All input for the create `Meta` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "meta",
+              "description": "The `Meta` to be created by this mutation.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "MetaInput",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "MetaInput",
+          "description": "An input for mutations affecting `Meta`",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "replayDate",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "replayId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "mapName",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "serverName",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "team0Score",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "team1Score",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "replayLength",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CreateMetaPayload",
+          "description": "The output of our create `Meta` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "meta",
+              "description": "The `Meta` that was created by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Meta",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "CreatePlayerInput",
+          "description": "All input for the create `Player` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "player",
+              "description": "The `Player` to be created by this mutation.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PlayerInput",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "PlayerInput",
+          "description": "An input for mutations affecting `Player`",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "name",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "appearsIn",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CreatePlayerPayload",
+          "description": "The output of our create `Player` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "player",
+              "description": "The `Player` that was created by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Player",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "CreatePlayerStatInput",
+          "description": "All input for the create `PlayerStat` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerStat",
+              "description": "The `PlayerStat` to be created by this mutation.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PlayerStatInput",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "PlayerStatInput",
+          "description": "An input for mutations affecting `PlayerStat`",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "replayId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerName",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerId",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "score",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "goals",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "assists",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "saves",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "shots",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "boostUsage",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "smallBoosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "largeBoosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedCollection",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedUsage",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeFullBoost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeLowBoost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeNoBoost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "numStolenBoosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageBoostLevel",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedBig",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedSmall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ballHitForward",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ballHitBackward",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeClosestToBall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeCloseToBall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeClosestToTeamCenter",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "possessionTime",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "turnovers",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "turnoversOnMyHalf",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "turnoversOnTheirHalf",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeLowInAir",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeHighInAir",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInDefendingHalf",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInAttackingHalf",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInDefendingThird",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInNeutralThird",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInAttackingThird",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeBehindBall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInFrontBall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeNearWall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInCorner",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageSpeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageHitDistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalHits",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalPasses",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeAtSlowSpeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeAtSuperSonic",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeAtBoostSpeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeMostForwardPlayer",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeMostBackPlayer",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeBetweenPlayers",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CreatePlayerStatPayload",
+          "description": "The output of our create `PlayerStat` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerStat",
+              "description": "The `PlayerStat` that was created by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "PlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1249,6 +4013,1088 @@
         },
         {
           "kind": "INPUT_OBJECT",
+          "name": "UpdateMetaInput",
+          "description": "All input for the `updateMeta` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "nodeId",
+              "description": "The globally unique `ID` which will identify a single `Meta` to be updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "metaPatch",
+              "description": "An object where the defined keys will be set on the `Meta` being updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "MetaPatch",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "MetaPatch",
+          "description": "Represents an update to a `Meta`. Fields that are set will be updated.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "replayDate",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "replayId",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "mapName",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "serverName",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "team0Score",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "team1Score",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "replayLength",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "UpdateMetaPayload",
+          "description": "The output of our update `Meta` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "meta",
+              "description": "The `Meta` that was updated by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Meta",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "UpdateMetaByReplayIdInput",
+          "description": "All input for the `updateMetaByReplayId` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "metaPatch",
+              "description": "An object where the defined keys will be set on the `Meta` being updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "MetaPatch",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "replayId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "UpdatePlayerInput",
+          "description": "All input for the `updatePlayer` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "nodeId",
+              "description": "The globally unique `ID` which will identify a single `Player` to be updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerPatch",
+              "description": "An object where the defined keys will be set on the `Player` being updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PlayerPatch",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "PlayerPatch",
+          "description": "Represents an update to a `Player`. Fields that are set will be updated.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "name",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerId",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "appearsIn",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "UpdatePlayerPayload",
+          "description": "The output of our update `Player` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "player",
+              "description": "The `Player` that was updated by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Player",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "UpdatePlayerByPlayerIdInput",
+          "description": "All input for the `updatePlayerByPlayerId` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerPatch",
+              "description": "An object where the defined keys will be set on the `Player` being updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PlayerPatch",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "UpdatePlayerStatInput",
+          "description": "All input for the `updatePlayerStat` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "nodeId",
+              "description": "The globally unique `ID` which will identify a single `PlayerStat` to be updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerStatPatch",
+              "description": "An object where the defined keys will be set on the `PlayerStat` being updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PlayerStatPatch",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "PlayerStatPatch",
+          "description": "Represents an update to a `PlayerStat`. Fields that are set will be updated.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "replayId",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerName",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerId",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "score",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "goals",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "assists",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "saves",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "shots",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "boostUsage",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "smallBoosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "largeBoosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedCollection",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedUsage",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeFullBoost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeLowBoost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeNoBoost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "numStolenBoosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageBoostLevel",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedBig",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedSmall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ballHitForward",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ballHitBackward",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeClosestToBall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeCloseToBall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeClosestToTeamCenter",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "possessionTime",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "turnovers",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "turnoversOnMyHalf",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "turnoversOnTheirHalf",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeLowInAir",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeHighInAir",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInDefendingHalf",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInAttackingHalf",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInDefendingThird",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInNeutralThird",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInAttackingThird",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeBehindBall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInFrontBall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeNearWall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeInCorner",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageSpeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageHitDistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalHits",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalPasses",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeAtSlowSpeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeAtSuperSonic",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeAtBoostSpeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeMostForwardPlayer",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeMostBackPlayer",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeBetweenPlayers",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "UpdatePlayerStatPayload",
+          "description": "The output of our update `PlayerStat` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerStat",
+              "description": "The `PlayerStat` that was updated by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "PlayerStat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "UpdatePlayerStatByReplayIdAndPlayerNameInput",
+          "description": "All input for the `updatePlayerStatByReplayIdAndPlayerName` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerStatPatch",
+              "description": "An object where the defined keys will be set on the `PlayerStat` being updated.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PlayerStatPatch",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "replayId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerName",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
           "name": "DeleteUserAccountInput",
           "description": "All input for the `deleteUserAccount` mutation.",
           "fields": null,
@@ -1408,6 +5254,503 @@
             }
           ],
           "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "DeleteMetaInput",
+          "description": "All input for the `deleteMeta` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "nodeId",
+              "description": "The globally unique `ID` which will identify a single `Meta` to be deleted.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "DeleteMetaPayload",
+          "description": "The output of our delete `Meta` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "meta",
+              "description": "The `Meta` that was deleted by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Meta",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deletedMetaId",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "DeleteMetaByReplayIdInput",
+          "description": "All input for the `deleteMetaByReplayId` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "replayId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "DeletePlayerInput",
+          "description": "All input for the `deletePlayer` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "nodeId",
+              "description": "The globally unique `ID` which will identify a single `Player` to be deleted.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "DeletePlayerPayload",
+          "description": "The output of our delete `Player` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "player",
+              "description": "The `Player` that was deleted by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Player",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deletedPlayerId",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "DeletePlayerByPlayerIdInput",
+          "description": "All input for the `deletePlayerByPlayerId` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "DeletePlayerStatInput",
+          "description": "All input for the `deletePlayerStat` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "nodeId",
+              "description": "The globally unique `ID` which will identify a single `PlayerStat` to be deleted.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "DeletePlayerStatPayload",
+          "description": "The output of our delete `PlayerStat` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerStat",
+              "description": "The `PlayerStat` that was deleted by this mutation.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "PlayerStat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "deletedPlayerStatId",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "DeletePlayerStatByReplayIdAndPlayerNameInput",
+          "description": "All input for the `deletePlayerStatByReplayIdAndPlayerName` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "replayId",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playerName",
+              "description": null,
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "CreateConstraintIfNotExistsInput",
+          "description": "All input for the `createConstraintIfNotExists` mutation.",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "clientMutationId",
+              "description": "An arbitrary string value with no semantic meaning. Will be included in the payload verbatim. May be used to track mutations by the client.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "tSchema",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "tName",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "cName",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "constraintSql",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CreateConstraintIfNotExistsPayload",
+          "description": "The output of our `createConstraintIfNotExists` mutation.",
+          "fields": [
+            {
+              "name": "clientMutationId",
+              "description": "The exact same `clientMutationId` that was provided in the mutation input, unchanged and unused. May be used by a client to track mutations.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "query",
+              "description": "Our root query field type. Allows us to run any query from our mutation payload.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Query",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -1801,6 +6144,213 @@
               "deprecationReason": null
             },
             {
+              "name": "allMetasList",
+              "description": "Reads a set of `Meta`. (live)",
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Only read the first `n` values of the set.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "offset",
+                  "description": "Skip the first `n` values.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "orderBy",
+                  "description": "The method to use when ordering `Meta`.",
+                  "type": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "ENUM",
+                        "name": "MetasOrderBy",
+                        "ofType": null
+                      }
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "condition",
+                  "description": "A condition to be used in determining which values should be returned by the collection.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "MetaCondition",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Meta",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "allPlayersList",
+              "description": "Reads a set of `Player`. (live)",
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Only read the first `n` values of the set.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "offset",
+                  "description": "Skip the first `n` values.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "orderBy",
+                  "description": "The method to use when ordering `Player`.",
+                  "type": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "ENUM",
+                        "name": "PlayersOrderBy",
+                        "ofType": null
+                      }
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "condition",
+                  "description": "A condition to be used in determining which values should be returned by the collection.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PlayerCondition",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Player",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "allPlayerStatsList",
+              "description": "Reads a set of `PlayerStat`. (live)",
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Only read the first `n` values of the set.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "offset",
+                  "description": "Skip the first `n` values.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "orderBy",
+                  "description": "The method to use when ordering `PlayerStat`.",
+                  "type": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "ENUM",
+                        "name": "PlayerStatsOrderBy",
+                        "ofType": null
+                      }
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "condition",
+                  "description": "A condition to be used in determining which values should be returned by the collection.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PlayerStatCondition",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "PlayerStat",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "userAccountByUserId",
               "description": " (live)",
               "args": [
@@ -1855,6 +6405,101 @@
               "deprecationReason": null
             },
             {
+              "name": "metaByReplayId",
+              "description": " (live)",
+              "args": [
+                {
+                  "name": "replayId",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Meta",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerByPlayerId",
+              "description": " (live)",
+              "args": [
+                {
+                  "name": "playerId",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Player",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerStatByReplayIdAndPlayerName",
+              "description": " (live)",
+              "args": [
+                {
+                  "name": "replayId",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "playerName",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "PlayerStat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "currentPerson",
               "description": "Returns the user currently in the session. (live)",
               "args": [],
@@ -1888,6 +6533,87 @@
               "type": {
                 "kind": "OBJECT",
                 "name": "UserAccount",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "meta",
+              "description": "Reads a single `Meta` using its globally unique `ID`. (live)",
+              "args": [
+                {
+                  "name": "nodeId",
+                  "description": "The globally unique `ID` to be used in selecting a single `Meta`.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Meta",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "player",
+              "description": "Reads a single `Player` using its globally unique `ID`. (live)",
+              "args": [
+                {
+                  "name": "nodeId",
+                  "description": "The globally unique `ID` to be used in selecting a single `Player`.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Player",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playerStat",
+              "description": "Reads a single `PlayerStat` using its globally unique `ID`. (live)",
+              "args": [
+                {
+                  "name": "nodeId",
+                  "description": "The globally unique `ID` to be used in selecting a single `PlayerStat`.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "PlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,

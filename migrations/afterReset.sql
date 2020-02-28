@@ -72,5 +72,6 @@ $do$;
 GRANT app_anonymous TO app_postgraphile;
 GRANT app_person TO app_postgraphile;
 GRANT usage ON SCHEMA app_public, csgo, rocket_league TO app_anonymous, app_person, app_postgraphile;
+GRANT usage on schema rocket_league to app_rocket_league;
 COMMIT;
 

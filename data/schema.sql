@@ -255,53 +255,6 @@ $$;
 
 
 --
--- Name: create_constraint_if_not_exists(text, text, text); Type: FUNCTION; Schema: app_public; Owner: -
---
-
-CREATE FUNCTION app_public.create_constraint_if_not_exists(t_name text, c_name text, constraint_sql text) RETURNS void
-    LANGUAGE plpgsql
-    AS $$
-BEGIN
-  -- Look for our constraint
-  IF NOT EXISTS (
-    SELECT
-      constraint_name
-    FROM
-      information_schema.constraint_column_usage
-    WHERE
-      table_name = t_name
-      AND constraint_name = c_name) THEN
-  EXECUTE constraint_sql;
-END IF;
-END;
-$$;
-
-
---
--- Name: create_constraint_if_not_exists(text, text, text, text); Type: FUNCTION; Schema: app_public; Owner: -
---
-
-CREATE FUNCTION app_public.create_constraint_if_not_exists(t_schema text, t_name text, c_name text, constraint_sql text) RETURNS void
-    LANGUAGE plpgsql
-    AS $$
-BEGIN
-  -- Look for our constraint
-  IF NOT EXISTS (
-    SELECT
-      constraint_name
-    FROM
-      information_schema.constraint_table_usage
-    WHERE
-      table_schema = t_schema
-      AND table_name = t_name
-      AND constraint_name = c_name) THEN
-  EXECUTE constraint_sql;
-END IF;
-END;
-$$;
-
-
---
 -- Name: current_person(); Type: FUNCTION; Schema: app_public; Owner: -
 --
 
@@ -394,90 +347,6 @@ COMMENT ON COLUMN app_private.user_account_private.password_hash IS 'A hash of t
 
 
 --
--- Name: meta; Type: TABLE; Schema: rocket_league; Owner: -
---
-
-CREATE TABLE rocket_league.meta (
-    replay_date text NOT NULL,
-    replay_id text NOT NULL,
-    map_name text,
-    server_name text,
-    team_0_score integer,
-    team_1_score integer,
-    replay_length text
-);
-
-
---
--- Name: player; Type: TABLE; Schema: rocket_league; Owner: -
---
-
-CREATE TABLE rocket_league.player (
-    name text,
-    player_id text NOT NULL,
-    appears_in text
-);
-
-
---
--- Name: player_stats; Type: TABLE; Schema: rocket_league; Owner: -
---
-
-CREATE TABLE rocket_league.player_stats (
-    replay_id text NOT NULL,
-    player_name text NOT NULL,
-    player_id text,
-    score integer,
-    goals integer,
-    assists integer,
-    saves integer,
-    shots integer,
-    boost_usage numeric,
-    small_boosts numeric,
-    large_boosts numeric,
-    wasted_collection numeric,
-    wasted_usage numeric,
-    time_full_boost numeric,
-    time_low_boost numeric,
-    time_no_boost numeric,
-    num_stolen_boosts integer,
-    average_boost_level numeric,
-    wasted_big numeric,
-    wasted_small numeric,
-    ball_hit_forward numeric,
-    ball_hit_backward numeric,
-    time_closest_to_ball numeric,
-    time_close_to_ball numeric,
-    time_closest_to_team_center numeric,
-    possession_time numeric,
-    turnovers numeric,
-    turnovers_on_my_half numeric,
-    turnovers_on_their_half numeric,
-    time_low_in_air numeric,
-    time_high_in_air numeric,
-    time_in_defending_half numeric,
-    time_in_attacking_half numeric,
-    time_in_defending_third numeric,
-    time_in_neutral_third numeric,
-    time_in_attacking_third numeric,
-    time_behind_ball numeric,
-    time_in_front_ball numeric,
-    time_near_wall numeric,
-    time_in_corner numeric,
-    average_speed numeric,
-    average_hit_distance numeric,
-    total_hits numeric,
-    total_passes numeric,
-    time_at_slow_speed numeric,
-    time_at_super_sonic numeric,
-    time_at_boost_speed numeric,
-    time_most_forward_player numeric,
-    time_most_back_player numeric,
-    time_between_players numeric
-);
-
-
---
 -- Name: user_account_private user_account_private_email_key; Type: CONSTRAINT; Schema: app_private; Owner: -
 --
 
@@ -507,30 +376,6 @@ ALTER TABLE ONLY app_public.user_account
 
 ALTER TABLE ONLY app_public.user_account
     ADD CONSTRAINT user_account_username_key UNIQUE (username);
-
-
---
--- Name: meta meta_pkey; Type: CONSTRAINT; Schema: rocket_league; Owner: -
---
-
-ALTER TABLE ONLY rocket_league.meta
-    ADD CONSTRAINT meta_pkey PRIMARY KEY (replay_id);
-
-
---
--- Name: player player_pkey; Type: CONSTRAINT; Schema: rocket_league; Owner: -
---
-
-ALTER TABLE ONLY rocket_league.player
-    ADD CONSTRAINT player_pkey PRIMARY KEY (player_id);
-
-
---
--- Name: player_stats player_stats_pkey; Type: CONSTRAINT; Schema: rocket_league; Owner: -
---
-
-ALTER TABLE ONLY rocket_league.player_stats
-    ADD CONSTRAINT player_stats_pkey PRIMARY KEY (replay_id, player_name);
 
 
 --
@@ -578,6 +423,25 @@ GRANT USAGE ON SCHEMA app_public TO app_postgraphile;
 
 
 --
+-- Name: SCHEMA csgo; Type: ACL; Schema: -; Owner: -
+--
+
+GRANT USAGE ON SCHEMA csgo TO app_anonymous;
+GRANT USAGE ON SCHEMA csgo TO app_person;
+GRANT USAGE ON SCHEMA csgo TO app_postgraphile;
+
+
+--
+-- Name: SCHEMA rocket_league; Type: ACL; Schema: -; Owner: -
+--
+
+GRANT USAGE ON SCHEMA rocket_league TO app_anonymous;
+GRANT USAGE ON SCHEMA rocket_league TO app_person;
+GRANT USAGE ON SCHEMA rocket_league TO app_postgraphile;
+GRANT USAGE ON SCHEMA rocket_league TO app_rocket_league;
+
+
+--
 -- Name: TABLE user_account; Type: ACL; Schema: app_public; Owner: -
 --
 
@@ -607,20 +471,6 @@ REVOKE ALL ON FUNCTION app_private.set_updated_at() FROM PUBLIC;
 
 
 --
--- Name: FUNCTION create_constraint_if_not_exists(t_name text, c_name text, constraint_sql text); Type: ACL; Schema: app_public; Owner: -
---
-
-REVOKE ALL ON FUNCTION app_public.create_constraint_if_not_exists(t_name text, c_name text, constraint_sql text) FROM PUBLIC;
-
-
---
--- Name: FUNCTION create_constraint_if_not_exists(t_schema text, t_name text, c_name text, constraint_sql text); Type: ACL; Schema: app_public; Owner: -
---
-
-REVOKE ALL ON FUNCTION app_public.create_constraint_if_not_exists(t_schema text, t_name text, c_name text, constraint_sql text) FROM PUBLIC;
-
-
---
 -- Name: FUNCTION current_person(); Type: ACL; Schema: app_public; Owner: -
 --
 
@@ -636,14 +486,6 @@ GRANT ALL ON FUNCTION app_public.current_person() TO app_postgraphile;
 
 REVOKE ALL ON FUNCTION app_public.register_user(username text, email text, password text) FROM PUBLIC;
 GRANT ALL ON FUNCTION app_public.register_user(username text, email text, password text) TO app_anonymous;
-
-
---
--- Name: TABLE meta; Type: ACL; Schema: rocket_league; Owner: -
---
-
-GRANT SELECT ON TABLE rocket_league.meta TO app_anonymous;
-GRANT SELECT ON TABLE rocket_league.meta TO app_person;
 
 
 --
