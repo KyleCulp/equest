@@ -68,6 +68,7 @@ BEGIN
 END IF;
 END
 $do$;
+GRANT CONNECT ON DATABASE :DATABASE_NAME TO app_rocket_league;
 --
 GRANT app_anonymous TO app_postgraphile;
 GRANT app_person TO app_postgraphile;
