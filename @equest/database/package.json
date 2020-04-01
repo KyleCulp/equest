@@ -1,0 +1,18 @@
+{
+  "name": "@equest/database",
+  "version": "0.0.0",
+  "description": "Write & automate database migrations.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "gm": "node -r @equest/config node_modules/.bin/graphile-migrate",
+    "migrate": "npm run gm migrate",
+    "reset": "npm run gm reset -- --erase",
+    "watch": "npm run gm watch"
+  },
+  "dependencies": {
+    "graphile-migrate": "^0.1.0",
+    "@equest/config": "0.0.0"
+  }
+}
