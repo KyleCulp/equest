@@ -7,6 +7,7 @@ import { PostgraphileInstance } from '../graphql/postgraphile';
 import PgManyToManyPlugin from '@graphile-contrib/pg-many-to-many';
 import { getUserClaimsFromRequest } from './installPassport';
 import { graphqlResolvers } from '../graphql/resolvers';
+import { join } from 'path';
 
 const postgraphilePlugins = [PgManyToManyPlugin];
 const postgraphileResolvers = graphqlResolvers();
@@ -79,7 +80,9 @@ export const installPostgraphile = async (app: Application) => {
           });
         }
       };
-    }
+    },
+    exportJsonSchemaPath: join(__dirname, '../../../../data/schema.json'), // export schema file
+    exportGqlSchemaPath: join(__dirname, '../../../../data/schema.gql') // export schema file
   };
 
   const pgMasterAdminPool = app.get('pgMasterAdminPool');

@@ -1,14 +1,13 @@
 import { Pool, Client } from 'pg';
 import { isEmail } from '../../utils';
-
-const { makeExtendSchemaPlugin, gql } = require('graphile-utils');
+import { makeExtendSchemaPlugin, gql } from 'graphile-utils';
 
 // This file is tab city oml
 
 export const authenticationResolver = makeExtendSchemaPlugin(build => ({
   typeDefs: gql`
     input RegisterInput {
-      username: String!
+      username: String
       email: String!
       password: String!
     }
@@ -33,14 +32,9 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
   `,
   resolvers: {
     Mutation: {
-      async register(
-        mutation,
-        args,
-        context,
-        resolveInfo,
-        { selectGraphQLResultFromTable }
-      ) {
+      async register(mutation, args, context, resolveInfo) {
         const { username = null, password, email } = args.input;
+        const { selectGraphQLResultFromTable } = resolveInfo.graphile;
         const pgMasterAdminPool: Pool = context.pgMasterAdminPool;
         const pgClient: Client = context.pgClient;
         const { login } = context;
@@ -94,17 +88,12 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
           throw e;
         }
       },
-      async login(
-        mutation,
-        args,
-        context,
-        resolveInfo,
-        { selectGraphQLResultFromTable }
-      ) {
+      async login(mutation, args, context, resolveInfo) {
         const { username, password } = args.input;
         const pgMasterAdminPool: Pool = context.pgMasterAdminPool;
         const pgClient: Client = context.pgClient;
         const { login } = context;
+        const { selectGraphQLResultFromTable } = resolveInfo.graphile;
 
         let loginSQL: string;
         if (isEmail(username)) {
@@ -112,20 +101,27 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
         } else {
           loginSQL = `select user_account.* from app_private.authenticate_by_username($1, $2) user_account where not (user_account is null)`;
         }
+
         try {
           // Call our login function to find out if the username/password combination exists
           const {
             rows: [user]
           } = await pgMasterAdminPool.query(loginSQL, [username, password]);
 
-          if (!user) {
-            throw new Error('Login failed');
-          }
+          if (!user) throw new Error('Login failed');
 
           const sql = build.pgSql;
 
+          const result = await selectGraphQLResultFromTable(
+            sql.fragment`app_public.user_account`,
+            (tableAlias, queryBuilder) => {
+              queryBuilder.where(
+                sql.fragment`${tableAlias}.user_id = ${sql.value(user.user_id)}`
+              );
+            }
+          );
+
           const results = await Promise.all([
-            // Fetch the data that was requested from GraphQL, and return it
             selectGraphQLResultFromTable(
               sql.fragment`app_public.user_account`,
               (tableAlias, sqlBuilder) => {
@@ -136,7 +132,6 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
                 );
               }
             ),
-
             // Tell Passport.js we're logged in
             login(user),
 
@@ -147,9 +142,10 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
             ])
           ]);
 
-          const [row] = results[0];
+          console.log(result);
+
           return {
-            data: row
+            data: result
           };
         } catch (e) {
           console.error(e);

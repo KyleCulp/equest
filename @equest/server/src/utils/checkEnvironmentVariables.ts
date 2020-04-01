@@ -1,4 +1,4 @@
-require('dotenv').config();
+import '@pcpb/config';
 
 /*
  *	Check that all environmental variables are present, and throw

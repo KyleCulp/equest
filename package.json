@@ -5,7 +5,8 @@
   "scripts": {
     "lerna": "lerna",
     "init": "node -r dotenv/config scripts/init.js",
-    "server:dev": "npm run start:dev --prefix @equest/server",
+    "bootstrap": "npm run lerna bootstrap",
+    "server:dev": "npm run dev --prefix @equest/server",
     "database:reset": "npm run reset --prefix @equest/database",
     "database:watch": "npm run watch --prefix @equest/database",
     "database:commit": "npm run commit --prefix @equest/database",

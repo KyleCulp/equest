@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const { join } = require('path');
 
-const schemas = ['app_public', 'rocket_league', 'csgo'];
+const schemas = ['app_public'];
 // const pluginHook = makePluginHook([PgPubSub].filter(_ => _));
 
 const {
@@ -38,8 +38,6 @@ export const postgraphileOptionsDevelopment: PostGraphileOptions = {
   // skipPlugins: , // Skip core plugins
   // readCache: , // production only
   // writeCache: , // production only
-  exportJsonSchemaPath: join(__dirname, '../../../data/schema.json'), // export schema file
-  exportGqlSchemaPath: join(__dirname, '../../../data/schema.gql'), // export schema file
   // sortExport: false,
   graphqlRoute: '/postgraphile',
   graphiqlRoute: '/graphiql',
