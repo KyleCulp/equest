@@ -11,7 +11,7 @@ export const installSession = async (app: Application) => {
   });
 
   const sessionMiddleware = session({
-    name: 'pcpbsid',
+    name: 'equestsid',
     rolling: false,
     saveUninitialized: false,
     resave: false,

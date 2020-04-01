@@ -1,3 +1,7 @@
+*/**/dist
+*/*/dist
+#lol
+
 # build artifact folders
 dist
 cjs

@@ -1,6 +1,10 @@
 const { Client } = require('pg');
+const prompt = require('prompt');
+const npm = require('npm');
 
-async function main() {
+prompt.start();
+
+async function installPostgres() {
   const connectionString = process.env.ROOT_DATABASE_URL;
   if (!connectionString) {
     throw new Error('ROOT_DATABASE_URL not set!');
@@ -46,13 +50,22 @@ async function main() {
   client.query(sqlFile, (err, result) => {
     if (err) {
       console.log('error: ', err);
-      process.exit(1);
     }
-    process.exit(0);
   });
 }
 
-main().catch(e => {
-  console.error(e);
-  process.exit(1);
+installPostgres();
+
+npm.load(() => {
+  console.log(
+    'This will reset the database, are you sure you want to do this? (Y/N)'
+  );
+  let answer;
+  prompt.get(['answer'], function(err, result) {
+    if (err) return onErr(err);
+    if (result.answer == 'y' || result.answer == 'Y') {
+      npm.run('database:reset', err => console.log(err));
+      // await npm.run('database:migrate', err => console.log(err));
+    }
+  });
 });

@@ -20,7 +20,9 @@ Past troubles: Some packages are wrapper for a C program, which have different b
 
 ### Initialiation
 
-Run `npm run init`. This will initialise the postgres database, download and bootstrap all project dependencies, and other neccessities.
+Install monorepo packages with `npm i`.
+
+After monorepo cli's are installed, run `npm run init`. This will initialise the postgres database, download and bootstrap all project dependencies, and other neccessities.
 
 ## Helpful docs
 

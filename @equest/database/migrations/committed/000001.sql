@@ -1,8 +1,9 @@
 --! Previous: -
---! Hash: sha1:19c3bda274b4d417e7aff956afc9e983b9b5447c
+--! Hash: sha1:3a3c962083a821e84c82fcf8c859f8c8d507ae4f
 
+--! split: 01-current.sql
 -- Enter migration here
--- User Account Table
+--
 
 CREATE TABLE IF NOT EXISTS app_public.user_account (
   user_id uuid PRIMARY KEY DEFAULT public.uuid_generate_v1mc (),
@@ -210,5 +211,3 @@ STRICT
 SECURITY DEFINER;
 
 COMMENT ON FUNCTION app_private.authenticate_by_username (text, text) IS 'Internal function to be called by postgraphile`s resolvers.';
-
---

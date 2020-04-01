@@ -9,7 +9,9 @@
     "gm": "node -r @equest/config node_modules/.bin/graphile-migrate",
     "migrate": "npm run gm migrate",
     "reset": "npm run gm reset -- --erase",
-    "watch": "npm run gm watch"
+    "watch": "npm run gm watch",
+    "commit": "npm run gm commit",
+    "uncommit": "npm run gm uncommit"
   },
   "dependencies": {
     "graphile-migrate": "^0.1.0",

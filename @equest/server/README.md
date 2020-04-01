@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const server = require('@pcpb/server');
+const server = require('@equest/server');
 
 // TODO: DEMONSTRATE API
 ```

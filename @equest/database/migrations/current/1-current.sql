@@ -1,5 +1,5 @@
--- -- Enter migration here
--- --
+-- Enter migration here
+--
 -- -- Name: meta; Type: TABLE; Schema: public; Owner: devadmin
 -- --
 -- -- Function to check if constraint exists, then execute if it doesn't.
@@ -231,7 +231,5 @@
 --   players text[],
 --   PRIMARY KEY (team_id)
 -- );
-
-GRANT SELECT ON TABLE rocket_league.teams TO app_anonymous, app_rocket_league, app_person;
-
+-- GRANT SELECT ON TABLE rocket_league.teams TO app_anonymous, app_rocket_league, app_person;
 -- GRANT INSERT ON TABLE rocket_league.teams TO app_rocket_league;

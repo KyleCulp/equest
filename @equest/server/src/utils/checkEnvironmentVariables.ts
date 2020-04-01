@@ -1,4 +1,4 @@
-import '@pcpb/config';
+import '@equest/config';
 
 /*
  *	Check that all environmental variables are present, and throw

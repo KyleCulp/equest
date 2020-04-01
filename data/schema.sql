@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 11.7 (Debian 11.7-1.pgdg90+1)
--- Dumped by pg_dump version 11.7 (Debian 11.7-1.pgdg90+1)
+-- Dumped from database version 11.7 (Debian 11.7-2.pgdg90+1)
+-- Dumped by pg_dump version 11.7 (Debian 11.7-2.pgdg90+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -28,13 +28,6 @@ CREATE SCHEMA app_private;
 --
 
 CREATE SCHEMA app_public;
-
-
---
--- Name: csgo; Type: SCHEMA; Schema: -; Owner: -
---
-
-CREATE SCHEMA csgo;
 
 
 --
@@ -423,22 +416,13 @@ GRANT USAGE ON SCHEMA app_public TO app_postgraphile;
 
 
 --
--- Name: SCHEMA csgo; Type: ACL; Schema: -; Owner: -
---
-
-GRANT USAGE ON SCHEMA csgo TO app_anonymous;
-GRANT USAGE ON SCHEMA csgo TO app_person;
-GRANT USAGE ON SCHEMA csgo TO app_postgraphile;
-
-
---
 -- Name: SCHEMA rocket_league; Type: ACL; Schema: -; Owner: -
 --
 
+GRANT USAGE ON SCHEMA rocket_league TO app_rocket_league;
 GRANT USAGE ON SCHEMA rocket_league TO app_anonymous;
 GRANT USAGE ON SCHEMA rocket_league TO app_person;
 GRANT USAGE ON SCHEMA rocket_league TO app_postgraphile;
-GRANT USAGE ON SCHEMA rocket_league TO app_rocket_league;
 
 
 --
@@ -492,7 +476,7 @@ GRANT ALL ON FUNCTION app_public.register_user(username text, email text, passwo
 -- Name: DEFAULT PRIVILEGES FOR FUNCTIONS; Type: DEFAULT ACL; Schema: -; Owner: -
 --
 
-ALTER DEFAULT PRIVILEGES FOR ROLE devuser REVOKE ALL ON FUNCTIONS  FROM PUBLIC;
+ALTER DEFAULT PRIVILEGES FOR ROLE devadmin REVOKE ALL ON FUNCTIONS  FROM PUBLIC;
 
 
 --

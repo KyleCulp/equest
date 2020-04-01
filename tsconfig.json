@@ -67,9 +67,9 @@
     "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */
   },
   "references": [
-    { "path": "@pcpb/config" },
-    { "path": "@pcpb/client" },
-    { "path": "@pcpb/graphql" },
-    { "path": "@pcpb/server" }
+    { "path": "@equest/config" },
+    { "path": "@equest/client" },
+    { "path": "@equest/graphql" },
+    { "path": "@equest/server" }
   ]
 }
