@@ -51,21 +51,26 @@ async function installPostgres() {
     if (err) {
       console.log('error: ', err);
     }
+    client.end();
   });
 }
 
 installPostgres();
 
-npm.load(() => {
-  console.log(
-    'This will reset the database, are you sure you want to do this? (Y/N)'
-  );
-  let answer;
-  prompt.get(['answer'], function(err, result) {
-    if (err) return onErr(err);
-    if (result.answer == 'y' || result.answer == 'Y') {
-      npm.run('database:reset', err => console.log(err));
-      // await npm.run('database:migrate', err => console.log(err));
-    }
+async function main() {
+  await installPostgres();
+  npm.load(() => {
+    console.log(
+      'This will reset the database, are you sure you want to do this? (Y/N)'
+    );
+    prompt.get(['answer'], function(err, result) {
+      if (err) return onErr(err);
+      if (result.answer == 'y' || result.answer == 'Y') {
+        npm.run('database:reset', err => console.log(err));
+        npm.run('database:migrate', err => console.log(err));
+      }
+    });
   });
-});
+}
+
+main();

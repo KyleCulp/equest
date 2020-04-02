@@ -3,16 +3,19 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lerna": "lerna",
+    "lerna": "node_modules/.bin/lerna",
     "bootstrap": "npm run lerna bootstrap",
     "link": "npm run lerna link",
+    "build": "npm run lerna run build",
     "init": "node -r dotenv/config scripts/init.js",
     "server:dev": "npm run dev --prefix @equest/server",
     "database:reset": "npm run reset --prefix @equest/database",
     "database:watch": "npm run watch --prefix @equest/database",
     "database:commit": "npm run commit --prefix @equest/database",
     "database:uncommit": "npm run uncommit --prefix @equest/database",
-    "database:migrate": "npm run migrate --prefix @equest/database"
+    "database:migrate": "npm run migrate --prefix @equest/database",
+    "graphql:codegen": "npm run migrate --prefix @equest/graphql",
+    "graphql:watch": "npm run migrate --prefix @equest/graphql",
   },
   "devDependencies": {
     "@types/node": "^13.9.1",

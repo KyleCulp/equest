@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process");
-const { basename, dirname, resolve } = require("path");
+const { execSync } = require('child_process');
+const { basename, dirname, resolve } = require('path');
 
-const projectName = basename(dirname(resolve(__dirname, "..")));
+const projectName = basename(dirname(resolve(__dirname, '..')));
 
 try {
   execSync(
-    `docker volume rm ${projectName}_db-volume ${projectName}_node_modules-volume ${projectName}_vscode-extensions ${projectName}_devcontainer_db-volume ${projectName}_devcontainer_node_modules-volume ${projectName}_devcontainer_vscode-extensions`,
-    { stdio: "inherit" }
+    `docker volume rm ${projectName}_equest-nm_root ${projectName}_equest-pgadmin-volume ${projectName}_equest-postgres-volume ${projectName}_equest-redis-volume ${projectName}_equest-vscode-extensions ${projectName}_equest-vscode-volume`,
+    { stdio: 'inherit' }
   );
 } catch (e) {
   /* noop */

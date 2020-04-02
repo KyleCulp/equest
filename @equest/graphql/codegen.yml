@@ -1,0 +1,18 @@
+overwrite: true
+schema: '../../data/schema.gql'
+documents: '../client/src/**/*.gql'
+config:
+  scalars:
+    Datetime: 'string'
+    JSON: '{ [key: string]: any }'
+  noGraphQLTag: false
+  withHOC: false
+  withComponent: false
+  withHooks: true
+generates:
+  index.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+      - "typescript-resolvers"

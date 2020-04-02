@@ -1,0 +1,19 @@
+{
+  "name": "@equest/graphql",
+  "version": "0.0.0",
+  "description": "Provides packages access to types & apoll client functions.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "codegen": "node_modules/.bin/graphql-codegen --config codegen.yml",
+    "watch": "npm run codegen --watch",
+    "build": "npm run codegen && node_modules/.bin/tsc -b"
+  },
+  "dependencies": {
+    "@graphql-codegen": "^1.13.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^13.9.5"
+  }
+}
