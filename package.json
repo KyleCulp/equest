@@ -14,11 +14,16 @@
     "database:commit": "npm run commit --prefix @equest/database",
     "database:uncommit": "npm run uncommit --prefix @equest/database",
     "database:migrate": "npm run migrate --prefix @equest/database",
-    "graphql:codegen": "npm run migrate --prefix @equest/graphql",
-    "graphql:watch": "npm run migrate --prefix @equest/graphql",
+    "graphql:codegen": "npm run codegen --prefix @equest/graphql",
+    "graphql:watch": "npm run watch --prefix @equest/graphql",
+    "client:dev": "npm run dev --prefix @equest/client"
   },
   "devDependencies": {
+    "@types/jwt-decode": "^2.2.1",
     "@types/node": "^13.9.1",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-router-dom": "^5.1.3",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "eslint": "^6.8.0",
@@ -31,5 +36,9 @@
     "lerna": "^3.20.2",
     "typescript": "^3.8.3",
     "dotenv": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyleculp/equest.git"
   }
 }
