@@ -7,7 +7,7 @@ export const authTypeDefs = gql`
   }
 `;
 
-export const authResolvers: AppResolvers = {
+export const authResolvers = {
   // Launch: {
   //   isInCart: (launch: LaunchTileTypes.LaunchTile, _, { cache }): boolean => {
   //     const queryResult = cache.readQuery<GetCartItemTypes.GetCartItems>({

@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "build": "yarn run clean-dist && webpack -p --config=configs/webpack/prod.js",
+    "build": "yarn run clean-dist && webpack -p --config=webpack/production.js",
     "clean-dist": "rm -rf dist/*",
     "dev": "node_modules/.bin/webpack-dev-server --config=webpack/development.js",
     "test": "jest --coverage --watchAll --config=configs/jest.json"

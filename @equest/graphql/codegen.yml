@@ -2,13 +2,13 @@ overwrite: true
 schema: '../../data/schema.gql'
 documents: '../client/src/**/*.gql'
 generates:
-  index.tsx:
+  src/generated.ts:
     plugins:
       - add: /* THIS IS A GENERATED FILE - DO NOT MODIFY */
       - 'typescript'
       - 'typescript-operations'
-      - 'typescript-react-apollo'
       - 'typescript-resolvers'
+      - 'typescript-react-apollo'
     config:
       scalars:
         Datetime: 'string'

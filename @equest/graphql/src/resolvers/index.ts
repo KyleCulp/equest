@@ -21,6 +21,6 @@ export interface AppResolvers extends Resolvers {
 }
 
 // Combine resolvers
-export const clientResolvers: AppResolvers = {
+export const clientResolvers = {
   ...authResolvers
 };

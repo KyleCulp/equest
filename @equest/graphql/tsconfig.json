@@ -1,13 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "outDir": ".",
-    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
-    "declarationDir": ".",
-    "target": "es2018",
-    "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "dist",
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "declarationDir": "dist",
     "jsx": "react"
   },
-  "include": ["index.tsx", "Client"]
+  "include": ["src"],
+  "exclude": ["node_modules", "node_modules/@apollo", "@apollo"]
 }

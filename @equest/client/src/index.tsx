@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloProvider } from '@apollo/client';
 import App from './app';
-// import { Client } from 'gql';
+import { client } from '@equest/graphql';
 
 ReactDOM.render(
-  // <ApolloProvider client={Client}>
-  <App />,
-  // </ApolloProvider>,
+  <ApolloProvider client={client}>
+    <App />,
+  </ApolloProvider>,
   document.getElementById('app')
 );

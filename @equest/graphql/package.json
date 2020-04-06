@@ -7,19 +7,23 @@
   "scripts": {
     "codegen": "node_modules/.bin/graphql-code-generator --config codegen.yml",
     "watch": "npm run codegen --watch",
-    "build": "npm run codegen && node_modules/.bin/tsc -b"
+    "build2": "npm run codegen && node_modules/.bin/tsc -b"
   },
   "dependencies": {
-    "@apollo/react-common": "^3.1.3",
     "@apollo/client": "^3.0.0-beta.41",
+    "@apollo/link-retry": "^2.0.0-beta.3",
+    "@apollo/react-common": "^3.1.3",
+    "@apollo/react-hooks": "^3.1.4",
+    "apollo-client": "^2.6.8",
     "apollo-utilities": "^1.3.3",
+    "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
     "react": "^16.13.1",
-    "graphql": "^15.0.0"
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.13.1",
     "@graphql-codegen/add": "^1.13.1",
+    "@graphql-codegen/cli": "^1.13.1",
     "@graphql-codegen/typescript": "^1.13.1",
     "@graphql-codegen/typescript-operations": "^1.13.1",
     "@graphql-codegen/typescript-react-apollo": "^1.13.1",
