@@ -1,6 +1,6 @@
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client';
 
-import { clientResolvers, clientTypeDefs } from '../resolvers';
+import { clientResolvers, clientTypeDefs } from './resolvers';
 import { clientCache } from './cache';
 import { clientLinks } from './links';
 

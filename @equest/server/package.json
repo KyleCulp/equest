@@ -2,6 +2,8 @@
   "name": "@equest/server",
   "version": "0.0.0",
   "description": "Express server with GraphQL API Middleware",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -b",
     "start": "node -r @app/config dist/index.js",
@@ -9,6 +11,8 @@
   },
   "dependencies": {
     "@equest/config": "0.0.0",
+    "@equest/graphql": "0.0.0",
+    "@equest/utils": "0.0.0",
     "@cloudnative/health-connect": "^2.1.0",
     "@graphile-contrib/pg-many-to-many": "^1.0.0-beta.12",
     "chalk": "^3.0.0",
@@ -20,8 +24,7 @@
     "lodash": "^4.17.15",
     "passport": "^0.4.0",
     "pg": "^7.17.0",
-    "postgraphile": "^4.5.0",
-    "reflect-metadata": "^0.1.13"
+    "postgraphile": "^4.5.0"
   },
   "devDependencies": {
     "@types/compression": "^1.0.1",
@@ -40,6 +43,7 @@
     "concurrently": "^5.0.2",
     "dotenv": "^8.2.0",
     "http-proxy": "^1.18.0",
+    "reflect-metadata": "^0.1.13",
     "ts-node-dev": "^1.0.0-pre.44"
   }
 }

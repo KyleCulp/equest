@@ -1,5 +1,5 @@
 import { Pool, Client } from 'pg';
-import { isEmail } from '../../utils';
+import { isEmail } from '../../../server/src/utils';
 import { makeExtendSchemaPlugin, gql } from 'graphile-utils';
 
 // This file is tab city oml

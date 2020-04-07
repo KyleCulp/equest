@@ -1,9 +1,9 @@
 import express, { Express } from 'express';
 import {
-	installDatabasePools,
-	installSession,
-	installPassport,
-	installPostgraphile
+  installDatabasePools,
+  installSession,
+  installPassport,
+  installPostgraphile,
 } from './middleware';
 import * as health from '@cloudnative/health-connect';
 
@@ -20,10 +20,10 @@ app.set('websocketMiddlewares', websocketMiddlewares);
  * Middleware installation requires a specific order
  */
 const installMiddleware = async () => {
-	await installDatabasePools(app);
-	await installSession(app);
-	await installPassport(app);
-	await installPostgraphile(app);
+  await installDatabasePools(app);
+  await installSession(app);
+  await installPassport(app);
+  await installPostgraphile(app);
 };
 
 installMiddleware();

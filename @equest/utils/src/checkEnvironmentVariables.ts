@@ -23,7 +23,7 @@ enum EnvironmentalVariables {
   REDIS_QUEUE_DB,
   SERVER_URL,
   SERVER_PORT,
-  JWT_SECRET
+  JWT_SECRET,
 }
 
 /**
@@ -46,14 +46,20 @@ const isString = (value: string | number) => isNaN(Number(value)) === false;
 export function enumToArray(value: typeof EnvironmentalVariables) {
   return Object.keys(value)
     .filter(isString)
-    .map(key => value[key]);
+    .map((key) => value[key]);
 }
 
 /**
  * Checks if needed environmental variables are available. Throws error at any missing
  */
-export const checkEnvironmentVariables = () => {
-  for (const envVar of enumToArray(EnvironmentalVariables)) {
+/**
+ * Checks if needed environmental variables are available. Throws error at any missing
+ *
+ * @param envList - The first input number
+ * @returns The arithmetic mean of `x` and `y`
+ */
+export const checkEnvironmentVariables = (envList) => {
+  for (const envVar of enumToArray(envList)) {
     if (!process.env[envVar]) {
       throw new Error('Missing environment variable: ' + envVar);
     }

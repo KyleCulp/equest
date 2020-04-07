@@ -3,14 +3,14 @@
 
 import postgraphile, { enhanceHttpServerWithSubscriptions } from 'postgraphile';
 import { Application } from 'express';
-import { PostgraphileInstance } from '../graphql/postgraphile';
+import { PostgraphileInstance } from '../postgraphile';
 import PgManyToManyPlugin from '@graphile-contrib/pg-many-to-many';
 import { getUserClaimsFromRequest } from './installPassport';
-import { graphqlResolvers } from '../graphql/resolvers';
 import { join } from 'path';
+import { serverResolvers } from '@equest/graphql';
 
 const postgraphilePlugins = [PgManyToManyPlugin];
-const postgraphileResolvers = graphqlResolvers();
+const postgraphileResolvers = serverResolvers();
 
 export const installPostgraphile = async (app: Application) => {
   const { schemas, postgraphileOptions } = PostgraphileInstance;
@@ -55,7 +55,7 @@ export const installPostgraphile = async (app: Application) => {
            */
           memo[`jwt.claims.${key}`] = value;
           return memo;
-        }, {})
+        }, {}),
       };
       // return {
       //   role: 'app_anonymous',
@@ -70,19 +70,19 @@ export const installPostgraphile = async (app: Application) => {
       return {
         claims,
         pgMasterAdminPool,
-        login: user => {
+        login: (user) => {
           if (!user) throw new Error('user argument is required');
           return new Promise((resolve, reject) => {
-            req.login(user, err => {
+            req.login(user, (err) => {
               if (err) reject(new Error(err));
               resolve(user);
             });
           });
-        }
+        },
       };
     },
     exportJsonSchemaPath: join(__dirname, '../../../../data/schema.json'), // export schema file
-    exportGqlSchemaPath: join(__dirname, '../../../../data/schema.gql') // export schema file
+    exportGqlSchemaPath: join(__dirname, '../../../../data/schema.gql'), // export schema file
   };
 
   const pgMasterAdminPool = app.get('pgMasterAdminPool');
