@@ -1,25 +1,19 @@
+import postgraphile from 'postgraphile';
+import { Application } from 'express';
+import { PostgraphileInstance } from '../graphql';
+import { getUserClaimsFromRequest } from './installPassport';
+
 // Lots of stuff from Graphile's bootstrap-react-apollo repo
 // Including comments, so props to graphile
 
-import postgraphile, { enhanceHttpServerWithSubscriptions } from 'postgraphile';
-import { Application } from 'express';
-import { PostgraphileInstance } from '../postgraphile';
-import PgManyToManyPlugin from '@graphile-contrib/pg-many-to-many';
-import { getUserClaimsFromRequest } from './installPassport';
-import { join } from 'path';
-import { serverResolvers } from '@equest/graphql';
-
-const postgraphilePlugins = [PgManyToManyPlugin];
-const postgraphileResolvers = serverResolvers();
-
 export const installPostgraphile = async (app: Application) => {
   const { schemas, postgraphileOptions } = PostgraphileInstance;
+  const pgMasterAdminPool = app.get('pgMasterAdminPool');
+
   const websocketMiddlewares = app.get('websocketMiddlewares');
   const appendedOptions = {
     ...postgraphileOptions,
     ...websocketMiddlewares,
-    appendPlugins: postgraphilePlugins.concat(postgraphileResolvers),
-
     /* Postgres transaction settings for each GraphQL query/mutation to
      * indicate to Postgres who is attempting to access the resources. These
      * will be referenced by RLS policies/triggers/etc.
@@ -37,7 +31,7 @@ export const installPostgraphile = async (app: Application) => {
       const claims = await getUserClaimsFromRequest(req);
       return {
         // Everyone uses the "visitor" role currently
-        role: process.env.DATABASE_VISITOR,
+        role: 'app_anonymous',
 
         // If there are any claims, then add them into the session.
         // Although this is pretty catch all, it's just going to be
@@ -64,7 +58,6 @@ export const installPostgraphile = async (app: Application) => {
     },
 
     async additionalGraphQLContextFromRequest(req) {
-      const pgMasterAdminPool = app.get('pgMasterAdminPool');
       const claims = await getUserClaimsFromRequest(req);
 
       return {
@@ -81,11 +74,7 @@ export const installPostgraphile = async (app: Application) => {
         },
       };
     },
-    exportJsonSchemaPath: join(__dirname, '../../../../data/schema.json'), // export schema file
-    exportGqlSchemaPath: join(__dirname, '../../../../data/schema.gql'), // export schema file
   };
-
-  const pgMasterAdminPool = app.get('pgMasterAdminPool');
 
   // Install the PostGraphile middleware
   const postgraphileMiddleware = postgraphile(

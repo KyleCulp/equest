@@ -1,14 +1,7 @@
 import IORedis from 'ioredis';
-require('dotenv').config();
+import '@equest/config';
 
-const {
-  REDIS_HOST,
-  REDIS_PORT,
-  REDIS_FAMILY,
-  REDIS_PASSWORD,
-  REDIS_SESSION_DB,
-  REDIS_QUEUE_DB
-} = process.env;
+const { REDIS_HOST, REDIS_PORT, REDIS_FAMILY, REDIS_PASSWORD } = process.env;
 
 /**
  * Return a redis client instance, connnecting to the provided database
@@ -22,6 +15,6 @@ export const redisInstance = async (database: number) => {
     host: REDIS_HOST,
     family: parseInt(REDIS_FAMILY!),
     // password: REDIS_PASSWORD,
-    db: database
+    db: database,
   });
 };

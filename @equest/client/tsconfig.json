@@ -1,26 +1,20 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "module": "esnext",
-    "outDir": "dist",
-    "removeComments": true,
-    "preserveConstEnums": true,
     "sourceMap": true,
-    "target": "ESNext",
-    "allowJs": true,
-    "checkJs": false,
+    "target": "es5",
     "jsx": "react",
-    "pretty": true,
-    "skipLibCheck": true,
-    "strict": true,
+    "module": "es6",
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "lib": ["dom", "dom.iterable", "ESNext"],
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true
+    "experimentalDecorators": true,
+    "declaration": false,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "outDir": "dist",
+    "lib": ["es6", "es7", "dom"]
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

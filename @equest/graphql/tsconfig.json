@@ -5,7 +5,8 @@
     "outDir": "dist",
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
     "declarationDir": "dist",
-    "jsx": "react"
+    "jsx": "react",
+    "skipLibCheck": true // Otherwise node_modules/@apollo throw up a ton of type errors that tsc wont exclude
   },
   "include": ["src"],
   "exclude": ["node_modules"]

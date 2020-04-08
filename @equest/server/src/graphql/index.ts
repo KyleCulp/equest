@@ -1,23 +1,28 @@
 import { PostGraphileOptions } from 'postgraphile';
+import PgManyToManyPlugin from '@graphile-contrib/pg-many-to-many';
+import { getGraphqlResolvers } from './resolvers';
+import { join } from 'path';
+import { isDev } from '@equest/utils';
 
-require('dotenv').config();
-
-const { join } = require('path');
-
-const schemas = ['app_public'];
-// const pluginHook = makePluginHook([PgPubSub].filter(_ => _));
+const schemas = ['app_public', 'rocket_league', 'csgo'];
 
 const {
   PG_MASTER_ADMIN_USERNAME,
   PG_MASTER_ADMIN_PASSWORD,
   PG_MASTER_HOST,
   PG_MASTER_PORT,
-  PG_MASTER_NAME
+  PG_MASTER_NAME,
 } = process.env;
 
 const ownerConnectionString = `postgres://${PG_MASTER_ADMIN_USERNAME}:${PG_MASTER_ADMIN_PASSWORD}@${PG_MASTER_HOST}:${PG_MASTER_PORT}/${PG_MASTER_NAME}`;
 
+const postgraphilePlugins = [PgManyToManyPlugin];
+const postgraphileResolvers = getGraphqlResolvers();
+
 export const postgraphileOptionsDevelopment: PostGraphileOptions = {
+  appendPlugins: postgraphilePlugins.concat(postgraphileResolvers),
+  exportJsonSchemaPath: join(__dirname, '../../../../data/schema.json'), // export schema file
+  exportGqlSchemaPath: join(__dirname, '../../../../data/schema.gql'), // export schema file
   watchPg: true,
   retryOnInitFail: false,
   ownerConnectionString: ownerConnectionString,
@@ -72,8 +77,8 @@ export const postgraphileOptionsDevelopment: PostGraphileOptions = {
      * with non-database-owner privileges, so we don't need to be warned that
      * they were not installed
      */
-    pgSkipInstallingWatchFixtures: true
-  }
+    pgSkipInstallingWatchFixtures: true,
+  },
   // async pgSettings(req: IncomingMessage) {
   // 	const claims = await getUserClaimsFromRequest(req);
   // 	return {
@@ -102,15 +107,14 @@ export const postgraphileOptionsDevelopment: PostGraphileOptions = {
 // Haven't made it prod-ready yet
 // Overwrite dev settings with prod settings
 export const postgraphileOptionsProduction: PostGraphileOptions = {
-  ...postgraphileOptionsDevelopment
+  ...postgraphileOptionsDevelopment,
 };
 
-const postgraphileOptions =
-  process.env.NODE_ENV === 'development'
-    ? postgraphileOptionsDevelopment
-    : postgraphileOptionsProduction;
+const postgraphileOptions = isDev
+  ? postgraphileOptionsDevelopment
+  : postgraphileOptionsProduction;
 
 export const PostgraphileInstance = {
   schemas,
-  postgraphileOptions
+  postgraphileOptions,
 };

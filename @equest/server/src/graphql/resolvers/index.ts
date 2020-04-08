@@ -1,5 +1,5 @@
 import { authenticationResolver } from './authenticationResolver';
 
-export const serverResolvers = () => {
+export const getGraphqlResolvers = () => {
   return [authenticationResolver];
 };

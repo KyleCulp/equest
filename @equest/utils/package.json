@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -b",
+    "build": "../../node_modules/.bin/tsc -b",
     "clean-dist": "rm -rf dist/*",
     "test": "jest --coverage --watchAll --config=configs/jest.json"
   },

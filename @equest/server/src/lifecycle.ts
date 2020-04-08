@@ -20,4 +20,6 @@ enum EnvironmentalVariables {
   JWT_SECRET,
 }
 
+export const handleLifecycle = () => {};
+
 checkEnvironmentVariables(EnvironmentalVariables);
