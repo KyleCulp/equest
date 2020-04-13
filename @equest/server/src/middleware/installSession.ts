@@ -1,10 +1,11 @@
 import { RedisStore as IRedisStore } from 'connect-redis';
 import session = require('express-session');
 import { Application } from 'express';
+import { Redis } from 'ioredis';
 const RedisStore = require('connect-redis')(session);
 
 export const installSession = async (app: Application) => {
-  const redisClient = app.get('redisSession');
+  const redisClient: Redis = app.get('redisSession');
   const sessionStore: IRedisStore = new RedisStore({
     client: redisClient,
   });

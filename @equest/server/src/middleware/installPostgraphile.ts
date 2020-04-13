@@ -2,13 +2,14 @@ import postgraphile from 'postgraphile';
 import { Application } from 'express';
 import { PostgraphileInstance } from '../graphql';
 import { getUserClaimsFromRequest } from './installPassport';
+import { Pool } from 'pg';
 
 // Lots of stuff from Graphile's bootstrap-react-apollo repo
 // Including comments, so props to graphile
 
 export const installPostgraphile = async (app: Application) => {
   const { schemas, postgraphileOptions } = PostgraphileInstance;
-  const pgMasterAdminPool = app.get('pgMasterAdminPool');
+  const pgMasterAdminPool: Pool = app.get('pgMasterAdminPool');
 
   const websocketMiddlewares = app.get('websocketMiddlewares');
   const appendedOptions = {

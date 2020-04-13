@@ -1,22 +1,8 @@
-import { createBrowserHistory } from 'history';
-import React, { useEffect, useState } from 'react';
-
-// import { setAccessToken } from '@Utils/Authentication';
-
-// import { Routes } from './Routes/Routes';
+import React from 'react';
+import { Routes } from './routes';
 
 type Props = {};
 
-export const history = createBrowserHistory();
-
-const App: React.FC<Props> = () => {
-  return (
-    // Empty shell rn
-    // <Routes {...props} />
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
+export const App: React.FC<Props> = () => {
+  return <Routes />;
 };
-
-export default App;

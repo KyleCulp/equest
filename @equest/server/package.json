@@ -10,20 +10,21 @@
     "dev": "node_modules/.bin/tsnd src/index.ts"
   },
   "dependencies": {
+    "@cloudnative/health-connect": "^2.1.0",
     "@equest/config": "0.0.0",
     "@equest/graphql": "0.0.0",
     "@equest/utils": "0.0.0",
-    "@cloudnative/health-connect": "^2.1.0",
     "@graphile-contrib/pg-many-to-many": "^1.0.0-beta.12",
     "chalk": "^3.0.0",
     "connect-redis": "^4.0.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
-    "graphile-migrate": "0.0.17",
+    "graphile-migrate": "^0.1.0",
     "ioredis": "^4.14.1",
     "lodash": "^4.17.15",
     "passport": "^0.4.0",
-    "pg": "^7.17.0",
+    "pg": "^7.18.2",
     "postgraphile": "^4.5.0"
   },
   "devDependencies": {
@@ -37,7 +38,7 @@
     "@types/http-proxy": "^1.17.2",
     "@types/ioredis": "^4.0.20",
     "@types/lodash": "^4.14.149",
-    "@types/node": "^13.1.1",
+    "@types/node": "^13.9.5",
     "@types/passport": "^1.0.2",
     "@types/pg": "^7.11.2",
     "concurrently": "^5.0.2",

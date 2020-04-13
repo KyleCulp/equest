@@ -48,7 +48,7 @@ export const postgraphileOptionsDevelopment: PostGraphileOptions = {
   graphiqlRoute: '/graphiql',
   graphiql: true,
   enhanceGraphiql: true,
-  enableCors: true, // Unknown what this does
+  enableCors: false, // Unknown what this does
   bodySizeLimit: '200kB', // Default is '100kB'
   enableQueryBatching: true, // Experimental, allows for multiple queries in one request
   // jwtSecret: 'pleaseacceptmyjwt',

@@ -6,19 +6,16 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "codegen": "node_modules/.bin/graphql-code-generator --config codegen.yml",
-    "watch": "npm run codegen --watch",
-    "build": "npm run codegen && ../../node_modules/.bin/tsc -b"
+    "watch": "node_modules/.bin/graphql-code-generator --config dev.codegen.yml --watch",
+    "build": "npm run codegen && ../../node_modules/.bin/tsc -b",
+    "devbuild": "node_modules/.bin/graphql-code-generator --config dev.codegen.yml && ../../node_modules/.bin/tsc -b"
   },
   "dependencies": {
-    "@apollo/client": "^3.0.0-beta.41",
+    "@apollo/client": "^3.0.0-beta.43",
     "@apollo/link-retry": "^2.0.0-beta.3",
-    "@apollo/react-common": "^3.1.3",
-    "@apollo/react-hooks": "^3.1.4",
     "@equest/config": "0.0.0",
     "@equest/utils": "0.0.0",
-    "apollo-client": "^2.6.8",
     "apollo-utilities": "^1.3.3",
-    "graphile-utils": "^4.5.6",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
     "i": "^0.3.6",
@@ -36,7 +33,7 @@
     "@types/dotenv": "^8.2.0",
     "@types/js-cookie": "^2.2.5",
     "@types/node": "^13.9.5",
-    "@types/react": "^16.9.25",
+    "@types/react": "^16.9.32",
     "tslib": "^1.11.1"
   }
 }
