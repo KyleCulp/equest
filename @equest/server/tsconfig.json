@@ -4,7 +4,9 @@
     "rootDir": "src",
     "outDir": "dist",
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "target": "es2018" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */,
+    "lib": ["es2018", "esnext.asynciterable"]
   },
   "include": ["src"],
   "references": [{ "path": "../config" }]

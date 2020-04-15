@@ -6,6 +6,7 @@ import {
   installPostgraphile,
 } from './middleware';
 import * as health from '@cloudnative/health-connect';
+import cors from 'cors';
 
 export const app: Express = express();
 
@@ -25,6 +26,8 @@ const installMiddleware = async () => {
   await installPassport(app);
   await installPostgraphile(app);
 };
+
+app.use(cors());
 
 installMiddleware();
 

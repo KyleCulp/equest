@@ -13,8 +13,8 @@
     // "noUnusedLocals": true,
     "strict": true,
     "outDir": "dist",
-    "lib": ["es6", "es7", "dom"]
-    // "skipLibCheck": true // Otherwise node_modules/@apollo throw up a ton of type errors that tsc wont exclude
+    "lib": ["es6", "es7", "dom"],
+    "skipLibCheck": true // Otherwise node_modules/@apollo throw up a ton of type errors that tsc wont exclude
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
