@@ -10,20 +10,21 @@ import { onError } from 'apollo-link-error';
 
 const httpLink = new HttpLink({
   uri: 'http://localhost:3000/postgraphile',
-  credentials: 'include',
-  fetchOptions: {
-    mode: 'no-cors',
-  },
-  useGETForQueries: true,
+  // credentials: 'include',
+  // fetchOptions: {
+  //   mode: 'no-cors'
+  // },
+  useGETForQueries: true
 });
 
 const authenticationLink = new ApolloLink((operation, forward) => {
   // add the s to the headers
   operation.setContext({
     headers: {
-      authorization: `bearer ${Cookies.get('equestsid')}` || null,
+      // authorization: `bearer ${Cookies.get('equestsid')}` || null,
       'Access-Control-Allow-Credentials': true,
-    },
+      'Access-Control-Allow-Origin': true
+    }
   });
 
   return forward(operation);
@@ -41,7 +42,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 
 export const clientLinks = ApolloLink.from([
   authenticationLink,
-  httpLink,
+  httpLink
 ]).setOnError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors)
     graphQLErrors.forEach(({ message, locations, path }) =>

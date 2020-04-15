@@ -1,10 +1,11 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
+import { Layout } from '../../components/Layout';
 
 export const Register: React.FC<RouteComponentProps> = () => {
   return (
-    <div>
+    <Layout>
       <h1>Register page</h1>
-    </div>
+    </Layout>
   );
 };

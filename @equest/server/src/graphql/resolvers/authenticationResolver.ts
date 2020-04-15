@@ -4,7 +4,7 @@ import { isEmail } from '@equest/utils';
 
 // This file is tab city oml
 
-export const authenticationResolver = makeExtendSchemaPlugin(build => ({
+export const authenticationResolver = makeExtendSchemaPlugin((build) => ({
   typeDefs: gql`
     input RegisterInput {
       username: String
@@ -42,7 +42,7 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
         try {
           // Call our register function from the database
           const {
-            rows: [user]
+            rows: [user],
           } = await pgMasterAdminPool.query(
             `select user_account.* from app_public.register_user (
               username => $1,
@@ -75,13 +75,13 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
             // Tell pg we're logged in
             pgClient.query('select set_config($1, $2, true);', [
               'jwt.claims.user_id',
-              user.user_id
-            ])
+              user.user_id,
+            ]),
           ]);
 
           const [row] = results[0];
           return {
-            data: row
+            data: row,
           };
         } catch (e) {
           console.error(e);
@@ -105,22 +105,12 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
         try {
           // Call our login function to find out if the username/password combination exists
           const {
-            rows: [user]
+            rows: [user],
           } = await pgMasterAdminPool.query(loginSQL, [username, password]);
 
           if (!user) throw new Error('Login failed');
 
           const sql = build.pgSql;
-
-          const result = await selectGraphQLResultFromTable(
-            sql.fragment`app_public.user_account`,
-            (tableAlias, queryBuilder) => {
-              queryBuilder.where(
-                sql.fragment`${tableAlias}.user_id = ${sql.value(user.user_id)}`
-              );
-            }
-          );
-
           const results = await Promise.all([
             selectGraphQLResultFromTable(
               sql.fragment`app_public.user_account`,
@@ -138,20 +128,20 @@ export const authenticationResolver = makeExtendSchemaPlugin(build => ({
             // Tell pg we're logged in
             pgClient.query('select set_config($1, $2, true);', [
               'jwt.claims.user_id',
-              user.user_id
-            ])
+              user.user_id,
+            ]),
           ]);
 
-          console.log(result);
+          const [row] = results[0];
 
           return {
-            data: result
+            data: row,
           };
         } catch (e) {
           console.error(e);
           throw e;
         }
-      }
-    }
-  }
+      },
+    },
+  },
 }));

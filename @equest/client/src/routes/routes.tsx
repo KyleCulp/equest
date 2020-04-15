@@ -49,14 +49,8 @@ type Props = {};
 export const Routes: React.FC<Props> = () => {
   return (
     <BrowserRouter>
-      {/* Some layout components here */}
-      <Link to="/">Home Page</Link>
-      <Link to="/login">Login Page</Link>
-      <Link to="/register">Register Page</Link>
-
       <Switch>
         {routes.map((route) => {
-          console.log('mapping lol');
           return <RouteHandler key={route.path} {...route} />;
         })}
       </Switch>
