@@ -27,7 +27,12 @@ const installMiddleware = async () => {
   await installPostgraphile(app);
 };
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:8080',
+    credentials: true,
+  })
+);
 
 installMiddleware();
 

@@ -10,11 +10,8 @@ import { onError } from 'apollo-link-error';
 
 const httpLink = new HttpLink({
   uri: 'http://localhost:3000/postgraphile',
-  // credentials: 'include',
-  // fetchOptions: {
-  //   mode: 'no-cors'
-  // },
-  useGETForQueries: true
+  credentials: 'include'
+  // useGETForQueries: true
 });
 
 const authenticationLink = new ApolloLink((operation, forward) => {
@@ -22,8 +19,8 @@ const authenticationLink = new ApolloLink((operation, forward) => {
   operation.setContext({
     headers: {
       // authorization: `bearer ${Cookies.get('equestsid')}` || null,
-      'Access-Control-Allow-Credentials': true,
-      'Access-Control-Allow-Origin': true
+      'Access-Control-Allow-Credentials': 'true',
+      'Access-Control-Allow-Origin': 'http://localhost:8080'
     }
   });
 

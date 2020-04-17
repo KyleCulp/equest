@@ -1,7 +1,0 @@
-query AllUserAccountsList {
-  allUserAccountsList {
-    username
-    roles
-    userId
-  }
-}

@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "stylelint-prettier/recommended",
+    "stylelint-8-point-grid"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      true,
+      {
+        "singleQuote": true,
+        "tabWidth": 2
+      }
+    ],
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true
+  }
+}

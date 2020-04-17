@@ -7,6 +7,7 @@
     "syncpack": "syncpack",
     "clean": "npm run lerna clean",
     "bootstrap": "npm run lerna bootstrap",
+    "lint:css": "stylelint '@equest/**/*.tsx'",
     "link": "npm run lerna link",
     "build": "npm run lerna run build",
     "init": "node -r dotenv/config scripts/init.js",
@@ -18,7 +19,8 @@
     "database:migrate": "npm run migrate --prefix @equest/database",
     "graphql:codegen": "npm run codegen --prefix @equest/graphql",
     "graphql:watch": "npm run watch --prefix @equest/graphql",
-    "client:dev": "npm run dev --prefix @equest/client"
+    "client:dev": "npm run dev --prefix @equest/client",
+    "client:storybook": "npm run storybook --prefix @equest/client"
   },
   "dependencies": {
     "pg": "^7.18.2",
@@ -44,9 +46,15 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "npm": "^6.14.4",
+    "prettier": "^2.0.4",
     "prompt": "^1.0.0",
     "rimraf": "^3.0.2",
     "source-map-loader": "^0.2.4",
+    "stylelint": "^13.3.2",
+    "stylelint-8-point-grid": "^0.2.4",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-prettier": "^1.1.2",
     "syncpack": "^5.0.1",
     "ts-jest": "^25.3.1",
     "ts-loader": "^7.0.0"
