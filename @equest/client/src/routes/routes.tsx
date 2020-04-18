@@ -1,11 +1,12 @@
 import React from 'react';
 import {
   BrowserRouter,
-  Switch,
-  RouteComponentProps,
   Link,
   Route,
+  RouteComponentProps,
+  Switch,
 } from 'react-router-dom';
+
 import { Home } from '../pages/home';
 import { Login } from '../pages/login';
 import { Register } from '../pages/register';

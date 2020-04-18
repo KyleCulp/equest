@@ -1,8 +1,8 @@
 import { ApolloClient } from '@apollo/client';
 
-import { clientResolvers, clientTypeDefs } from './resolvers';
 import { clientCache } from './cache';
 import { clientLinks } from './links';
+import { clientResolvers, clientTypeDefs } from './resolvers';
 
 export const client = new ApolloClient({
   cache: clientCache,

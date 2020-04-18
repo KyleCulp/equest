@@ -18,5 +18,5 @@ export const clientCache = new InMemoryCache({
     //   // include those nested keyFields by using a nested array of strings:
     //   keyFields: ['title', 'author', ['name']]
     // }
-  }
+  },
 });

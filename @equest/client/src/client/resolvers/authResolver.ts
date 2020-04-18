@@ -1,5 +1,5 @@
-import gql from 'graphql-tag';
 import { Resolvers } from '@apollo/client';
+import gql from 'graphql-tag';
 
 export const authTypeDefs = gql`
   type Local {

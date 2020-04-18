@@ -1,5 +1,6 @@
-import IORedis from 'ioredis';
 import '@equest/config';
+
+import IORedis from 'ioredis';
 
 const { REDIS_HOST, REDIS_PORT, REDIS_FAMILY, REDIS_PASSWORD } = process.env;
 

@@ -1,22 +1,23 @@
-import React from 'react';
-import { Sidebar } from './Sidebar';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
+import React from 'react';
+
 import { Header } from './Header';
+import { Sidebar } from './Sidebar';
 
 export const drawerWidth = 240;
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex'
+    display: 'flex',
   },
   appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
     height: '100vh',
-    overflow: 'auto'
+    overflow: 'auto',
   },
   container: {
     paddingTop: theme.spacing(4),
@@ -26,22 +27,22 @@ const useStyles = makeStyles(theme => ({
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    })
+      duration: theme.transitions.duration.leavingScreen,
+    }),
   },
   containerShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  }
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
 }));
 
 type Props = {};
 
-export const Layout: React.FC<Props> = props => {
+export const Layout: React.FC<Props> = (props) => {
   const { children } = props;
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);

@@ -1,10 +1,18 @@
+/* eslint-disable */
 /* THIS IS A GENERATED FILE - DO NOT MODIFY */
-import { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from 'graphql';
+import {
+  GraphQLResolveInfo,
+  GraphQLScalarType,
+  GraphQLScalarTypeConfig,
+} from 'graphql';
 import { gql } from '@apollo/client';
 import * as ApolloReactCommon from '@apollo/client';
 import * as ApolloReactHooks from '@apollo/client';
 export type Maybe<T> = T | null;
-export type RequireFields<T, K extends keyof T> = { [X in Exclude<keyof T, K>]?: T[X] } & { [P in K]-?: NonNullable<T[P]> };
+export type RequireFields<T, K extends keyof T> = {
+  [X in Exclude<keyof T, K>]?: T[X];
+} &
+  { [P in K]-?: NonNullable<T[P]> };
 
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
@@ -13,32 +21,308 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
-  UUID: any;
-  JSON: { [key: string]: any };
+  /**
+   * A point in time as described by the [ISO
+   * 8601](https://en.wikipedia.org/wiki/ISO_8601) standard. May or may not include a timezone.
+   */
   Datetime: string;
+  /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
+  JSON: { [key: string]: any };
+  /** A universally unique identifier as defined by [RFC 4122](https://tools.ietf.org/html/rfc4122). */
+  UUID: any;
 };
 
-export type Query = Node & {
-   __typename?: 'Query';
-  query: Query;
+/** All input for the create `TestTable` mutation. */
+export type CreateTestTableInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The `TestTable` to be created by this mutation. */
+  testTable: TestTableInput;
+};
+
+/** The output of our create `TestTable` mutation. */
+export type CreateTestTablePayload = {
+  __typename?: 'CreateTestTablePayload';
+  /**
+   * The exact same `clientMutationId` that was provided in the mutation input,
+   * unchanged and unused. May be used by a client to track mutations.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The `TestTable` that was created by this mutation. */
+  testTable?: Maybe<TestTable>;
+  /** Our root query field type. Allows us to run any query from our mutation payload. */
+  query?: Maybe<Query>;
+};
+
+/** All input for the create `UserAccount` mutation. */
+export type CreateUserAccountInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The `UserAccount` to be created by this mutation. */
+  userAccount: UserAccountInput;
+};
+
+/** The output of our create `UserAccount` mutation. */
+export type CreateUserAccountPayload = {
+  __typename?: 'CreateUserAccountPayload';
+  /**
+   * The exact same `clientMutationId` that was provided in the mutation input,
+   * unchanged and unused. May be used by a client to track mutations.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The `UserAccount` that was created by this mutation. */
+  userAccount?: Maybe<UserAccount>;
+  /** Our root query field type. Allows us to run any query from our mutation payload. */
+  query?: Maybe<Query>;
+};
+
+/** All input for the `deleteTestTableByUserId` mutation. */
+export type DeleteTestTableByUserIdInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  userId: Scalars['UUID'];
+};
+
+/** All input for the `deleteTestTable` mutation. */
+export type DeleteTestTableInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The globally unique `ID` which will identify a single `TestTable` to be deleted. */
   nodeId: Scalars['ID'];
+};
+
+/** The output of our delete `TestTable` mutation. */
+export type DeleteTestTablePayload = {
+  __typename?: 'DeleteTestTablePayload';
+  /**
+   * The exact same `clientMutationId` that was provided in the mutation input,
+   * unchanged and unused. May be used by a client to track mutations.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The `TestTable` that was deleted by this mutation. */
+  testTable?: Maybe<TestTable>;
+  deletedTestTableId?: Maybe<Scalars['ID']>;
+  /** Our root query field type. Allows us to run any query from our mutation payload. */
+  query?: Maybe<Query>;
+};
+
+/** All input for the `deleteUserAccountByUserId` mutation. */
+export type DeleteUserAccountByUserIdInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Primary unique identifier for a user. Autogenerated. */
+  userId: Scalars['UUID'];
+};
+
+/** All input for the `deleteUserAccountByUsername` mutation. */
+export type DeleteUserAccountByUsernameInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The user’s username. Can be null. */
+  username: Scalars['String'];
+};
+
+/** All input for the `deleteUserAccount` mutation. */
+export type DeleteUserAccountInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The globally unique `ID` which will identify a single `UserAccount` to be deleted. */
+  nodeId: Scalars['ID'];
+};
+
+/** The output of our delete `UserAccount` mutation. */
+export type DeleteUserAccountPayload = {
+  __typename?: 'DeleteUserAccountPayload';
+  /**
+   * The exact same `clientMutationId` that was provided in the mutation input,
+   * unchanged and unused. May be used by a client to track mutations.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The `UserAccount` that was deleted by this mutation. */
+  userAccount?: Maybe<UserAccount>;
+  deletedUserAccountId?: Maybe<Scalars['ID']>;
+  /** Our root query field type. Allows us to run any query from our mutation payload. */
+  query?: Maybe<Query>;
+};
+
+export type LoginInput = {
+  username: Scalars['String'];
+  password: Scalars['String'];
+};
+
+export type LoginPayload = {
+  __typename?: 'LoginPayload';
+  user: UserAccount;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type Mutation = {
+  __typename?: 'Mutation';
+  /** Creates a single `TestTable`. */
+  createTestTable?: Maybe<CreateTestTablePayload>;
+  /** Creates a single `UserAccount`. */
+  createUserAccount?: Maybe<CreateUserAccountPayload>;
+  /** Updates a single `TestTable` using its globally unique id and a patch. */
+  updateTestTable?: Maybe<UpdateTestTablePayload>;
+  /** Updates a single `TestTable` using a unique key and a patch. */
+  updateTestTableByUserId?: Maybe<UpdateTestTablePayload>;
+  /** Updates a single `UserAccount` using its globally unique id and a patch. */
+  updateUserAccount?: Maybe<UpdateUserAccountPayload>;
+  /** Updates a single `UserAccount` using a unique key and a patch. */
+  updateUserAccountByUserId?: Maybe<UpdateUserAccountPayload>;
+  /** Updates a single `UserAccount` using a unique key and a patch. */
+  updateUserAccountByUsername?: Maybe<UpdateUserAccountPayload>;
+  /** Deletes a single `TestTable` using its globally unique id. */
+  deleteTestTable?: Maybe<DeleteTestTablePayload>;
+  /** Deletes a single `TestTable` using a unique key. */
+  deleteTestTableByUserId?: Maybe<DeleteTestTablePayload>;
+  /** Deletes a single `UserAccount` using its globally unique id. */
+  deleteUserAccount?: Maybe<DeleteUserAccountPayload>;
+  /** Deletes a single `UserAccount` using a unique key. */
+  deleteUserAccountByUserId?: Maybe<DeleteUserAccountPayload>;
+  /** Deletes a single `UserAccount` using a unique key. */
+  deleteUserAccountByUsername?: Maybe<DeleteUserAccountPayload>;
+  /** Register`s a user account, with a username. */
+  registerUser?: Maybe<RegisterUserPayload>;
+  register?: Maybe<RegisterPayload>;
+  login?: Maybe<LoginPayload>;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationCreateTestTableArgs = {
+  input: CreateTestTableInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationCreateUserAccountArgs = {
+  input: CreateUserAccountInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationUpdateTestTableArgs = {
+  input: UpdateTestTableInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationUpdateTestTableByUserIdArgs = {
+  input: UpdateTestTableByUserIdInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationUpdateUserAccountArgs = {
+  input: UpdateUserAccountInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationUpdateUserAccountByUserIdArgs = {
+  input: UpdateUserAccountByUserIdInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationUpdateUserAccountByUsernameArgs = {
+  input: UpdateUserAccountByUsernameInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationDeleteTestTableArgs = {
+  input: DeleteTestTableInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationDeleteTestTableByUserIdArgs = {
+  input: DeleteTestTableByUserIdInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationDeleteUserAccountArgs = {
+  input: DeleteUserAccountInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationDeleteUserAccountByUserIdArgs = {
+  input: DeleteUserAccountByUserIdInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationDeleteUserAccountByUsernameArgs = {
+  input: DeleteUserAccountByUsernameInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationRegisterUserArgs = {
+  input: RegisterUserInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationRegisterArgs = {
+  input: RegisterInput;
+};
+
+/** The root mutation type which contains root level fields which mutate data. */
+export type MutationLoginArgs = {
+  input: LoginInput;
+};
+
+/** An object with a globally unique `ID`. */
+export type Node = {
+  /** A globally unique identifier. Can be used in various places throughout the system to identify this single value. */
+  nodeId: Scalars['ID'];
+};
+
+/** The root query type which gives access points into the data universe. */
+export type Query = Node & {
+  __typename?: 'Query';
+  /**
+   * Exposes the root query type nested one level down. This is helpful for Relay 1
+   * which can only query top level fields if they are in a particular form.
+   */
+  query: Query;
+  /** The root query type must be a `Node` to work well with Relay 1 mutations. This just resolves to `query`. */
+  nodeId: Scalars['ID'];
+  /** Fetches an object given its globally unique `ID`. */
   node?: Maybe<Node>;
+  /** Reads a set of `TestTable`. */
   allTestTablesList?: Maybe<Array<TestTable>>;
+  /** Reads a set of `UserAccount`. */
   allUserAccountsList?: Maybe<Array<UserAccount>>;
   testTableByUserId?: Maybe<TestTable>;
   userAccountByUserId?: Maybe<UserAccount>;
   userAccountByUsername?: Maybe<UserAccount>;
+  /** Returns the user currently in the session. */
   currentPerson?: Maybe<UserAccount>;
+  /** Reads a single `TestTable` using its globally unique `ID`. */
   testTable?: Maybe<TestTable>;
+  /** Reads a single `UserAccount` using its globally unique `ID`. */
   userAccount?: Maybe<UserAccount>;
 };
 
-
+/** The root query type which gives access points into the data universe. */
 export type QueryNodeArgs = {
   nodeId: Scalars['ID'];
 };
 
-
+/** The root query type which gives access points into the data universe. */
 export type QueryAllTestTablesListArgs = {
   first?: Maybe<Scalars['Int']>;
   offset?: Maybe<Scalars['Int']>;
@@ -46,7 +330,7 @@ export type QueryAllTestTablesListArgs = {
   condition?: Maybe<TestTableCondition>;
 };
 
-
+/** The root query type which gives access points into the data universe. */
 export type QueryAllUserAccountsListArgs = {
   first?: Maybe<Scalars['Int']>;
   offset?: Maybe<Scalars['Int']>;
@@ -54,326 +338,29 @@ export type QueryAllUserAccountsListArgs = {
   condition?: Maybe<UserAccountCondition>;
 };
 
-
+/** The root query type which gives access points into the data universe. */
 export type QueryTestTableByUserIdArgs = {
   userId: Scalars['UUID'];
 };
 
-
+/** The root query type which gives access points into the data universe. */
 export type QueryUserAccountByUserIdArgs = {
   userId: Scalars['UUID'];
 };
 
-
+/** The root query type which gives access points into the data universe. */
 export type QueryUserAccountByUsernameArgs = {
   username: Scalars['String'];
 };
 
-
+/** The root query type which gives access points into the data universe. */
 export type QueryTestTableArgs = {
   nodeId: Scalars['ID'];
 };
 
-
+/** The root query type which gives access points into the data universe. */
 export type QueryUserAccountArgs = {
   nodeId: Scalars['ID'];
-};
-
-export type Node = {
-  nodeId: Scalars['ID'];
-};
-
-export enum TestTablesOrderBy {
-  Natural = 'NATURAL',
-  UserIdAsc = 'USER_ID_ASC',
-  UserIdDesc = 'USER_ID_DESC',
-  PrimaryKeyAsc = 'PRIMARY_KEY_ASC',
-  PrimaryKeyDesc = 'PRIMARY_KEY_DESC'
-}
-
-export type TestTableCondition = {
-  userId?: Maybe<Scalars['UUID']>;
-};
-
-
-export type TestTable = Node & {
-   __typename?: 'TestTable';
-  nodeId: Scalars['ID'];
-  userId: Scalars['UUID'];
-  data?: Maybe<Scalars['JSON']>;
-};
-
-
-export enum UserAccountsOrderBy {
-  Natural = 'NATURAL',
-  UserIdAsc = 'USER_ID_ASC',
-  UserIdDesc = 'USER_ID_DESC',
-  UsernameAsc = 'USERNAME_ASC',
-  UsernameDesc = 'USERNAME_DESC',
-  PrimaryKeyAsc = 'PRIMARY_KEY_ASC',
-  PrimaryKeyDesc = 'PRIMARY_KEY_DESC'
-}
-
-export type UserAccountCondition = {
-  userId?: Maybe<Scalars['UUID']>;
-  username?: Maybe<Scalars['String']>;
-};
-
-export type UserAccount = Node & {
-   __typename?: 'UserAccount';
-  nodeId: Scalars['ID'];
-  userId: Scalars['UUID'];
-  username?: Maybe<Scalars['String']>;
-  emailConfirmed: Scalars['Boolean'];
-  roles: Scalars['String'];
-  createdAt?: Maybe<Scalars['Datetime']>;
-  updatedAt?: Maybe<Scalars['Datetime']>;
-};
-
-
-export type Mutation = {
-   __typename?: 'Mutation';
-  createTestTable?: Maybe<CreateTestTablePayload>;
-  createUserAccount?: Maybe<CreateUserAccountPayload>;
-  updateTestTable?: Maybe<UpdateTestTablePayload>;
-  updateTestTableByUserId?: Maybe<UpdateTestTablePayload>;
-  updateUserAccount?: Maybe<UpdateUserAccountPayload>;
-  updateUserAccountByUserId?: Maybe<UpdateUserAccountPayload>;
-  updateUserAccountByUsername?: Maybe<UpdateUserAccountPayload>;
-  deleteTestTable?: Maybe<DeleteTestTablePayload>;
-  deleteTestTableByUserId?: Maybe<DeleteTestTablePayload>;
-  deleteUserAccount?: Maybe<DeleteUserAccountPayload>;
-  deleteUserAccountByUserId?: Maybe<DeleteUserAccountPayload>;
-  deleteUserAccountByUsername?: Maybe<DeleteUserAccountPayload>;
-  registerUser?: Maybe<RegisterUserPayload>;
-  register?: Maybe<RegisterPayload>;
-  login?: Maybe<LoginPayload>;
-};
-
-
-export type MutationCreateTestTableArgs = {
-  input: CreateTestTableInput;
-};
-
-
-export type MutationCreateUserAccountArgs = {
-  input: CreateUserAccountInput;
-};
-
-
-export type MutationUpdateTestTableArgs = {
-  input: UpdateTestTableInput;
-};
-
-
-export type MutationUpdateTestTableByUserIdArgs = {
-  input: UpdateTestTableByUserIdInput;
-};
-
-
-export type MutationUpdateUserAccountArgs = {
-  input: UpdateUserAccountInput;
-};
-
-
-export type MutationUpdateUserAccountByUserIdArgs = {
-  input: UpdateUserAccountByUserIdInput;
-};
-
-
-export type MutationUpdateUserAccountByUsernameArgs = {
-  input: UpdateUserAccountByUsernameInput;
-};
-
-
-export type MutationDeleteTestTableArgs = {
-  input: DeleteTestTableInput;
-};
-
-
-export type MutationDeleteTestTableByUserIdArgs = {
-  input: DeleteTestTableByUserIdInput;
-};
-
-
-export type MutationDeleteUserAccountArgs = {
-  input: DeleteUserAccountInput;
-};
-
-
-export type MutationDeleteUserAccountByUserIdArgs = {
-  input: DeleteUserAccountByUserIdInput;
-};
-
-
-export type MutationDeleteUserAccountByUsernameArgs = {
-  input: DeleteUserAccountByUsernameInput;
-};
-
-
-export type MutationRegisterUserArgs = {
-  input: RegisterUserInput;
-};
-
-
-export type MutationRegisterArgs = {
-  input: RegisterInput;
-};
-
-
-export type MutationLoginArgs = {
-  input: LoginInput;
-};
-
-export type CreateTestTableInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  testTable: TestTableInput;
-};
-
-export type TestTableInput = {
-  userId?: Maybe<Scalars['UUID']>;
-  data?: Maybe<Scalars['JSON']>;
-};
-
-export type CreateTestTablePayload = {
-   __typename?: 'CreateTestTablePayload';
-  clientMutationId?: Maybe<Scalars['String']>;
-  testTable?: Maybe<TestTable>;
-  query?: Maybe<Query>;
-};
-
-export type CreateUserAccountInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  userAccount: UserAccountInput;
-};
-
-export type UserAccountInput = {
-  userId?: Maybe<Scalars['UUID']>;
-  username?: Maybe<Scalars['String']>;
-  emailConfirmed?: Maybe<Scalars['Boolean']>;
-  roles?: Maybe<Scalars['String']>;
-  createdAt?: Maybe<Scalars['Datetime']>;
-  updatedAt?: Maybe<Scalars['Datetime']>;
-};
-
-export type CreateUserAccountPayload = {
-   __typename?: 'CreateUserAccountPayload';
-  clientMutationId?: Maybe<Scalars['String']>;
-  userAccount?: Maybe<UserAccount>;
-  query?: Maybe<Query>;
-};
-
-export type UpdateTestTableInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  nodeId: Scalars['ID'];
-  testTablePatch: TestTablePatch;
-};
-
-export type TestTablePatch = {
-  userId?: Maybe<Scalars['UUID']>;
-  data?: Maybe<Scalars['JSON']>;
-};
-
-export type UpdateTestTablePayload = {
-   __typename?: 'UpdateTestTablePayload';
-  clientMutationId?: Maybe<Scalars['String']>;
-  testTable?: Maybe<TestTable>;
-  query?: Maybe<Query>;
-};
-
-export type UpdateTestTableByUserIdInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  testTablePatch: TestTablePatch;
-  userId: Scalars['UUID'];
-};
-
-export type UpdateUserAccountInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  nodeId: Scalars['ID'];
-  userAccountPatch: UserAccountPatch;
-};
-
-export type UserAccountPatch = {
-  userId?: Maybe<Scalars['UUID']>;
-  username?: Maybe<Scalars['String']>;
-  emailConfirmed?: Maybe<Scalars['Boolean']>;
-  roles?: Maybe<Scalars['String']>;
-  createdAt?: Maybe<Scalars['Datetime']>;
-  updatedAt?: Maybe<Scalars['Datetime']>;
-};
-
-export type UpdateUserAccountPayload = {
-   __typename?: 'UpdateUserAccountPayload';
-  clientMutationId?: Maybe<Scalars['String']>;
-  userAccount?: Maybe<UserAccount>;
-  query?: Maybe<Query>;
-};
-
-export type UpdateUserAccountByUserIdInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  userAccountPatch: UserAccountPatch;
-  userId: Scalars['UUID'];
-};
-
-export type UpdateUserAccountByUsernameInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  userAccountPatch: UserAccountPatch;
-  username: Scalars['String'];
-};
-
-export type DeleteTestTableInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  nodeId: Scalars['ID'];
-};
-
-export type DeleteTestTablePayload = {
-   __typename?: 'DeleteTestTablePayload';
-  clientMutationId?: Maybe<Scalars['String']>;
-  testTable?: Maybe<TestTable>;
-  deletedTestTableId?: Maybe<Scalars['ID']>;
-  query?: Maybe<Query>;
-};
-
-export type DeleteTestTableByUserIdInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  userId: Scalars['UUID'];
-};
-
-export type DeleteUserAccountInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  nodeId: Scalars['ID'];
-};
-
-export type DeleteUserAccountPayload = {
-   __typename?: 'DeleteUserAccountPayload';
-  clientMutationId?: Maybe<Scalars['String']>;
-  userAccount?: Maybe<UserAccount>;
-  deletedUserAccountId?: Maybe<Scalars['ID']>;
-  query?: Maybe<Query>;
-};
-
-export type DeleteUserAccountByUserIdInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  userId: Scalars['UUID'];
-};
-
-export type DeleteUserAccountByUsernameInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  username: Scalars['String'];
-};
-
-export type RegisterUserInput = {
-  clientMutationId?: Maybe<Scalars['String']>;
-  username: Scalars['String'];
-  email: Scalars['String'];
-  password: Scalars['String'];
-};
-
-export type RegisterUserPayload = {
-   __typename?: 'RegisterUserPayload';
-  clientMutationId?: Maybe<Scalars['String']>;
-  userAccount?: Maybe<UserAccount>;
-  query?: Maybe<Query>;
 };
 
 export type RegisterInput = {
@@ -383,41 +370,134 @@ export type RegisterInput = {
 };
 
 export type RegisterPayload = {
-   __typename?: 'RegisterPayload';
+  __typename?: 'RegisterPayload';
   user: UserAccount;
 };
 
-export type LoginInput = {
+/** All input for the `registerUser` mutation. */
+export type RegisterUserInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
   username: Scalars['String'];
+  email: Scalars['String'];
   password: Scalars['String'];
 };
 
-export type LoginPayload = {
-   __typename?: 'LoginPayload';
-  user: UserAccount;
+/** The output of our `registerUser` mutation. */
+export type RegisterUserPayload = {
+  __typename?: 'RegisterUserPayload';
+  /**
+   * The exact same `clientMutationId` that was provided in the mutation input,
+   * unchanged and unused. May be used by a client to track mutations.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  userAccount?: Maybe<UserAccount>;
+  /** Our root query field type. Allows us to run any query from our mutation payload. */
+  query?: Maybe<Query>;
 };
 
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type Subscription = {
-   __typename?: 'Subscription';
+  __typename?: 'Subscription';
+  /**
+   * Exposes the root query type nested one level down. This is helpful for Relay 1
+   * which can only query top level fields if they are in a particular form. (live)
+   */
   query: Query;
+  /** The root query type must be a `Node` to work well with Relay 1 mutations. This just resolves to `query`. (live) */
   nodeId: Scalars['ID'];
+  /** Fetches an object given its globally unique `ID`. (live) */
   node?: Maybe<Node>;
+  /** Reads a set of `TestTable`. (live) */
   allTestTablesList?: Maybe<Array<TestTable>>;
+  /** Reads a set of `UserAccount`. (live) */
   allUserAccountsList?: Maybe<Array<UserAccount>>;
+  /** (live) */
   testTableByUserId?: Maybe<TestTable>;
+  /** (live) */
   userAccountByUserId?: Maybe<UserAccount>;
+  /** (live) */
   userAccountByUsername?: Maybe<UserAccount>;
+  /** Returns the user currently in the session. (live) */
   currentPerson?: Maybe<UserAccount>;
+  /** Reads a single `TestTable` using its globally unique `ID`. (live) */
   testTable?: Maybe<TestTable>;
+  /** Reads a single `UserAccount` using its globally unique `ID`. (live) */
   userAccount?: Maybe<UserAccount>;
 };
 
-
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type SubscriptionNodeArgs = {
   nodeId: Scalars['ID'];
 };
 
-
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type SubscriptionAllTestTablesListArgs = {
   first?: Maybe<Scalars['Int']>;
   offset?: Maybe<Scalars['Int']>;
@@ -425,7 +505,28 @@ export type SubscriptionAllTestTablesListArgs = {
   condition?: Maybe<TestTableCondition>;
 };
 
-
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type SubscriptionAllUserAccountsListArgs = {
   first?: Maybe<Scalars['Int']>;
   offset?: Maybe<Scalars['Int']>;
@@ -433,78 +534,370 @@ export type SubscriptionAllUserAccountsListArgs = {
   condition?: Maybe<UserAccountCondition>;
 };
 
-
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type SubscriptionTestTableByUserIdArgs = {
   userId: Scalars['UUID'];
 };
 
-
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type SubscriptionUserAccountByUserIdArgs = {
   userId: Scalars['UUID'];
 };
 
-
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type SubscriptionUserAccountByUsernameArgs = {
   username: Scalars['String'];
 };
 
-
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type SubscriptionTestTableArgs = {
   nodeId: Scalars['ID'];
 };
 
-
+/**
+ * The root subscription type: contains events and live queries you can subscribe to with the `subscription` operation.
+ *
+ * #### Live Queries
+ *
+ * Live query fields are differentiated by containing `(live)` at the end of their
+ * description, they are added for each field in the `Query` type. When you
+ * subscribe to a live query field, the selection set will be evaluated and sent to
+ * the client, and then most things\* that would cause the output of the selection
+ * set to change will trigger the selection set to be re-evaluated and the results
+ * to be re-sent to the client.
+ *
+ * _(\* Not everything: typically only changes to persisted data referenced by the query are detected, not computed fields.)_
+ *
+ * Live queries can be very expensive, so try and keep them small and focussed.
+ *
+ * #### Events
+ *
+ * Event fields will run their selection set when, and only when, the specified
+ * server-side event occurs. This makes them a lot more efficient than Live
+ * Queries, but it is still recommended that you keep payloads fairly small.
+ */
 export type SubscriptionUserAccountArgs = {
   nodeId: Scalars['ID'];
 };
+
+export type TestTable = Node & {
+  __typename?: 'TestTable';
+  /** A globally unique identifier. Can be used in various places throughout the system to identify this single value. */
+  nodeId: Scalars['ID'];
+  userId: Scalars['UUID'];
+  data?: Maybe<Scalars['JSON']>;
+};
+
+/**
+ * A condition to be used against `TestTable` object types. All fields are tested
+ * for equality and combined with a logical ‘and.’
+ */
+export type TestTableCondition = {
+  /** Checks for equality with the object’s `userId` field. */
+  userId?: Maybe<Scalars['UUID']>;
+};
+
+/** An input for mutations affecting `TestTable` */
+export type TestTableInput = {
+  userId?: Maybe<Scalars['UUID']>;
+  data?: Maybe<Scalars['JSON']>;
+};
+
+/** Represents an update to a `TestTable`. Fields that are set will be updated. */
+export type TestTablePatch = {
+  userId?: Maybe<Scalars['UUID']>;
+  data?: Maybe<Scalars['JSON']>;
+};
+
+/** Methods to use when ordering `TestTable`. */
+export enum TestTablesOrderBy {
+  Natural = 'NATURAL',
+  UserIdAsc = 'USER_ID_ASC',
+  UserIdDesc = 'USER_ID_DESC',
+  PrimaryKeyAsc = 'PRIMARY_KEY_ASC',
+  PrimaryKeyDesc = 'PRIMARY_KEY_DESC',
+}
+
+/** All input for the `updateTestTableByUserId` mutation. */
+export type UpdateTestTableByUserIdInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** An object where the defined keys will be set on the `TestTable` being updated. */
+  testTablePatch: TestTablePatch;
+  userId: Scalars['UUID'];
+};
+
+/** All input for the `updateTestTable` mutation. */
+export type UpdateTestTableInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The globally unique `ID` which will identify a single `TestTable` to be updated. */
+  nodeId: Scalars['ID'];
+  /** An object where the defined keys will be set on the `TestTable` being updated. */
+  testTablePatch: TestTablePatch;
+};
+
+/** The output of our update `TestTable` mutation. */
+export type UpdateTestTablePayload = {
+  __typename?: 'UpdateTestTablePayload';
+  /**
+   * The exact same `clientMutationId` that was provided in the mutation input,
+   * unchanged and unused. May be used by a client to track mutations.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The `TestTable` that was updated by this mutation. */
+  testTable?: Maybe<TestTable>;
+  /** Our root query field type. Allows us to run any query from our mutation payload. */
+  query?: Maybe<Query>;
+};
+
+/** All input for the `updateUserAccountByUserId` mutation. */
+export type UpdateUserAccountByUserIdInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** An object where the defined keys will be set on the `UserAccount` being updated. */
+  userAccountPatch: UserAccountPatch;
+  /** Primary unique identifier for a user. Autogenerated. */
+  userId: Scalars['UUID'];
+};
+
+/** All input for the `updateUserAccountByUsername` mutation. */
+export type UpdateUserAccountByUsernameInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** An object where the defined keys will be set on the `UserAccount` being updated. */
+  userAccountPatch: UserAccountPatch;
+  /** The user’s username. Can be null. */
+  username: Scalars['String'];
+};
+
+/** All input for the `updateUserAccount` mutation. */
+export type UpdateUserAccountInput = {
+  /**
+   * An arbitrary string value with no semantic meaning. Will be included in the
+   * payload verbatim. May be used to track mutations by the client.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The globally unique `ID` which will identify a single `UserAccount` to be updated. */
+  nodeId: Scalars['ID'];
+  /** An object where the defined keys will be set on the `UserAccount` being updated. */
+  userAccountPatch: UserAccountPatch;
+};
+
+/** The output of our update `UserAccount` mutation. */
+export type UpdateUserAccountPayload = {
+  __typename?: 'UpdateUserAccountPayload';
+  /**
+   * The exact same `clientMutationId` that was provided in the mutation input,
+   * unchanged and unused. May be used by a client to track mutations.
+   */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The `UserAccount` that was updated by this mutation. */
+  userAccount?: Maybe<UserAccount>;
+  /** Our root query field type. Allows us to run any query from our mutation payload. */
+  query?: Maybe<Query>;
+};
+
+/** A user’s core account */
+export type UserAccount = Node & {
+  __typename?: 'UserAccount';
+  /** A globally unique identifier. Can be used in various places throughout the system to identify this single value. */
+  nodeId: Scalars['ID'];
+  /** Primary unique identifier for a user. Autogenerated. */
+  userId: Scalars['UUID'];
+  /** The user’s username. Can be null. */
+  username?: Maybe<Scalars['String']>;
+  /** The status of users confirmed email. */
+  emailConfirmed: Scalars['Boolean'];
+  /** The users role. */
+  roles: Scalars['String'];
+  /** The time this person was created. */
+  createdAt?: Maybe<Scalars['Datetime']>;
+  /** The time this person was last updated. */
+  updatedAt?: Maybe<Scalars['Datetime']>;
+};
+
+/**
+ * A condition to be used against `UserAccount` object types. All fields are tested
+ * for equality and combined with a logical ‘and.’
+ */
+export type UserAccountCondition = {
+  /** Checks for equality with the object’s `userId` field. */
+  userId?: Maybe<Scalars['UUID']>;
+  /** Checks for equality with the object’s `username` field. */
+  username?: Maybe<Scalars['String']>;
+};
+
+/** An input for mutations affecting `UserAccount` */
+export type UserAccountInput = {
+  /** Primary unique identifier for a user. Autogenerated. */
+  userId?: Maybe<Scalars['UUID']>;
+  /** The user’s username. Can be null. */
+  username?: Maybe<Scalars['String']>;
+  /** The status of users confirmed email. */
+  emailConfirmed?: Maybe<Scalars['Boolean']>;
+  /** The users role. */
+  roles?: Maybe<Scalars['String']>;
+  /** The time this person was created. */
+  createdAt?: Maybe<Scalars['Datetime']>;
+  /** The time this person was last updated. */
+  updatedAt?: Maybe<Scalars['Datetime']>;
+};
+
+/** Represents an update to a `UserAccount`. Fields that are set will be updated. */
+export type UserAccountPatch = {
+  /** Primary unique identifier for a user. Autogenerated. */
+  userId?: Maybe<Scalars['UUID']>;
+  /** The user’s username. Can be null. */
+  username?: Maybe<Scalars['String']>;
+  /** The status of users confirmed email. */
+  emailConfirmed?: Maybe<Scalars['Boolean']>;
+  /** The users role. */
+  roles?: Maybe<Scalars['String']>;
+  /** The time this person was created. */
+  createdAt?: Maybe<Scalars['Datetime']>;
+  /** The time this person was last updated. */
+  updatedAt?: Maybe<Scalars['Datetime']>;
+};
+
+/** Methods to use when ordering `UserAccount`. */
+export enum UserAccountsOrderBy {
+  Natural = 'NATURAL',
+  UserIdAsc = 'USER_ID_ASC',
+  UserIdDesc = 'USER_ID_DESC',
+  UsernameAsc = 'USERNAME_ASC',
+  UsernameDesc = 'USERNAME_DESC',
+  PrimaryKeyAsc = 'PRIMARY_KEY_ASC',
+  PrimaryKeyDesc = 'PRIMARY_KEY_DESC',
+}
 
 export type LoginMutationVariables = {
   input: LoginInput;
 };
 
-
-export type LoginMutation = (
-  { __typename?: 'Mutation' }
-  & { login?: Maybe<(
-    { __typename?: 'LoginPayload' }
-    & { user: (
-      { __typename?: 'UserAccount' }
-      & Pick<UserAccount, 'username' | 'userId' | 'roles'>
-    ) }
-  )> }
-);
+export type LoginMutation = { __typename?: 'Mutation' } & {
+  login?: Maybe<
+    { __typename?: 'LoginPayload' } & {
+      user: { __typename?: 'UserAccount' } & Pick<
+        UserAccount,
+        'username' | 'userId' | 'roles'
+      >;
+    }
+  >;
+};
 
 export type RegisterMutationVariables = {
   input: RegisterInput;
 };
 
-
-export type RegisterMutation = (
-  { __typename?: 'Mutation' }
-  & { register?: Maybe<(
-    { __typename?: 'RegisterPayload' }
-    & { user: (
-      { __typename?: 'UserAccount' }
-      & Pick<UserAccount, 'userId' | 'username' | 'roles'>
-    ) }
-  )> }
-);
-
-export type AllUserAccountsListQueryVariables = {};
-
-
-export type AllUserAccountsListQuery = (
-  { __typename?: 'Query' }
-  & { allUserAccountsList?: Maybe<Array<(
-    { __typename?: 'UserAccount' }
-    & Pick<UserAccount, 'username' | 'roles' | 'userId'>
-  )>> }
-);
-
-
+export type RegisterMutation = { __typename?: 'Mutation' } & {
+  register?: Maybe<
+    { __typename?: 'RegisterPayload' } & {
+      user: { __typename?: 'UserAccount' } & Pick<
+        UserAccount,
+        'userId' | 'username' | 'roles'
+      >;
+    }
+  >;
+};
 
 export type ResolverTypeWrapper<T> = Promise<T> | T;
-
 
 export type StitchingResolver<TResult, TParent, TContext, TArgs> = {
   fragment: string;
@@ -536,9 +929,25 @@ export type SubscriptionResolveFn<TResult, TParent, TContext, TArgs> = (
   info: GraphQLResolveInfo
 ) => TResult | Promise<TResult>;
 
-export interface SubscriptionSubscriberObject<TResult, TKey extends string, TParent, TContext, TArgs> {
-  subscribe: SubscriptionSubscribeFn<{ [key in TKey]: TResult }, TParent, TContext, TArgs>;
-  resolve?: SubscriptionResolveFn<TResult, { [key in TKey]: TResult }, TContext, TArgs>;
+export interface SubscriptionSubscriberObject<
+  TResult,
+  TKey extends string,
+  TParent,
+  TContext,
+  TArgs
+> {
+  subscribe: SubscriptionSubscribeFn<
+    { [key in TKey]: TResult },
+    TParent,
+    TContext,
+    TArgs
+  >;
+  resolve?: SubscriptionResolveFn<
+    TResult,
+    { [key in TKey]: TResult },
+    TContext,
+    TArgs
+  >;
 }
 
 export interface SubscriptionResolverObject<TResult, TParent, TContext, TArgs> {
@@ -546,12 +955,26 @@ export interface SubscriptionResolverObject<TResult, TParent, TContext, TArgs> {
   resolve: SubscriptionResolveFn<TResult, any, TContext, TArgs>;
 }
 
-export type SubscriptionObject<TResult, TKey extends string, TParent, TContext, TArgs> =
+export type SubscriptionObject<
+  TResult,
+  TKey extends string,
+  TParent,
+  TContext,
+  TArgs
+> =
   | SubscriptionSubscriberObject<TResult, TKey, TParent, TContext, TArgs>
   | SubscriptionResolverObject<TResult, TParent, TContext, TArgs>;
 
-export type SubscriptionResolver<TResult, TKey extends string, TParent = {}, TContext = {}, TArgs = {}> =
-  | ((...args: any[]) => SubscriptionObject<TResult, TKey, TParent, TContext, TArgs>)
+export type SubscriptionResolver<
+  TResult,
+  TKey extends string,
+  TParent = {},
+  TContext = {},
+  TArgs = {}
+> =
+  | ((
+      ...args: any[]
+    ) => SubscriptionObject<TResult, TKey, TParent, TContext, TArgs>)
   | SubscriptionObject<TResult, TKey, TParent, TContext, TArgs>;
 
 export type TypeResolveFn<TTypes, TParent = {}, TContext = {}> = (
@@ -560,11 +983,19 @@ export type TypeResolveFn<TTypes, TParent = {}, TContext = {}> = (
   info: GraphQLResolveInfo
 ) => Maybe<TTypes> | Promise<Maybe<TTypes>>;
 
-export type isTypeOfResolverFn<T = {}> = (obj: T, info: GraphQLResolveInfo) => boolean | Promise<boolean>;
+export type isTypeOfResolverFn<T = {}> = (
+  obj: T,
+  info: GraphQLResolveInfo
+) => boolean | Promise<boolean>;
 
 export type NextResolverFn<T> = () => Promise<T>;
 
-export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs = {}> = (
+export type DirectiveResolverFn<
+  TResult = {},
+  TParent = {},
+  TContext = {},
+  TArgs = {}
+> = (
   next: NextResolverFn<TResult>,
   parent: TParent,
   args: TArgs,
@@ -574,285 +1005,598 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
-  String: ResolverTypeWrapper<Scalars['String']>,
-  Boolean: ResolverTypeWrapper<Scalars['Boolean']>,
-  Query: ResolverTypeWrapper<{}>,
-  ID: ResolverTypeWrapper<Scalars['ID']>,
-  Int: ResolverTypeWrapper<Scalars['Int']>,
-  Node: ResolversTypes['Query'] | ResolversTypes['TestTable'] | ResolversTypes['UserAccount'],
-  TestTablesOrderBy: TestTablesOrderBy,
-  TestTableCondition: TestTableCondition,
-  UUID: ResolverTypeWrapper<Scalars['UUID']>,
-  TestTable: ResolverTypeWrapper<TestTable>,
-  JSON: ResolverTypeWrapper<Scalars['JSON']>,
-  UserAccountsOrderBy: UserAccountsOrderBy,
-  UserAccountCondition: UserAccountCondition,
-  UserAccount: ResolverTypeWrapper<UserAccount>,
-  Datetime: ResolverTypeWrapper<Scalars['Datetime']>,
-  Mutation: ResolverTypeWrapper<{}>,
-  CreateTestTableInput: CreateTestTableInput,
-  TestTableInput: TestTableInput,
-  CreateTestTablePayload: ResolverTypeWrapper<CreateTestTablePayload>,
-  CreateUserAccountInput: CreateUserAccountInput,
-  UserAccountInput: UserAccountInput,
-  CreateUserAccountPayload: ResolverTypeWrapper<CreateUserAccountPayload>,
-  UpdateTestTableInput: UpdateTestTableInput,
-  TestTablePatch: TestTablePatch,
-  UpdateTestTablePayload: ResolverTypeWrapper<UpdateTestTablePayload>,
-  UpdateTestTableByUserIdInput: UpdateTestTableByUserIdInput,
-  UpdateUserAccountInput: UpdateUserAccountInput,
-  UserAccountPatch: UserAccountPatch,
-  UpdateUserAccountPayload: ResolverTypeWrapper<UpdateUserAccountPayload>,
-  UpdateUserAccountByUserIdInput: UpdateUserAccountByUserIdInput,
-  UpdateUserAccountByUsernameInput: UpdateUserAccountByUsernameInput,
-  DeleteTestTableInput: DeleteTestTableInput,
-  DeleteTestTablePayload: ResolverTypeWrapper<DeleteTestTablePayload>,
-  DeleteTestTableByUserIdInput: DeleteTestTableByUserIdInput,
-  DeleteUserAccountInput: DeleteUserAccountInput,
-  DeleteUserAccountPayload: ResolverTypeWrapper<DeleteUserAccountPayload>,
-  DeleteUserAccountByUserIdInput: DeleteUserAccountByUserIdInput,
-  DeleteUserAccountByUsernameInput: DeleteUserAccountByUsernameInput,
-  RegisterUserInput: RegisterUserInput,
-  RegisterUserPayload: ResolverTypeWrapper<RegisterUserPayload>,
-  RegisterInput: RegisterInput,
-  RegisterPayload: ResolverTypeWrapper<RegisterPayload>,
-  LoginInput: LoginInput,
-  LoginPayload: ResolverTypeWrapper<LoginPayload>,
-  Subscription: ResolverTypeWrapper<{}>,
+  String: ResolverTypeWrapper<Scalars['String']>;
+  Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
+  CreateTestTableInput: CreateTestTableInput;
+  CreateTestTablePayload: ResolverTypeWrapper<CreateTestTablePayload>;
+  CreateUserAccountInput: CreateUserAccountInput;
+  CreateUserAccountPayload: ResolverTypeWrapper<CreateUserAccountPayload>;
+  Datetime: ResolverTypeWrapper<Scalars['Datetime']>;
+  DeleteTestTableByUserIdInput: DeleteTestTableByUserIdInput;
+  DeleteTestTableInput: DeleteTestTableInput;
+  ID: ResolverTypeWrapper<Scalars['ID']>;
+  DeleteTestTablePayload: ResolverTypeWrapper<DeleteTestTablePayload>;
+  DeleteUserAccountByUserIdInput: DeleteUserAccountByUserIdInput;
+  DeleteUserAccountByUsernameInput: DeleteUserAccountByUsernameInput;
+  DeleteUserAccountInput: DeleteUserAccountInput;
+  DeleteUserAccountPayload: ResolverTypeWrapper<DeleteUserAccountPayload>;
+  JSON: ResolverTypeWrapper<Scalars['JSON']>;
+  LoginInput: LoginInput;
+  LoginPayload: ResolverTypeWrapper<LoginPayload>;
+  Mutation: ResolverTypeWrapper<{}>;
+  Node:
+    | ResolversTypes['Query']
+    | ResolversTypes['TestTable']
+    | ResolversTypes['UserAccount'];
+  Query: ResolverTypeWrapper<{}>;
+  Int: ResolverTypeWrapper<Scalars['Int']>;
+  RegisterInput: RegisterInput;
+  RegisterPayload: ResolverTypeWrapper<RegisterPayload>;
+  RegisterUserInput: RegisterUserInput;
+  RegisterUserPayload: ResolverTypeWrapper<RegisterUserPayload>;
+  Subscription: ResolverTypeWrapper<{}>;
+  TestTable: ResolverTypeWrapper<TestTable>;
+  TestTableCondition: TestTableCondition;
+  TestTableInput: TestTableInput;
+  TestTablePatch: TestTablePatch;
+  TestTablesOrderBy: TestTablesOrderBy;
+  UpdateTestTableByUserIdInput: UpdateTestTableByUserIdInput;
+  UpdateTestTableInput: UpdateTestTableInput;
+  UpdateTestTablePayload: ResolverTypeWrapper<UpdateTestTablePayload>;
+  UpdateUserAccountByUserIdInput: UpdateUserAccountByUserIdInput;
+  UpdateUserAccountByUsernameInput: UpdateUserAccountByUsernameInput;
+  UpdateUserAccountInput: UpdateUserAccountInput;
+  UpdateUserAccountPayload: ResolverTypeWrapper<UpdateUserAccountPayload>;
+  UserAccount: ResolverTypeWrapper<UserAccount>;
+  UserAccountCondition: UserAccountCondition;
+  UserAccountInput: UserAccountInput;
+  UserAccountPatch: UserAccountPatch;
+  UserAccountsOrderBy: UserAccountsOrderBy;
+  UUID: ResolverTypeWrapper<Scalars['UUID']>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
-  String: Scalars['String'],
-  Boolean: Scalars['Boolean'],
-  Query: {},
-  ID: Scalars['ID'],
-  Int: Scalars['Int'],
-  Node: ResolversParentTypes['Query'] | ResolversParentTypes['TestTable'] | ResolversParentTypes['UserAccount'],
-  TestTablesOrderBy: TestTablesOrderBy,
-  TestTableCondition: TestTableCondition,
-  UUID: Scalars['UUID'],
-  TestTable: TestTable,
-  JSON: Scalars['JSON'],
-  UserAccountsOrderBy: UserAccountsOrderBy,
-  UserAccountCondition: UserAccountCondition,
-  UserAccount: UserAccount,
-  Datetime: Scalars['Datetime'],
-  Mutation: {},
-  CreateTestTableInput: CreateTestTableInput,
-  TestTableInput: TestTableInput,
-  CreateTestTablePayload: CreateTestTablePayload,
-  CreateUserAccountInput: CreateUserAccountInput,
-  UserAccountInput: UserAccountInput,
-  CreateUserAccountPayload: CreateUserAccountPayload,
-  UpdateTestTableInput: UpdateTestTableInput,
-  TestTablePatch: TestTablePatch,
-  UpdateTestTablePayload: UpdateTestTablePayload,
-  UpdateTestTableByUserIdInput: UpdateTestTableByUserIdInput,
-  UpdateUserAccountInput: UpdateUserAccountInput,
-  UserAccountPatch: UserAccountPatch,
-  UpdateUserAccountPayload: UpdateUserAccountPayload,
-  UpdateUserAccountByUserIdInput: UpdateUserAccountByUserIdInput,
-  UpdateUserAccountByUsernameInput: UpdateUserAccountByUsernameInput,
-  DeleteTestTableInput: DeleteTestTableInput,
-  DeleteTestTablePayload: DeleteTestTablePayload,
-  DeleteTestTableByUserIdInput: DeleteTestTableByUserIdInput,
-  DeleteUserAccountInput: DeleteUserAccountInput,
-  DeleteUserAccountPayload: DeleteUserAccountPayload,
-  DeleteUserAccountByUserIdInput: DeleteUserAccountByUserIdInput,
-  DeleteUserAccountByUsernameInput: DeleteUserAccountByUsernameInput,
-  RegisterUserInput: RegisterUserInput,
-  RegisterUserPayload: RegisterUserPayload,
-  RegisterInput: RegisterInput,
-  RegisterPayload: RegisterPayload,
-  LoginInput: LoginInput,
-  LoginPayload: LoginPayload,
-  Subscription: {},
+  String: Scalars['String'];
+  Boolean: Scalars['Boolean'];
+  CreateTestTableInput: CreateTestTableInput;
+  CreateTestTablePayload: CreateTestTablePayload;
+  CreateUserAccountInput: CreateUserAccountInput;
+  CreateUserAccountPayload: CreateUserAccountPayload;
+  Datetime: Scalars['Datetime'];
+  DeleteTestTableByUserIdInput: DeleteTestTableByUserIdInput;
+  DeleteTestTableInput: DeleteTestTableInput;
+  ID: Scalars['ID'];
+  DeleteTestTablePayload: DeleteTestTablePayload;
+  DeleteUserAccountByUserIdInput: DeleteUserAccountByUserIdInput;
+  DeleteUserAccountByUsernameInput: DeleteUserAccountByUsernameInput;
+  DeleteUserAccountInput: DeleteUserAccountInput;
+  DeleteUserAccountPayload: DeleteUserAccountPayload;
+  JSON: Scalars['JSON'];
+  LoginInput: LoginInput;
+  LoginPayload: LoginPayload;
+  Mutation: {};
+  Node:
+    | ResolversParentTypes['Query']
+    | ResolversParentTypes['TestTable']
+    | ResolversParentTypes['UserAccount'];
+  Query: {};
+  Int: Scalars['Int'];
+  RegisterInput: RegisterInput;
+  RegisterPayload: RegisterPayload;
+  RegisterUserInput: RegisterUserInput;
+  RegisterUserPayload: RegisterUserPayload;
+  Subscription: {};
+  TestTable: TestTable;
+  TestTableCondition: TestTableCondition;
+  TestTableInput: TestTableInput;
+  TestTablePatch: TestTablePatch;
+  TestTablesOrderBy: TestTablesOrderBy;
+  UpdateTestTableByUserIdInput: UpdateTestTableByUserIdInput;
+  UpdateTestTableInput: UpdateTestTableInput;
+  UpdateTestTablePayload: UpdateTestTablePayload;
+  UpdateUserAccountByUserIdInput: UpdateUserAccountByUserIdInput;
+  UpdateUserAccountByUsernameInput: UpdateUserAccountByUsernameInput;
+  UpdateUserAccountInput: UpdateUserAccountInput;
+  UpdateUserAccountPayload: UpdateUserAccountPayload;
+  UserAccount: UserAccount;
+  UserAccountCondition: UserAccountCondition;
+  UserAccountInput: UserAccountInput;
+  UserAccountPatch: UserAccountPatch;
+  UserAccountsOrderBy: UserAccountsOrderBy;
+  UUID: Scalars['UUID'];
 };
 
-export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
-  query?: Resolver<ResolversTypes['Query'], ParentType, ContextType>,
-  nodeId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>,
-  node?: Resolver<Maybe<ResolversTypes['Node']>, ParentType, ContextType, RequireFields<QueryNodeArgs, 'nodeId'>>,
-  allTestTablesList?: Resolver<Maybe<Array<ResolversTypes['TestTable']>>, ParentType, ContextType, RequireFields<QueryAllTestTablesListArgs, never>>,
-  allUserAccountsList?: Resolver<Maybe<Array<ResolversTypes['UserAccount']>>, ParentType, ContextType, RequireFields<QueryAllUserAccountsListArgs, never>>,
-  testTableByUserId?: Resolver<Maybe<ResolversTypes['TestTable']>, ParentType, ContextType, RequireFields<QueryTestTableByUserIdArgs, 'userId'>>,
-  userAccountByUserId?: Resolver<Maybe<ResolversTypes['UserAccount']>, ParentType, ContextType, RequireFields<QueryUserAccountByUserIdArgs, 'userId'>>,
-  userAccountByUsername?: Resolver<Maybe<ResolversTypes['UserAccount']>, ParentType, ContextType, RequireFields<QueryUserAccountByUsernameArgs, 'username'>>,
-  currentPerson?: Resolver<Maybe<ResolversTypes['UserAccount']>, ParentType, ContextType>,
-  testTable?: Resolver<Maybe<ResolversTypes['TestTable']>, ParentType, ContextType, RequireFields<QueryTestTableArgs, 'nodeId'>>,
-  userAccount?: Resolver<Maybe<ResolversTypes['UserAccount']>, ParentType, ContextType, RequireFields<QueryUserAccountArgs, 'nodeId'>>,
+export type CreateTestTablePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateTestTablePayload'] = ResolversParentTypes['CreateTestTablePayload']
+> = {
+  clientMutationId?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
+  testTable?: Resolver<
+    Maybe<ResolversTypes['TestTable']>,
+    ParentType,
+    ContextType
+  >;
+  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
 };
 
-export type NodeResolvers<ContextType = any, ParentType extends ResolversParentTypes['Node'] = ResolversParentTypes['Node']> = {
-  __resolveType: TypeResolveFn<'Query' | 'TestTable' | 'UserAccount', ParentType, ContextType>,
-  nodeId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>,
+export type CreateUserAccountPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateUserAccountPayload'] = ResolversParentTypes['CreateUserAccountPayload']
+> = {
+  clientMutationId?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
+  userAccount?: Resolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    ParentType,
+    ContextType
+  >;
+  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
 };
 
-export interface UuidScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['UUID'], any> {
-  name: 'UUID'
+export interface DatetimeScalarConfig
+  extends GraphQLScalarTypeConfig<ResolversTypes['Datetime'], any> {
+  name: 'Datetime';
 }
 
-export type TestTableResolvers<ContextType = any, ParentType extends ResolversParentTypes['TestTable'] = ResolversParentTypes['TestTable']> = {
-  nodeId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>,
-  userId?: Resolver<ResolversTypes['UUID'], ParentType, ContextType>,
-  data?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
+export type DeleteTestTablePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['DeleteTestTablePayload'] = ResolversParentTypes['DeleteTestTablePayload']
+> = {
+  clientMutationId?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
+  testTable?: Resolver<
+    Maybe<ResolversTypes['TestTable']>,
+    ParentType,
+    ContextType
+  >;
+  deletedTestTableId?: Resolver<
+    Maybe<ResolversTypes['ID']>,
+    ParentType,
+    ContextType
+  >;
+  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
 };
 
-export interface JsonScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['JSON'], any> {
-  name: 'JSON'
+export type DeleteUserAccountPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['DeleteUserAccountPayload'] = ResolversParentTypes['DeleteUserAccountPayload']
+> = {
+  clientMutationId?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
+  userAccount?: Resolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    ParentType,
+    ContextType
+  >;
+  deletedUserAccountId?: Resolver<
+    Maybe<ResolversTypes['ID']>,
+    ParentType,
+    ContextType
+  >;
+  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
+};
+
+export interface JsonScalarConfig
+  extends GraphQLScalarTypeConfig<ResolversTypes['JSON'], any> {
+  name: 'JSON';
 }
 
-export type UserAccountResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserAccount'] = ResolversParentTypes['UserAccount']> = {
-  nodeId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>,
-  userId?: Resolver<ResolversTypes['UUID'], ParentType, ContextType>,
-  username?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>,
-  emailConfirmed?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>,
-  roles?: Resolver<ResolversTypes['String'], ParentType, ContextType>,
-  createdAt?: Resolver<Maybe<ResolversTypes['Datetime']>, ParentType, ContextType>,
-  updatedAt?: Resolver<Maybe<ResolversTypes['Datetime']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
+export type LoginPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['LoginPayload'] = ResolversParentTypes['LoginPayload']
+> = {
+  user?: Resolver<ResolversTypes['UserAccount'], ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
 };
 
-export interface DatetimeScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['Datetime'], any> {
-  name: 'Datetime'
+export type MutationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']
+> = {
+  createTestTable?: Resolver<
+    Maybe<ResolversTypes['CreateTestTablePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCreateTestTableArgs, 'input'>
+  >;
+  createUserAccount?: Resolver<
+    Maybe<ResolversTypes['CreateUserAccountPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCreateUserAccountArgs, 'input'>
+  >;
+  updateTestTable?: Resolver<
+    Maybe<ResolversTypes['UpdateTestTablePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUpdateTestTableArgs, 'input'>
+  >;
+  updateTestTableByUserId?: Resolver<
+    Maybe<ResolversTypes['UpdateTestTablePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUpdateTestTableByUserIdArgs, 'input'>
+  >;
+  updateUserAccount?: Resolver<
+    Maybe<ResolversTypes['UpdateUserAccountPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUpdateUserAccountArgs, 'input'>
+  >;
+  updateUserAccountByUserId?: Resolver<
+    Maybe<ResolversTypes['UpdateUserAccountPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUpdateUserAccountByUserIdArgs, 'input'>
+  >;
+  updateUserAccountByUsername?: Resolver<
+    Maybe<ResolversTypes['UpdateUserAccountPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUpdateUserAccountByUsernameArgs, 'input'>
+  >;
+  deleteTestTable?: Resolver<
+    Maybe<ResolversTypes['DeleteTestTablePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationDeleteTestTableArgs, 'input'>
+  >;
+  deleteTestTableByUserId?: Resolver<
+    Maybe<ResolversTypes['DeleteTestTablePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationDeleteTestTableByUserIdArgs, 'input'>
+  >;
+  deleteUserAccount?: Resolver<
+    Maybe<ResolversTypes['DeleteUserAccountPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationDeleteUserAccountArgs, 'input'>
+  >;
+  deleteUserAccountByUserId?: Resolver<
+    Maybe<ResolversTypes['DeleteUserAccountPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationDeleteUserAccountByUserIdArgs, 'input'>
+  >;
+  deleteUserAccountByUsername?: Resolver<
+    Maybe<ResolversTypes['DeleteUserAccountPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationDeleteUserAccountByUsernameArgs, 'input'>
+  >;
+  registerUser?: Resolver<
+    Maybe<ResolversTypes['RegisterUserPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationRegisterUserArgs, 'input'>
+  >;
+  register?: Resolver<
+    Maybe<ResolversTypes['RegisterPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationRegisterArgs, 'input'>
+  >;
+  login?: Resolver<
+    Maybe<ResolversTypes['LoginPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationLoginArgs, 'input'>
+  >;
+};
+
+export type NodeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Node'] = ResolversParentTypes['Node']
+> = {
+  __resolveType: TypeResolveFn<
+    'Query' | 'TestTable' | 'UserAccount',
+    ParentType,
+    ContextType
+  >;
+  nodeId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+};
+
+export type QueryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
+> = {
+  query?: Resolver<ResolversTypes['Query'], ParentType, ContextType>;
+  nodeId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  node?: Resolver<
+    Maybe<ResolversTypes['Node']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryNodeArgs, 'nodeId'>
+  >;
+  allTestTablesList?: Resolver<
+    Maybe<Array<ResolversTypes['TestTable']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryAllTestTablesListArgs, never>
+  >;
+  allUserAccountsList?: Resolver<
+    Maybe<Array<ResolversTypes['UserAccount']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryAllUserAccountsListArgs, never>
+  >;
+  testTableByUserId?: Resolver<
+    Maybe<ResolversTypes['TestTable']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryTestTableByUserIdArgs, 'userId'>
+  >;
+  userAccountByUserId?: Resolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserAccountByUserIdArgs, 'userId'>
+  >;
+  userAccountByUsername?: Resolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserAccountByUsernameArgs, 'username'>
+  >;
+  currentPerson?: Resolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    ParentType,
+    ContextType
+  >;
+  testTable?: Resolver<
+    Maybe<ResolversTypes['TestTable']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryTestTableArgs, 'nodeId'>
+  >;
+  userAccount?: Resolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserAccountArgs, 'nodeId'>
+  >;
+};
+
+export type RegisterPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RegisterPayload'] = ResolversParentTypes['RegisterPayload']
+> = {
+  user?: Resolver<ResolversTypes['UserAccount'], ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
+};
+
+export type RegisterUserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RegisterUserPayload'] = ResolversParentTypes['RegisterUserPayload']
+> = {
+  clientMutationId?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
+  userAccount?: Resolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    ParentType,
+    ContextType
+  >;
+  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
+};
+
+export type SubscriptionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Subscription'] = ResolversParentTypes['Subscription']
+> = {
+  query?: SubscriptionResolver<
+    ResolversTypes['Query'],
+    'query',
+    ParentType,
+    ContextType
+  >;
+  nodeId?: SubscriptionResolver<
+    ResolversTypes['ID'],
+    'nodeId',
+    ParentType,
+    ContextType
+  >;
+  node?: SubscriptionResolver<
+    Maybe<ResolversTypes['Node']>,
+    'node',
+    ParentType,
+    ContextType,
+    RequireFields<SubscriptionNodeArgs, 'nodeId'>
+  >;
+  allTestTablesList?: SubscriptionResolver<
+    Maybe<Array<ResolversTypes['TestTable']>>,
+    'allTestTablesList',
+    ParentType,
+    ContextType,
+    RequireFields<SubscriptionAllTestTablesListArgs, never>
+  >;
+  allUserAccountsList?: SubscriptionResolver<
+    Maybe<Array<ResolversTypes['UserAccount']>>,
+    'allUserAccountsList',
+    ParentType,
+    ContextType,
+    RequireFields<SubscriptionAllUserAccountsListArgs, never>
+  >;
+  testTableByUserId?: SubscriptionResolver<
+    Maybe<ResolversTypes['TestTable']>,
+    'testTableByUserId',
+    ParentType,
+    ContextType,
+    RequireFields<SubscriptionTestTableByUserIdArgs, 'userId'>
+  >;
+  userAccountByUserId?: SubscriptionResolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    'userAccountByUserId',
+    ParentType,
+    ContextType,
+    RequireFields<SubscriptionUserAccountByUserIdArgs, 'userId'>
+  >;
+  userAccountByUsername?: SubscriptionResolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    'userAccountByUsername',
+    ParentType,
+    ContextType,
+    RequireFields<SubscriptionUserAccountByUsernameArgs, 'username'>
+  >;
+  currentPerson?: SubscriptionResolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    'currentPerson',
+    ParentType,
+    ContextType
+  >;
+  testTable?: SubscriptionResolver<
+    Maybe<ResolversTypes['TestTable']>,
+    'testTable',
+    ParentType,
+    ContextType,
+    RequireFields<SubscriptionTestTableArgs, 'nodeId'>
+  >;
+  userAccount?: SubscriptionResolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    'userAccount',
+    ParentType,
+    ContextType,
+    RequireFields<SubscriptionUserAccountArgs, 'nodeId'>
+  >;
+};
+
+export type TestTableResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['TestTable'] = ResolversParentTypes['TestTable']
+> = {
+  nodeId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  userId?: Resolver<ResolversTypes['UUID'], ParentType, ContextType>;
+  data?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
+};
+
+export type UpdateTestTablePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateTestTablePayload'] = ResolversParentTypes['UpdateTestTablePayload']
+> = {
+  clientMutationId?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
+  testTable?: Resolver<
+    Maybe<ResolversTypes['TestTable']>,
+    ParentType,
+    ContextType
+  >;
+  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
+};
+
+export type UpdateUserAccountPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateUserAccountPayload'] = ResolversParentTypes['UpdateUserAccountPayload']
+> = {
+  clientMutationId?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
+  userAccount?: Resolver<
+    Maybe<ResolversTypes['UserAccount']>,
+    ParentType,
+    ContextType
+  >;
+  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
+};
+
+export type UserAccountResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserAccount'] = ResolversParentTypes['UserAccount']
+> = {
+  nodeId?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  userId?: Resolver<ResolversTypes['UUID'], ParentType, ContextType>;
+  username?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  emailConfirmed?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  roles?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  createdAt?: Resolver<
+    Maybe<ResolversTypes['Datetime']>,
+    ParentType,
+    ContextType
+  >;
+  updatedAt?: Resolver<
+    Maybe<ResolversTypes['Datetime']>,
+    ParentType,
+    ContextType
+  >;
+  __isTypeOf?: isTypeOfResolverFn<ParentType>;
+};
+
+export interface UuidScalarConfig
+  extends GraphQLScalarTypeConfig<ResolversTypes['UUID'], any> {
+  name: 'UUID';
 }
-
-export type MutationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
-  createTestTable?: Resolver<Maybe<ResolversTypes['CreateTestTablePayload']>, ParentType, ContextType, RequireFields<MutationCreateTestTableArgs, 'input'>>,
-  createUserAccount?: Resolver<Maybe<ResolversTypes['CreateUserAccountPayload']>, ParentType, ContextType, RequireFields<MutationCreateUserAccountArgs, 'input'>>,
-  updateTestTable?: Resolver<Maybe<ResolversTypes['UpdateTestTablePayload']>, ParentType, ContextType, RequireFields<MutationUpdateTestTableArgs, 'input'>>,
-  updateTestTableByUserId?: Resolver<Maybe<ResolversTypes['UpdateTestTablePayload']>, ParentType, ContextType, RequireFields<MutationUpdateTestTableByUserIdArgs, 'input'>>,
-  updateUserAccount?: Resolver<Maybe<ResolversTypes['UpdateUserAccountPayload']>, ParentType, ContextType, RequireFields<MutationUpdateUserAccountArgs, 'input'>>,
-  updateUserAccountByUserId?: Resolver<Maybe<ResolversTypes['UpdateUserAccountPayload']>, ParentType, ContextType, RequireFields<MutationUpdateUserAccountByUserIdArgs, 'input'>>,
-  updateUserAccountByUsername?: Resolver<Maybe<ResolversTypes['UpdateUserAccountPayload']>, ParentType, ContextType, RequireFields<MutationUpdateUserAccountByUsernameArgs, 'input'>>,
-  deleteTestTable?: Resolver<Maybe<ResolversTypes['DeleteTestTablePayload']>, ParentType, ContextType, RequireFields<MutationDeleteTestTableArgs, 'input'>>,
-  deleteTestTableByUserId?: Resolver<Maybe<ResolversTypes['DeleteTestTablePayload']>, ParentType, ContextType, RequireFields<MutationDeleteTestTableByUserIdArgs, 'input'>>,
-  deleteUserAccount?: Resolver<Maybe<ResolversTypes['DeleteUserAccountPayload']>, ParentType, ContextType, RequireFields<MutationDeleteUserAccountArgs, 'input'>>,
-  deleteUserAccountByUserId?: Resolver<Maybe<ResolversTypes['DeleteUserAccountPayload']>, ParentType, ContextType, RequireFields<MutationDeleteUserAccountByUserIdArgs, 'input'>>,
-  deleteUserAccountByUsername?: Resolver<Maybe<ResolversTypes['DeleteUserAccountPayload']>, ParentType, ContextType, RequireFields<MutationDeleteUserAccountByUsernameArgs, 'input'>>,
-  registerUser?: Resolver<Maybe<ResolversTypes['RegisterUserPayload']>, ParentType, ContextType, RequireFields<MutationRegisterUserArgs, 'input'>>,
-  register?: Resolver<Maybe<ResolversTypes['RegisterPayload']>, ParentType, ContextType, RequireFields<MutationRegisterArgs, 'input'>>,
-  login?: Resolver<Maybe<ResolversTypes['LoginPayload']>, ParentType, ContextType, RequireFields<MutationLoginArgs, 'input'>>,
-};
-
-export type CreateTestTablePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateTestTablePayload'] = ResolversParentTypes['CreateTestTablePayload']> = {
-  clientMutationId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>,
-  testTable?: Resolver<Maybe<ResolversTypes['TestTable']>, ParentType, ContextType>,
-  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type CreateUserAccountPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateUserAccountPayload'] = ResolversParentTypes['CreateUserAccountPayload']> = {
-  clientMutationId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>,
-  userAccount?: Resolver<Maybe<ResolversTypes['UserAccount']>, ParentType, ContextType>,
-  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type UpdateTestTablePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateTestTablePayload'] = ResolversParentTypes['UpdateTestTablePayload']> = {
-  clientMutationId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>,
-  testTable?: Resolver<Maybe<ResolversTypes['TestTable']>, ParentType, ContextType>,
-  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type UpdateUserAccountPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateUserAccountPayload'] = ResolversParentTypes['UpdateUserAccountPayload']> = {
-  clientMutationId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>,
-  userAccount?: Resolver<Maybe<ResolversTypes['UserAccount']>, ParentType, ContextType>,
-  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type DeleteTestTablePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['DeleteTestTablePayload'] = ResolversParentTypes['DeleteTestTablePayload']> = {
-  clientMutationId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>,
-  testTable?: Resolver<Maybe<ResolversTypes['TestTable']>, ParentType, ContextType>,
-  deletedTestTableId?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>,
-  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type DeleteUserAccountPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['DeleteUserAccountPayload'] = ResolversParentTypes['DeleteUserAccountPayload']> = {
-  clientMutationId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>,
-  userAccount?: Resolver<Maybe<ResolversTypes['UserAccount']>, ParentType, ContextType>,
-  deletedUserAccountId?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>,
-  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type RegisterUserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RegisterUserPayload'] = ResolversParentTypes['RegisterUserPayload']> = {
-  clientMutationId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>,
-  userAccount?: Resolver<Maybe<ResolversTypes['UserAccount']>, ParentType, ContextType>,
-  query?: Resolver<Maybe<ResolversTypes['Query']>, ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type RegisterPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RegisterPayload'] = ResolversParentTypes['RegisterPayload']> = {
-  user?: Resolver<ResolversTypes['UserAccount'], ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type LoginPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['LoginPayload'] = ResolversParentTypes['LoginPayload']> = {
-  user?: Resolver<ResolversTypes['UserAccount'], ParentType, ContextType>,
-  __isTypeOf?: isTypeOfResolverFn<ParentType>,
-};
-
-export type SubscriptionResolvers<ContextType = any, ParentType extends ResolversParentTypes['Subscription'] = ResolversParentTypes['Subscription']> = {
-  query?: SubscriptionResolver<ResolversTypes['Query'], "query", ParentType, ContextType>,
-  nodeId?: SubscriptionResolver<ResolversTypes['ID'], "nodeId", ParentType, ContextType>,
-  node?: SubscriptionResolver<Maybe<ResolversTypes['Node']>, "node", ParentType, ContextType, RequireFields<SubscriptionNodeArgs, 'nodeId'>>,
-  allTestTablesList?: SubscriptionResolver<Maybe<Array<ResolversTypes['TestTable']>>, "allTestTablesList", ParentType, ContextType, RequireFields<SubscriptionAllTestTablesListArgs, never>>,
-  allUserAccountsList?: SubscriptionResolver<Maybe<Array<ResolversTypes['UserAccount']>>, "allUserAccountsList", ParentType, ContextType, RequireFields<SubscriptionAllUserAccountsListArgs, never>>,
-  testTableByUserId?: SubscriptionResolver<Maybe<ResolversTypes['TestTable']>, "testTableByUserId", ParentType, ContextType, RequireFields<SubscriptionTestTableByUserIdArgs, 'userId'>>,
-  userAccountByUserId?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, "userAccountByUserId", ParentType, ContextType, RequireFields<SubscriptionUserAccountByUserIdArgs, 'userId'>>,
-  userAccountByUsername?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, "userAccountByUsername", ParentType, ContextType, RequireFields<SubscriptionUserAccountByUsernameArgs, 'username'>>,
-  currentPerson?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, "currentPerson", ParentType, ContextType>,
-  testTable?: SubscriptionResolver<Maybe<ResolversTypes['TestTable']>, "testTable", ParentType, ContextType, RequireFields<SubscriptionTestTableArgs, 'nodeId'>>,
-  userAccount?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, "userAccount", ParentType, ContextType, RequireFields<SubscriptionUserAccountArgs, 'nodeId'>>,
-};
 
 export type Resolvers<ContextType = any> = {
-  Query?: QueryResolvers<ContextType>,
-  Node?: NodeResolvers,
-  UUID?: GraphQLScalarType,
-  TestTable?: TestTableResolvers<ContextType>,
-  JSON?: GraphQLScalarType,
-  UserAccount?: UserAccountResolvers<ContextType>,
-  Datetime?: GraphQLScalarType,
-  Mutation?: MutationResolvers<ContextType>,
-  CreateTestTablePayload?: CreateTestTablePayloadResolvers<ContextType>,
-  CreateUserAccountPayload?: CreateUserAccountPayloadResolvers<ContextType>,
-  UpdateTestTablePayload?: UpdateTestTablePayloadResolvers<ContextType>,
-  UpdateUserAccountPayload?: UpdateUserAccountPayloadResolvers<ContextType>,
-  DeleteTestTablePayload?: DeleteTestTablePayloadResolvers<ContextType>,
-  DeleteUserAccountPayload?: DeleteUserAccountPayloadResolvers<ContextType>,
-  RegisterUserPayload?: RegisterUserPayloadResolvers<ContextType>,
-  RegisterPayload?: RegisterPayloadResolvers<ContextType>,
-  LoginPayload?: LoginPayloadResolvers<ContextType>,
-  Subscription?: SubscriptionResolvers<ContextType>,
+  CreateTestTablePayload?: CreateTestTablePayloadResolvers<ContextType>;
+  CreateUserAccountPayload?: CreateUserAccountPayloadResolvers<ContextType>;
+  Datetime?: GraphQLScalarType;
+  DeleteTestTablePayload?: DeleteTestTablePayloadResolvers<ContextType>;
+  DeleteUserAccountPayload?: DeleteUserAccountPayloadResolvers<ContextType>;
+  JSON?: GraphQLScalarType;
+  LoginPayload?: LoginPayloadResolvers<ContextType>;
+  Mutation?: MutationResolvers<ContextType>;
+  Node?: NodeResolvers;
+  Query?: QueryResolvers<ContextType>;
+  RegisterPayload?: RegisterPayloadResolvers<ContextType>;
+  RegisterUserPayload?: RegisterUserPayloadResolvers<ContextType>;
+  Subscription?: SubscriptionResolvers<ContextType>;
+  TestTable?: TestTableResolvers<ContextType>;
+  UpdateTestTablePayload?: UpdateTestTablePayloadResolvers<ContextType>;
+  UpdateUserAccountPayload?: UpdateUserAccountPayloadResolvers<ContextType>;
+  UserAccount?: UserAccountResolvers<ContextType>;
+  UUID?: GraphQLScalarType;
 };
-
 
 /**
  * @deprecated
  * Use "Resolvers" root object instead. If you wish to get "IResolvers", add "typesPrefix: I" to your config.
-*/
+ */
 export type IResolvers<ContextType = any> = Resolvers<ContextType>;
 
-
 export const LoginDocument = gql`
-    mutation Login($input: LoginInput!) {
-  login(input: $input) {
-    user {
-      username
-      userId
-      roles
+  mutation Login($input: LoginInput!) {
+    login(input: $input) {
+      user {
+        username
+        userId
+        roles
+      }
     }
   }
-}
-    `;
-export type LoginMutationFn = ApolloReactCommon.MutationFunction<LoginMutation, LoginMutationVariables>;
+`;
+export type LoginMutationFn = ApolloReactCommon.MutationFunction<
+  LoginMutation,
+  LoginMutationVariables
+>;
 
 /**
  * __useLoginMutation__
@@ -871,24 +1615,40 @@ export type LoginMutationFn = ApolloReactCommon.MutationFunction<LoginMutation, 
  *   },
  * });
  */
-export function useLoginMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<LoginMutation, LoginMutationVariables>) {
-        return ApolloReactHooks.useMutation<LoginMutation, LoginMutationVariables>(LoginDocument, baseOptions);
-      }
+export function useLoginMutation(
+  baseOptions?: ApolloReactHooks.MutationHookOptions<
+    LoginMutation,
+    LoginMutationVariables
+  >
+) {
+  return ApolloReactHooks.useMutation<LoginMutation, LoginMutationVariables>(
+    LoginDocument,
+    baseOptions
+  );
+}
 export type LoginMutationHookResult = ReturnType<typeof useLoginMutation>;
-export type LoginMutationResult = ApolloReactCommon.MutationResult<LoginMutation>;
-export type LoginMutationOptions = ApolloReactCommon.BaseMutationOptions<LoginMutation, LoginMutationVariables>;
+export type LoginMutationResult = ApolloReactCommon.MutationResult<
+  LoginMutation
+>;
+export type LoginMutationOptions = ApolloReactCommon.BaseMutationOptions<
+  LoginMutation,
+  LoginMutationVariables
+>;
 export const RegisterDocument = gql`
-    mutation Register($input: RegisterInput!) {
-  register(input: $input) {
-    user {
-      userId
-      username
-      roles
+  mutation Register($input: RegisterInput!) {
+    register(input: $input) {
+      user {
+        userId
+        username
+        roles
+      }
     }
   }
-}
-    `;
-export type RegisterMutationFn = ApolloReactCommon.MutationFunction<RegisterMutation, RegisterMutationVariables>;
+`;
+export type RegisterMutationFn = ApolloReactCommon.MutationFunction<
+  RegisterMutation,
+  RegisterMutationVariables
+>;
 
 /**
  * __useRegisterMutation__
@@ -907,43 +1667,22 @@ export type RegisterMutationFn = ApolloReactCommon.MutationFunction<RegisterMuta
  *   },
  * });
  */
-export function useRegisterMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<RegisterMutation, RegisterMutationVariables>) {
-        return ApolloReactHooks.useMutation<RegisterMutation, RegisterMutationVariables>(RegisterDocument, baseOptions);
-      }
-export type RegisterMutationHookResult = ReturnType<typeof useRegisterMutation>;
-export type RegisterMutationResult = ApolloReactCommon.MutationResult<RegisterMutation>;
-export type RegisterMutationOptions = ApolloReactCommon.BaseMutationOptions<RegisterMutation, RegisterMutationVariables>;
-export const AllUserAccountsListDocument = gql`
-    query AllUserAccountsList {
-  allUserAccountsList {
-    username
-    roles
-    userId
-  }
+export function useRegisterMutation(
+  baseOptions?: ApolloReactHooks.MutationHookOptions<
+    RegisterMutation,
+    RegisterMutationVariables
+  >
+) {
+  return ApolloReactHooks.useMutation<
+    RegisterMutation,
+    RegisterMutationVariables
+  >(RegisterDocument, baseOptions);
 }
-    `;
-
-/**
- * __useAllUserAccountsListQuery__
- *
- * To run a query within a React component, call `useAllUserAccountsListQuery` and pass it any options that fit your needs.
- * When your component renders, `useAllUserAccountsListQuery` returns an object from Apollo Client that contains loading, error, and data properties 
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useAllUserAccountsListQuery({
- *   variables: {
- *   },
- * });
- */
-export function useAllUserAccountsListQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<AllUserAccountsListQuery, AllUserAccountsListQueryVariables>) {
-        return ApolloReactHooks.useQuery<AllUserAccountsListQuery, AllUserAccountsListQueryVariables>(AllUserAccountsListDocument, baseOptions);
-      }
-export function useAllUserAccountsListLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<AllUserAccountsListQuery, AllUserAccountsListQueryVariables>) {
-          return ApolloReactHooks.useLazyQuery<AllUserAccountsListQuery, AllUserAccountsListQueryVariables>(AllUserAccountsListDocument, baseOptions);
-        }
-export type AllUserAccountsListQueryHookResult = ReturnType<typeof useAllUserAccountsListQuery>;
-export type AllUserAccountsListLazyQueryHookResult = ReturnType<typeof useAllUserAccountsListLazyQuery>;
-export type AllUserAccountsListQueryResult = ApolloReactCommon.QueryResult<AllUserAccountsListQuery, AllUserAccountsListQueryVariables>;
+export type RegisterMutationHookResult = ReturnType<typeof useRegisterMutation>;
+export type RegisterMutationResult = ApolloReactCommon.MutationResult<
+  RegisterMutation
+>;
+export type RegisterMutationOptions = ApolloReactCommon.BaseMutationOptions<
+  RegisterMutation,
+  RegisterMutationVariables
+>;

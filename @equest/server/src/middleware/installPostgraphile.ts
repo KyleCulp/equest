@@ -1,8 +1,9 @@
-import postgraphile from 'postgraphile';
 import { Application } from 'express';
+import { Pool } from 'pg';
+import postgraphile from 'postgraphile';
+
 import { PostgraphileInstance } from '../graphql';
 import { getUserClaimsFromRequest } from './installPassport';
-import { Pool } from 'pg';
 
 // Lots of stuff from Graphile's bootstrap-react-apollo repo
 // Including comments, so props to graphile

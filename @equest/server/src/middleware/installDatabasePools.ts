@@ -1,10 +1,11 @@
-import { Pool } from 'pg';
-import {
-  redisInstance,
-  pgMasterPoolConfig,
-  pgMasterAdminPoolConfig
-} from '../database';
 import { Application } from 'express';
+import { Pool } from 'pg';
+
+import {
+  pgMasterAdminPoolConfig,
+  pgMasterPoolConfig,
+  redisInstance,
+} from '../database';
 
 const { REDIS_SESSION_DB, REDIS_QUEUE_DB } = process.env;
 

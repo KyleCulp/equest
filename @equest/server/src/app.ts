@@ -1,12 +1,13 @@
-import express, { Express } from 'express';
-import {
-  installDatabasePools,
-  installSession,
-  installPassport,
-  installPostgraphile,
-} from './middleware';
 import * as health from '@cloudnative/health-connect';
 import cors from 'cors';
+import express, { Express } from 'express';
+
+import {
+  installDatabasePools,
+  installPassport,
+  installPostgraphile,
+  installSession,
+} from './middleware';
 
 export const app: Express = express();
 

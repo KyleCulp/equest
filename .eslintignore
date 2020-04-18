@@ -1,4 +1,8 @@
 node_modules
+@equest/*/node_modules
+@equest/graphql/src/generated.ts
+
+data
 umd
 dist
 coverage

@@ -4,6 +4,7 @@ documents: '../client/src/**/*.gql'
 generates:
   src/generated.ts:
     plugins:
+      - add: /* eslint-disable */
       - add: /* THIS IS A GENERATED FILE - DO NOT MODIFY */
       - 'typescript'
       - 'typescript-operations'

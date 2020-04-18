@@ -1,7 +1,7 @@
 import { ApolloLink, HttpLink } from '@apollo/client';
 import { RetryLink } from '@apollo/link-retry';
-import Cookies from 'js-cookie';
 import { onError } from 'apollo-link-error';
+import Cookies from 'js-cookie';
 
 // https://www.apollographql.com/docs/link/
 // https://www.apollographql.com/docs/react/v3.0-beta/api/link/introduction/
@@ -10,7 +10,7 @@ import { onError } from 'apollo-link-error';
 
 const httpLink = new HttpLink({
   uri: 'http://localhost:3000/postgraphile',
-  credentials: 'include'
+  credentials: 'include',
   // useGETForQueries: true
 });
 
@@ -20,8 +20,8 @@ const authenticationLink = new ApolloLink((operation, forward) => {
     headers: {
       // authorization: `bearer ${Cookies.get('equestsid')}` || null,
       'Access-Control-Allow-Credentials': 'true',
-      'Access-Control-Allow-Origin': 'http://localhost:8080'
-    }
+      'Access-Control-Allow-Origin': 'http://localhost:8080',
+    },
   });
 
   return forward(operation);
@@ -39,7 +39,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 
 export const clientLinks = ApolloLink.from([
   authenticationLink,
-  httpLink
+  httpLink,
 ]).setOnError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors)
     graphQLErrors.forEach(({ message, locations, path }) =>

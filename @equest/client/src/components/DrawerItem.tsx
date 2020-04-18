@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link, LinkProps } from 'react-router-dom';
-import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import DashboardIcon from '@material-ui/icons/Dashboard';
+import ListItemText from '@material-ui/core/ListItemText';
 import { OverridableComponent } from '@material-ui/core/OverridableComponent';
 import { SvgIconTypeMap } from '@material-ui/core/SvgIcon';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import React from 'react';
+import { Link, LinkProps } from 'react-router-dom';
 
 interface Props extends LinkProps {
   label: string;

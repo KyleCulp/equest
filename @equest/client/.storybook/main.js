@@ -5,9 +5,9 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-info',
     '@storybook/addon-links',
-    '@storybook/addon-storysource'
+    '@storybook/addon-storysource',
   ],
-  webpackFinal: async config => {
+  webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       use: [
@@ -15,15 +15,15 @@ module.exports = {
         {
           loader: require.resolve('ts-loader'),
           options: {
-            transpileOnly: true
-          }
+            transpileOnly: true,
+          },
         },
         {
-          loader: require.resolve('react-docgen-typescript-loader')
-        }
-      ]
+          loader: require.resolve('react-docgen-typescript-loader'),
+        },
+      ],
     });
     config.resolve.extensions.push('.ts', '.tsx');
     return config;
-  }
+  },
 };

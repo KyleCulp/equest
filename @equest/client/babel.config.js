@@ -7,19 +7,19 @@ module.exports = {
     //   }
     // ],
     '@babel/preset-react',
-    '@emotion/babel-preset-css-prop'
+    '@emotion/babel-preset-css-prop',
   ],
   plugins: [
     'emotion',
     'react-hot-loader/babel',
-    '@babel/plugin-syntax-dynamic-import'
+    '@babel/plugin-syntax-dynamic-import',
   ],
   env: {
     production: {
-      presets: ['minify']
+      presets: ['minify'],
     },
     test: {
-      presets: ['@babel/preset-env', '@babel/preset-react']
-    }
-  }
+      presets: ['@babel/preset-env', '@babel/preset-react'],
+    },
+  },
 };

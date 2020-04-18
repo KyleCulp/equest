@@ -1,7 +1,9 @@
+import '@equest/config';
+
 import { createServer } from 'http';
+
 import { app } from './app';
 import { handleLifecycle } from './lifecycle';
-import '@equest/config';
 
 // Run/include application lifecycle related functions
 handleLifecycle();

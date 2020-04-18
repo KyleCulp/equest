@@ -1,8 +1,9 @@
-import { PostGraphileOptions } from 'postgraphile';
-import PgManyToManyPlugin from '@graphile-contrib/pg-many-to-many';
-import { getGraphqlResolvers } from './resolvers';
-import { join } from 'path';
 import { isDev } from '@equest/utils';
+import PgManyToManyPlugin from '@graphile-contrib/pg-many-to-many';
+import { join } from 'path';
+import { PostGraphileOptions } from 'postgraphile';
+
+import { getGraphqlResolvers } from './resolvers';
 
 const schemas = ['app_public', 'rocket_league', 'csgo'];
 

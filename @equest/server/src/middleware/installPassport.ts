@@ -1,4 +1,4 @@
-import { Request, Response, Application } from 'express';
+import { Application, Request, Response } from 'express';
 import passport from 'passport';
 import { Pool } from 'pg';
 
