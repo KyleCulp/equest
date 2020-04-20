@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules", "@equest/*/dist", "@equest/*/node_modules"],
-  // "include": ["@equest"],
+  "include": ["@equest/config"],
   "compilerOptions": {
     /* Basic Options */
     "target": "es2018" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */,
@@ -15,7 +15,7 @@
       "esnext.asynciterable"
     ],
     "resolveJsonModule": true,
-
+    "skipLibCheck": true,
     "allowJs": false /* Allow javascript files to be compiled. */,
     "jsx": "react",
     "declaration": true /* Generates corresponding '.d.ts' file. */,
@@ -52,12 +52,13 @@
     "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
     "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
     "paths": {
-      "@equest/*": ["@equest/*"]
+      "@equest/*": ["@equest/*"],
+      "@equest/config": ["@equest/config"],
+      "@equest/utils": ["@equest/utils"]
     } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
-    "rootDirs": [
-      "@equest/*/src",
-      "@equest/*/stories"
-    ] /* List of root folders whose combined content represents the structure of the project at runtime. */,
+    // "rootDirs": [
+    //   "@equest/*/src"
+    // ] /* List of root folders whose combined content represents the structure of the project at runtime. */,
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
     // "types": [],                           /* Type declaration files to be included in compilation. */
     "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */,

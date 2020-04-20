@@ -1,14 +1,13 @@
 kind: pipeline
 type: docker
-name: greeting
+name: default
 
 steps:
-  - name: en
-    image: alpine
+  - name: lint
+    image: node
+    failure: ignore
+    detach: true
+    privileged: true
     commands:
-      - echo hello world
-
-  - name: fr
-    image: alpine
-    commands:
-      - echo bonjour monde
+      - npm install
+      - npm run format

@@ -2,10 +2,10 @@
   "name": "@equest/config",
   "version": "0.0.0",
   "description": "Provides config & preloads dotenv",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index",
+  "types": "dist/index",
   "scripts": {
-    "build": "tsc -b"
+    "build": "../../node_modules/.bin/tsc -b"
   },
   "dependencies": {
     "dotenv": "^8.2.0"
