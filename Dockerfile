@@ -1,71 +1,60 @@
-# Global args, set before the first FROM, shared by all stages
-ARG PORT=5678
-ARG NODE_ENV="production"
-ARG ROOT_URL="http://localhost:${PORT}"
-ARG TARGET="server"
+FROM node:12
 
-################################################################################
-# Build stage 1 - `npm run build`
+# The node image comes with a base non-root 'node' user which this Dockerfile
+# gives sudo access. However, for Linux, this user's GID/UID must match your local
+# user UID/GID to avoid permission issues with bind mounts. Update USER_UID / USER_GID
+# if yours is not 1000. See https://aka.ms/vscode-remote/containers/non-root-user.
+ARG USER_UID=${UID:-1000}
+ARG SETUP_MODE=normal
 
-FROM node:12-alpine as builder
-# Import our shared args
-ARG NODE_ENV
-ARG ROOT_URL
+# COPY scripts/setup.sh /setup.sh
+# RUN /setup.sh $SETUP_MODE
+EXPOSE 3000
 
-# Cache node_modules for as long as possible
-COPY lerna.json package.json package-lock.json /workspace/
-COPY @equest/ /workspace/@equest/
-WORKDIR /workspace/
-RUN npm install --only=dev
 
-COPY tsconfig.json /workspace/
-# Folders must be copied separately, files can be copied all at once
-COPY scripts/ /workspace/scripts/
-COPY data/ /workspace/data/
+# # #Taken from Bret Fisher's Dockercon Example
+# # #https://github.com/BretFisher/dockercon19
 
-# Finally run the build script
-RUN npm run build
+# FROM node:12 as base
+# ENV NODE=ENV=production
+# ENV TINI_VERSION v0.18.0
+# ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+# RUN chmod +x /tini
+# EXPOSE 3000
+# RUN mkdir /app && chown -R node:node /app
+# WORKDIR /app
+# ADD . /app
+# USER node
+# COPY --chown=node:node package.json package-lock*.json ./
+# RUN npm ci && npm cache clean --force
 
-################################################################################
-# Build stage 2 - COPY the relevant things (multiple steps)
+# FROM base as dev
+# ENV NODE_ENV=development
+# ENV PATH=/app/node_modules/.bin:$PATH
+# RUN npm install --only=development
+# USER root
+# CMD ["npm", "run", "start:dev"]
 
-FROM node:12-alpine as clean
-# Import our shared args
-ARG NODE_ENV
-ARG ROOT_URL
+# FROM base as source
+# COPY --chown=node:node . .
 
-COPY --from=builder /workspace/@equest /workspace
+# FROM source as test
+# ENV NODE_ENV=development
+# ENV PATH=/app/node_modules/.bin:$PATH
+# COPY --from=dev /app/node_modules /app/node_modules
+# RUN eslint .
+# RUN npm test
+# CMD ["npm", "run", "test"]
 
-RUN rm -Rf /workspace/node_modules /workspace/@equest/*/node_modules
+# FROM test as audit
+# USER root
+# RUN npm audit --audit-level critical
+# ARG MICROSCANNER_TOKEN
+# ADD https://get.aquasec.com/microscanner /
+# RUN chmod +x /microscanner
+# RUN /microscanner $MICROSCANNER_TOKEN --continue-on-failure
 
-################################################################################
-# Build stage FINAL - COPY everything, once, and then do a clean `yarn install`
-
-FROM node:12-alpine
-
-EXPOSE $PORT
-WORKDIR /workspace/
-# Copy everything from stage 2, it's already been filtered
-COPY --from=clean /workspace/ /workspace/
-
-# Install yarn ASAP because it's the slowest
-RUN npm install 
-
-# Import our shared args
-ARG PORT
-ARG NODE_ENV
-ARG ROOT_URL
-ARG TARGET
-
-LABEL description="My PostGraphile-powered $TARGET"
-
-# You might want to disable GRAPHILE_TURBO if you have issues
-ENV GRAPHILE_TURBO=1 TARGET=$TARGET PORT=$PORT
-ENV DATABASE_HOST="pg"
-ENV DATABASE_NAME="graphile_starter"
-ENV DATABASE_OWNER="${DATABASE_NAME}"
-ENV DATABASE_VISITOR="${DATABASE_NAME}_visitor"
-ENV DATABASE_AUTHENTICATOR="${DATABASE_NAME}_authenticator"
-
-# Entrypoint last so that we can run `sh` in previous build steps for debugging
-ENTRYPOINT yarn "${TARGET}" start
+# FROM source as prod
+# ENTRYPOINT ["/tini", "--"]
+# RUN npm run build
+# CMD ["node", "./dist/index.js"]
