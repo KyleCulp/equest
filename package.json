@@ -61,7 +61,7 @@
     "prompt": "^1.0.0",
     "rimraf": "^3.0.2",
     "source-map-loader": "^0.2.4",
-    "stylelint": "^13.3.2",
+    "stylelint": "^13.3.3",
     "stylelint-8-point-grid": "^0.2.4",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0",
