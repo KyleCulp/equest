@@ -3,10 +3,10 @@
 ## Current available global Docker image parameters: imageRegistry and imagePullSecrets
 ##
 global:
-#   imageRegistry: myRegistryName
-#   imagePullSecrets:
-#     - myRegistryKeySecretName
-#   storageClass: myStorageClass
+  #   imageRegistry: myRegistryName
+  #   imagePullSecrets:
+  #     - myRegistryKeySecretName
+  #   storageClass: myStorageClass
   redis: {}
 
 ## Bitnami Redis image version
@@ -193,12 +193,12 @@ securityContext:
   #   value: "10000"
 
 ## Use password authentication
-usePassword: true
+usePassword: false
 ## Redis password (both master and slave)
 ## Defaults to a random 10-character alphanumeric string if not set and usePassword is true
 ## ref: https://github.com/bitnami/bitnami-docker-redis#setting-the-server-password-on-first-run
 ##
-password: ""
+password: ''
 ## Use existing secret (ignores previous password)
 # existingSecret:
 ## Password key to be retrieved from Redis secret
@@ -209,7 +209,8 @@ password: ""
 usePasswordFile: false
 
 ## Persist data to a persistent volume (Redis Master)
-persistence: {}
+persistence:
+  {}
   ## A manually managed Persistent Volume and Claim
   ## Requires persistence.enabled: true
   ## If defined, PVC must be created manually before volume will be bound
@@ -226,7 +227,7 @@ master:
   ##
   ## Can be used to specify command line arguments, for example:
   ##
-  command: "/run.sh"
+  command: '/run.sh'
   ## Additional Redis configuration for the master nodes
   ## ref: https://redis.io/topics/config
   ##
@@ -246,8 +247,8 @@ master:
   ## ref: https://redis.io/topics/security#disabling-of-specific-commands
   ##
   disableCommands:
-  - FLUSHDB
-  - FLUSHALL
+    - FLUSHDB
+    - FLUSHALL
 
   ## Redis Master additional pod labels and annotations
   ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
@@ -323,7 +324,7 @@ master:
     path: /data
     ## The subdirectory of the volume to mount to, useful in dev environments
     ## and one PV for multiple services.
-    subPath: ""
+    subPath: ''
     ## redis data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
     ## If set to "-", storageClassName: "", which disables dynamic provisioning
@@ -333,7 +334,7 @@ master:
     ##
     # storageClass: "-"
     accessModes:
-    - ReadWriteOnce
+      - ReadWriteOnce
     size: 8Gi
     ## Persistent Volume selectors
     ## https://kubernetes.io/docs/concepts/storage/persistent-volumes/#selector
@@ -381,7 +382,7 @@ slave:
   port: 6379
   ## Can be used to specify command line arguments, for example:
   ##
-  command: "/run.sh"
+  command: '/run.sh'
   ## Additional Redis configuration for the slave nodes
   ## ref: https://redis.io/topics/config
   ##
@@ -390,8 +391,8 @@ slave:
   extraFlags: []
   ## List of Redis commands to disable
   disableCommands:
-  - FLUSHDB
-  - FLUSHALL
+    - FLUSHDB
+    - FLUSHALL
 
   ## Redis Slave pod/node affinity/anti-affinity
   ##
@@ -447,7 +448,7 @@ slave:
     path: /data
     ## The subdirectory of the volume to mount to, useful in dev environments
     ## and one PV for multiple services.
-    subPath: ""
+    subPath: ''
     ## redis data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
     ## If set to "-", storageClassName: "", which disables dynamic provisioning
@@ -457,7 +458,7 @@ slave:
     ##
     # storageClass: "-"
     accessModes:
-    - ReadWriteOnce
+      - ReadWriteOnce
     size: 8Gi
     ## Persistent Volume selectors
     ## https://kubernetes.io/docs/concepts/storage/persistent-volumes/#selector
@@ -501,8 +502,8 @@ metrics:
 
   ## Metrics exporter pod Annotation and Labels
   podAnnotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: "9121"
+    prometheus.io/scrape: 'true'
+    prometheus.io/port: '9121'
   # podLabels: {}
 
   # Enable this if you're using https://github.com/coreos/prometheus-operator
@@ -524,8 +525,9 @@ metrics:
   prometheusRule:
     enabled: false
     additionalLabels: {}
-    namespace: ""
-    rules: []
+    namespace: ''
+    rules:
+      []
       ## These are just examples rules, please adapt them to your needs.
       ## Make sure to constraint the rules to the current postgresql service.
       #  - alert: RedisDown
@@ -556,7 +558,6 @@ metrics:
       #    annotations:
       #      summary: Redis instance {{ "{{ $instance }}" }} has evicted keys
       #      description: Redis instance {{ "{{ $instance }}" }} has evicted {{ "{{ $value }}" }} keys in the last 5 minutes.
-
 
   ## Metrics exporter pod priorityClassName
   # priorityClassName: {}
