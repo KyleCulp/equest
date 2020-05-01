@@ -1,6 +1,6 @@
 {
   "name": "@equest/utils",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "Utility functions that are used across the codebase.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,6 +11,5 @@
   },
   "dependencies": {
     "@equest/config": "0.0.0"
-  },
-  "devDependencies": {}
+  }
 }

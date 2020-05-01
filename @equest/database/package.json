@@ -1,6 +1,6 @@
 {
   "name": "@equest/database",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Write & automate database migrations.",
   "private": true,
   "directories": {
@@ -15,7 +15,7 @@
     "uncommit": "npm run gm uncommit"
   },
   "dependencies": {
-    "graphile-migrate": "^0.1.0",
-    "@equest/config": "0.0.0"
+    "@equest/config": "0.0.0",
+    "graphile-migrate": "^0.1.0"
   }
 }
