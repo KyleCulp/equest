@@ -1,6 +1,6 @@
 {
   "name": "@equest/server",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Express server with GraphQL API Middleware",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,8 +13,8 @@
   "dependencies": {
     "@cloudnative/health-connect": "^2.1.0",
     "@equest/config": "0.0.0",
-    "@equest/graphql": "^0.0.1",
-    "@equest/utils": "^0.0.1-alpha.0",
+    "@equest/graphql": "^0.1.0",
+    "@equest/utils": "^0.1.0",
     "@graphile-contrib/pg-many-to-many": "^1.0.0-beta.12",
     "chalk": "^3.0.0",
     "connect-redis": "^4.0.3",
