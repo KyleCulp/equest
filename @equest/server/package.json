@@ -4,6 +4,7 @@
   "description": "Express server with GraphQL API Middleware",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": true,
   "scripts": {
     "build": "../../node_modules/.bin/tsc -b",
     "start": "node -r @app/config dist/index.js",

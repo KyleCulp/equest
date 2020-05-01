@@ -4,6 +4,7 @@
   "description": "React frontend with Apollo Client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": true,
   "scripts": {
     "build": "yarn run clean-dist && webpack -p --config=webpack/production.js",
     "clean-dist": "rm -rf dist/*",

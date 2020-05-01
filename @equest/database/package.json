@@ -2,6 +2,7 @@
   "name": "@equest/database",
   "version": "0.0.0",
   "description": "Write & automate database migrations.",
+  "private": true,
   "directories": {
     "test": "tests"
   },
