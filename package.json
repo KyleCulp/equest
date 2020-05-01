@@ -3,6 +3,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "test": "node_modules/.bin/jest --passWithNoTests",
     "lerna": "node_modules/.bin/lerna",
     "syncpack": "node_modules/.bin/yncpack",
     "clean": "npm run lerna clean",
@@ -56,6 +57,7 @@
     "eslint-plugin-react-hooks": "^3.0.0",
     "eslint-plugin-simple-import-sort": "^5.0.2",
     "eslint-plugin-tsdoc": "^0.2.4",
+    "jest": "^25.5.3",
     "npm": "^6.14.4",
     "prettier": "^2.0.4",
     "prompt": "^1.0.0",

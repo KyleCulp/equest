@@ -1,14 +1,14 @@
 kind: pipeline
-type: docker
-name: greeting
+type: kubernetes
+name: default
 
 steps:
-  - name: en
-    image: alpine
-    commands:
-      - echo hello world
+- name: build
+  image: node:12
+  commands:
+  - npm install
+  - npm test
 
-  - name: fr
-    image: alpine
-    commands:
-      - echo bonjour monde
+trigger:
+  branch:
+  - master
