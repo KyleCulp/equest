@@ -1,6 +1,6 @@
 {
   "name": "@equest/graphql",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Provides packages access to types & apoll client functions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

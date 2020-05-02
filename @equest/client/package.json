@@ -1,6 +1,6 @@
 {
   "name": "@equest/client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React frontend with Apollo Client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,7 +20,7 @@
     "@blueprintjs/table": "^3.8.3",
     "@emotion/core": "^10.0.28",
     "@equest/config": "0.0.0",
-    "@equest/graphql": "^0.1.0",
+    "@equest/graphql": "^0.2.0",
     "@equest/utils": "^0.1.0",
     "@loadable/component": "^5.12.0",
     "@material-ui/core": "^4.9.10",
