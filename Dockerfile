@@ -7,12 +7,14 @@ ARG REGISTRY
 FROM node:12-alpine as builder
 
 ENV NODE_ENV=development
+ARG REGISTRY
+ARG TARGET
 
 WORKDIR /workspace
 
-COPY lerna.json package.json package-lock.lock tsconfig.json /workspace/
+COPY lerna.json package.json package-lock.json tsconfig.json /workspace/
 
-COPY @equest /workspace/@equest/
+COPY @equest/ /workspace/@equest/
 
 COPY data/ /workspace/data/
 
@@ -20,31 +22,37 @@ RUN npm config set registry "${REGISTRY}"
 
 RUN npm install --no-progress
 
-RUN npm run build
+RUN npm run "${TARGET}":build
 
 ###########################
-#### Stage 2: Minimize size
+#### Stage 2: Minimize size of image
 FROM node:12-alpine as clean
 
 ARG NODE_ENV
+ARG TARGET
 
-# COPY --from=builder /workspace/lerna.json /workspace/package.json /workspace/package-lock.json /workspace/
-COPY --from=builder /workspace/package.json /workspace/package-lock.json /workspace/dist/ /workspace/@equest/${TARGET}/
+COPY --from=builder /workspace/@equest/${TARGET}/package.json /workspace/@equest/${TARGET}/dist/ /app/
+# COPY --from=builder /workspace/@equest/${TARGET}/dist/ /workspace/@equest/${TARGET}/dist/
 
+RUN rm -Rf /workspace/node_modules /workspace/@equest/*/node_modules
 
+#######
 FROM node:12-alpine
 
 ARG NODE_ENV
 ARG REGISTRY
+ARG PORT
+
+ENV PORT=$PORT
 
 EXPOSE $PORT
 
-WORKDIR /workspace
+WORKDIR /app
 
-COPY -from=clean /workspace/ /workspace/
+COPY --from=clean /app/ /app/
 
 RUN npm config set registry "${REGISTRY}"
 
 RUN npm install --save-prod --save-exact
 
-ENTRYPOINT node dist/index.js
+ENTRYPOINT node dist/@equest/${TARGET}/index.js
