@@ -10,6 +10,6 @@
     "test": "jest --coverage --watchAll --config=configs/jest.json"
   },
   "dependencies": {
-    "@equest/config": "0.0.0"
+    "@equest/config": "0.2.0"
   }
 }
