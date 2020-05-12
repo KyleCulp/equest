@@ -1,0 +1,46 @@
+{
+  "name": "@equest/frontend",
+  "version": "0.3.0",
+  "description": "React frontend with Apollo Client",
+  "private": true,
+  "scripts": {
+    "next": "./node_modules/.bin/next",
+    "build": "npm run next build",
+    "export": "npm run next export",
+    "dev": "npm run next -- -p 4000",
+    "start": "node_modules/.bin/next start",
+    "test": "jest --coverage --watchAll --config=configs/jest.json",
+    "storybook": "node_modules/.bin/start-storybook"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.0.0-beta.44",
+    "@blueprintjs/core": "^3.26.1",
+    "@emotion/core": "^10.0.28",
+    "@equest/client": "^0.2.0",
+    "@equest/config": "^0.2.0",
+    "@equest/graphql": "^0.3.0",
+    "@equest/utils": "^0.2.0",
+    "@rebass/forms": "^4.0.6",
+    "@rebass/preset": "^4.0.5",
+    "@umijs/hooks": "^1.9.2",
+    "emotion-theming": "^10.0.27",
+    "graphql": "^15.0.0",
+    "next": "^9.3.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^5.6.3",
+    "rebass": "^4.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/rebass": "^4.0.5",
+    "@types/rebass__forms": "^4.0.2"
+  },
+  "jest": {
+    "transform": {
+      "\\.(gql|graphql)$": "jest-transform-graphql",
+      ".*": "babel-jest"
+    }
+  }
+}

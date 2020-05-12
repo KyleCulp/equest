@@ -8,7 +8,7 @@ import { handleLifecycle } from './lifecycle';
 // Run/include application lifecycle related functions
 handleLifecycle();
 
-const port = process.env.SERVER_PORT ? parseInt(process.env.SERVER_PORT) : 3000;
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
 // Getting access to the HTTP server directly means that we can do things
 // with websockets if we need to (e.g. GraphQL subscriptions).

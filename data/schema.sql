@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 11.7 (Debian 11.7-2.pgdg90+1)
+-- Dumped from database version 11.7
 -- Dumped by pg_dump version 11.7 (Debian 11.7-2.pgdg90+1)
 
 SET statement_timeout = 0;
@@ -407,25 +407,6 @@ CREATE POLICY select_user_account ON app_public.user_account FOR SELECT USING (t
 ALTER TABLE app_public.user_account ENABLE ROW LEVEL SECURITY;
 
 --
--- Name: SCHEMA app_public; Type: ACL; Schema: -; Owner: -
---
-
-GRANT USAGE ON SCHEMA app_public TO app_anonymous;
-GRANT USAGE ON SCHEMA app_public TO app_person;
-GRANT USAGE ON SCHEMA app_public TO app_postgraphile;
-
-
---
--- Name: SCHEMA rocket_league; Type: ACL; Schema: -; Owner: -
---
-
-GRANT USAGE ON SCHEMA rocket_league TO app_rocket_league;
-GRANT USAGE ON SCHEMA rocket_league TO app_anonymous;
-GRANT USAGE ON SCHEMA rocket_league TO app_person;
-GRANT USAGE ON SCHEMA rocket_league TO app_postgraphile;
-
-
---
 -- Name: TABLE user_account; Type: ACL; Schema: app_public; Owner: -
 --
 
@@ -476,7 +457,7 @@ GRANT ALL ON FUNCTION app_public.register_user(username text, email text, passwo
 -- Name: DEFAULT PRIVILEGES FOR FUNCTIONS; Type: DEFAULT ACL; Schema: -; Owner: -
 --
 
-ALTER DEFAULT PRIVILEGES FOR ROLE devadmin REVOKE ALL ON FUNCTIONS  FROM PUBLIC;
+ALTER DEFAULT PRIVILEGES FOR ROLE doadmin REVOKE ALL ON FUNCTIONS  FROM PUBLIC;
 
 
 --

@@ -1,6 +1,6 @@
 overwrite: true
-schema: http://localhost:3000/postgraphile
-documents: '../client/src/**/*.gql'
+schema: http://localhost:3000/graphql
+documents: '../frontend/src/**/*.gql'
 generates:
   src/generated.ts:
     plugins:

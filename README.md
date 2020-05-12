@@ -1,6 +1,5 @@
 # Equest
 
-
 ## Initial Setup
 
 ### Docker
@@ -24,6 +23,10 @@ Past troubles: Some packages are wrapper for a C program, which have different b
 Install monorepo packages with `npm i`.
 
 After monorepo cli's are installed, run `npm run init`. This will initialise the postgres database, download and bootstrap all project dependencies, and other neccessities.
+
+## Unique project gotchas
+
+Getting error codes from functions in the database is weird, with alot of borrowed code from graphile/starter. utils handleErrors & graphqlErrors
 
 ## Helpful docs
 

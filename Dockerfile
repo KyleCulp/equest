@@ -4,7 +4,7 @@ ARG TARGET
 ARG REGISTRY
 
 #### Stage 1: Build source
-FROM node:12-alpine as builder
+FROM node:12 as builder
 
 ENV NODE_ENV=development
 ARG REGISTRY
@@ -26,7 +26,7 @@ RUN npm run "${TARGET}":build
 
 ###########################
 #### Stage 2: Minimize size of image
-FROM node:12-alpine as clean
+FROM node:12 as clean
 
 ARG NODE_ENV
 ARG TARGET
@@ -37,7 +37,7 @@ COPY --from=builder /workspace/@equest/${TARGET}/package.json /workspace/@equest
 RUN rm -Rf /workspace/node_modules /workspace/@equest/*/node_modules
 
 #######
-FROM node:12-alpine
+FROM node:12
 
 ARG NODE_ENV
 ARG REGISTRY
@@ -55,4 +55,4 @@ RUN npm config set registry "${REGISTRY}"
 
 RUN npm install --save-prod --save-exact
 
-ENTRYPOINT node dist/@equest/${TARGET}/index.js
+ENTRYPOINT node index.js

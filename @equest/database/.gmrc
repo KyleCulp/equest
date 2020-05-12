@@ -1,7 +1,5 @@
 {
-  "pgSettings": {
-    "search_path": "app_public,app_private,public,parts"
-  },
+
   "placeholders": {
     ":RL_PARSER_PASSWORD": "!ENV"
   },

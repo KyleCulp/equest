@@ -1,3 +1,5 @@
+import { isDev } from '@equest/utils';
+import fs from 'fs';
 import { Pool, PoolConfig } from 'pg';
 
 const {
@@ -8,6 +10,9 @@ const {
   PG_MASTER_HOST,
   PG_MASTER_PORT,
   PG_MASTER_NAME,
+  PG_MASTER_CA_LOCATION,
+  // PG_MASTER_KEY_LOCATION,
+  // PG_MASTER_CERT_LOCATION
 } = process.env;
 
 export const pgMasterAdminPoolConfig: PoolConfig = {
@@ -19,12 +24,12 @@ export const pgMasterAdminPoolConfig: PoolConfig = {
   connectionTimeoutMillis: 0, // default 0, no timeout
   idleTimeoutMillis: 10000, // default 10,000
   max: 10, // defaultt 10
-  // ssl: {
-  // 	rejectUnauthorized: false,
-  // 	ca: fs.readFileSync('/path/to/server-certificates/root.crt').toString(),
-  // 	key: fs.readFileSync('/path/to/client-key/postgresql.key').toString(),
-  // 	cert: fs.readFileSync('/path/to/client-certificates/postgresql.crt').toString(),
-  // },
+  ssl: {
+    rejectUnauthorized: true,
+    ca: fs.readFileSync(PG_MASTER_CA_LOCATION!),
+    // key: fs.readFileSync(PG_MASTER_KEY_LOCATION!),
+    // cert: fs.readFileSync(PG_MASTER_CERT_LOCATION!),
+  },
 };
 
 export const pgMasterPoolConfig: PoolConfig = {
@@ -36,10 +41,10 @@ export const pgMasterPoolConfig: PoolConfig = {
   connectionTimeoutMillis: 0, // default 0, no timeout
   idleTimeoutMillis: 10000, // default 10,000
   max: 10, // defaultt 10
-  // ssl: {
-  // 	rejectUnauthorized: false,
-  // 	ca: fs.readFileSync('/path/to/server-certificates/root.crt').toString(),
-  // 	key: fs.readFileSync('/path/to/client-key/postgresql.key').toString(),
-  // 	cert: fs.readFileSync('/path/to/client-certificates/postgresql.crt').toString(),
-  // },
+  ssl: {
+    rejectUnauthorized: true,
+    ca: fs.readFileSync(PG_MASTER_CA_LOCATION!),
+    // key: fs.readFileSync(PG_MASTER_KEY_LOCATION!),
+    // cert: fs.readFileSync(PG_MASTER_CERT_LOCATION!),
+  },
 };

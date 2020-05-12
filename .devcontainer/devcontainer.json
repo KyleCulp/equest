@@ -14,15 +14,16 @@
   },
   // Add the IDs of extensions you want installed when the container is created in the array below.
   "extensions": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "mikestead.dotenv",
-    "ms-azuretools.vscode-docker",
-    "p1c2u.docker-compose",
-    "tombonnike.vscode-status-bar-format-toggle",
-    "ckolkman.vscode-postgres",
-    "shd101wyy.markdown-preview-enhanced",
-    "bradymholt.pgformatter"
+    // "dbaeumer.vscode-eslint",
+    // "esbenp.prettier-vscode",
+    // "mikestead.dotenv",
+    // "ms-azuretools.vscode-docker",
+    // "p1c2u.docker-compose",
+    // "tombonnike.vscode-status-bar-format-toggle",
+    // "ckolkman.vscode-postgres",
+    // "shd101wyy.markdown-preview-enhanced",
+    // "bradymholt.pgformatter",
+    // "hediet.vscode-drawio"
   ],
   // Uncomment the next line if you want start specific services in your Docker Compose config.
   "runServices": ["postgres", "redis", "equest-devcontainer"],

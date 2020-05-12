@@ -15,7 +15,7 @@ export const redisInstance = async (database: number) => {
     port: parseInt(REDIS_PORT!),
     host: REDIS_HOST,
     family: parseInt(REDIS_FAMILY!),
-    // password: REDIS_PASSWORD,
+    password: REDIS_PASSWORD,
     db: database,
   });
 };

@@ -1,7 +1,8 @@
 import { isDev } from '@equest/utils';
 import PgManyToManyPlugin from '@graphile-contrib/pg-many-to-many';
-import { join } from 'path';
+import { resolve } from 'path';
 import { PostGraphileOptions } from 'postgraphile';
+import { makePgSmartTagsFromFilePlugin } from 'postgraphile/plugins';
 
 import { getGraphqlResolvers } from './resolvers';
 
@@ -17,13 +18,25 @@ const {
 
 const ownerConnectionString = `postgres://${PG_MASTER_ADMIN_USERNAME}:${PG_MASTER_ADMIN_PASSWORD}@${PG_MASTER_HOST}:${PG_MASTER_PORT}/${PG_MASTER_NAME}`;
 
-const postgraphilePlugins = [PgManyToManyPlugin];
+const TagsFilePlugin = makePgSmartTagsFromFilePlugin(
+  // We're using JSONC for VSCode compatibility; also using an explicit file
+  // path keeps the tests happy.
+  resolve(__dirname, '../../postgraphile.tags.jsonc')
+);
+
+/*
+ * Postgraphile plugins
+ * TagsFilePlugin: Describe the schema in json, instead of smart sql comments.
+ * PgManyToManyPlugin:
+ *
+ */
+const postgraphilePlugins = [TagsFilePlugin, PgManyToManyPlugin];
 const postgraphileResolvers = getGraphqlResolvers();
 
 export const postgraphileOptionsDevelopment: PostGraphileOptions = {
   appendPlugins: postgraphilePlugins.concat(postgraphileResolvers),
-  exportJsonSchemaPath: join(__dirname, '../../../../data/schema.json'), // export schema file
-  exportGqlSchemaPath: join(__dirname, '../../../../data/schema.gql'), // export schema file
+  exportJsonSchemaPath: resolve(__dirname, '../../../../data/schema.json'), // export schema file
+  exportGqlSchemaPath: resolve(__dirname, '../../../../data/schema.gql'), // export schema file
   watchPg: true,
   retryOnInitFail: false,
   ownerConnectionString: ownerConnectionString,
@@ -45,7 +58,7 @@ export const postgraphileOptionsDevelopment: PostGraphileOptions = {
   // readCache: , // production only
   // writeCache: , // production only
   // sortExport: false,
-  graphqlRoute: '/postgraphile',
+  graphqlRoute: '/graphql',
   graphiqlRoute: '/graphiql',
   graphiql: true,
   enhanceGraphiql: true,
@@ -80,35 +93,16 @@ export const postgraphileOptionsDevelopment: PostGraphileOptions = {
      */
     pgSkipInstallingWatchFixtures: true,
   },
-  // async pgSettings(req: IncomingMessage) {
-  // 	const claims = await getUserClaimsFromRequest(req);
-  // 	return {
-  // 		// Everyone uses the "visitor" role currently
-  // 		role: process.env.DATABASE_VISITOR,
-
-  // 		// If there are any claims, then add them into the session.
-  // 		...Object.entries(claims).reduce((memo, [key, value]) => {
-  // 			if (!key.match(/^[a-z][a-z0-9A-Z-_]+$/)) {
-  // 				throw new Error("Invalid claim key.");
-  // 			}
-
-  // 			/*
-  // 			* Note, though this says "jwt" it's not actually anything to do with
-  // 			* JWTs, we just know it's a safe namespace to use, and it means you
-  // 			* can use JWTs too, if you like, and they'll use the same settings
-  // 			* names reducing the amount of code you need to write.
-  // 			*/
-  // 			memo[`jwt.claims.${key}`] = value;
-  // 			return memo;
-  // 		}, {}),
-  // 	};
-  // }
 };
 
-// Haven't made it prod-ready yet
 // Overwrite dev settings with prod settings
 export const postgraphileOptionsProduction: PostGraphileOptions = {
   ...postgraphileOptionsDevelopment,
+  watchPg: false,
+  retryOnInitFail: true,
+  extendedErrors: ['errcode'],
+  exportGqlSchemaPath: undefined,
+  exportJsonSchemaPath: undefined,
 };
 
 const postgraphileOptions = isDev

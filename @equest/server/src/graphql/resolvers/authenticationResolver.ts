@@ -95,6 +95,7 @@ export const authenticationResolver = makeExtendSchemaPlugin((build) => ({
         const { login } = context;
         const { selectGraphQLResultFromTable } = resolveInfo.graphile;
 
+        // Call pgSQL functions with select statement
         let loginSQL: string;
         if (isEmail(username)) {
           loginSQL = `select user_account.* from app_private.authenticate_by_email($1, $2) user_account where not (user_account is null)`;
@@ -108,10 +109,13 @@ export const authenticationResolver = makeExtendSchemaPlugin((build) => ({
             rows: [user],
           } = await pgMasterAdminPool.query(loginSQL, [username, password]);
 
-          if (!user) throw new Error('Login failed');
-
+          if (!user) {
+            console.log(user);
+            throw new Error('Login failed');
+          }
           const sql = build.pgSql;
           const results = await Promise.all([
+            // Results that the user requested in GraphQL
             selectGraphQLResultFromTable(
               sql.fragment`app_public.user_account`,
               (tableAlias, sqlBuilder) => {

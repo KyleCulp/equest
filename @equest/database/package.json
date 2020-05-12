@@ -1,11 +1,8 @@
 {
   "name": "@equest/database",
   "version": "0.0.1",
-  "description": "Write & automate database migrations.",
-  "private": true,
-  "directories": {
-    "test": "tests"
-  },
+  "description": "Write the database schema in sql & js, automate database migrations.",
+  "main": "schemaTagsPlugin.js",
   "scripts": {
     "gm": "node -r @equest/config node_modules/.bin/graphile-migrate",
     "migrate": "npm run gm migrate",
@@ -15,7 +12,11 @@
     "uncommit": "npm run gm uncommit"
   },
   "dependencies": {
-    "@equest/config": "0.0.0",
+    "graphile-build-pg": "^4.7.0",
+    "graphile-utils": "^4.7.0"
+  },
+  "devDependencies": {
+    "@equest/config": "^0.2.0",
     "graphile-migrate": "^0.1.0"
   }
 }

@@ -1,6 +1,6 @@
 overwrite: true
 schema: '../../data/schema.gql'
-documents: '../client/src/**/*.gql'
+documents: '../frontend/src/**/*.gql'
 generates:
   src/generated.ts:
     plugins:

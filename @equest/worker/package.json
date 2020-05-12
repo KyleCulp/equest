@@ -1,0 +1,24 @@
+{
+  "name": "@equest/worker",
+  "version": "1.0.0",
+  "description": "Run redis queue workers",
+  "main": "dist/index.js",
+  "private": true,
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleCulp/equest.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "bullmq": "^1.8.7"
+  }
+}

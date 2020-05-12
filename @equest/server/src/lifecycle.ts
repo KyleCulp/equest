@@ -15,8 +15,8 @@ enum EnvironmentalVariables {
   REDIS_PASSWORD,
   REDIS_SESSION_DB,
   REDIS_QUEUE_DB,
-  SERVER_URL,
-  SERVER_PORT,
+  // SERVER_URL,
+  PORT,
   JWT_SECRET,
 }
 

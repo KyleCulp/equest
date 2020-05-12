@@ -1,20 +1,11 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "sourceMap": true,
-    "target": "es5",
-    "jsx": "react",
-    "module": "es6",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "declaration": true,
-    "removeComments": true,
-    // "noImplicitReturns": true,
-    // "noUnusedLocals": true,
-    "strict": true,
+    "rootDir": "src",
     "outDir": "dist",
-    "lib": ["es6", "es7", "dom"],
-    "skipLibCheck": true // Otherwise node_modules/@apollo throw up a ton of type errors that tsc wont exclude
+    "skipLibCheck": true, // Otherwise node_modules/@apollo throw up a ton of type errors that tsc wont exclude
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "declarationDir": "dist"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

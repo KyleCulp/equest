@@ -12,6 +12,7 @@
     "node": ">= 10.9.0"
   },
   "publishConfig": {
+    "registry": "https://verdaccio.pcpb.us/",
     "access": "public"
   },
   "scripts": {
