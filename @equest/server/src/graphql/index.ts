@@ -6,7 +6,7 @@ import { makePgSmartTagsFromFilePlugin } from 'postgraphile/plugins';
 
 import { getGraphqlResolvers } from './resolvers';
 
-const schemas = ['app_public', 'rocket_league', 'csgo'];
+const schemas = ['app_public', 'rocket_league'];
 
 const {
   PG_MASTER_ADMIN_USERNAME,

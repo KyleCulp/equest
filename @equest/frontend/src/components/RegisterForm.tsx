@@ -1,61 +1,83 @@
-import { RegisterInput } from '@equest/graphql';
+import { RegisterInput, useRegisterMutation } from '../generated'
 import { Input } from '@rebass/forms';
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
+import { useForm, ValidationOptions } from 'react-hook-form';
 import { Box, Button, Flex } from 'rebass';
+import { MutationTuple } from '@apollo/client';
 
 interface formField {
   name: string;
   placeholder: string;
   type: string;
+  validation: ValidationOptions;
 }
 
-const formFields: Array<formField> = [
+const formFields: formField[] = [
   {
     name: 'username',
     placeholder: 'Username',
     type: 'text',
+    validation: {
+      required: false,
+    }
   },
   {
     name: 'email',
     placeholder: 'Email',
     type: 'email',
+    validation: {
+      required: true,
+    }
   },
-  ,
   {
     name: 'password',
     placeholder: 'Password',
     type: 'password',
+    validation: {
+      required: "Please enter a password",
+      min: 8,
+      max: 32
+    }
   },
 ];
 
 interface Props {
-  setInput: Function;
+  setInput: Dispatch<SetStateAction<RegisterInput>>
 }
 
 const RegisterForm: React.FC<Props> = ({ setInput }) => {
-  const { register, handleSubmit } = useForm<RegisterInput>();
-
-  const onSubmit = async (FormData: RegisterInput, e) => {
-    console.log('Submit event', e);
-    setInput(FormData);
-    console.log(FormData);
-  };
+  const { register, handleSubmit, errors } = useForm<RegisterInput>();
+  const [registerMutation, { data, loading, error }] = useRegisterMutation();
+  const onSubmit = async (input: RegisterInput) => {
+    console.log(input);
+    // registerMutation({ variables: { input } });
+  }
+  useEffect(() => {
+    console.log(errors)
+  }, [errors])
 
   return (
     <Box as="form" maxWidth={256} onSubmit={handleSubmit(onSubmit)}>
       <Flex flexWrap={'wrap'}>
         {formFields.map((field, key) => (
-          <Input
-            ref={register}
-            key={key}
-            name={field.name}
-            placeholder={field.placeholder}
-            type={field.type}
-            marginY={2}
-            width="100%"
-            css={{ textAlign: 'center' }}
-          />
+          <div key={key}>
+            {errors[field.name] && " Name required"}
+            <Input
+              ref={register({
+                required: true,
+                min: 8,
+                max: 32
+              })}
+              key={key}
+              name={field.name}
+              placeholder={field.placeholder}
+              defaultValue=""
+              type={field.type}
+              marginY={2}
+              width="100%"
+              css={{ textAlign: 'center' }}
+            />
+          </div>
         ))}
         <Button type="submit" width="100%">
           Submit

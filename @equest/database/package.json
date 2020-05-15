@@ -1,6 +1,7 @@
 {
   "name": "@equest/database",
   "version": "0.0.1",
+  "private": true,
   "description": "Write the database schema in sql & js, automate database migrations.",
   "main": "schemaTagsPlugin.js",
   "scripts": {

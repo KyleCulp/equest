@@ -1,22 +1,19 @@
 import { ApolloProvider } from '@apollo/client';
-import { client } from '@equest/client';
+import { client } from '../client'
 import { ThemeProvider } from 'emotion-theming';
-import App from 'next/app';
+import { AppProps } from 'next/app';
 import React from 'react';
 
 import theme from '../theme';
 
-class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <ApolloProvider client={client}>
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </ApolloProvider>
-    );
-  }
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </ApolloProvider>
+  );
 }
 
 // Wraps all components in the tree with the data provider

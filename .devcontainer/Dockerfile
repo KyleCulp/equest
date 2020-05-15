@@ -47,12 +47,14 @@ RUN apt-get update \
     && apt-get -y install --allow-unauthenticated --no-install-recommends yarn postgresql-client-11 \
     #
     # Install eslint globally
-    && npm install -g eslint \
+    # && npm install -g eslint \
     #
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
+
+RUN curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
 
 
 # Docker Compose version

@@ -2,7 +2,7 @@ overwrite: true
 schema: http://localhost:3000/graphql
 documents: '../frontend/src/**/*.gql'
 generates:
-  src/generated.ts:
+  ../frontend/src/generated.tsx:
     plugins:
       - add: /* eslint-disable */
       - add: /* THIS IS A GENERATED FILE - DO NOT MODIFY */

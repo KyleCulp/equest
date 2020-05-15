@@ -1,12 +1,32 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "noEmit": false,
     "rootDir": "src",
     "outDir": "dist",
-    "skipLibCheck": true, // Otherwise node_modules/@apollo throw up a ton of type errors that tsc wont exclude
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "lib": [
+      "es2018",
+      "esnext.asynciterable"
+    ],
+    "target": "es2018",
+    "module": "commonjs",
+    "jsx": "react"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "index.tsx",
+    "src"
+  ],
+  "references": [
+    {
+      "path": "../graphql"
+    },
+    {
+      "path": "../utils"
+    },
+    {
+      "path": "../config"
+    }
+  ]
 }

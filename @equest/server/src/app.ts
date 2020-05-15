@@ -30,7 +30,7 @@ const installMiddleware = async () => {
 
 app.use(
   cors({
-    origin: 'http://localhost:8080',
+    origin: 'http://127.0.0.1:4000',
     credentials: true,
   })
 );
