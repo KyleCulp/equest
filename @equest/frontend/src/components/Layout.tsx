@@ -1,22 +1,19 @@
-import { RegisterInput, useRegisterMutation } from '../generated'
+import { MutationTuple } from '@apollo/client';
 import { Input } from '@rebass/forms';
 import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { useForm, ValidationOptions } from 'react-hook-form';
 import { Box, Button, Flex } from 'rebass';
-import { MutationTuple } from '@apollo/client';
 
-interface Props {
-}
+import { RegisterInput, useRegisterMutation } from '../generated';
 
-const Layout: React.FC<Props> = () => {
+interface Props { }
 
+const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <Box as="form" maxWidth={256} onSubmit={handleSubmit(onSubmit)}>
-      <Flex flexWrap={'wrap'}>
-
-      </Flex>
+    <Box as="form" maxWidth={256}>
+      <Flex flexWrap={'wrap'}>{children}</Flex>
     </Box>
   );
 };
 
-export default RegisterForm;
+export default Layout;

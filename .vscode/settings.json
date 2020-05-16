@@ -1,4 +1,5 @@
 {
+  "remote.containers.workspaceMountConsistency": "delegated",
   "typescript.tsdk": "node_modules/typescript/lib",
   "terminal.integrated.shell.linux": "/bin/bash",
   "editor.defaultFormatter": "esbenp.prettier-vscode",

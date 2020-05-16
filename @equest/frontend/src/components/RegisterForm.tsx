@@ -1,9 +1,10 @@
-import { RegisterInput, useRegisterMutation } from '../generated'
+import { MutationTuple } from '@apollo/client';
 import { Input } from '@rebass/forms';
 import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { useForm, ValidationOptions } from 'react-hook-form';
 import { Box, Button, Flex } from 'rebass';
-import { MutationTuple } from '@apollo/client';
+
+import { RegisterInput, useRegisterMutation } from '../generated';
 
 interface formField {
   name: string;
@@ -19,7 +20,7 @@ const formFields: formField[] = [
     type: 'text',
     validation: {
       required: false,
-    }
+    },
   },
   {
     name: 'email',
@@ -27,22 +28,22 @@ const formFields: formField[] = [
     type: 'email',
     validation: {
       required: true,
-    }
+    },
   },
   {
     name: 'password',
     placeholder: 'Password',
     type: 'password',
     validation: {
-      required: "Please enter a password",
+      required: 'Please enter a password',
       min: 8,
-      max: 32
-    }
+      max: 32,
+    },
   },
 ];
 
 interface Props {
-  setInput: Dispatch<SetStateAction<RegisterInput>>
+  setInput: Dispatch<SetStateAction<RegisterInput>>;
 }
 
 const RegisterForm: React.FC<Props> = ({ setInput }) => {
@@ -51,22 +52,22 @@ const RegisterForm: React.FC<Props> = ({ setInput }) => {
   const onSubmit = async (input: RegisterInput) => {
     console.log(input);
     // registerMutation({ variables: { input } });
-  }
+  };
   useEffect(() => {
-    console.log(errors)
-  }, [errors])
+    console.log(errors);
+  }, [errors]);
 
   return (
     <Box as="form" maxWidth={256} onSubmit={handleSubmit(onSubmit)}>
       <Flex flexWrap={'wrap'}>
         {formFields.map((field, key) => (
           <div key={key}>
-            {errors[field.name] && " Name required"}
+            {errors[field.name] && ' Name required'}
             <Input
               ref={register({
                 required: true,
                 min: 8,
-                max: 32
+                max: 32,
               })}
               key={key}
               name={field.name}

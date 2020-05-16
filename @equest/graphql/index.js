@@ -1,19 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.useRegisterMutation = exports.RegisterDocument = void 0;
 const tslib_1 = require("tslib");
 const client_1 = require("@apollo/client");
 const ApolloReactHooks = tslib_1.__importStar(require("@apollo/client"));
 exports.RegisterDocument = client_1.gql `
-    mutation Register($input: RegisterInput!) {
-  register(input: $input) {
-    user {
-      userId
-      username
-      roles
+  mutation Register($input: RegisterInput!) {
+    register(input: $input) {
+      user {
+        userId
+        username
+        roles
+      }
     }
   }
-}
-    `;
+`;
 /**
  * __useRegisterMutation__
  *

@@ -1,6 +1,7 @@
 {
   "name": "@equest/config",
-  "version": "0.2.0",
+  "version": "1.0.0",
+  "private": true,
   "description": "Provides config & preloads dotenv",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,10 +11,6 @@
   ],
   "engines": {
     "node": ">= 10.9.0"
-  },
-  "publishConfig": {
-    "registry": "https://verdaccio.pcpb.us/",
-    "access": "public"
   },
   "scripts": {
     "build": "tsc -b"

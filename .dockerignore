@@ -8,3 +8,4 @@ npm-debug.log
 *Dockerfile*
 *docker-compose*
 .drone.yml
+.pnpm-store

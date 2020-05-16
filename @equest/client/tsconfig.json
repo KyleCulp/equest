@@ -1,32 +1,38 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "noEmit": false,
     "rootDir": "src",
     "outDir": "dist",
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
-    "declarationDir": "dist",
+    "composite": false,
+    "incremental": false,
+    "target": "es5",
     "lib": [
-      "es2018",
-      "esnext.asynciterable"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "target": "es2018",
-    "module": "commonjs",
-    "jsx": "react"
+    "noEmit": true,
+    "esModuleInterop": true,
+    "declaration": false,
+    "declarationMap": false,
+    "isolatedModules": true
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
-    "index.tsx",
-    "src"
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "references": [
+    {
+      "path": "../config"
+    },
     {
       "path": "../graphql"
     },
     {
       "path": "../utils"
-    },
-    {
-      "path": "../config"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "@equest/utils",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Utility functions that are used across the codebase.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
     "test": "jest --coverage --watchAll --config=configs/jest.json"
   },
   "dependencies": {
-    "@equest/config": "0.2.0",
-    "@apollo/client": "^3.0.0-beta.44"
+    "@apollo/client": "^3.0.0-beta.44",
+    "@equest/config": "^1.0.0"
   }
 }

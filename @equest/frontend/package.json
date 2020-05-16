@@ -1,13 +1,13 @@
 {
   "name": "@equest/frontend",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "React frontend with Apollo Client",
   "private": true,
   "scripts": {
     "next": "./node_modules/.bin/next",
-    "build": "npm run next build",
-    "export": "npm run next export",
-    "dev": "npm run next -- -p 4000",
+    "build": "yarn run next build",
+    "export": "yarn run next export",
+    "dev": "yarn run next -p 4000",
     "start": "node_modules/.bin/next start",
     "test": "jest --coverage --watchAll --config=configs/jest.json",
     "storybook": "node_modules/.bin/start-storybook"
@@ -18,10 +18,10 @@
     "@apollo/link-retry": "^2.0.0-beta.3",
     "@blueprintjs/core": "^3.26.1",
     "@emotion/core": "^10.0.28",
-    "@equest/client": "^0.2.0",
-    "@equest/config": "^0.2.0",
-    "@equest/graphql": "^0.3.0",
-    "@equest/utils": "^0.2.0",
+    "@equest/client": "^1.0.0",
+    "@equest/config": "^1.0.0",
+    "@equest/graphql": "^1.0.0",
+    "@equest/utils": "^1.0.0",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@umijs/hooks": "^1.9.2",
@@ -29,6 +29,9 @@
     "graphql": "^15.0.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.3.6",
+    "next-compose-plugins": "^2.2.0",
+    "next-plugin-custom-babel-config": "^1.0.2",
+    "next-transpile-modules": "^3.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^5.6.3",
@@ -39,7 +42,8 @@
     "@types/react-dom": "^16.9.7",
     "@types/rebass": "^4.0.5",
     "@types/rebass__forms": "^4.0.2",
-    "babel-plugin-import": "^1.13.0"
+    "babel-plugin-import": "^1.13.0",
+    "styled-components": "^5.1.0"
   },
   "jest": {
     "transform": {

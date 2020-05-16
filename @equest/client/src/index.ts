@@ -2,13 +2,13 @@ import { ApolloClient } from '@apollo/client';
 
 import { clientCache } from './cache';
 import { clientLinks } from './links';
-import { clientResolvers, clientTypeDefs } from './resolvers';
-import { authResolvers } from './resolvers/authResolver';
+import { clientResolvers } from './resolvers';
+import { authTypeDefs } from './resolvers/authResolver';
 
 export const client = new ApolloClient({
   cache: clientCache,
   link: clientLinks,
-  typeDefs: clientTypeDefs,
+  typeDefs: authTypeDefs,
 });
 
-client.addResolvers(authResolvers);
+client.addResolvers(clientResolvers);

@@ -1,16 +1,9 @@
 {
-  "packages": ["@equest/*"],
-  "version": "independent",
-  "npmClient": "npm",
-  "command": {
-    "publish": {
-      "message": "chore(release): publish",
-      "include": "@equest",
-      "registry": "https://verdaccio.pcpb.us"
-    },
-    "bootstrap": {
-      "ignore": "component-*",
-      "npmClientArgs": ["--no-package-lock"]
-    }
-  }
+  "packages": [
+    "@equest/*"
+  ],
+  "version": "1.0.0",
+  "loglevel": "quiet",
+  "npmClient": "yarn",
+  "useWorkspaces": true
 }

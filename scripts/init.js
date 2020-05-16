@@ -1,6 +1,6 @@
 const { Client } = require('pg');
 const prompt = require('prompt');
-const npm = require('npm');
+require('dotenv').config();
 
 prompt.start();
 
@@ -59,18 +59,22 @@ installPostgres();
 
 async function main() {
   await installPostgres();
-  npm.load(() => {
-    console.log(
-      'This will reset the database, are you sure you want to do this? (Y/N)'
-    );
-    prompt.get(['answer'], function(err, result) {
-      if (err) return onErr(err);
-      if (result.answer == 'y' || result.answer == 'Y') {
-        npm.run('database:reset', err => console.log(err));
-        npm.run('database:migrate', err => console.log(err));
-      }
-    });
+  console.log(
+    'This will reset the database, are you sure you want to do this? (Y/N) <---'
+  );
+  prompt.get(['answer'], function (err, result) {
+    try {
+      execSync(
+        `yarn workspace @equest/database reset && yarn workspace @equest/database migrate`,
+        { stdio: 'inherit' }
+      );
+    } catch (e) {
+      /* noop */
+    }
   });
+
 }
+
+
 
 main();

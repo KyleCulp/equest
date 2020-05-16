@@ -451,17 +451,17 @@ export declare type UserAccountPatch = {
 export declare type RegisterMutationVariables = {
     input: RegisterInput;
 };
-export declare type RegisterMutation = ({
+export declare type RegisterMutation = {
     __typename?: 'Mutation';
 } & {
-    register?: Maybe<({
+    register?: Maybe<{
         __typename?: 'RegisterPayload';
     } & {
-        user: ({
+        user: {
             __typename?: 'UserAccount';
-        } & Pick<UserAccount, 'userId' | 'username' | 'roles'>);
-    })>;
-});
+        } & Pick<UserAccount, 'userId' | 'username' | 'roles'>;
+    }>;
+};
 export declare type ResolverTypeWrapper<T> = Promise<T> | T;
 export declare type StitchingResolver<TResult, TParent, TContext, TArgs> = {
     fragment: string;
@@ -607,13 +607,13 @@ export declare type RegisterUserPayloadResolvers<ContextType = any, ParentType e
     __isTypeOf?: isTypeOfResolverFn<ParentType>;
 };
 export declare type SubscriptionResolvers<ContextType = any, ParentType extends ResolversParentTypes['Subscription'] = ResolversParentTypes['Subscription']> = {
-    query?: SubscriptionResolver<ResolversTypes['Query'], "query", ParentType, ContextType>;
-    nodeId?: SubscriptionResolver<ResolversTypes['ID'], "nodeId", ParentType, ContextType>;
-    node?: SubscriptionResolver<Maybe<ResolversTypes['Node']>, "node", ParentType, ContextType, RequireFields<SubscriptionNodeArgs, 'nodeId'>>;
-    userAccountByUserId?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, "userAccountByUserId", ParentType, ContextType, RequireFields<SubscriptionUserAccountByUserIdArgs, 'userId'>>;
-    userAccountByUsername?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, "userAccountByUsername", ParentType, ContextType, RequireFields<SubscriptionUserAccountByUsernameArgs, 'username'>>;
-    currentPerson?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, "currentPerson", ParentType, ContextType>;
-    userAccount?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, "userAccount", ParentType, ContextType, RequireFields<SubscriptionUserAccountArgs, 'nodeId'>>;
+    query?: SubscriptionResolver<ResolversTypes['Query'], 'query', ParentType, ContextType>;
+    nodeId?: SubscriptionResolver<ResolversTypes['ID'], 'nodeId', ParentType, ContextType>;
+    node?: SubscriptionResolver<Maybe<ResolversTypes['Node']>, 'node', ParentType, ContextType, RequireFields<SubscriptionNodeArgs, 'nodeId'>>;
+    userAccountByUserId?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, 'userAccountByUserId', ParentType, ContextType, RequireFields<SubscriptionUserAccountByUserIdArgs, 'userId'>>;
+    userAccountByUsername?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, 'userAccountByUsername', ParentType, ContextType, RequireFields<SubscriptionUserAccountByUsernameArgs, 'username'>>;
+    currentPerson?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, 'currentPerson', ParentType, ContextType>;
+    userAccount?: SubscriptionResolver<Maybe<ResolversTypes['UserAccount']>, 'userAccount', ParentType, ContextType, RequireFields<SubscriptionUserAccountArgs, 'nodeId'>>;
 };
 export declare type UpdateUserAccountPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateUserAccountPayload'] = ResolversParentTypes['UpdateUserAccountPayload']> = {
     clientMutationId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;

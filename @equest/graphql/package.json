@@ -1,9 +1,10 @@
 {
   "name": "@equest/graphql",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Provides packages access to types & apoll client functions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": true,
   "scripts": {
     "codegen": "node_modules/.bin/graphql-code-generator --config codegen.yml",
     "watch": "node_modules/.bin/graphql-code-generator --config dev.codegen.yml --watch",
@@ -21,8 +22,8 @@
   "dependencies": {
     "@apollo/client": "^3.0.0-beta.44",
     "@apollo/link-retry": "^2.0.0-beta.3",
-    "@equest/config": "^0.2.0",
-    "@equest/utils": "^0.2.0",
+    "@equest/config": "^1.0.0",
+    "@equest/utils": "^1.0.0",
     "apollo-utilities": "^1.3.4"
   },
   "devDependencies": {

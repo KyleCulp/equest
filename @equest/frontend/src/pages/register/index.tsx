@@ -1,16 +1,13 @@
-import { RegisterInput, useRegisterMutation } from '../../generated'
 import { NextPage } from 'next';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import RegisterForm from '../../components/RegisterForm';
+import { RegisterInput, useRegisterMutation } from '../../generated';
 
 const RegisterPage: NextPage = () => {
   const [registerMutation, { data, loading, error }] = useRegisterMutation();
-  useEffect(() => {
-
-  });
+  useEffect(() => {});
   const [input, setInput] = useState<RegisterInput>({} as RegisterInput);
-
 
   return (
     <div>

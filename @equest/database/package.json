@@ -1,6 +1,6 @@
 {
   "name": "@equest/database",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Write the database schema in sql & js, automate database migrations.",
   "main": "schemaTagsPlugin.js",
@@ -17,7 +17,7 @@
     "graphile-utils": "^4.7.0"
   },
   "devDependencies": {
-    "@equest/config": "^0.2.0",
+    "@equest/config": "1.0.0",
     "graphile-migrate": "^0.1.0"
   }
 }
