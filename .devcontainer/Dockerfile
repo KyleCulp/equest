@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-FROM node:12
+FROM nikolaik/python-nodejs:python3.7-nodejs12
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
@@ -28,25 +28,25 @@ RUN apt-get update \
     && if [ "$COMMON_SCRIPT_SHA" != "dev-mode" ]; then echo "$COMMON_SCRIPT_SHA /tmp/common-setup.sh" | sha256sum -c - ; fi \
     && /bin/bash /tmp/common-setup.sh "$INSTALL_ZSH" "$USERNAME" "$USER_UID" "$USER_GID" \
     && rm /tmp/common-setup.sh \
-    #
-    # Remove outdated yarn from /opt and install via package 
-    # so it can be easily updated via apt-get upgrade yarn
+#     #
+#     # Remove outdated yarn from /opt and install via package 
+#     # so it can be easily updated via apt-get upgrade yarn
     && rm -rf /opt/yarn-* \
     && rm -f /usr/local/bin/yarn \
     && rm -f /usr/local/bin/yarnpkg \
-    && apt-get install -y curl apt-transport-https lsb-release \
-    && echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)"-pgdg main | tee /etc/apt/sources.list.d/pgdg.list \
-    && apt-get update \ 
-    && apt-get -y install --allow-unauthenticated --no-install-recommends postgresql-client-11 \
-    # Clean up
-    && apt-get autoremove -y \
-    && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y curl apt-transport-https lsb-release 
+#     && echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)"-pgdg main | tee /etc/apt/sources.list.d/pgdg.list \
+#     && apt-get update \ 
+#     && apt-get -y install --allow-unauthenticated --no-install-recommends postgresql-client-11 \
+#     # Clean up
+#     && apt-get autoremove -y \
+#     && apt-get clean -y \
+#     && rm -rf /var/lib/apt/lists/*
 
 # This has permission issues, install with npm instead
 # RUN curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
-RUN chmod -R 777 /usr/local/lib/node_modules 
-RUN npm i -g lerna yarn
+# RUN chmod -R 777 /usr/local/lib/node_modules 
+RUN npm i -g -f lerna yarn 
 # RUN cd /workspace && yarn set version latest && cd 
 # Docker Compose version
 ARG COMPOSE_VERSION=1.24.0

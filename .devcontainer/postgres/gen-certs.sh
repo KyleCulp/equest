@@ -23,7 +23,7 @@ echo
 # create and self sign the root CA certificate
 echo
 echo "${LOGGING_PREFIX} Creating self-signed root CA certificate"
-openssl req -x509 -new -nodes -key ${BASEDIR}/rootCA.key -sha256 -days 1024 -out ${BASEDIR}/rootCA.crt -subj "/C=UK/ST=/L=/O=IBM/OU=AIOS/CN=aios-orch-dev-env-CA"
+openssl req -x509 -new -nodes -key ${BASEDIR}/rootCA.key -sha256 -days 365 -out ${BASEDIR}/rootCA.crt -subj "/C=UK/ST=/L=/O=IBM/OU=AIOS/CN=aios-orch-dev-env-CA"
 echo "${LOGGING_PREFIX} Self-signed root CA certificate (${BASEDIR}/rootCA.crt) is:"
 openssl x509 -in ${BASEDIR}/rootCA.crt -text -noout
 echo
@@ -36,7 +36,7 @@ openssl rsa -passin pass:${PASSKEY} -in ${BASEDIR}/server.pass.key -out ${BASEDI
 rm ${BASEDIR}/server.pass.key
 echo
 
-# create a certificate request for our server. This includes a subject alternative name so either aios-localhost, localhost or postgres can be used to address it
+# # create a certificate request for our server. This includes a subject alternative name so either aios-localhost, localhost or postgres can be used to address it
 echo
 echo "${LOGGING_PREFIX} Creating server certificate"
 openssl req -new -key ${BASEDIR}/server.key -out ${BASEDIR}/server.csr -subj "/C=UK/ST=/L=/O=IBM/OU=AIOS/CN=postgres" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:postgres,DNS:localhost,DNS:aios-localhost")) 

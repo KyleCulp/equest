@@ -43,6 +43,7 @@
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
     "prompt": "^1.0.0",
+    "redis-cli": "^1.4.0",
     "rimraf": "^3.0.2",
     "source-map-loader": "^0.2.4",
     "ts-jest": "^26.0.0",

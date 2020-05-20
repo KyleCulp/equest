@@ -17,6 +17,8 @@ async function installPostgres() {
   const databaseUserPassword = process.env.PG_MASTER_PASSWORD;
 
   const sqlFile = `
+    GRANT CONNECT ON DATABASE dev to app_rocket_league;
+
     DO $do$
       BEGIN
         IF NOT EXISTS (
@@ -55,9 +57,8 @@ async function installPostgres() {
   });
 }
 
-installPostgres();
-
 async function main() {
+  process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
   await installPostgres();
   console.log(
     'This will reset the database, are you sure you want to do this? (Y/N) <---'
@@ -72,9 +73,7 @@ async function main() {
       /* noop */
     }
   });
-
+  process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 1;
 }
-
-
 
 main();

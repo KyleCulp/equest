@@ -1,0 +1,23 @@
+{
+  "name": "@equest/rlparser",
+  "version": "1.0.0",
+  "description": "Run the rocket league parser.",
+  "main": "dist/index.js",
+  "private": true,
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleCulp/equest.git"
+  },
+  "scripts": {
+    "build": "../../node_modules/.bin/tsc -b",
+    "dev": "../../node_modules/.bin/tsnd src/index.ts"
+  },
+  "dependencies": {
+    "bullmq": "^1.8.7",
+    "@equest/config": "^1.0.0",
+    "@equest/utils": "^1.0.0"
+  }
+}

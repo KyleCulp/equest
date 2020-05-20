@@ -10,7 +10,7 @@ const { REDIS_HOST, REDIS_PORT, REDIS_FAMILY, REDIS_PASSWORD } = process.env;
  * @param database - Specific redis database for the client instance to connect to
  * @returns An IORedis Client
  */
-export const redisInstance = async (database: number) => {
+export const redisInstance = (database: number) => {
   return new IORedis({
     port: parseInt(REDIS_PORT!),
     host: REDIS_HOST,

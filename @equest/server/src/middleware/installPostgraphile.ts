@@ -1,4 +1,4 @@
-import { Application } from 'express';
+import { Application, Request } from 'express';
 import { Pool } from 'pg';
 import postgraphile from 'postgraphile';
 
@@ -29,7 +29,7 @@ export const installPostgraphile = async (app: Application) => {
      * extension settings. We find `jwt.claims.*` to be a safe namespace,
      * whether or not you're using JWTs.
      */
-    async pgSettings(req) {
+    async pgSettings(req: Request) {
       const claims = await getUserClaimsFromRequest(req);
       return {
         // Everyone uses the "visitor" role currently
@@ -59,7 +59,7 @@ export const installPostgraphile = async (app: Application) => {
       // };
     },
 
-    async additionalGraphQLContextFromRequest(req) {
+    async additionalGraphQLContextFromRequest(req: Request) {
       const claims = await getUserClaimsFromRequest(req);
 
       return {

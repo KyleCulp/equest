@@ -1,8 +1,6 @@
 */**/dist
 */*/dist
-#lol
-drone/.env
-
+redis-cli
 # build artifact folders
 dist
 cjs

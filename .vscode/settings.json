@@ -20,5 +20,8 @@
   },
   "[postgres]": {
     "editor.defaultFormatter": "bradymholt.pgformatter"
+  },
+  "files.associations": {
+    "*.sql": "postgres"
   }
 }

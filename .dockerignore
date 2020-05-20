@@ -9,3 +9,5 @@ npm-debug.log
 *docker-compose*
 .drone.yml
 .pnpm-store
+@equest/*/node_modules
+@equest/**/node_modules

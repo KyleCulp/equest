@@ -1,37 +1,43 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "incremental": true,
-    "noEmitOnError": true,
     "allowJs": false,
-    "allowSyntheticDefaultImports": true,
+    "allowUmdGlobalAccess": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "assumeChangesOnlyAffectDirectDependencies": false,
+    "checkJs": false,
+    "disableSizeLimit": false,
+    "generateCpuProfile": "profile.cpuprofile",
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": false,
+    "noStrictGenericChecks": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveConstEnums": false,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "suppressExcessPropertyErrors": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "useDefineForClassFields": false,
     "esModuleInterop": true,
-    "jsx": "preserve",
+    "skipLibCheck": true,
     "lib": [
       "dom",
       "es2017"
     ],
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "preserveConstEnums": true,
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "removeComments": false,
-    "strict": true,
-    "strictNullChecks": true,
-    "importHelpers": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "preserveWatchOutput": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noEmit": true,
-    "declaration": true,
-    "declarationMap": true,
+    "target": "ESNEXT",
+    "module": "CommonJS",
     "baseUrl": ".",
     "paths": {
       "@equest/*": [
@@ -39,13 +45,15 @@
       ]
     }
   },
-  "include": [],
   "references": [
     {
-      "path": "@equest/config"
+      "path": "@equest/blog"
     },
     {
       "path": "@equest/client"
+    },
+    {
+      "path": "@equest/config"
     },
     {
       "path": "@equest/graphql"
@@ -56,5 +64,8 @@
     {
       "path": "@equest/worker"
     }
+  ],
+  "exclude": [
+    "node_modules",
   ]
 }

@@ -3,6 +3,7 @@ const withPlugins = require("next-compose-plugins");
 const withCustomBabelConfig = require("next-plugin-custom-babel-config");
 const withTranspileModules = require("next-transpile-modules");
 // taken from https://github.com/josephluck/next-typescript-monorepo
+
 function withCustomWebpack(config = {}) {
   const { webpack } = config;
 
@@ -31,6 +32,8 @@ const plugins = [
   [withCustomWebpack],
 ];
 
-const config = {};
+const config = {
+  distDir: 'dist',
+};
 
 module.exports = withPlugins(plugins, config);

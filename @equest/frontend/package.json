@@ -6,7 +6,7 @@
   "scripts": {
     "next": "./node_modules/.bin/next",
     "build": "yarn run next build",
-    "export": "yarn run next export",
+    "export": "yarn run next build && yarn run next export",
     "dev": "yarn run next -p 4000",
     "start": "node_modules/.bin/next start",
     "test": "jest --coverage --watchAll --config=configs/jest.json",

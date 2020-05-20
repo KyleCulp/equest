@@ -3,3 +3,4 @@ export const isTest = process.env.NODE_ENV === 'test';
 export * from './checkEnvironmentVariables';
 export * from './regex';
 export * from './graphqlErrors';
+export * from './redisInstance';

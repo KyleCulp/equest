@@ -2,6 +2,18 @@ import { Application, Request, Response } from 'express';
 import passport from 'passport';
 import { Pool } from 'pg';
 
+// Lotta stuff in here from below
+// https://github.com/graphile/starter/blob/master/%40app/server/src/middleware/installPassport.ts
+
+declare global {
+  namespace Express {
+    interface User {
+      user_id: string;
+    }
+  }
+}
+
+
 async function getUserByIdentifier(
   pgMasterAdminPool: Pool,
   identifier: string
@@ -49,6 +61,7 @@ export const installPassport = async (app: Application) => {
   });
 };
 
+
 export const getUserClaimsFromRequest = async (req: Request) => ({
-  ...(req['user'] ? { ['user_id']: req['user']['user_id'] } : null),
+  ...(req.user ? { ['user_id']: req.user['user_id'] } : null),
 });
