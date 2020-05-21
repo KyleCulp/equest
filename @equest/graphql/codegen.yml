@@ -2,7 +2,7 @@ overwrite: true
 schema: '../../data/schema.gql'
 documents: '../frontend/src/**/*.gql'
 generates:
-  ../frontend/src/generated.tsx:
+  src/index.tsx:
     plugins:
       - add: /* eslint-disable */
       - add: /* THIS IS A GENERATED FILE - DO NOT MODIFY */
@@ -19,7 +19,7 @@ generates:
       withComponent: false
       withHooks: true
       withRefetchFn: true
-      apolloReactCommonImportFrom: @apollo/client
-      apolloReactHooksImportFrom: @apollo/client
+      apolloReactCommonImportFrom: '@apollo/client'
+      apolloReactHooksImportFrom: '@apollo/client'
       reactApolloVersion: 3
       gqlImport: '@apollo/client#gql'

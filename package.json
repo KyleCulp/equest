@@ -2,13 +2,13 @@
   "name": "equest",
   "license": "MIT",
   "private": true,
-  "type": "module",
   "scripts": {
     "preinstall": "npx only-allow yarn",
-    "init": "node scripts/init.js",
-    "build": "lerna run build",
-    "format": "node_modules/.bin/eslint --ext .ts,.tsx,.graphql . --fix; node_modules/.bin/prettier --ignore-path .eslintignore --write '**/*.{ts,tsx,gql,md}'",
-    "clean": "node -r dotenv/config scripts/clean-volumes.js"
+    "clean": "lerna run clean --stream --parallel",
+    "build": "lerna run build --stream --parallel",
+    "lint": "eslint . --ext .ts,.tsx -f codeframe",
+    "prettify": "npx prettier \"./**/*.{js,ts,tsx}\" --write",
+    "init": "node scripts/init.js && yarn run build"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^9.4.0",
@@ -52,7 +52,8 @@
     "source-map-loader": "^0.2.4",
     "ts-jest": "^26.0.0",
     "ts-loader": "^7.0.2",
-    "ts-node": "^8.10.1"
+    "ts-node": "^8.10.1",
+    "ts-node-dev": "^1.0.0-pre.44"
   },
   "repository": {
     "type": "git",
@@ -66,5 +67,10 @@
       "**/react-native",
       "**/react-native/**"
     ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "tabWidth": 2
   }
 }

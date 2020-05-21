@@ -11,11 +11,10 @@
     "esm",
     "src"
   ],
-  "engines": {
-    "node": ">= 10.9.0"
-  },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json"
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs",
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm"
   },
   "dependencies": {
     "dotenv": "^8.2.0"

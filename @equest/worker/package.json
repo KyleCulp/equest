@@ -2,14 +2,10 @@
   "name": "@equest/worker",
   "version": "1.0.0",
   "description": "Run redis queue workers",
-  "main": "dist/index",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KyleCulp/equest.git"
-  },
   "scripts": {
-    "dev": "../../node_modules/.bin/tsnd src/index.ts"
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "ts-node-dev src/main.ts"
   },
   "dependencies": {
     "@equest/config": "^1.0.0",

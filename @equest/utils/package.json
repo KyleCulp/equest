@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "Utility functions that are used across the codebase.",
   "private": true,
-  "main": "dist/main.cjs.js",
-  "module": "dist/main.esm.js",
-  "types": "dist/main.d.ts",
+  "main": "cjs/main.js",
+  "module": "esm/main.js",
+  "types": "esm/main.d.ts",
+  "files": [
+    "cjs",
+    "esm",
+    "src"
+  ],
   "scripts": {
-    "build": "../../node_modules/.bin/tsc -b",
-    "clean-dist": "rm -rf dist/*",
-    "test": "jest --coverage --watchAll --config=configs/jest.json"
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs",
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm"
   },
   "dependencies": {
     "@apollo/client": "^3.0.0-beta.44",

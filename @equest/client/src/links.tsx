@@ -1,6 +1,5 @@
 import { ApolloLink, HttpLink } from '@apollo/client';
-import { onError } from '@apollo/link-error';
-import { RetryLink } from '@apollo/link-retry';
+//
 // import Cookies from 'js-cookie';
 import fetch from 'isomorphic-unfetch';
 
@@ -29,17 +28,14 @@ const authenticationLink = new ApolloLink((operation, forward) => {
   return forward(operation);
 });
 
-const errorLink = onError(({ graphQLErrors, networkError }) => {
-  if (graphQLErrors)
-    graphQLErrors.forEach(({ message, locations, path }) =>
-      console.log(
-        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-      )
-    );
-  if (networkError) console.log(`[Network error]: ${networkError}`);
-});
+// const errorLink = onError(({ graphQLErrors, networkError }) => {
+//   if (graphQLErrors)
+//     graphQLErrors.forEach(({ message, locations, path }) =>
+//       console.log(
+//         `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+//       )
+//     );
+//   if (networkError) console.log(`[Network error]: ${networkError}`);
+// });
 
-export const clientLinks = ApolloLink.from([
-  authenticationLink,
-  httpLink,
-]);
+export const clientLinks = ApolloLink.from([authenticationLink, httpLink]);

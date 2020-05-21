@@ -1,8 +1,6 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "dist",
     "paths": {
       "@equest/*": ["node_modules/@equest/*/src"]
     }
