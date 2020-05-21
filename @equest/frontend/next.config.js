@@ -1,39 +1,6 @@
-const path = require("path");
-const withPlugins = require("next-compose-plugins");
-const withCustomBabelConfig = require("next-plugin-custom-babel-config");
-const withTranspileModules = require("next-transpile-modules");
-// taken from https://github.com/josephluck/next-typescript-monorepo
-
-function withCustomWebpack(config = {}) {
-  const { webpack } = config;
-
-  config.webpack = (config, ...rest) => {
-    const babelRule = config.module.rules.find((rule) =>
-      rule.use && Array.isArray(rule.use)
-        ? rule.use.find((u) => u.loader === "next-babel-loader")
-        : rule.use.loader === "next-babel-loader"
-    );
-    if (babelRule) {
-      babelRule.include.push(path.resolve("../"));
-    }
-
-    return webpack(config, ...rest);
-  };
-
-  return config;
-}
-
-const plugins = [
-  [withTranspileModules, { transpileModules: ["@acme"] }],
-  [
-    withCustomBabelConfig,
-    { babelConfigFile: path.resolve("../../babel.config.js") },
-  ],
-  [withCustomWebpack],
-];
-
-const config = {
-  distDir: 'dist',
+// next.config.js
+module.exports = {
+  experimental: {
+    jsconfigPaths: true, // enables it for both jsconfig.json and tsconfig.json
+  },
 };
-
-module.exports = withPlugins(plugins, config);

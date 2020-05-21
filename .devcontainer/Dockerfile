@@ -46,7 +46,7 @@ RUN apt-get update \
 # This has permission issues, install with npm instead
 # RUN curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
 # RUN chmod -R 777 /usr/local/lib/node_modules 
-RUN npm i -g -f lerna yarn 
+RUN npm i -g -f lerna yarn @nestjs/cli
 # RUN cd /workspace && yarn set version latest && cd 
 # Docker Compose version
 ARG COMPOSE_VERSION=1.24.0

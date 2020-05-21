@@ -13,22 +13,20 @@ export const authTypeDefs = gql`
 
 export const authResolvers: Resolvers = {
   Local: {
-    isLoggedIn: async function (
-      rootValue,
-      args,
-      context,
-      info
-    ): Promise<boolean> {
+    isLoggedIn: async function (): // rootValue,
+    // args,
+    // context,
+    // info
+    Promise<boolean> {
       return false;
     },
   },
   Query: {
-    kylesName: async function (
-      rootValue,
-      args,
-      context,
-      info
-    ): Promise<string> {
+    kylesName: async function (): // rootValue,
+    // args,
+    // context,
+    // info
+    Promise<string> {
       console.log('hello');
       return 'its kyle xd';
     },

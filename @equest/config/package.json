@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "description": "Provides config & preloads dotenv",
-  "main": "src/index.ts",
+  "main": "cjs/main.js",
+  "module": "esm/main.js",
+  "types": "esm/main.d.ts",
   "files": [
-    "dist",
+    "cjs",
+    "esm",
     "src"
   ],
-  "engines": {
-    "node": ">= 10.9.0"
-  },
   "scripts": {
-    "build": "../../node_modules/.bin/tsc -b"
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs",
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm"
   },
   "dependencies": {
     "dotenv": "^8.2.0"

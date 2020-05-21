@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "description": "Write the database schema in sql & js, automate database migrations.",
-  "main": "schemaTagsPlugin.js",
   "scripts": {
     "gm": "node -r @equest/config node_modules/.bin/graphile-migrate",
-    "migrate": "npm run gm migrate",
-    "reset": "npm run gm reset -- --erase",
-    "watch": "npm run gm watch",
-    "commit": "npm run gm commit",
-    "uncommit": "npm run gm uncommit"
+    "migrate": "yarn run gm migrate",
+    "reset": "yarn run gm reset --erase",
+    "watch": "yarn run gm watch",
+    "commit": "yarn run gm commit",
+    "uncommit": "yarn run gm uncommit"
   },
   "dependencies": {
     "graphile-build-pg": "^4.7.0",

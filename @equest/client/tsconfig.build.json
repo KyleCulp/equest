@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "paths": {
+      "@equest/*": ["node_modules/@equest/*/src"]
+    }
+  },
+  "include": ["src"]
+}

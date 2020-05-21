@@ -1,6 +1,6 @@
-import { DocumentNode, Resolvers } from '@apollo/client';
+import { Resolvers } from '@apollo/client';
 
-import { authResolvers, authTypeDefs } from './authResolver';
+import { authResolvers } from './authResolver';
 
 // export const clientTypeDefs: DocumentNode[] = [authTypeDefs];
 

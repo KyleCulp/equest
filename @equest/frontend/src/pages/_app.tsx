@@ -1,8 +1,7 @@
-import { ApolloProvider } from '@apollo/client';
+import { ApolloProvider, from } from '@apollo/client';
 import { ThemeProvider } from 'emotion-theming';
 import { AppProps } from 'next/app';
 import React from 'react';
-
 import { client } from '@equest/client';
 import theme from '../theme';
 

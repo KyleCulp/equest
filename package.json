@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow yarn",
-    "init": "node scripts/init.js",
-    "build": "lerna run build",
-    "format": "node_modules/.bin/eslint --ext .ts,.tsx,.graphql . --fix; node_modules/.bin/prettier --ignore-path .eslintignore --write '**/*.{ts,tsx,gql,md}'",
-    "clean": "node -r dotenv/config scripts/clean-volumes.js"
+    "clean": "lerna run clean --stream --parallel",
+    "build": "lerna run build --stream --parallel",
+    "lint": "eslint . --ext .ts,.tsx -f codeframe",
+    "prettify": "npx prettier \"./**/*.{js,ts,tsx}\" --write",
+    "init": "node scripts/init.js && yarn run build"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^9.4.0",
@@ -17,10 +18,12 @@
     "dotenv": "^8.2.0",
     "lerna": "^3.20.2",
     "pg": "^8.2.1",
-    "typescript": "^3.9.2",
+    "typescript": "^3.9.3",
     "yarn": "^1.22.4"
   },
   "devDependencies": {
+    "@nestjs/cli": "^7.1.5",
+    "@ts-engine/cli": "^1.5.2",
     "@types/graphql": "^14.5.0",
     "@types/jest": "^25.2.1",
     "@types/jwt-decode": "^2.2.1",
@@ -30,6 +33,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
+    "css-loader": "^3.5.3",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-graphql": "^3.1.1",
@@ -47,7 +51,9 @@
     "rimraf": "^3.0.2",
     "source-map-loader": "^0.2.4",
     "ts-jest": "^26.0.0",
-    "ts-loader": "^7.0.2"
+    "ts-loader": "^7.0.2",
+    "ts-node": "^8.10.1",
+    "ts-node-dev": "^1.0.0-pre.44"
   },
   "repository": {
     "type": "git",
@@ -56,6 +62,15 @@
   "workspaces": {
     "packages": [
       "@equest/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**"
     ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "tabWidth": 2
   }
 }

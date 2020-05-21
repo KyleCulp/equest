@@ -3,9 +3,18 @@
   "version": "1.0.0",
   "description": "Apollo client with configured settings",
   "private": true,
-  "main": "src/index.ts",
+  "main": "cjs/main.js",
+  "module": "esm/main.js",
+  "types": "esm/main.d.ts",
+  "files": [
+    "cjs",
+    "esm",
+    "src"
+  ],
   "scripts": {
-    "build": "../../node_modules/.bin/tsc -b"
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs",
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm"
   },
   "dependencies": {
     "@apollo/client": "^3.0.0-beta.44",

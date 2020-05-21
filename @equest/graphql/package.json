@@ -2,13 +2,21 @@
   "name": "@equest/graphql",
   "version": "1.0.0",
   "description": "Provides packages access to types & apoll client functions.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "private": true,
+  "main": "cjs/main.js",
+  "module": "esm/main.js",
+  "types": "esm/main.d.ts",
+  "files": [
+    "cjs",
+    "esm",
+    "src"
+  ],
   "scripts": {
+    "build": "yarn run codegen && yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs",
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm",
     "codegen": "node_modules/.bin/graphql-code-generator --config codegen.yml",
     "watch": "node_modules/.bin/graphql-code-generator --config dev.codegen.yml --watch",
-    "build": "npm run codegen && ../../node_modules/.bin/tsc -b",
     "devbuild": "node_modules/.bin/graphql-code-generator --config dev.codegen.yml && ../../node_modules/.bin/tsc -b"
   },
   "publishConfig": {

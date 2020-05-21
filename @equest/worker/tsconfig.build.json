@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "cjs",
+    "paths": {
+      "@equest/*": ["node_modules/@equest/*/src"]
+    }
+  },
+  "include": ["src"]
+}
