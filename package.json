@@ -8,7 +8,7 @@
     "build": "lerna run build --stream --parallel",
     "lint": "eslint . --ext .ts,.tsx -f codeframe",
     "prettify": "npx prettier \"./**/*.{js,ts,tsx}\" --write",
-    "init": "node scripts/init.js && yarn run build"
+    "init": "yarn && node scripts/init.js && yarn run build"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^9.4.0",

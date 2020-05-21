@@ -20,9 +20,7 @@ Run `docker network create -d bridge equest` on initial setup. A universal netwo
 
 ## Initialization
 
-Install monorepo packages with `npm i`.
-
-After monorepo cli's are installed, run `npm run init`. This will initialise the postgres database, download and bootstrap all project dependencies, and other neccessities.
+Run `yarn init`. This will download dependencies, initialize the postgres database, download and bootstrap all project dependencies, and other neccessities.
 
 ## Unique project gotchas
 
