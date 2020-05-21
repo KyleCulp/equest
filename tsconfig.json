@@ -19,7 +19,7 @@
     "noStrictGenericChecks": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "preserveConstEnums": false,
+    "preserveConstEnums": true,
     "removeComments": false,
     "resolveJsonModule": true,
     "strict": true,
@@ -32,23 +32,22 @@
     "useDefineForClassFields": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "lib": [
-      "dom",
-      "es2017"
-    ],
-    "target": "ESNEXT",
+    "lib": ["dom", "dom.iterable", "esnext", "ESNext"],
+    "target": "esnext",
     "module": "CommonJS",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "preserveWatchOutput": true,
     "baseUrl": ".",
+    "incremental": true,
+    "declaration": true,
+    "declarationMap": true,
     "paths": {
-      "@equest/*": [
-        "@equest/*"
-      ]
-    }
+      "@equest/*": ["@equest/*"]
+    },
+    "experimentalDecorators": true
   },
   "references": [
-    {
-      "path": "@equest/blog"
-    },
     {
       "path": "@equest/client"
     },
@@ -59,13 +58,8 @@
       "path": "@equest/graphql"
     },
     {
-      "path": "@equest/server"
-    },
-    {
-      "path": "@equest/worker"
+      "path": "@equest/utils"
     }
   ],
-  "exclude": [
-    "node_modules",
-  ]
+  "exclude": ["node_modules", "server"]
 }

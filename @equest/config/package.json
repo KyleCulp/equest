@@ -1,9 +1,11 @@
 {
   "name": "@equest/config",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "description": "Provides config & preloads dotenv",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "src"

@@ -1,29 +1,13 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../frontend/tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
-    "composite": false,
-    "incremental": false,
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "noEmit": true,
-    "esModuleInterop": true,
-    "declaration": false,
-    "declarationMap": false,
-    "isolatedModules": true
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "declarationDir": "dist"
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "exclude": ["node_modules", "dist"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "references": [
     {
       "path": "../config"

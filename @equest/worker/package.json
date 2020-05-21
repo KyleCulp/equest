@@ -2,7 +2,7 @@
   "name": "@equest/worker",
   "version": "1.0.0",
   "description": "Run redis queue workers",
-  "main": "src/index.ts",
+  "main": "dist/index",
   "private": true,
   "repository": {
     "type": "git",

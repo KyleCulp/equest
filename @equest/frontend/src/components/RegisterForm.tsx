@@ -62,7 +62,6 @@ const RegisterForm: React.FC<Props> = ({ setInput }) => {
       <Flex flexWrap={'wrap'}>
         {formFields.map((field, key) => (
           <div key={key}>
-            {errors[field.name] && ' Name required'}
             <Input
               ref={register({
                 required: true,

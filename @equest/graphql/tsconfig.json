@@ -1,21 +1,6 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "noEmit": false,
-    "rootDir": ".",
-    "outDir": ".",
-    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
-    "declarationDir": ".",
-    "lib": [
-      "es2018",
-      "esnext.asynciterable"
-    ],
-    "target": "es2018",
-    "module": "commonjs",
-    "jsx": "react"
-  },
-  "include": [
-    "index.tsx"
-  ],
+  "extends": "../frontend/tsconfig.json",
+  "compilerOptions": {},
+  "include": ["index.tsx"],
   "exclude": []
 }

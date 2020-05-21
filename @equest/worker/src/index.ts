@@ -1,6 +1,8 @@
 import { redisInstance } from '@equest/utils';
 import { QueueEvents } from 'bullmq';
 
+console.log('Worker starting');
+
 const queueEvents = new QueueEvents('Equest Worker', {
   connection: redisInstance(parseInt(process.env['REDIS_QUEUE_DB']!)),
 });

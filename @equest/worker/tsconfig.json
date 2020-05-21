@@ -3,15 +3,8 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
-    "composite": false,
-    "incremental": false,
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "noEmit": true,
-    "esModuleInterop": true,
-    "declaration": false,
-    "declarationMap": false,
-    "isolatedModules": true
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "declarationDir": "dist"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"],
