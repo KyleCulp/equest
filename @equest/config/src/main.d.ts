@@ -3,4 +3,4 @@ export declare const settings: {
         origin: string;
     };
 };
-//# sourceMappingURL=index.d.ts.map
+//# sourceMappingURL=main.d.ts.map

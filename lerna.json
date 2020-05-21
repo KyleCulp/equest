@@ -1,9 +1,6 @@
 {
-  "packages": [
-    "@equest/*"
-  ],
-  "version": "1.0.0",
-  "loglevel": "quiet",
+  "packages": ["@equest/*"],
+  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true
 }

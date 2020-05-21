@@ -1,4 +1,4 @@
-import '@equest/config';
+import '@equest/config/src/main';
 
 import IORedis from 'ioredis';
 

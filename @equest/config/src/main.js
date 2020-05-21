@@ -5,4 +5,4 @@ export const settings = {
         origin: 'http://127.0.0.1:4000',
     },
 };
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=main.js.map

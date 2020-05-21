@@ -1,4 +1,4 @@
-import '@equest/config';
+import '@equest/config/src/main';
 
 // /*
 //  *	Check that all environmental variables are present, and throw

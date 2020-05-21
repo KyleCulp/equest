@@ -2,8 +2,10 @@
   "name": "@equest/utils",
   "version": "1.0.0",
   "description": "Utility functions that are used across the codebase.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "private": true,
+  "main": "dist/main.cjs.js",
+  "module": "dist/main.esm.js",
+  "types": "dist/main.d.ts",
   "scripts": {
     "build": "../../node_modules/.bin/tsc -b",
     "clean-dist": "rm -rf dist/*",
