@@ -11,7 +11,7 @@
     "init": "yarn && node scripts/init.js && yarn run build"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^9.4.0",
+    "@next/bundle-analyzer": "9.4.1",
     "@next/mdx": "^9.4.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.10.7",
