@@ -1,11 +1,5 @@
 import { redisInstance } from '@equest/utils';
-import {
-  Controller,
-  Get,
-  Post,
-  UploadedFile,
-  UseInterceptors,
-} from '@nestjs/common';
+import { Controller, Get, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { Queue } from 'bullmq';
 
@@ -33,5 +27,6 @@ export class RocketLeagueController {
   async uploadFile(@UploadedFile() file: any) {
     // await queue.add('parse', { replay: file['f']})
     console.log(file);
+    await queue.add('parse', { replay: file['originalname'] });
   }
 }

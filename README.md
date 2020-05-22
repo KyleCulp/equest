@@ -32,6 +32,10 @@ Getting error codes from functions in the database is weird, with alot of borrow
 
 [Postgraphile](https://www.graphile.org/postgraphile/introduction/)
 
+# Typescript
+
+Base tsconfig, and every package has a custom tsconfig.build.json for each packages independant requirements. Library packages export folders `cjs` and or `esm`, providing browser js & nodejs builds.
+
 # Notes
 
 This repo makes use of many frameworks and libraries. Although it may look like resume driven design took place here, this is a student research project for me to gain experience with many technologies and figure out what I want to do after college.

@@ -1,14 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 
 import { AppModule } from './modules/app.module';
+import { UI } from 'bull-board';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.setGlobalPrefix('api');
   app.enableShutdownHooks();
-
-  // app.use();
 
   // const options = new DocumentBuilder()
   //   .setTitle('Equest API')

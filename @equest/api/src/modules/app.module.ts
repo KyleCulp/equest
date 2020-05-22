@@ -1,4 +1,4 @@
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { TerminusModule } from '@nestjs/terminus';
 
 import { AppController } from '../controllers/app.controller';

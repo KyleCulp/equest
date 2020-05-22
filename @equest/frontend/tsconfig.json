@@ -2,14 +2,20 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "paths": {
-      "@equest/*": ["../../node_modules/@equest/*/src", "..", "../client"]
-      // "@equest/client": ["../client/src"]
+      "@equest/*": [
+        "../../node_modules/@equest/*/src",
+        "..",
+        "../client"
+      ]
     },
     "allowJs": true,
     "skipLibCheck": true,
     "noEmit": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "module": "esnext"
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

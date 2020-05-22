@@ -1,8 +1,7 @@
 {
   "name": "@equest/rlparser",
   "version": "1.0.0",
-  "description": "Run the rocket league parser.",
-  "main": "dist/index.js",
+  "description": "Runs the rocket league parser & handles replay parse queue.",
   "private": true,
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
