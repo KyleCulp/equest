@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^9.4.0",
-    "@next/mdx": "^9.4.0",
+    "@next/mdx": "9.4.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
