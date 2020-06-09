@@ -1,1 +1,3 @@
-TODO: Setup config for cookie name, host, etc
+# @equest/config
+
+Provides config & imports dotenv for different projects. Used by almost every other package.

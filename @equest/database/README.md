@@ -1,3 +1,7 @@
+# @equest/database
+
+Write & test database code.
+
 Each function needs explicit grants to use
 
 Each table needs RBAC, and some need unique RLS policies

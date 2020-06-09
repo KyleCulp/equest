@@ -14,7 +14,8 @@
   "scripts": {
     "build": "yarn build:cjs && yarn build:esm",
     "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs",
-    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm"
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm",
+    "dev": "tsc -w -p tsconfig.build.json --module commonjs --outDir cjs"
   },
   "dependencies": {
     "@apollo/client": "^3.0.0-beta.44",

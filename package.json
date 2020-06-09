@@ -8,7 +8,8 @@
     "build": "lerna run build --stream --parallel",
     "lint": "eslint . --ext .ts,.tsx -f codeframe",
     "prettify": "npx prettier \"./**/*.{js,ts,tsx}\" --write",
-    "init": "yarn && node scripts/init.js && yarn run build"
+    "init": "yarn && node scripts/init.js && yarn run build",
+    "neon": "neon"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^9.4.0",
@@ -46,11 +47,14 @@
     "eslint-plugin-simple-import-sort": "^5.0.3",
     "eslint-plugin-tsdoc": "^0.2.4",
     "jest": "^26.0.1",
+    "neon-cli": "^0.4.0",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "prompt": "^1.0.0",
     "redis-cli": "^1.4.0",
     "rimraf": "^3.0.2",
     "source-map-loader": "^0.2.4",
+    "ts-interface-builder": "^0.2.2",
     "ts-jest": "^26.0.0",
     "ts-loader": "^7.0.2",
     "ts-node": "^8.10.1",

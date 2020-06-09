@@ -46,12 +46,15 @@ RUN apt-get update \
 # This has permission issues, install with npm instead
 # RUN curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
 # RUN chmod -R 777 /usr/local/lib/node_modules 
-RUN npm i -g -f lerna yarn @nestjs/cli
+RUN npm i -g -f lerna yarn @nestjs/cli neon-cli
 # RUN cd /workspace && yarn set version latest && cd 
 # Docker Compose version
 ARG COMPOSE_VERSION=1.24.0
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
+# Install latest rust version
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN export PATH="$HOME/bin:$PATH"
 
 # The image referenced above includes a non-root user with sudo access. Add 
 # the "remoteUser" property to devcontainer.json to use it. On Linux, the container 

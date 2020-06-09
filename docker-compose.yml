@@ -29,13 +29,15 @@ services:
       - .:/workspace
       # - equest-vscode-volume:/workspace
       # Node modules for every package, very worth in terms of performance.
-      - equest-nm_root:/workspace/node_modules
+      - nm-equest-root:/workspace/node_modules
       - nm-equest-api:/workspace/@equest/api/node_modules
+      - nm-equest-blog:/workspace/@equest/blog/node_modules
       - nm-equest-client:/workspace/@equest/client/node_modules
       - nm-equest-config:/workspace/@equest/config/node_modules
       - nm-equest-database:/workspace/@equest/database/node_modules
       - nm-equest-frontend:/workspace/@equest/frontend/node_modules
       - nm-equest-graphql:/workspace/@equest/graphql/node_modules
+      - nm-equest-rlparser:/workspace/@equest/rlparser/node_modules
       - nm-equest-utils:/workspace/@equest/utils/node_modules
       - nm-equest-worker:/workspace/@equest/worker/node_modules
 
@@ -105,13 +107,15 @@ volumes:
   equest-pgadmin-volume:
   equest-vscode-volume:
   # Node modules
-  equest-nm_root:
+  nm-equest-root:
   nm-equest-api:
+  nm-equest-blog:
   nm-equest-client:
   nm-equest-config:
   nm-equest-database:
   nm-equest-frontend:
   nm-equest-graphql:
+  nm-equest-rlparser:
   nm-equest-utils:
   nm-equest-worker:
   # used for keeeping vscode-extensions while rebuilding

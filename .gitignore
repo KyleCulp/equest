@@ -7,6 +7,9 @@ cjs
 esm
 umd
 
+@equest/*/secrets.env
+secrets.env
+
 # IDEs
 .idea
 

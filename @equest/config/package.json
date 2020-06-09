@@ -6,7 +6,6 @@
   "main": "cjs/main.js",
   "module": "esm/main.js",
   "types": "esm/main.d.ts",
-  "type": "module",
   "files": [
     "cjs",
     "esm",
@@ -15,7 +14,8 @@
   "scripts": {
     "build": "yarn build:cjs && yarn build:esm",
     "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs",
-    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm"
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm",
+    "dev": "tsc -w -p tsconfig.build.json --module commonjs --outDir cjs"
   },
   "dependencies": {
     "dotenv": "^8.2.0"

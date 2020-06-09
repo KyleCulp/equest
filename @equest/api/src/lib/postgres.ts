@@ -15,7 +15,7 @@ const {
   // PG_MASTER_CERT_LOCATION
 } = process.env;
 
-export const pgMasterAdminPoolConfig: PoolConfig = {
+const pgMasterAdminPoolConfig: PoolConfig = {
   user: PG_MASTER_ADMIN_USERNAME,
   password: PG_MASTER_ADMIN_PASSWORD,
   host: PG_MASTER_HOST,
@@ -32,7 +32,7 @@ export const pgMasterAdminPoolConfig: PoolConfig = {
   },
 };
 
-export const pgMasterPoolConfig: PoolConfig = {
+const pgMasterPoolConfig: PoolConfig = {
   user: PG_MASTER_USERNAME,
   password: PG_MASTER_PASSWORD,
   host: PG_MASTER_HOST,
@@ -48,3 +48,5 @@ export const pgMasterPoolConfig: PoolConfig = {
     // cert: fs.readFileSync(PG_MASTER_CERT_LOCATION!),
   },
 };
+export const pgMasterAdminPool: Pool = new Pool(pgMasterAdminPoolConfig);
+export const pgMasterPool: Pool = new Pool(pgMasterPoolConfig);

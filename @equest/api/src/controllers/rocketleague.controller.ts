@@ -1,13 +1,8 @@
-import { redisInstance } from '@equest/utils';
-import { Controller, Get, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
-import { FileInterceptor } from '@nestjs/platform-express';
-import { Queue } from 'bullmq';
-
+import { Controller, Get, Post, UseInterceptors, UploadedFiles } from '@nestjs/common';
 import { RocketLeagueService } from '../services/rocketleague.service';
-
-const queue = new Queue('rocket_league_replays', {
-  connection: redisInstance(parseInt(process.env['REDIS_RL_DB']!)),
-});
+import { FilesInterceptor } from '@nestjs/platform-express';
+import multer from 'multer';
+import { rlReplaysQueue } from '../lib/queues';
 
 @Controller('rocket-league')
 export class RocketLeagueController {
@@ -15,18 +10,23 @@ export class RocketLeagueController {
 
   @Get()
   getHello(): string {
-    return this.RocketLeagueService.getXD();
+    return this.RocketLeagueService.getHello();
   }
 
   @Post('upload')
   @UseInterceptors(
-    FileInterceptor('replay', {
-      dest: 'replays', // context: base of nest app
+    FilesInterceptor('replays', 100, {
+      storage: multer.diskStorage({
+        destination: process.env['API_RLREPLAY_FOLDER'],
+        filename: function (req, file, cb) {
+          // This sets the filename as the original name.
+          // Multer kept cutting off `.replay`
+          cb(null, file.originalname);
+        },
+      }),
     })
   )
-  async uploadFile(@UploadedFile() file: any) {
-    // await queue.add('parse', { replay: file['f']})
-    console.log(file);
-    await queue.add('parse', { replay: file['originalname'] });
+  async uploadFiles(@UploadedFiles() files: Express.Multer.File[]) {
+    return this.RocketLeagueService.uploadFiles(files);
   }
 }

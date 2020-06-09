@@ -6,5 +6,6 @@
       "@equest/*": ["node_modules/@equest/*/src"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["replays"]
 }

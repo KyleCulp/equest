@@ -10,14 +10,14 @@ async function installPostgres() {
     throw new Error('ROOT_DATABASE_URL not set!');
   }
 
-  const databaseOwner = process.env.PG_MASTER_ADMIN_USERNAME;
-  const databaseOwnerPassword = process.env.PG_MASTER_ADMIN_PASSWORD;
+  const rlParserUsername = process.env.RL_PARSER_USERNAME;
+  const rlParserPassword = process.env.RL_PARSER_PASSWORD;
 
   const databaseUser = process.env.PG_MASTER_USERNAME;
   const databaseUserPassword = process.env.PG_MASTER_PASSWORD;
 
   const sqlFile = `
-    GRANT CONNECT ON DATABASE dev to app_rocket_league;
+    GRANT CONNECT ON DATABASE devadmin to app_rocket_league;
 
     DO $do$
       BEGIN
@@ -26,8 +26,8 @@ async function installPostgres() {
           FROM
             pg_catalog.pg_roles
           WHERE
-            rolname = '${databaseOwner}') THEN
-        CREATE ROLE ${databaseOwner} SUPERUSER LOGIN PASSWORD '${databaseOwnerPassword}';
+            rolname = '${rlParserUsername}') THEN
+        CREATE ROLE ${rlParserUsername} SUPERUSER LOGIN PASSWORD '${rlParserPassword}';
       END IF;
     END
     $do$;
@@ -50,6 +50,7 @@ async function installPostgres() {
 
   client.connect();
   client.query(sqlFile, (err, result) => {
+    client.end();
     if (err) {
       console.log('error: ', err);
     }
@@ -60,15 +61,12 @@ async function installPostgres() {
 async function main() {
   process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
   await installPostgres();
-  console.log(
-    'This will reset the database, are you sure you want to do this? (Y/N) <---'
-  );
+  console.log('This will reset the database, are you sure you want to do this? (Y/N) <---');
   prompt.get(['answer'], function (err, result) {
     try {
-      execSync(
-        `yarn workspace @equest/database reset && yarn workspace @equest/database migrate`,
-        { stdio: 'inherit' }
-      );
+      execSync(`yarn workspace @equest/database reset && yarn workspace @equest/database migrate`, {
+        stdio: 'inherit',
+      });
     } catch (e) {
       /* noop */
     }

@@ -4,7 +4,7 @@
   "private": true,
   "description": "Write the database schema in sql & js, automate database migrations.",
   "scripts": {
-    "gm": "node -r @equest/config node_modules/.bin/graphile-migrate",
+    "gm": "NODE_ENV=development node -r @equest/config node_modules/.bin/graphile-migrate",
     "migrate": "yarn run gm migrate",
     "reset": "yarn run gm reset --erase",
     "watch": "yarn run gm watch",
