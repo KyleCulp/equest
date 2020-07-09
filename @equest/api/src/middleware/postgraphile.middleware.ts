@@ -1,16 +1,18 @@
 import { Request } from 'express';
 import postgraphile from 'postgraphile';
 
-import { getUserClaimsFromRequest } from './passport.middleware';
+import { getUserClaimsFromRequest, passportInitializeMiddleware, passportSessionMiddleware } from './passport.middleware';
 
 import { isDev } from '@equest/config';
 import PgManyToManyPlugin from '@graphile-contrib/pg-many-to-many';
+import PgSimplifyInflectorPlugin from '@graphile-contrib/pg-simplify-inflector';
 import { resolve } from 'path';
 import { PostGraphileOptions } from 'postgraphile';
 import { makePgSmartTagsFromFilePlugin } from 'postgraphile/plugins';
 
 import { getGraphqlResolvers } from '../resolvers';
 import { pgMasterAdminPool } from '../lib/postgres';
+import { sessionMiddleware } from './session.middleware';
 
 const schemas = ['app_public', 'rocket_league'];
 
@@ -36,13 +38,13 @@ const TagsFilePlugin = makePgSmartTagsFromFilePlugin(
  * PgManyToManyPlugin:
  *
  */
-const postgraphilePlugins = [TagsFilePlugin, PgManyToManyPlugin];
+const postgraphilePlugins = [TagsFilePlugin, PgManyToManyPlugin, PgSimplifyInflectorPlugin];
 const postgraphileResolvers = getGraphqlResolvers();
 
 export const postgraphileOptionsDevelopment: PostGraphileOptions = {
   appendPlugins: postgraphilePlugins.concat(postgraphileResolvers),
-  exportJsonSchemaPath: resolve(__dirname, '../../../data/schema.json'), // export schema file
-  exportGqlSchemaPath: resolve(__dirname, '../../../data/schema.gql'), // export schema file
+  exportJsonSchemaPath: resolve(__dirname, '../../../../data/schema.json'), // export schema file
+  exportGqlSchemaPath: resolve(__dirname, '../../../../data/schema.gql'), // export schema file
   watchPg: true,
   retryOnInitFail: false,
   ownerConnectionString: ownerConnectionString,
@@ -98,6 +100,7 @@ export const postgraphileOptionsDevelopment: PostGraphileOptions = {
      * they were not installed
      */
     pgSkipInstallingWatchFixtures: true,
+    pgOmitListSuffix: false,
   },
 };
 
@@ -151,12 +154,11 @@ const appendedOptions = {
         memo[`jwt.claims.${key}`] = value;
         return memo;
       }, {}),
-    };
-    // return {
-    //   role: 'app_anonymous',
-    //   'jwt.claims.user_id': req.ctx.state.user && req.ctx.state.user.user_id
-    // };
+    }
   },
+  websocketMiddlewares: [
+    sessionMiddleware, passportInitializeMiddleware, passportSessionMiddleware
+  ],
 
   async additionalGraphQLContextFromRequest(req: Request) {
     const claims = await getUserClaimsFromRequest(req);

@@ -1,8 +1,9 @@
-import { Controller, Get, Post, UseInterceptors, UploadedFiles } from '@nestjs/common';
+import { Controller, Get, Post, UseInterceptors, UploadedFiles, UseGuards } from '@nestjs/common';
 import { RocketLeagueService } from '../services/rocketleague.service';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import multer from 'multer';
 import { rlReplaysQueue } from '../lib/queues';
+import { HttpBearerGuard } from '../passport/httpbearer.guard';
 
 @Controller('rocket-league')
 export class RocketLeagueController {
@@ -14,6 +15,7 @@ export class RocketLeagueController {
   }
 
   @Post('upload')
+  // @UseGuards(HttpBearerGuard)
   @UseInterceptors(
     FilesInterceptor('replays', 100, {
       storage: multer.diskStorage({

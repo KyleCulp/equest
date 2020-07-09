@@ -1,3 +1,69 @@
+"""
+A floating point number that requires more precision than IEEE 754 binary 64
+"""
+scalar BigFloat
+
+"""All input for the create `PlayerStat` mutation."""
+input CreatePlayerStatInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `PlayerStat` to be created by this mutation."""
+  playerStat: PlayerStatInput!
+}
+
+"""The output of our create `PlayerStat` mutation."""
+type CreatePlayerStatPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `PlayerStat` that was created by this mutation."""
+  playerStat: PlayerStat
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `ReplayMeta` that is related to this `PlayerStat`."""
+  replay: ReplayMeta
+}
+
+"""All input for the create `ReplayMeta` mutation."""
+input CreateReplayMetaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `ReplayMeta` to be created by this mutation."""
+  replayMeta: ReplayMetaInput!
+}
+
+"""The output of our create `ReplayMeta` mutation."""
+type CreateReplayMetaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `ReplayMeta` that was created by this mutation."""
+  replayMeta: ReplayMeta
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+}
+
 """All input for the create `UserAccount` mutation."""
 input CreateUserAccountInput {
   """
@@ -33,16 +99,106 @@ A point in time as described by the [ISO
 """
 scalar Datetime
 
-"""All input for the `deleteUserAccountByUserId` mutation."""
-input DeleteUserAccountByUserIdInput {
+"""All input for the `deletePlayerStatByNodeId` mutation."""
+input DeletePlayerStatByNodeIdInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
   """
   clientMutationId: String
 
-  """A user's unique ID."""
-  userId: UUID!
+  """
+  The globally unique `ID` which will identify a single `PlayerStat` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""All input for the `deletePlayerStat` mutation."""
+input DeletePlayerStatInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  replayId: String!
+  platformId: String!
+}
+
+"""The output of our delete `PlayerStat` mutation."""
+type DeletePlayerStatPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `PlayerStat` that was deleted by this mutation."""
+  playerStat: PlayerStat
+  deletedPlayerStatNodeId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `ReplayMeta` that is related to this `PlayerStat`."""
+  replay: ReplayMeta
+}
+
+"""All input for the `deleteReplayMetaByNodeId` mutation."""
+input DeleteReplayMetaByNodeIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `ReplayMeta` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""All input for the `deleteReplayMeta` mutation."""
+input DeleteReplayMetaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  replayId: String!
+}
+
+"""The output of our delete `ReplayMeta` mutation."""
+type DeleteReplayMetaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `ReplayMeta` that was deleted by this mutation."""
+  replayMeta: ReplayMeta
+  deletedReplayMetaNodeId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+}
+
+"""All input for the `deleteUserAccountByNodeId` mutation."""
+input DeleteUserAccountByNodeIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `UserAccount` to be deleted.
+  """
+  nodeId: ID!
 }
 
 """All input for the `deleteUserAccountByUsername` mutation."""
@@ -63,10 +219,8 @@ input DeleteUserAccountInput {
   """
   clientMutationId: String
 
-  """
-  The globally unique `ID` which will identify a single `UserAccount` to be deleted.
-  """
-  nodeId: ID!
+  """A user's unique ID."""
+  userId: UUID!
 }
 
 """The output of our delete `UserAccount` mutation."""
@@ -79,13 +233,18 @@ type DeleteUserAccountPayload {
 
   """The `UserAccount` that was deleted by this mutation."""
   userAccount: UserAccount
-  deletedUserAccountId: ID
+  deletedUserAccountNodeId: ID
 
   """
   Our root query field type. Allows us to run any query from our mutation payload.
   """
   query: Query
 }
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
 
 input LoginInput {
   username: String!
@@ -108,22 +267,38 @@ type Mutation {
     input: CreateUserAccountInput!
   ): CreateUserAccountPayload
 
+  """Creates a single `PlayerStat`."""
+  createPlayerStat(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreatePlayerStatInput!
+  ): CreatePlayerStatPayload
+
+  """Creates a single `ReplayMeta`."""
+  createReplayMeta(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateReplayMetaInput!
+  ): CreateReplayMetaPayload
+
   """
   Updates a single `UserAccount` using its globally unique id and a patch.
   """
+  updateUserAccountByNodeId(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateUserAccountByNodeIdInput!
+  ): UpdateUserAccountPayload
+
+  """Updates a single `UserAccount` using a unique key and a patch."""
   updateUserAccount(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
     input: UpdateUserAccountInput!
-  ): UpdateUserAccountPayload
-
-  """Updates a single `UserAccount` using a unique key and a patch."""
-  updateUserAccountByUserId(
-    """
-    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
-    """
-    input: UpdateUserAccountByUserIdInput!
   ): UpdateUserAccountPayload
 
   """Updates a single `UserAccount` using a unique key and a patch."""
@@ -134,20 +309,56 @@ type Mutation {
     input: UpdateUserAccountByUsernameInput!
   ): UpdateUserAccountPayload
 
+  """
+  Updates a single `PlayerStat` using its globally unique id and a patch.
+  """
+  updatePlayerStatByNodeId(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdatePlayerStatByNodeIdInput!
+  ): UpdatePlayerStatPayload
+
+  """Updates a single `PlayerStat` using a unique key and a patch."""
+  updatePlayerStat(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdatePlayerStatInput!
+  ): UpdatePlayerStatPayload
+
+  """
+  Updates a single `ReplayMeta` using its globally unique id and a patch.
+  """
+  updateReplayMetaByNodeId(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateReplayMetaByNodeIdInput!
+  ): UpdateReplayMetaPayload
+
+  """Updates a single `ReplayMeta` using a unique key and a patch."""
+  updateReplayMeta(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateReplayMetaInput!
+  ): UpdateReplayMetaPayload
+
   """Deletes a single `UserAccount` using its globally unique id."""
+  deleteUserAccountByNodeId(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteUserAccountByNodeIdInput!
+  ): DeleteUserAccountPayload
+
+  """Deletes a single `UserAccount` using a unique key."""
   deleteUserAccount(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
     input: DeleteUserAccountInput!
-  ): DeleteUserAccountPayload
-
-  """Deletes a single `UserAccount` using a unique key."""
-  deleteUserAccountByUserId(
-    """
-    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
-    """
-    input: DeleteUserAccountByUserIdInput!
   ): DeleteUserAccountPayload
 
   """Deletes a single `UserAccount` using a unique key."""
@@ -157,6 +368,38 @@ type Mutation {
     """
     input: DeleteUserAccountByUsernameInput!
   ): DeleteUserAccountPayload
+
+  """Deletes a single `PlayerStat` using its globally unique id."""
+  deletePlayerStatByNodeId(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeletePlayerStatByNodeIdInput!
+  ): DeletePlayerStatPayload
+
+  """Deletes a single `PlayerStat` using a unique key."""
+  deletePlayerStat(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeletePlayerStatInput!
+  ): DeletePlayerStatPayload
+
+  """Deletes a single `ReplayMeta` using its globally unique id."""
+  deleteReplayMetaByNodeId(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteReplayMetaByNodeIdInput!
+  ): DeleteReplayMetaPayload
+
+  """Deletes a single `ReplayMeta` using a unique key."""
+  deleteReplayMeta(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteReplayMetaInput!
+  ): DeleteReplayMetaPayload
   registerUser(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
@@ -185,6 +428,296 @@ interface Node {
   nodeId: ID!
 }
 
+type PlayerStat implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  replayId: String!
+  platformId: String!
+  name: String
+  score: Int
+  goals: Int
+  assists: Int
+  saves: Int
+  shots: Int
+  turnovers: BigFloat
+  turnoversOnMyHalf: BigFloat
+  turnoversOnTheirHalf: BigFloat
+  wastedCollection: BigFloat
+  wonTurnovers: BigFloat
+  averageSpeed: BigFloat
+  averageHitDistance: BigFloat
+  averageDistanceFromCenter: BigFloat
+  averageBoostLevel: BigFloat
+  averageBoostUsed: BigFloat
+  timeOnGround: BigFloat
+  timeOnWall: BigFloat
+  timeLowInAir: BigFloat
+  timeHighInAir: BigFloat
+  timeInDefendingHalf: BigFloat
+  timeInAttackingHalf: BigFloat
+  timeInDefendingThird: BigFloat
+  timeInNeutralThird: BigFloat
+  timeInAttackingThird: BigFloat
+  timeBehindBall: BigFloat
+  timeInFrontBall: BigFloat
+  timeNearWall: BigFloat
+  timeInCorner: BigFloat
+  timeAtSlowSpeed: BigFloat
+  timeAtSuperSonic: BigFloat
+  timeAtBoostSpeed: BigFloat
+  timeInFrontOfCenterOfMass: BigFloat
+  timeMostForwardPlayer: BigFloat
+  timeMostBackPlayer: BigFloat
+  timeBetweenPlayers: BigFloat
+  timeFullBoost: BigFloat
+  timeLowBoost: BigFloat
+  timeNoBoost: BigFloat
+  timeClosestToBall: BigFloat
+  timeCloseToBall: BigFloat
+  timeInGame: BigFloat
+  timeFurthestFromBall: BigFloat
+  numTimeBoost: BigFloat
+  numTimeCheat: BigFloat
+  numTimeGoToBall: BigFloat
+  numTimeDefend: BigFloat
+  numTimeAfk: BigFloat
+  numTimeFirstTouch: BigFloat
+  numSmallBoosts: BigFloat
+  numLargeBoosts: BigFloat
+  ballHitForward: BigFloat
+  possessionTime: BigFloat
+  count: BigFloat
+  boostUsage: BigFloat
+  totalHits: BigFloat
+  totalPasses: BigFloat
+  totalDribbles: BigFloat
+  totalDribbleConts: BigFloat
+  totalAerials: BigFloat
+  totalClears: BigFloat
+  totalKickoffs: BigFloat
+  totalCarries: BigFloat
+  totalFlicks: BigFloat
+  totalCarryTime: BigFloat
+  totalCarryDistance: BigFloat
+  longestCarry: BigFloat
+  furthestCarry: BigFloat
+  averageCarryTime: BigFloat
+  fastestCarrySpeed: BigFloat
+  averageZDistance: BigFloat
+  averageBallZVelocity: BigFloat
+  varianceZDistance: BigFloat
+  varianceBallZVelocity: BigFloat
+  averageCarrySpeed: BigFloat
+  distanceAlongPath: BigFloat
+  firstFrameInGame: BigFloat
+  isBot: Boolean
+  cameraSettings: JSON
+  controlConfig: JSON
+  playerItems: JSON
+  isOrange: Boolean
+
+  """Reads a single `ReplayMeta` that is related to this `PlayerStat`."""
+  replay: ReplayMeta
+}
+
+"""
+A condition to be used against `PlayerStat` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input PlayerStatCondition {
+  """Checks for equality with the object’s `replayId` field."""
+  replayId: String
+}
+
+"""An input for mutations affecting `PlayerStat`"""
+input PlayerStatInput {
+  replayId: String!
+  platformId: String!
+  name: String
+  score: Int
+  goals: Int
+  assists: Int
+  saves: Int
+  shots: Int
+  turnovers: BigFloat
+  turnoversOnMyHalf: BigFloat
+  turnoversOnTheirHalf: BigFloat
+  wastedCollection: BigFloat
+  wonTurnovers: BigFloat
+  averageSpeed: BigFloat
+  averageHitDistance: BigFloat
+  averageDistanceFromCenter: BigFloat
+  averageBoostLevel: BigFloat
+  averageBoostUsed: BigFloat
+  timeOnGround: BigFloat
+  timeOnWall: BigFloat
+  timeLowInAir: BigFloat
+  timeHighInAir: BigFloat
+  timeInDefendingHalf: BigFloat
+  timeInAttackingHalf: BigFloat
+  timeInDefendingThird: BigFloat
+  timeInNeutralThird: BigFloat
+  timeInAttackingThird: BigFloat
+  timeBehindBall: BigFloat
+  timeInFrontBall: BigFloat
+  timeNearWall: BigFloat
+  timeInCorner: BigFloat
+  timeAtSlowSpeed: BigFloat
+  timeAtSuperSonic: BigFloat
+  timeAtBoostSpeed: BigFloat
+  timeInFrontOfCenterOfMass: BigFloat
+  timeMostForwardPlayer: BigFloat
+  timeMostBackPlayer: BigFloat
+  timeBetweenPlayers: BigFloat
+  timeFullBoost: BigFloat
+  timeLowBoost: BigFloat
+  timeNoBoost: BigFloat
+  timeClosestToBall: BigFloat
+  timeCloseToBall: BigFloat
+  timeInGame: BigFloat
+  timeFurthestFromBall: BigFloat
+  numTimeBoost: BigFloat
+  numTimeCheat: BigFloat
+  numTimeGoToBall: BigFloat
+  numTimeDefend: BigFloat
+  numTimeAfk: BigFloat
+  numTimeFirstTouch: BigFloat
+  numSmallBoosts: BigFloat
+  numLargeBoosts: BigFloat
+  ballHitForward: BigFloat
+  possessionTime: BigFloat
+  count: BigFloat
+  boostUsage: BigFloat
+  totalHits: BigFloat
+  totalPasses: BigFloat
+  totalDribbles: BigFloat
+  totalDribbleConts: BigFloat
+  totalAerials: BigFloat
+  totalClears: BigFloat
+  totalKickoffs: BigFloat
+  totalCarries: BigFloat
+  totalFlicks: BigFloat
+  totalCarryTime: BigFloat
+  totalCarryDistance: BigFloat
+  longestCarry: BigFloat
+  furthestCarry: BigFloat
+  averageCarryTime: BigFloat
+  fastestCarrySpeed: BigFloat
+  averageZDistance: BigFloat
+  averageBallZVelocity: BigFloat
+  varianceZDistance: BigFloat
+  varianceBallZVelocity: BigFloat
+  averageCarrySpeed: BigFloat
+  distanceAlongPath: BigFloat
+  firstFrameInGame: BigFloat
+  isBot: Boolean
+  cameraSettings: JSON
+  controlConfig: JSON
+  playerItems: JSON
+  isOrange: Boolean
+}
+
+"""
+Represents an update to a `PlayerStat`. Fields that are set will be updated.
+"""
+input PlayerStatPatch {
+  replayId: String
+  platformId: String
+  name: String
+  score: Int
+  goals: Int
+  assists: Int
+  saves: Int
+  shots: Int
+  turnovers: BigFloat
+  turnoversOnMyHalf: BigFloat
+  turnoversOnTheirHalf: BigFloat
+  wastedCollection: BigFloat
+  wonTurnovers: BigFloat
+  averageSpeed: BigFloat
+  averageHitDistance: BigFloat
+  averageDistanceFromCenter: BigFloat
+  averageBoostLevel: BigFloat
+  averageBoostUsed: BigFloat
+  timeOnGround: BigFloat
+  timeOnWall: BigFloat
+  timeLowInAir: BigFloat
+  timeHighInAir: BigFloat
+  timeInDefendingHalf: BigFloat
+  timeInAttackingHalf: BigFloat
+  timeInDefendingThird: BigFloat
+  timeInNeutralThird: BigFloat
+  timeInAttackingThird: BigFloat
+  timeBehindBall: BigFloat
+  timeInFrontBall: BigFloat
+  timeNearWall: BigFloat
+  timeInCorner: BigFloat
+  timeAtSlowSpeed: BigFloat
+  timeAtSuperSonic: BigFloat
+  timeAtBoostSpeed: BigFloat
+  timeInFrontOfCenterOfMass: BigFloat
+  timeMostForwardPlayer: BigFloat
+  timeMostBackPlayer: BigFloat
+  timeBetweenPlayers: BigFloat
+  timeFullBoost: BigFloat
+  timeLowBoost: BigFloat
+  timeNoBoost: BigFloat
+  timeClosestToBall: BigFloat
+  timeCloseToBall: BigFloat
+  timeInGame: BigFloat
+  timeFurthestFromBall: BigFloat
+  numTimeBoost: BigFloat
+  numTimeCheat: BigFloat
+  numTimeGoToBall: BigFloat
+  numTimeDefend: BigFloat
+  numTimeAfk: BigFloat
+  numTimeFirstTouch: BigFloat
+  numSmallBoosts: BigFloat
+  numLargeBoosts: BigFloat
+  ballHitForward: BigFloat
+  possessionTime: BigFloat
+  count: BigFloat
+  boostUsage: BigFloat
+  totalHits: BigFloat
+  totalPasses: BigFloat
+  totalDribbles: BigFloat
+  totalDribbleConts: BigFloat
+  totalAerials: BigFloat
+  totalClears: BigFloat
+  totalKickoffs: BigFloat
+  totalCarries: BigFloat
+  totalFlicks: BigFloat
+  totalCarryTime: BigFloat
+  totalCarryDistance: BigFloat
+  longestCarry: BigFloat
+  furthestCarry: BigFloat
+  averageCarryTime: BigFloat
+  fastestCarrySpeed: BigFloat
+  averageZDistance: BigFloat
+  averageBallZVelocity: BigFloat
+  varianceZDistance: BigFloat
+  varianceBallZVelocity: BigFloat
+  averageCarrySpeed: BigFloat
+  distanceAlongPath: BigFloat
+  firstFrameInGame: BigFloat
+  isBot: Boolean
+  cameraSettings: JSON
+  controlConfig: JSON
+  playerItems: JSON
+  isOrange: Boolean
+}
+
+"""Methods to use when ordering `PlayerStat`."""
+enum PlayerStatsOrderBy {
+  NATURAL
+  REPLAY_ID_ASC
+  REPLAY_ID_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
 """The root query type which gives access points into the data universe."""
 type Query implements Node {
   """
@@ -203,17 +736,70 @@ type Query implements Node {
     """The globally unique `ID`."""
     nodeId: ID!
   ): Node
-  userAccountByUserId(userId: UUID!): UserAccount
+
+  """Reads a set of `PlayerStat`."""
+  playerStatsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Skip the first `n` values."""
+    offset: Int
+
+    """The method to use when ordering `PlayerStat`."""
+    orderBy: [PlayerStatsOrderBy!]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: PlayerStatCondition
+  ): [PlayerStat!]
+
+  """Reads a set of `ReplayMeta`."""
+  replayMetasList(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Skip the first `n` values."""
+    offset: Int
+
+    """The method to use when ordering `ReplayMeta`."""
+    orderBy: [ReplayMetasOrderBy!]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: ReplayMetaCondition
+  ): [ReplayMeta!]
+  userAccount(userId: UUID!): UserAccount
   userAccountByUsername(username: String!): UserAccount
+  playerStat(replayId: String!, platformId: String!): PlayerStat
+  replayMeta(replayId: String!): ReplayMeta
+  canAccessSchema(schemarole: String): Boolean
   currentPerson: UserAccount
 
   """Reads a single `UserAccount` using its globally unique `ID`."""
-  userAccount(
+  userAccountByNodeId(
     """
     The globally unique `ID` to be used in selecting a single `UserAccount`.
     """
     nodeId: ID!
   ): UserAccount
+
+  """Reads a single `PlayerStat` using its globally unique `ID`."""
+  playerStatByNodeId(
+    """
+    The globally unique `ID` to be used in selecting a single `PlayerStat`.
+    """
+    nodeId: ID!
+  ): PlayerStat
+
+  """Reads a single `ReplayMeta` using its globally unique `ID`."""
+  replayMetaByNodeId(
+    """
+    The globally unique `ID` to be used in selecting a single `ReplayMeta`.
+    """
+    nodeId: ID!
+  ): ReplayMeta
 }
 
 input RegisterInput {
@@ -251,6 +837,112 @@ type RegisterUserPayload {
   Our root query field type. Allows us to run any query from our mutation payload.
   """
   query: Query
+}
+
+type ReplayMeta implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  replayId: String!
+  name: String
+  map: String
+  version: Int
+  time: Int
+  frames: Int
+  teamSize: Int
+  team0Score: Int
+  team1Score: Int
+  team0Players: [String]
+  team1Players: [String]
+  length: BigFloat
+  gameServerId: String
+  serverName: String
+  matchGuid: String
+  playlist: Int
+  createdAt: Datetime
+  updatedAt: Datetime
+
+  """Reads and enables pagination through a set of `PlayerStat`."""
+  playerStatsByReplayIdList(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Skip the first `n` values."""
+    offset: Int
+
+    """The method to use when ordering `PlayerStat`."""
+    orderBy: [PlayerStatsOrderBy!]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: PlayerStatCondition
+  ): [PlayerStat!]!
+}
+
+"""
+A condition to be used against `ReplayMeta` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input ReplayMetaCondition {
+  """Checks for equality with the object’s `replayId` field."""
+  replayId: String
+}
+
+"""An input for mutations affecting `ReplayMeta`"""
+input ReplayMetaInput {
+  replayId: String!
+  name: String
+  map: String
+  version: Int
+  time: Int
+  frames: Int
+  teamSize: Int
+  team0Score: Int
+  team1Score: Int
+  team0Players: [String]
+  team1Players: [String]
+  length: BigFloat
+  gameServerId: String
+  serverName: String
+  matchGuid: String
+  playlist: Int
+  createdAt: Datetime
+  updatedAt: Datetime
+}
+
+"""
+Represents an update to a `ReplayMeta`. Fields that are set will be updated.
+"""
+input ReplayMetaPatch {
+  replayId: String
+  name: String
+  map: String
+  version: Int
+  time: Int
+  frames: Int
+  teamSize: Int
+  team0Score: Int
+  team1Score: Int
+  team0Players: [String]
+  team1Players: [String]
+  length: BigFloat
+  gameServerId: String
+  serverName: String
+  matchGuid: String
+  playlist: Int
+  createdAt: Datetime
+  updatedAt: Datetime
+}
+
+"""Methods to use when ordering `ReplayMeta`."""
+enum ReplayMetasOrderBy {
+  NATURAL
+  REPLAY_ID_ASC
+  REPLAY_ID_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
 }
 
 """
@@ -293,26 +985,85 @@ type Subscription {
     nodeId: ID!
   ): Node
 
+  """Reads a set of `PlayerStat`. (live)"""
+  playerStatsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Skip the first `n` values."""
+    offset: Int
+
+    """The method to use when ordering `PlayerStat`."""
+    orderBy: [PlayerStatsOrderBy!]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: PlayerStatCondition
+  ): [PlayerStat!]
+
+  """Reads a set of `ReplayMeta`. (live)"""
+  replayMetasList(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Skip the first `n` values."""
+    offset: Int
+
+    """The method to use when ordering `ReplayMeta`."""
+    orderBy: [ReplayMetasOrderBy!]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: ReplayMetaCondition
+  ): [ReplayMeta!]
+
   """ (live)"""
-  userAccountByUserId(userId: UUID!): UserAccount
+  userAccount(userId: UUID!): UserAccount
 
   """ (live)"""
   userAccountByUsername(username: String!): UserAccount
 
   """ (live)"""
+  playerStat(replayId: String!, platformId: String!): PlayerStat
+
+  """ (live)"""
+  replayMeta(replayId: String!): ReplayMeta
+
+  """ (live)"""
+  canAccessSchema(schemarole: String): Boolean
+
+  """ (live)"""
   currentPerson: UserAccount
 
   """Reads a single `UserAccount` using its globally unique `ID`. (live)"""
-  userAccount(
+  userAccountByNodeId(
     """
     The globally unique `ID` to be used in selecting a single `UserAccount`.
     """
     nodeId: ID!
   ): UserAccount
+
+  """Reads a single `PlayerStat` using its globally unique `ID`. (live)"""
+  playerStatByNodeId(
+    """
+    The globally unique `ID` to be used in selecting a single `PlayerStat`.
+    """
+    nodeId: ID!
+  ): PlayerStat
+
+  """Reads a single `ReplayMeta` using its globally unique `ID`. (live)"""
+  replayMetaByNodeId(
+    """
+    The globally unique `ID` to be used in selecting a single `ReplayMeta`.
+    """
+    nodeId: ID!
+  ): ReplayMeta
 }
 
-"""All input for the `updateUserAccountByUserId` mutation."""
-input UpdateUserAccountByUserIdInput {
+"""All input for the `updatePlayerStatByNodeId` mutation."""
+input UpdatePlayerStatByNodeIdInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -320,16 +1071,18 @@ input UpdateUserAccountByUserIdInput {
   clientMutationId: String
 
   """
-  An object where the defined keys will be set on the `UserAccount` being updated.
+  The globally unique `ID` which will identify a single `PlayerStat` to be updated.
   """
-  userAccountPatch: UserAccountPatch!
+  nodeId: ID!
 
-  """A user's unique ID."""
-  userId: UUID!
+  """
+  An object where the defined keys will be set on the `PlayerStat` being updated.
+  """
+  patch: PlayerStatPatch!
 }
 
-"""All input for the `updateUserAccountByUsername` mutation."""
-input UpdateUserAccountByUsernameInput {
+"""All input for the `updatePlayerStat` mutation."""
+input UpdatePlayerStatInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -337,14 +1090,86 @@ input UpdateUserAccountByUsernameInput {
   clientMutationId: String
 
   """
-  An object where the defined keys will be set on the `UserAccount` being updated.
+  An object where the defined keys will be set on the `PlayerStat` being updated.
   """
-  userAccountPatch: UserAccountPatch!
-  username: String!
+  patch: PlayerStatPatch!
+  replayId: String!
+  platformId: String!
 }
 
-"""All input for the `updateUserAccount` mutation."""
-input UpdateUserAccountInput {
+"""The output of our update `PlayerStat` mutation."""
+type UpdatePlayerStatPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `PlayerStat` that was updated by this mutation."""
+  playerStat: PlayerStat
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `ReplayMeta` that is related to this `PlayerStat`."""
+  replay: ReplayMeta
+}
+
+"""All input for the `updateReplayMetaByNodeId` mutation."""
+input UpdateReplayMetaByNodeIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `ReplayMeta` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `ReplayMeta` being updated.
+  """
+  patch: ReplayMetaPatch!
+}
+
+"""All input for the `updateReplayMeta` mutation."""
+input UpdateReplayMetaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `ReplayMeta` being updated.
+  """
+  patch: ReplayMetaPatch!
+  replayId: String!
+}
+
+"""The output of our update `ReplayMeta` mutation."""
+type UpdateReplayMetaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `ReplayMeta` that was updated by this mutation."""
+  replayMeta: ReplayMeta
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+}
+
+"""All input for the `updateUserAccountByNodeId` mutation."""
+input UpdateUserAccountByNodeIdInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -359,7 +1184,39 @@ input UpdateUserAccountInput {
   """
   An object where the defined keys will be set on the `UserAccount` being updated.
   """
-  userAccountPatch: UserAccountPatch!
+  patch: UserAccountPatch!
+}
+
+"""All input for the `updateUserAccountByUsername` mutation."""
+input UpdateUserAccountByUsernameInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `UserAccount` being updated.
+  """
+  patch: UserAccountPatch!
+  username: String!
+}
+
+"""All input for the `updateUserAccount` mutation."""
+input UpdateUserAccountInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `UserAccount` being updated.
+  """
+  patch: UserAccountPatch!
+
+  """A user's unique ID."""
+  userId: UUID!
 }
 
 """The output of our update `UserAccount` mutation."""

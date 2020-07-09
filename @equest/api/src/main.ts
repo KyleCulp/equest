@@ -3,7 +3,7 @@ import '@equest/config';
 import { AppModule } from './modules/app.module';
 import { importEnv, isDev } from '@equest/config';
 import { rlReplaysQueue } from './lib/queues';
-import { UI, setQueues } from 'bull-board';
+import { router, setQueues } from 'bull-board';
 import { postgraphileMiddleware } from './middleware/postgraphile.middleware';
 import { sessionMiddleware } from './middleware/session.middleware';
 import { passportInitializeMiddleware, passportSessionMiddleware } from './middleware/passport.middleware';
@@ -25,7 +25,7 @@ async function bootstrap() {
   app.use(passportSessionMiddleware);
   app.use(postgraphileMiddleware);
 
-  app.use('/admin/queues', UI);
+  app.use('/admin/queues', router);
 
   // const options = new DocumentBuilder()
   //   .setTitle('Equest API')

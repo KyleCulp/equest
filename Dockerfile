@@ -1,13 +1,11 @@
 ARG USER_UID=${UID:-1000}
 ARG SETUP_MODE=normal
 ARG TARGET
-ARG REGISTRY
 
 #### Stage 1: Build source
 FROM node:12 as builder
 
 ENV NODE_ENV=development
-ARG REGISTRY
 ARG TARGET
 
 WORKDIR /workspace
@@ -18,11 +16,9 @@ COPY @equest/ /workspace/@equest/
 
 COPY data/ /workspace/data/
 
-RUN npm config set registry "${REGISTRY}"
+RUN yarn
 
-RUN npm install --no-progress
-
-RUN npm run "${TARGET}":build
+RUN lerna exec run "${TARGET}":build
 
 ###########################
 #### Stage 2: Minimize size of image
@@ -40,7 +36,6 @@ RUN rm -Rf /workspace/node_modules /workspace/@equest/*/node_modules
 FROM node:12
 
 ARG NODE_ENV
-ARG REGISTRY
 ARG PORT
 
 ENV PORT=$PORT
@@ -50,8 +45,6 @@ EXPOSE $PORT
 WORKDIR /app
 
 COPY --from=clean /app/ /app/
-
-RUN npm config set registry "${REGISTRY}"
 
 RUN npm install --save-prod --save-exact
 

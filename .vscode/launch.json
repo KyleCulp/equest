@@ -1,14 +1,56 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    // "version": "0.2.0",
-    // "configurations": [
-    //     {
-    //         "type": "node",
-    //         "request": "launch",
-    //         "name": "Launch Program",
-    //         "program": "${workspaceFolder}/server.js"
-    //     }
-    // ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch RLParser",
+      "runtimeArgs": ["-r", "ts-node/register", "--inspect"],
+      "port": 9676,
+      "args": ["${workspaceFolder}/@equest/rlparser/src/main.ts"],
+      "console": "integratedTerminal"
+    }
+  ]
 }
+// {
+//   "version": "0.1.0",
+//   "configurations": [
+//     {
+//       "type": "node",
+//       "request": "attach",
+//       "name": "Attach to Node Server",
+//       "port": 9678,
+//       "restart": true,
+//       "outFiles": [
+//         "${workspaceFolder}/@app/server/dist/**/*.js"
+//       ]
+//     },
+//     {
+//       "type": "node",
+//       "request": "attach",
+//       "name": "Attach to Jest tests",
+//       "port": 9876,
+//       "restart": true
+//     },
+//     {
+//       "type": "node",
+//       "request": "attach",
+//       "name": "Attach to Worker",
+//       "port": 9757,
+//       "restart": true,
+//       "outFiles": [
+//         "${workspaceFolder}/@app/worker/dist/**/*.js"
+//       ]
+//     },
+//     {
+//       "type": "chrome",
+//       "request": "launch",
+//       "name": "Launch localhost:5678",
+//       "url": "http://localhost:5678/",
+//       "webRoot": "${workspaceFolder}/@app/client/src",
+//       "pathMapping": {
+//         "/_next": "${workspaceFolder}/@app/client/.next"
+//       }
+//     }
+//   ]
+// }

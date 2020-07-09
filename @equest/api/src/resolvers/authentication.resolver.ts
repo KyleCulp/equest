@@ -1,8 +1,11 @@
 import { isEmail } from '@equest/utils';
 import { gql, makeExtendSchemaPlugin } from 'graphile-utils';
 import { Client, Pool } from 'pg';
+import { AuthenticationService } from '../services/authentication.service';
 
 // This file is tab city oml
+
+const authenticationService = new AuthenticationService();
 
 export const authenticationResolver = makeExtendSchemaPlugin((build) => ({
   typeDefs: gql`
@@ -33,118 +36,13 @@ export const authenticationResolver = makeExtendSchemaPlugin((build) => ({
   resolvers: {
     Mutation: {
       async register(mutation, args, context, resolveInfo) {
-        const { username = null, password, email } = args.input;
-        const { selectGraphQLResultFromTable } = resolveInfo.graphile;
-        const pgMasterAdminPool: Pool = context.pgMasterAdminPool;
-        const pgClient: Client = context.pgClient;
-        const { login } = context;
-
-        try {
-          // Call our register function from the database
-          const {
-            rows: [user],
-          } = await pgMasterAdminPool.query(
-            `select user_account.* from app_public.register_user (
-              username => $1,
-              email => $2,
-              password => $3
-            ) user_account where not (user_account is null)`,
-            [username, email, password]
-          );
-
-          if (!user) throw new Error('Registration failed.');
-
-          const sql = build.pgSql;
-
-          const results = await Promise.all([
-            // Fetch the data that was requested from GraphQL, and return it
-            selectGraphQLResultFromTable(
-              sql.fragment`app_public.user_account`,
-              (tableAlias, sqlBuilder) => {
-                sqlBuilder.where(
-                  sql.fragment`${tableAlias}.user_id = ${sql.value(
-                    user.user_id
-                  )}`
-                );
-              }
-            ),
-
-            // Tell Passport.js we're logged in
-            login(user),
-
-            // Tell pg we're logged in
-            pgClient.query('select set_config($1, $2, true);', [
-              'jwt.claims.user_id',
-              user.user_id,
-            ]),
-          ]);
-
-          const [row] = results[0];
-          return {
-            data: row,
-          };
-        } catch (e) {
-          console.error(e);
-          throw e;
-        }
+        return authenticationService.register({ build, mutation, args, context, resolveInfo });
       },
       async login(mutation, args, context, resolveInfo) {
-        const { username, password } = args.input;
-        const pgMasterAdminPool: Pool = context.pgMasterAdminPool;
-        const pgClient: Client = context.pgClient;
-        const { login } = context;
-        const { selectGraphQLResultFromTable } = resolveInfo.graphile;
-
-        // Call pgSQL functions with select statement
-        let loginSQL: string;
-        if (isEmail(username)) {
-          loginSQL = `select user_account.* from app_private.authenticate_by_email($1, $2) user_account where not (user_account is null)`;
-        } else {
-          loginSQL = `select user_account.* from app_private.authenticate_by_username($1, $2) user_account where not (user_account is null)`;
-        }
-
-        try {
-          // Call our login function to find out if the username/password combination exists
-          const {
-            rows: [user],
-          } = await pgMasterAdminPool.query(loginSQL, [username, password]);
-
-          if (!user) {
-            console.log(user);
-            throw new Error('Login failed');
-          }
-          const sql = build.pgSql;
-          const results = await Promise.all([
-            // Results that the user requested in GraphQL
-            selectGraphQLResultFromTable(
-              sql.fragment`app_public.user_account`,
-              (tableAlias, sqlBuilder) => {
-                sqlBuilder.where(
-                  sql.fragment`${tableAlias}.user_id = ${sql.value(
-                    user.user_id
-                  )}`
-                );
-              }
-            ),
-            // Tell Passport.js we're logged in
-            login(user),
-
-            // Tell pg we're logged in
-            pgClient.query('select set_config($1, $2, true);', [
-              'jwt.claims.user_id',
-              user.user_id,
-            ]),
-          ]);
-
-          const [row] = results[0];
-
-          return {
-            data: row,
-          };
-        } catch (e) {
-          console.error(e);
-          throw e;
-        }
+        return authenticationService.login({ build, mutation, args, context, resolveInfo });
+      },
+      async resetPassword(mutation, args, context, resolveInfo) {
+        return authenticationService.resetPassword({ build, mutation, args, context, resolveInfo });
       },
     },
   },

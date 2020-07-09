@@ -5,7 +5,8 @@ import zlib from 'zlib';
 /*
  * Compress a file with zlib's gzip
  *
- * @param filePath Exact path of file
+ * @param filePath Exact path of file to compress
+ * @returns Readable stream of compressed file
  */
 export const compressFile = async (filePath: string): Promise<ReadStream> => {
   const readStream = fs.createReadStream(filePath);
@@ -19,6 +20,32 @@ export const compressFile = async (filePath: string): Promise<ReadStream> => {
 };
 
 /*
+ * Download file from S3 storage
+ *
+ * @param filePath S3 File path
+ * @param params S3 client params
+ * @param s3 s3 client instance to use
+ */
+export const downloadFileFromS3 = async (filePath: string, params: PutObjectRequest, s3: S3) => {
+  let s3Stream = s3.getObject(params).createReadStream();
+  let replay = fs.createWriteStream(filePath);
+
+  return new Promise((resolve, reject) => {
+    s3Stream
+      .pipe(replay)
+      .on('error', function (err) {
+        // capture any errors that occur when writing data to the file
+        console.error('File Stream:', err);
+        reject(err);
+      })
+      .on('close', () => {
+        // When stream is done downloading file, resolve promise
+        resolve();
+      });
+  });
+};
+
+/*
  * Upload file to S3 storage
  *
  * @param file Singular file to upload
@@ -26,7 +53,7 @@ export const compressFile = async (filePath: string): Promise<ReadStream> => {
  * @param bucket S3 bucket to put file in
  * @param s3 s3 client instance to use
  */
-export const uploadFile = (file: ReadStream, key: string, bucket: string, s3: S3) => {
+export const uploadFileToS3 = (file: ReadStream, key: string, bucket: string, s3: S3) => {
   let params: PutObjectRequest = {
     Bucket: bucket,
     Key: key,

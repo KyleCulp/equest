@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS app_public.user_account (
   user_id uuid PRIMARY KEY DEFAULT public.uuid_generate_v1mc (),
   username text UNIQUE,
-  roles text[] DEFAULT '{"user"}',
+  roles text[] DEFAULT '{"user", "rocket_league"}',
   created_at timestamp DEFAULT now(),
   updated_at timestamp DEFAULT now(),
   CHECK (char_length(username) <= 32)
@@ -14,7 +14,7 @@ GRANT SELECT ON TABLE app_public.user_account TO app_postgraphile, app_person, a
 -- Only logged in people can update & delete it.
 -- This RBAC helps us differentiate guest from users
 
-GRANT UPDATE, DELETE ON TABLE app_public.user_account TO app_postgraphile, app_person;
+GRANT UPDATE, DELETE ON TABLE app_public.user_account TO app_postgraphile, app_person, app_anonymous;
 
 -- RLS policies provide fine-grain security
 -- Let anyone select on this row
@@ -96,7 +96,63 @@ STABLE;
 
 GRANT EXECUTE ON FUNCTION app_public.current_person () TO app_anonymous, app_person, app_postgraphile;
 
+---
+-- CREATE OR REPLACE FUNCTION app_public.can_access_schema (SCHEMA text)
+--   RETURNS boolean
+--   AS $$
+--   SELECT
+--     TRUE
+--   WHERE
+--     SCHEMA = ANY (
+--       SELECT
+--         roles
+--       FROM
+--         app_public.user_account
+--       WHERE
+--         user_id = current_setting('jwt.claims.user_id')::uuid);
+
+CREATE OR REPLACE FUNCTION app_public.can_access_schema (schemaRole text)
+  RETURNS bool
+  AS $$
+  SELECT
+    EXISTS (
+      SELECT
+        *
+      FROM
+        app_public.user_account
+      WHERE (user_id = current_setting('jwt.claims.user_id')::uuid)
+      AND (schemaRole = ANY (roles)))
+$$
+LANGUAGE sql
+STABLE;
+
+GRANT EXECUTE ON FUNCTION app_public.can_access_schema (text) TO app_anonymous, app_person, app_postgraphile;
+
+-- WHERE
+--   user_id = current_setting('jwt.claims.user_id')::uuid
+--   SELECT
+--     coalesce((
+--       SELECT
+--         TRUE FROM (unnest(
+--             SELECT
+--               roles FROM app_public.user_account
+--             WHERE
+--               user_id = current_setting('jwt.claims.user_id')::uuid)).* --
+--       AS u (game)
+--     WHERE
+--       game LIKE SCHEMA LIMIT 1), FALSE);
+--
+--   TRUE
+-- WHERE
+--   SCHEMA = ANY (
+--     SELECT
+--       roles
+--     FROM
+--       app_public.user_account
+--     WHERE
+--       user_id = current_setting('jwt.claims.user_id')::uuid);
 -- authenticate_by_email
+
 CREATE OR REPLACE FUNCTION app_private.authenticate_by_email (email text, PASSWORD text)
   RETURNS app_public.user_account
   AS $$

@@ -1,7 +1,5 @@
 import { RedisStore as IRedisStore } from 'connect-redis';
 import session = require('express-session');
-import { Application } from 'express';
-import { Redis } from 'ioredis';
 import { redisInstance } from '@equest/utils';
 const RedisStore = require('connect-redis')(session);
 

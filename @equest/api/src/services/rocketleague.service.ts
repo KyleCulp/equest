@@ -37,8 +37,10 @@ export class RocketLeagueService {
   async uploadFile(file: Express.Multer.File): Promise<Object> {
     const { S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY, S3_ENDPOINT, S3_REGION, S3_REPLAYS_BUCKET } = process.env;
 
-    const parsedReplayOutput = await this.parseReplay(file);
-    const parsedReplay = JSON.parse(parsedReplayOutput.stdout)['properties'];
+    // const parsedReplayOutput = await this.parseReplay(file);
+    // Extract the properties object from the json stdout from rrrocket
+    // const parsedReplay = JSON.parse(parsedReplayOutput.stdout)['properties'];
+    // const replay_id = JSON.parse(parsedReplayOutput.stdout)['properties']['Id'];
 
     const s3 = new S3({
       accessKeyId: S3_ACCESS_KEY_ID,
@@ -62,7 +64,7 @@ export class RocketLeagueService {
       if (err) console.log('Error', err);
       if (data) {
         await rlReplaysQueue.add('replay', {
-          replay_id: parsedReplay['Id'], // Case sensitive apparently ;-;
+          replay_name: file.originalname,
           replayPath: 'replays/rocketleague/' + file.originalname,
         });
         console.log('Upload Success', data);
