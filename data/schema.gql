@@ -3,60 +3,550 @@ A floating point number that requires more precision than IEEE 754 binary 64
 """
 scalar BigFloat
 
-"""All input for the create `PlayerStat` mutation."""
-input CreatePlayerStatInput {
+type CarballPlayerStat implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  replayId: String!
+  platformId: String!
+  name: String
+  titleid: BigFloat
+  score: BigFloat
+  goals: BigFloat
+  assists: BigFloat
+  saves: BigFloat
+  shots: BigFloat
+  camerasettingsStiffness: BigFloat
+  camerasettingsHeight: BigFloat
+  camerasettingsTransitionspeed: BigFloat
+  camerasettingsPitch: BigFloat
+  camerasettingsSwivelspeed: BigFloat
+  camerasettingsFieldofview: BigFloat
+  camerasettingsDistance: BigFloat
+  loadoutBanner: BigFloat
+  loadoutBoost: BigFloat
+  loadoutCar: BigFloat
+  loadoutGoalexplosion: BigFloat
+  loadoutSkin: BigFloat
+  loadoutTrail: BigFloat
+  loadoutWheels: BigFloat
+  loadoutVersion: BigFloat
+  loadoutTopper: BigFloat
+  loadoutAntenna: BigFloat
+  loadoutEngineaudio: BigFloat
+  loadoutGoalexplosionpaint: BigFloat
+  loadoutWheelspaint: BigFloat
+  loadoutPrimarycolor: BigFloat
+  loadoutAccentcolor: BigFloat
+  loadoutPrimaryfinish: BigFloat
+  loadoutAccentfinish: BigFloat
+  loadoutAvatarborderusercolor: BigFloat
+  boostusage: BigFloat
+  numsmallboosts: BigFloat
+  numlargeboosts: BigFloat
+  wastedcollection: BigFloat
+  wastedusage: BigFloat
+  timefullboost: BigFloat
+  timelowboost: BigFloat
+  timenoboost: BigFloat
+  numstolenboosts: BigFloat
+  averageboostlevel: BigFloat
+  wastedbig: BigFloat
+  wastedsmall: BigFloat
+  ballhitforward: BigFloat
+  ballhitbackward: BigFloat
+  timeclosesttoball: BigFloat
+  timefurthestfromball: BigFloat
+  timeclosetoball: BigFloat
+  timeclosesttoteamcenter: BigFloat
+  timefurthestfromteamcenter: BigFloat
+  possessiontime: BigFloat
+  turnovers: BigFloat
+  turnoversonmyhalf: BigFloat
+  turnoversontheirhalf: BigFloat
+  wonturnovers: BigFloat
+  timeonground: BigFloat
+  timelowinair: BigFloat
+  timehighinair: BigFloat
+  timeindefendinghalf: BigFloat
+  timeinattackinghalf: BigFloat
+  timeindefendingthird: BigFloat
+  timeinneutralthird: BigFloat
+  timeinattackingthird: BigFloat
+  timebehindball: BigFloat
+  timeinfrontball: BigFloat
+  timenearwall: BigFloat
+  timeincorner: BigFloat
+  timeonwall: BigFloat
+  averagespeed: BigFloat
+  averagehitdistance: BigFloat
+  averagedistancefromcenter: BigFloat
+  totalhits: BigFloat
+  totalpasses: BigFloat
+  totaldribbles: BigFloat
+  totaldribbleconts: BigFloat
+  totalaerials: BigFloat
+  totalclears: BigFloat
+  iskeyboard: Boolean
+  analoguesteeringinputpercent: BigFloat
+  analoguethrottleinputpercent: BigFloat
+  timeatslowspeed: BigFloat
+  timeatsupersonic: BigFloat
+  timeatboostspeed: BigFloat
+  timeinfrontofcenterofmass: BigFloat
+  timebehindcenterofmass: BigFloat
+  timemostforwardplayer: BigFloat
+  timemostbackplayer: BigFloat
+  timebetweenplayers: BigFloat
+  pass: BigFloat
+  shot: BigFloat
+  goal: BigFloat
+  assist: BigFloat
+  assisted: BigFloat
+  save: BigFloat
+  count: BigFloat
+  totalcarries: BigFloat
+  longestcarry: String
+  furthestcarry: String
+  totalcarrytime: String
+  averagecarrytime: String
+  fastestcarryspeed: String
+  totalcarrydistance: String
+  averagezdistance: String
+  averagexydistance: String
+  averageballzvelocity: String
+  variancexydistance: String
+  variancezdistance: String
+  varianceballzvelocity: String
+  averagecarryspeed: String
+  distancealongpath: String
+  totalkickoffs: BigFloat
+  numtimeboost: BigFloat
+  numtimegotoball: BigFloat
+  numtimefirsttouch: BigFloat
+  averageboostused: String
+  isbot: Boolean
+  timeingame: String
+  firstframeingame: BigFloat
+  team: String
+}
+
+"""
+A condition to be used against `CarballPlayerStat` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input CarballPlayerStatCondition {
+  """Checks for equality with the object’s `replayId` field."""
+  replayId: String
+}
+
+"""An input for mutations affecting `CarballPlayerStat`"""
+input CarballPlayerStatInput {
+  replayId: String!
+  platformId: String!
+  name: String
+  titleid: BigFloat
+  score: BigFloat
+  goals: BigFloat
+  assists: BigFloat
+  saves: BigFloat
+  shots: BigFloat
+  camerasettingsStiffness: BigFloat
+  camerasettingsHeight: BigFloat
+  camerasettingsTransitionspeed: BigFloat
+  camerasettingsPitch: BigFloat
+  camerasettingsSwivelspeed: BigFloat
+  camerasettingsFieldofview: BigFloat
+  camerasettingsDistance: BigFloat
+  loadoutBanner: BigFloat
+  loadoutBoost: BigFloat
+  loadoutCar: BigFloat
+  loadoutGoalexplosion: BigFloat
+  loadoutSkin: BigFloat
+  loadoutTrail: BigFloat
+  loadoutWheels: BigFloat
+  loadoutVersion: BigFloat
+  loadoutTopper: BigFloat
+  loadoutAntenna: BigFloat
+  loadoutEngineaudio: BigFloat
+  loadoutGoalexplosionpaint: BigFloat
+  loadoutWheelspaint: BigFloat
+  loadoutPrimarycolor: BigFloat
+  loadoutAccentcolor: BigFloat
+  loadoutPrimaryfinish: BigFloat
+  loadoutAccentfinish: BigFloat
+  loadoutAvatarborderusercolor: BigFloat
+  boostusage: BigFloat
+  numsmallboosts: BigFloat
+  numlargeboosts: BigFloat
+  wastedcollection: BigFloat
+  wastedusage: BigFloat
+  timefullboost: BigFloat
+  timelowboost: BigFloat
+  timenoboost: BigFloat
+  numstolenboosts: BigFloat
+  averageboostlevel: BigFloat
+  wastedbig: BigFloat
+  wastedsmall: BigFloat
+  ballhitforward: BigFloat
+  ballhitbackward: BigFloat
+  timeclosesttoball: BigFloat
+  timefurthestfromball: BigFloat
+  timeclosetoball: BigFloat
+  timeclosesttoteamcenter: BigFloat
+  timefurthestfromteamcenter: BigFloat
+  possessiontime: BigFloat
+  turnovers: BigFloat
+  turnoversonmyhalf: BigFloat
+  turnoversontheirhalf: BigFloat
+  wonturnovers: BigFloat
+  timeonground: BigFloat
+  timelowinair: BigFloat
+  timehighinair: BigFloat
+  timeindefendinghalf: BigFloat
+  timeinattackinghalf: BigFloat
+  timeindefendingthird: BigFloat
+  timeinneutralthird: BigFloat
+  timeinattackingthird: BigFloat
+  timebehindball: BigFloat
+  timeinfrontball: BigFloat
+  timenearwall: BigFloat
+  timeincorner: BigFloat
+  timeonwall: BigFloat
+  averagespeed: BigFloat
+  averagehitdistance: BigFloat
+  averagedistancefromcenter: BigFloat
+  totalhits: BigFloat
+  totalpasses: BigFloat
+  totaldribbles: BigFloat
+  totaldribbleconts: BigFloat
+  totalaerials: BigFloat
+  totalclears: BigFloat
+  iskeyboard: Boolean
+  analoguesteeringinputpercent: BigFloat
+  analoguethrottleinputpercent: BigFloat
+  timeatslowspeed: BigFloat
+  timeatsupersonic: BigFloat
+  timeatboostspeed: BigFloat
+  timeinfrontofcenterofmass: BigFloat
+  timebehindcenterofmass: BigFloat
+  timemostforwardplayer: BigFloat
+  timemostbackplayer: BigFloat
+  timebetweenplayers: BigFloat
+  pass: BigFloat
+  shot: BigFloat
+  goal: BigFloat
+  assist: BigFloat
+  assisted: BigFloat
+  save: BigFloat
+  count: BigFloat
+  totalcarries: BigFloat
+  longestcarry: String
+  furthestcarry: String
+  totalcarrytime: String
+  averagecarrytime: String
+  fastestcarryspeed: String
+  totalcarrydistance: String
+  averagezdistance: String
+  averagexydistance: String
+  averageballzvelocity: String
+  variancexydistance: String
+  variancezdistance: String
+  varianceballzvelocity: String
+  averagecarryspeed: String
+  distancealongpath: String
+  totalkickoffs: BigFloat
+  numtimeboost: BigFloat
+  numtimegotoball: BigFloat
+  numtimefirsttouch: BigFloat
+  averageboostused: String
+  isbot: Boolean
+  timeingame: String
+  firstframeingame: BigFloat
+  team: String
+}
+
+"""
+Represents an update to a `CarballPlayerStat`. Fields that are set will be updated.
+"""
+input CarballPlayerStatPatch {
+  replayId: String
+  platformId: String
+  name: String
+  titleid: BigFloat
+  score: BigFloat
+  goals: BigFloat
+  assists: BigFloat
+  saves: BigFloat
+  shots: BigFloat
+  camerasettingsStiffness: BigFloat
+  camerasettingsHeight: BigFloat
+  camerasettingsTransitionspeed: BigFloat
+  camerasettingsPitch: BigFloat
+  camerasettingsSwivelspeed: BigFloat
+  camerasettingsFieldofview: BigFloat
+  camerasettingsDistance: BigFloat
+  loadoutBanner: BigFloat
+  loadoutBoost: BigFloat
+  loadoutCar: BigFloat
+  loadoutGoalexplosion: BigFloat
+  loadoutSkin: BigFloat
+  loadoutTrail: BigFloat
+  loadoutWheels: BigFloat
+  loadoutVersion: BigFloat
+  loadoutTopper: BigFloat
+  loadoutAntenna: BigFloat
+  loadoutEngineaudio: BigFloat
+  loadoutGoalexplosionpaint: BigFloat
+  loadoutWheelspaint: BigFloat
+  loadoutPrimarycolor: BigFloat
+  loadoutAccentcolor: BigFloat
+  loadoutPrimaryfinish: BigFloat
+  loadoutAccentfinish: BigFloat
+  loadoutAvatarborderusercolor: BigFloat
+  boostusage: BigFloat
+  numsmallboosts: BigFloat
+  numlargeboosts: BigFloat
+  wastedcollection: BigFloat
+  wastedusage: BigFloat
+  timefullboost: BigFloat
+  timelowboost: BigFloat
+  timenoboost: BigFloat
+  numstolenboosts: BigFloat
+  averageboostlevel: BigFloat
+  wastedbig: BigFloat
+  wastedsmall: BigFloat
+  ballhitforward: BigFloat
+  ballhitbackward: BigFloat
+  timeclosesttoball: BigFloat
+  timefurthestfromball: BigFloat
+  timeclosetoball: BigFloat
+  timeclosesttoteamcenter: BigFloat
+  timefurthestfromteamcenter: BigFloat
+  possessiontime: BigFloat
+  turnovers: BigFloat
+  turnoversonmyhalf: BigFloat
+  turnoversontheirhalf: BigFloat
+  wonturnovers: BigFloat
+  timeonground: BigFloat
+  timelowinair: BigFloat
+  timehighinair: BigFloat
+  timeindefendinghalf: BigFloat
+  timeinattackinghalf: BigFloat
+  timeindefendingthird: BigFloat
+  timeinneutralthird: BigFloat
+  timeinattackingthird: BigFloat
+  timebehindball: BigFloat
+  timeinfrontball: BigFloat
+  timenearwall: BigFloat
+  timeincorner: BigFloat
+  timeonwall: BigFloat
+  averagespeed: BigFloat
+  averagehitdistance: BigFloat
+  averagedistancefromcenter: BigFloat
+  totalhits: BigFloat
+  totalpasses: BigFloat
+  totaldribbles: BigFloat
+  totaldribbleconts: BigFloat
+  totalaerials: BigFloat
+  totalclears: BigFloat
+  iskeyboard: Boolean
+  analoguesteeringinputpercent: BigFloat
+  analoguethrottleinputpercent: BigFloat
+  timeatslowspeed: BigFloat
+  timeatsupersonic: BigFloat
+  timeatboostspeed: BigFloat
+  timeinfrontofcenterofmass: BigFloat
+  timebehindcenterofmass: BigFloat
+  timemostforwardplayer: BigFloat
+  timemostbackplayer: BigFloat
+  timebetweenplayers: BigFloat
+  pass: BigFloat
+  shot: BigFloat
+  goal: BigFloat
+  assist: BigFloat
+  assisted: BigFloat
+  save: BigFloat
+  count: BigFloat
+  totalcarries: BigFloat
+  longestcarry: String
+  furthestcarry: String
+  totalcarrytime: String
+  averagecarrytime: String
+  fastestcarryspeed: String
+  totalcarrydistance: String
+  averagezdistance: String
+  averagexydistance: String
+  averageballzvelocity: String
+  variancexydistance: String
+  variancezdistance: String
+  varianceballzvelocity: String
+  averagecarryspeed: String
+  distancealongpath: String
+  totalkickoffs: BigFloat
+  numtimeboost: BigFloat
+  numtimegotoball: BigFloat
+  numtimefirsttouch: BigFloat
+  averageboostused: String
+  isbot: Boolean
+  timeingame: String
+  firstframeingame: BigFloat
+  team: String
+}
+
+"""Methods to use when ordering `CarballPlayerStat`."""
+enum CarballPlayerStatsOrderBy {
+  NATURAL
+  REPLAY_ID_ASC
+  REPLAY_ID_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+type CarballReplayMeta implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  replayId: String!
+  name: String
+  map: String
+  version: Int
+  time: String
+  frames: Int
+  goals: [JSON]
+  demos: [JSON]
+  primaryplayer: String
+  length: BigFloat
+  servername: String
+  gameserverid: String
+  matchguid: String
+  playlist: String
+  teamSize: Int
+  team0Score: Int
+  team1Score: Int
+  createdAt: Datetime
+  updatedAt: Datetime
+}
+
+"""
+A condition to be used against `CarballReplayMeta` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input CarballReplayMetaCondition {
+  """Checks for equality with the object’s `replayId` field."""
+  replayId: String
+}
+
+"""An input for mutations affecting `CarballReplayMeta`"""
+input CarballReplayMetaInput {
+  replayId: String!
+  name: String
+  map: String
+  version: Int
+  time: String
+  frames: Int
+  goals: [JSON]
+  demos: [JSON]
+  primaryplayer: String
+  length: BigFloat
+  servername: String
+  gameserverid: String
+  matchguid: String
+  playlist: String
+  teamSize: Int
+  team0Score: Int
+  team1Score: Int
+  createdAt: Datetime
+  updatedAt: Datetime
+}
+
+"""
+Represents an update to a `CarballReplayMeta`. Fields that are set will be updated.
+"""
+input CarballReplayMetaPatch {
+  replayId: String
+  name: String
+  map: String
+  version: Int
+  time: String
+  frames: Int
+  goals: [JSON]
+  demos: [JSON]
+  primaryplayer: String
+  length: BigFloat
+  servername: String
+  gameserverid: String
+  matchguid: String
+  playlist: String
+  teamSize: Int
+  team0Score: Int
+  team1Score: Int
+  createdAt: Datetime
+  updatedAt: Datetime
+}
+
+"""Methods to use when ordering `CarballReplayMeta`."""
+enum CarballReplayMetasOrderBy {
+  NATURAL
+  REPLAY_ID_ASC
+  REPLAY_ID_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""All input for the create `CarballPlayerStat` mutation."""
+input CreateCarballPlayerStatInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
   """
   clientMutationId: String
 
-  """The `PlayerStat` to be created by this mutation."""
-  playerStat: PlayerStatInput!
+  """The `CarballPlayerStat` to be created by this mutation."""
+  carballPlayerStat: CarballPlayerStatInput!
 }
 
-"""The output of our create `PlayerStat` mutation."""
-type CreatePlayerStatPayload {
+"""The output of our create `CarballPlayerStat` mutation."""
+type CreateCarballPlayerStatPayload {
   """
   The exact same `clientMutationId` that was provided in the mutation input,
   unchanged and unused. May be used by a client to track mutations.
   """
   clientMutationId: String
 
-  """The `PlayerStat` that was created by this mutation."""
-  playerStat: PlayerStat
+  """The `CarballPlayerStat` that was created by this mutation."""
+  carballPlayerStat: CarballPlayerStat
 
   """
   Our root query field type. Allows us to run any query from our mutation payload.
   """
   query: Query
-
-  """Reads a single `ReplayMeta` that is related to this `PlayerStat`."""
-  replay: ReplayMeta
 }
 
-"""All input for the create `ReplayMeta` mutation."""
-input CreateReplayMetaInput {
+"""All input for the create `CarballReplayMeta` mutation."""
+input CreateCarballReplayMetaInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
   """
   clientMutationId: String
 
-  """The `ReplayMeta` to be created by this mutation."""
-  replayMeta: ReplayMetaInput!
+  """The `CarballReplayMeta` to be created by this mutation."""
+  carballReplayMeta: CarballReplayMetaInput!
 }
 
-"""The output of our create `ReplayMeta` mutation."""
-type CreateReplayMetaPayload {
+"""The output of our create `CarballReplayMeta` mutation."""
+type CreateCarballReplayMetaPayload {
   """
   The exact same `clientMutationId` that was provided in the mutation input,
   unchanged and unused. May be used by a client to track mutations.
   """
   clientMutationId: String
 
-  """The `ReplayMeta` that was created by this mutation."""
-  replayMeta: ReplayMeta
+  """The `CarballReplayMeta` that was created by this mutation."""
+  carballReplayMeta: CarballReplayMeta
 
   """
   Our root query field type. Allows us to run any query from our mutation payload.
@@ -99,8 +589,8 @@ A point in time as described by the [ISO
 """
 scalar Datetime
 
-"""All input for the `deletePlayerStatByNodeId` mutation."""
-input DeletePlayerStatByNodeIdInput {
+"""All input for the `deleteCarballPlayerStatByNodeId` mutation."""
+input DeleteCarballPlayerStatByNodeIdInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -108,13 +598,13 @@ input DeletePlayerStatByNodeIdInput {
   clientMutationId: String
 
   """
-  The globally unique `ID` which will identify a single `PlayerStat` to be deleted.
+  The globally unique `ID` which will identify a single `CarballPlayerStat` to be deleted.
   """
   nodeId: ID!
 }
 
-"""All input for the `deletePlayerStat` mutation."""
-input DeletePlayerStatInput {
+"""All input for the `deleteCarballPlayerStat` mutation."""
+input DeleteCarballPlayerStatInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -124,29 +614,26 @@ input DeletePlayerStatInput {
   platformId: String!
 }
 
-"""The output of our delete `PlayerStat` mutation."""
-type DeletePlayerStatPayload {
+"""The output of our delete `CarballPlayerStat` mutation."""
+type DeleteCarballPlayerStatPayload {
   """
   The exact same `clientMutationId` that was provided in the mutation input,
   unchanged and unused. May be used by a client to track mutations.
   """
   clientMutationId: String
 
-  """The `PlayerStat` that was deleted by this mutation."""
-  playerStat: PlayerStat
-  deletedPlayerStatNodeId: ID
+  """The `CarballPlayerStat` that was deleted by this mutation."""
+  carballPlayerStat: CarballPlayerStat
+  deletedCarballPlayerStatNodeId: ID
 
   """
   Our root query field type. Allows us to run any query from our mutation payload.
   """
   query: Query
-
-  """Reads a single `ReplayMeta` that is related to this `PlayerStat`."""
-  replay: ReplayMeta
 }
 
-"""All input for the `deleteReplayMetaByNodeId` mutation."""
-input DeleteReplayMetaByNodeIdInput {
+"""All input for the `deleteCarballReplayMetaByNodeId` mutation."""
+input DeleteCarballReplayMetaByNodeIdInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -154,13 +641,13 @@ input DeleteReplayMetaByNodeIdInput {
   clientMutationId: String
 
   """
-  The globally unique `ID` which will identify a single `ReplayMeta` to be deleted.
+  The globally unique `ID` which will identify a single `CarballReplayMeta` to be deleted.
   """
   nodeId: ID!
 }
 
-"""All input for the `deleteReplayMeta` mutation."""
-input DeleteReplayMetaInput {
+"""All input for the `deleteCarballReplayMeta` mutation."""
+input DeleteCarballReplayMetaInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -169,17 +656,17 @@ input DeleteReplayMetaInput {
   replayId: String!
 }
 
-"""The output of our delete `ReplayMeta` mutation."""
-type DeleteReplayMetaPayload {
+"""The output of our delete `CarballReplayMeta` mutation."""
+type DeleteCarballReplayMetaPayload {
   """
   The exact same `clientMutationId` that was provided in the mutation input,
   unchanged and unused. May be used by a client to track mutations.
   """
   clientMutationId: String
 
-  """The `ReplayMeta` that was deleted by this mutation."""
-  replayMeta: ReplayMeta
-  deletedReplayMetaNodeId: ID
+  """The `CarballReplayMeta` that was deleted by this mutation."""
+  carballReplayMeta: CarballReplayMeta
+  deletedCarballReplayMetaNodeId: ID
 
   """
   Our root query field type. Allows us to run any query from our mutation payload.
@@ -267,21 +754,21 @@ type Mutation {
     input: CreateUserAccountInput!
   ): CreateUserAccountPayload
 
-  """Creates a single `PlayerStat`."""
-  createPlayerStat(
+  """Creates a single `CarballPlayerStat`."""
+  createCarballPlayerStat(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: CreatePlayerStatInput!
-  ): CreatePlayerStatPayload
+    input: CreateCarballPlayerStatInput!
+  ): CreateCarballPlayerStatPayload
 
-  """Creates a single `ReplayMeta`."""
-  createReplayMeta(
+  """Creates a single `CarballReplayMeta`."""
+  createCarballReplayMeta(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: CreateReplayMetaInput!
-  ): CreateReplayMetaPayload
+    input: CreateCarballReplayMetaInput!
+  ): CreateCarballReplayMetaPayload
 
   """
   Updates a single `UserAccount` using its globally unique id and a patch.
@@ -310,40 +797,40 @@ type Mutation {
   ): UpdateUserAccountPayload
 
   """
-  Updates a single `PlayerStat` using its globally unique id and a patch.
+  Updates a single `CarballPlayerStat` using its globally unique id and a patch.
   """
-  updatePlayerStatByNodeId(
+  updateCarballPlayerStatByNodeId(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: UpdatePlayerStatByNodeIdInput!
-  ): UpdatePlayerStatPayload
+    input: UpdateCarballPlayerStatByNodeIdInput!
+  ): UpdateCarballPlayerStatPayload
 
-  """Updates a single `PlayerStat` using a unique key and a patch."""
-  updatePlayerStat(
+  """Updates a single `CarballPlayerStat` using a unique key and a patch."""
+  updateCarballPlayerStat(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: UpdatePlayerStatInput!
-  ): UpdatePlayerStatPayload
+    input: UpdateCarballPlayerStatInput!
+  ): UpdateCarballPlayerStatPayload
 
   """
-  Updates a single `ReplayMeta` using its globally unique id and a patch.
+  Updates a single `CarballReplayMeta` using its globally unique id and a patch.
   """
-  updateReplayMetaByNodeId(
+  updateCarballReplayMetaByNodeId(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: UpdateReplayMetaByNodeIdInput!
-  ): UpdateReplayMetaPayload
+    input: UpdateCarballReplayMetaByNodeIdInput!
+  ): UpdateCarballReplayMetaPayload
 
-  """Updates a single `ReplayMeta` using a unique key and a patch."""
-  updateReplayMeta(
+  """Updates a single `CarballReplayMeta` using a unique key and a patch."""
+  updateCarballReplayMeta(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: UpdateReplayMetaInput!
-  ): UpdateReplayMetaPayload
+    input: UpdateCarballReplayMetaInput!
+  ): UpdateCarballReplayMetaPayload
 
   """Deletes a single `UserAccount` using its globally unique id."""
   deleteUserAccountByNodeId(
@@ -369,37 +856,37 @@ type Mutation {
     input: DeleteUserAccountByUsernameInput!
   ): DeleteUserAccountPayload
 
-  """Deletes a single `PlayerStat` using its globally unique id."""
-  deletePlayerStatByNodeId(
+  """Deletes a single `CarballPlayerStat` using its globally unique id."""
+  deleteCarballPlayerStatByNodeId(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: DeletePlayerStatByNodeIdInput!
-  ): DeletePlayerStatPayload
+    input: DeleteCarballPlayerStatByNodeIdInput!
+  ): DeleteCarballPlayerStatPayload
 
-  """Deletes a single `PlayerStat` using a unique key."""
-  deletePlayerStat(
+  """Deletes a single `CarballPlayerStat` using a unique key."""
+  deleteCarballPlayerStat(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: DeletePlayerStatInput!
-  ): DeletePlayerStatPayload
+    input: DeleteCarballPlayerStatInput!
+  ): DeleteCarballPlayerStatPayload
 
-  """Deletes a single `ReplayMeta` using its globally unique id."""
-  deleteReplayMetaByNodeId(
+  """Deletes a single `CarballReplayMeta` using its globally unique id."""
+  deleteCarballReplayMetaByNodeId(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: DeleteReplayMetaByNodeIdInput!
-  ): DeleteReplayMetaPayload
+    input: DeleteCarballReplayMetaByNodeIdInput!
+  ): DeleteCarballReplayMetaPayload
 
-  """Deletes a single `ReplayMeta` using a unique key."""
-  deleteReplayMeta(
+  """Deletes a single `CarballReplayMeta` using a unique key."""
+  deleteCarballReplayMeta(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
     """
-    input: DeleteReplayMetaInput!
-  ): DeleteReplayMetaPayload
+    input: DeleteCarballReplayMetaInput!
+  ): DeleteCarballReplayMetaPayload
   registerUser(
     """
     The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
@@ -428,296 +915,6 @@ interface Node {
   nodeId: ID!
 }
 
-type PlayerStat implements Node {
-  """
-  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
-  """
-  nodeId: ID!
-  replayId: String!
-  platformId: String!
-  name: String
-  score: Int
-  goals: Int
-  assists: Int
-  saves: Int
-  shots: Int
-  turnovers: BigFloat
-  turnoversOnMyHalf: BigFloat
-  turnoversOnTheirHalf: BigFloat
-  wastedCollection: BigFloat
-  wonTurnovers: BigFloat
-  averageSpeed: BigFloat
-  averageHitDistance: BigFloat
-  averageDistanceFromCenter: BigFloat
-  averageBoostLevel: BigFloat
-  averageBoostUsed: BigFloat
-  timeOnGround: BigFloat
-  timeOnWall: BigFloat
-  timeLowInAir: BigFloat
-  timeHighInAir: BigFloat
-  timeInDefendingHalf: BigFloat
-  timeInAttackingHalf: BigFloat
-  timeInDefendingThird: BigFloat
-  timeInNeutralThird: BigFloat
-  timeInAttackingThird: BigFloat
-  timeBehindBall: BigFloat
-  timeInFrontBall: BigFloat
-  timeNearWall: BigFloat
-  timeInCorner: BigFloat
-  timeAtSlowSpeed: BigFloat
-  timeAtSuperSonic: BigFloat
-  timeAtBoostSpeed: BigFloat
-  timeInFrontOfCenterOfMass: BigFloat
-  timeMostForwardPlayer: BigFloat
-  timeMostBackPlayer: BigFloat
-  timeBetweenPlayers: BigFloat
-  timeFullBoost: BigFloat
-  timeLowBoost: BigFloat
-  timeNoBoost: BigFloat
-  timeClosestToBall: BigFloat
-  timeCloseToBall: BigFloat
-  timeInGame: BigFloat
-  timeFurthestFromBall: BigFloat
-  numTimeBoost: BigFloat
-  numTimeCheat: BigFloat
-  numTimeGoToBall: BigFloat
-  numTimeDefend: BigFloat
-  numTimeAfk: BigFloat
-  numTimeFirstTouch: BigFloat
-  numSmallBoosts: BigFloat
-  numLargeBoosts: BigFloat
-  ballHitForward: BigFloat
-  possessionTime: BigFloat
-  count: BigFloat
-  boostUsage: BigFloat
-  totalHits: BigFloat
-  totalPasses: BigFloat
-  totalDribbles: BigFloat
-  totalDribbleConts: BigFloat
-  totalAerials: BigFloat
-  totalClears: BigFloat
-  totalKickoffs: BigFloat
-  totalCarries: BigFloat
-  totalFlicks: BigFloat
-  totalCarryTime: BigFloat
-  totalCarryDistance: BigFloat
-  longestCarry: BigFloat
-  furthestCarry: BigFloat
-  averageCarryTime: BigFloat
-  fastestCarrySpeed: BigFloat
-  averageZDistance: BigFloat
-  averageBallZVelocity: BigFloat
-  varianceZDistance: BigFloat
-  varianceBallZVelocity: BigFloat
-  averageCarrySpeed: BigFloat
-  distanceAlongPath: BigFloat
-  firstFrameInGame: BigFloat
-  isBot: Boolean
-  cameraSettings: JSON
-  controlConfig: JSON
-  playerItems: JSON
-  isOrange: Boolean
-
-  """Reads a single `ReplayMeta` that is related to this `PlayerStat`."""
-  replay: ReplayMeta
-}
-
-"""
-A condition to be used against `PlayerStat` object types. All fields are tested
-for equality and combined with a logical ‘and.’
-"""
-input PlayerStatCondition {
-  """Checks for equality with the object’s `replayId` field."""
-  replayId: String
-}
-
-"""An input for mutations affecting `PlayerStat`"""
-input PlayerStatInput {
-  replayId: String!
-  platformId: String!
-  name: String
-  score: Int
-  goals: Int
-  assists: Int
-  saves: Int
-  shots: Int
-  turnovers: BigFloat
-  turnoversOnMyHalf: BigFloat
-  turnoversOnTheirHalf: BigFloat
-  wastedCollection: BigFloat
-  wonTurnovers: BigFloat
-  averageSpeed: BigFloat
-  averageHitDistance: BigFloat
-  averageDistanceFromCenter: BigFloat
-  averageBoostLevel: BigFloat
-  averageBoostUsed: BigFloat
-  timeOnGround: BigFloat
-  timeOnWall: BigFloat
-  timeLowInAir: BigFloat
-  timeHighInAir: BigFloat
-  timeInDefendingHalf: BigFloat
-  timeInAttackingHalf: BigFloat
-  timeInDefendingThird: BigFloat
-  timeInNeutralThird: BigFloat
-  timeInAttackingThird: BigFloat
-  timeBehindBall: BigFloat
-  timeInFrontBall: BigFloat
-  timeNearWall: BigFloat
-  timeInCorner: BigFloat
-  timeAtSlowSpeed: BigFloat
-  timeAtSuperSonic: BigFloat
-  timeAtBoostSpeed: BigFloat
-  timeInFrontOfCenterOfMass: BigFloat
-  timeMostForwardPlayer: BigFloat
-  timeMostBackPlayer: BigFloat
-  timeBetweenPlayers: BigFloat
-  timeFullBoost: BigFloat
-  timeLowBoost: BigFloat
-  timeNoBoost: BigFloat
-  timeClosestToBall: BigFloat
-  timeCloseToBall: BigFloat
-  timeInGame: BigFloat
-  timeFurthestFromBall: BigFloat
-  numTimeBoost: BigFloat
-  numTimeCheat: BigFloat
-  numTimeGoToBall: BigFloat
-  numTimeDefend: BigFloat
-  numTimeAfk: BigFloat
-  numTimeFirstTouch: BigFloat
-  numSmallBoosts: BigFloat
-  numLargeBoosts: BigFloat
-  ballHitForward: BigFloat
-  possessionTime: BigFloat
-  count: BigFloat
-  boostUsage: BigFloat
-  totalHits: BigFloat
-  totalPasses: BigFloat
-  totalDribbles: BigFloat
-  totalDribbleConts: BigFloat
-  totalAerials: BigFloat
-  totalClears: BigFloat
-  totalKickoffs: BigFloat
-  totalCarries: BigFloat
-  totalFlicks: BigFloat
-  totalCarryTime: BigFloat
-  totalCarryDistance: BigFloat
-  longestCarry: BigFloat
-  furthestCarry: BigFloat
-  averageCarryTime: BigFloat
-  fastestCarrySpeed: BigFloat
-  averageZDistance: BigFloat
-  averageBallZVelocity: BigFloat
-  varianceZDistance: BigFloat
-  varianceBallZVelocity: BigFloat
-  averageCarrySpeed: BigFloat
-  distanceAlongPath: BigFloat
-  firstFrameInGame: BigFloat
-  isBot: Boolean
-  cameraSettings: JSON
-  controlConfig: JSON
-  playerItems: JSON
-  isOrange: Boolean
-}
-
-"""
-Represents an update to a `PlayerStat`. Fields that are set will be updated.
-"""
-input PlayerStatPatch {
-  replayId: String
-  platformId: String
-  name: String
-  score: Int
-  goals: Int
-  assists: Int
-  saves: Int
-  shots: Int
-  turnovers: BigFloat
-  turnoversOnMyHalf: BigFloat
-  turnoversOnTheirHalf: BigFloat
-  wastedCollection: BigFloat
-  wonTurnovers: BigFloat
-  averageSpeed: BigFloat
-  averageHitDistance: BigFloat
-  averageDistanceFromCenter: BigFloat
-  averageBoostLevel: BigFloat
-  averageBoostUsed: BigFloat
-  timeOnGround: BigFloat
-  timeOnWall: BigFloat
-  timeLowInAir: BigFloat
-  timeHighInAir: BigFloat
-  timeInDefendingHalf: BigFloat
-  timeInAttackingHalf: BigFloat
-  timeInDefendingThird: BigFloat
-  timeInNeutralThird: BigFloat
-  timeInAttackingThird: BigFloat
-  timeBehindBall: BigFloat
-  timeInFrontBall: BigFloat
-  timeNearWall: BigFloat
-  timeInCorner: BigFloat
-  timeAtSlowSpeed: BigFloat
-  timeAtSuperSonic: BigFloat
-  timeAtBoostSpeed: BigFloat
-  timeInFrontOfCenterOfMass: BigFloat
-  timeMostForwardPlayer: BigFloat
-  timeMostBackPlayer: BigFloat
-  timeBetweenPlayers: BigFloat
-  timeFullBoost: BigFloat
-  timeLowBoost: BigFloat
-  timeNoBoost: BigFloat
-  timeClosestToBall: BigFloat
-  timeCloseToBall: BigFloat
-  timeInGame: BigFloat
-  timeFurthestFromBall: BigFloat
-  numTimeBoost: BigFloat
-  numTimeCheat: BigFloat
-  numTimeGoToBall: BigFloat
-  numTimeDefend: BigFloat
-  numTimeAfk: BigFloat
-  numTimeFirstTouch: BigFloat
-  numSmallBoosts: BigFloat
-  numLargeBoosts: BigFloat
-  ballHitForward: BigFloat
-  possessionTime: BigFloat
-  count: BigFloat
-  boostUsage: BigFloat
-  totalHits: BigFloat
-  totalPasses: BigFloat
-  totalDribbles: BigFloat
-  totalDribbleConts: BigFloat
-  totalAerials: BigFloat
-  totalClears: BigFloat
-  totalKickoffs: BigFloat
-  totalCarries: BigFloat
-  totalFlicks: BigFloat
-  totalCarryTime: BigFloat
-  totalCarryDistance: BigFloat
-  longestCarry: BigFloat
-  furthestCarry: BigFloat
-  averageCarryTime: BigFloat
-  fastestCarrySpeed: BigFloat
-  averageZDistance: BigFloat
-  averageBallZVelocity: BigFloat
-  varianceZDistance: BigFloat
-  varianceBallZVelocity: BigFloat
-  averageCarrySpeed: BigFloat
-  distanceAlongPath: BigFloat
-  firstFrameInGame: BigFloat
-  isBot: Boolean
-  cameraSettings: JSON
-  controlConfig: JSON
-  playerItems: JSON
-  isOrange: Boolean
-}
-
-"""Methods to use when ordering `PlayerStat`."""
-enum PlayerStatsOrderBy {
-  NATURAL
-  REPLAY_ID_ASC
-  REPLAY_ID_DESC
-  PRIMARY_KEY_ASC
-  PRIMARY_KEY_DESC
-}
-
 """The root query type which gives access points into the data universe."""
 type Query implements Node {
   """
@@ -737,43 +934,43 @@ type Query implements Node {
     nodeId: ID!
   ): Node
 
-  """Reads a set of `PlayerStat`."""
-  playerStatsList(
+  """Reads a set of `CarballPlayerStat`."""
+  carballPlayerStatsList(
     """Only read the first `n` values of the set."""
     first: Int
 
     """Skip the first `n` values."""
     offset: Int
 
-    """The method to use when ordering `PlayerStat`."""
-    orderBy: [PlayerStatsOrderBy!]
+    """The method to use when ordering `CarballPlayerStat`."""
+    orderBy: [CarballPlayerStatsOrderBy!]
 
     """
     A condition to be used in determining which values should be returned by the collection.
     """
-    condition: PlayerStatCondition
-  ): [PlayerStat!]
+    condition: CarballPlayerStatCondition
+  ): [CarballPlayerStat!]
 
-  """Reads a set of `ReplayMeta`."""
-  replayMetasList(
+  """Reads a set of `CarballReplayMeta`."""
+  carballReplayMetasList(
     """Only read the first `n` values of the set."""
     first: Int
 
     """Skip the first `n` values."""
     offset: Int
 
-    """The method to use when ordering `ReplayMeta`."""
-    orderBy: [ReplayMetasOrderBy!]
+    """The method to use when ordering `CarballReplayMeta`."""
+    orderBy: [CarballReplayMetasOrderBy!]
 
     """
     A condition to be used in determining which values should be returned by the collection.
     """
-    condition: ReplayMetaCondition
-  ): [ReplayMeta!]
+    condition: CarballReplayMetaCondition
+  ): [CarballReplayMeta!]
   userAccount(userId: UUID!): UserAccount
   userAccountByUsername(username: String!): UserAccount
-  playerStat(replayId: String!, platformId: String!): PlayerStat
-  replayMeta(replayId: String!): ReplayMeta
+  carballPlayerStat(replayId: String!, platformId: String!): CarballPlayerStat
+  carballReplayMeta(replayId: String!): CarballReplayMeta
   canAccessSchema(schemarole: String): Boolean
   currentPerson: UserAccount
 
@@ -785,21 +982,21 @@ type Query implements Node {
     nodeId: ID!
   ): UserAccount
 
-  """Reads a single `PlayerStat` using its globally unique `ID`."""
-  playerStatByNodeId(
+  """Reads a single `CarballPlayerStat` using its globally unique `ID`."""
+  carballPlayerStatByNodeId(
     """
-    The globally unique `ID` to be used in selecting a single `PlayerStat`.
+    The globally unique `ID` to be used in selecting a single `CarballPlayerStat`.
     """
     nodeId: ID!
-  ): PlayerStat
+  ): CarballPlayerStat
 
-  """Reads a single `ReplayMeta` using its globally unique `ID`."""
-  replayMetaByNodeId(
+  """Reads a single `CarballReplayMeta` using its globally unique `ID`."""
+  carballReplayMetaByNodeId(
     """
-    The globally unique `ID` to be used in selecting a single `ReplayMeta`.
+    The globally unique `ID` to be used in selecting a single `CarballReplayMeta`.
     """
     nodeId: ID!
-  ): ReplayMeta
+  ): CarballReplayMeta
 }
 
 input RegisterInput {
@@ -837,112 +1034,6 @@ type RegisterUserPayload {
   Our root query field type. Allows us to run any query from our mutation payload.
   """
   query: Query
-}
-
-type ReplayMeta implements Node {
-  """
-  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
-  """
-  nodeId: ID!
-  replayId: String!
-  name: String
-  map: String
-  version: Int
-  time: Int
-  frames: Int
-  teamSize: Int
-  team0Score: Int
-  team1Score: Int
-  team0Players: [String]
-  team1Players: [String]
-  length: BigFloat
-  gameServerId: String
-  serverName: String
-  matchGuid: String
-  playlist: Int
-  createdAt: Datetime
-  updatedAt: Datetime
-
-  """Reads and enables pagination through a set of `PlayerStat`."""
-  playerStatsByReplayIdList(
-    """Only read the first `n` values of the set."""
-    first: Int
-
-    """Skip the first `n` values."""
-    offset: Int
-
-    """The method to use when ordering `PlayerStat`."""
-    orderBy: [PlayerStatsOrderBy!]
-
-    """
-    A condition to be used in determining which values should be returned by the collection.
-    """
-    condition: PlayerStatCondition
-  ): [PlayerStat!]!
-}
-
-"""
-A condition to be used against `ReplayMeta` object types. All fields are tested
-for equality and combined with a logical ‘and.’
-"""
-input ReplayMetaCondition {
-  """Checks for equality with the object’s `replayId` field."""
-  replayId: String
-}
-
-"""An input for mutations affecting `ReplayMeta`"""
-input ReplayMetaInput {
-  replayId: String!
-  name: String
-  map: String
-  version: Int
-  time: Int
-  frames: Int
-  teamSize: Int
-  team0Score: Int
-  team1Score: Int
-  team0Players: [String]
-  team1Players: [String]
-  length: BigFloat
-  gameServerId: String
-  serverName: String
-  matchGuid: String
-  playlist: Int
-  createdAt: Datetime
-  updatedAt: Datetime
-}
-
-"""
-Represents an update to a `ReplayMeta`. Fields that are set will be updated.
-"""
-input ReplayMetaPatch {
-  replayId: String
-  name: String
-  map: String
-  version: Int
-  time: Int
-  frames: Int
-  teamSize: Int
-  team0Score: Int
-  team1Score: Int
-  team0Players: [String]
-  team1Players: [String]
-  length: BigFloat
-  gameServerId: String
-  serverName: String
-  matchGuid: String
-  playlist: Int
-  createdAt: Datetime
-  updatedAt: Datetime
-}
-
-"""Methods to use when ordering `ReplayMeta`."""
-enum ReplayMetasOrderBy {
-  NATURAL
-  REPLAY_ID_ASC
-  REPLAY_ID_DESC
-  PRIMARY_KEY_ASC
-  PRIMARY_KEY_DESC
 }
 
 """
@@ -985,39 +1076,39 @@ type Subscription {
     nodeId: ID!
   ): Node
 
-  """Reads a set of `PlayerStat`. (live)"""
-  playerStatsList(
+  """Reads a set of `CarballPlayerStat`. (live)"""
+  carballPlayerStatsList(
     """Only read the first `n` values of the set."""
     first: Int
 
     """Skip the first `n` values."""
     offset: Int
 
-    """The method to use when ordering `PlayerStat`."""
-    orderBy: [PlayerStatsOrderBy!]
+    """The method to use when ordering `CarballPlayerStat`."""
+    orderBy: [CarballPlayerStatsOrderBy!]
 
     """
     A condition to be used in determining which values should be returned by the collection.
     """
-    condition: PlayerStatCondition
-  ): [PlayerStat!]
+    condition: CarballPlayerStatCondition
+  ): [CarballPlayerStat!]
 
-  """Reads a set of `ReplayMeta`. (live)"""
-  replayMetasList(
+  """Reads a set of `CarballReplayMeta`. (live)"""
+  carballReplayMetasList(
     """Only read the first `n` values of the set."""
     first: Int
 
     """Skip the first `n` values."""
     offset: Int
 
-    """The method to use when ordering `ReplayMeta`."""
-    orderBy: [ReplayMetasOrderBy!]
+    """The method to use when ordering `CarballReplayMeta`."""
+    orderBy: [CarballReplayMetasOrderBy!]
 
     """
     A condition to be used in determining which values should be returned by the collection.
     """
-    condition: ReplayMetaCondition
-  ): [ReplayMeta!]
+    condition: CarballReplayMetaCondition
+  ): [CarballReplayMeta!]
 
   """ (live)"""
   userAccount(userId: UUID!): UserAccount
@@ -1026,10 +1117,10 @@ type Subscription {
   userAccountByUsername(username: String!): UserAccount
 
   """ (live)"""
-  playerStat(replayId: String!, platformId: String!): PlayerStat
+  carballPlayerStat(replayId: String!, platformId: String!): CarballPlayerStat
 
   """ (live)"""
-  replayMeta(replayId: String!): ReplayMeta
+  carballReplayMeta(replayId: String!): CarballReplayMeta
 
   """ (live)"""
   canAccessSchema(schemarole: String): Boolean
@@ -1045,25 +1136,29 @@ type Subscription {
     nodeId: ID!
   ): UserAccount
 
-  """Reads a single `PlayerStat` using its globally unique `ID`. (live)"""
-  playerStatByNodeId(
+  """
+  Reads a single `CarballPlayerStat` using its globally unique `ID`. (live)
+  """
+  carballPlayerStatByNodeId(
     """
-    The globally unique `ID` to be used in selecting a single `PlayerStat`.
+    The globally unique `ID` to be used in selecting a single `CarballPlayerStat`.
     """
     nodeId: ID!
-  ): PlayerStat
+  ): CarballPlayerStat
 
-  """Reads a single `ReplayMeta` using its globally unique `ID`. (live)"""
-  replayMetaByNodeId(
+  """
+  Reads a single `CarballReplayMeta` using its globally unique `ID`. (live)
+  """
+  carballReplayMetaByNodeId(
     """
-    The globally unique `ID` to be used in selecting a single `ReplayMeta`.
+    The globally unique `ID` to be used in selecting a single `CarballReplayMeta`.
     """
     nodeId: ID!
-  ): ReplayMeta
+  ): CarballReplayMeta
 }
 
-"""All input for the `updatePlayerStatByNodeId` mutation."""
-input UpdatePlayerStatByNodeIdInput {
+"""All input for the `updateCarballPlayerStatByNodeId` mutation."""
+input UpdateCarballPlayerStatByNodeIdInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -1071,18 +1166,18 @@ input UpdatePlayerStatByNodeIdInput {
   clientMutationId: String
 
   """
-  The globally unique `ID` which will identify a single `PlayerStat` to be updated.
+  The globally unique `ID` which will identify a single `CarballPlayerStat` to be updated.
   """
   nodeId: ID!
 
   """
-  An object where the defined keys will be set on the `PlayerStat` being updated.
+  An object where the defined keys will be set on the `CarballPlayerStat` being updated.
   """
-  patch: PlayerStatPatch!
+  patch: CarballPlayerStatPatch!
 }
 
-"""All input for the `updatePlayerStat` mutation."""
-input UpdatePlayerStatInput {
+"""All input for the `updateCarballPlayerStat` mutation."""
+input UpdateCarballPlayerStatInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -1090,35 +1185,32 @@ input UpdatePlayerStatInput {
   clientMutationId: String
 
   """
-  An object where the defined keys will be set on the `PlayerStat` being updated.
+  An object where the defined keys will be set on the `CarballPlayerStat` being updated.
   """
-  patch: PlayerStatPatch!
+  patch: CarballPlayerStatPatch!
   replayId: String!
   platformId: String!
 }
 
-"""The output of our update `PlayerStat` mutation."""
-type UpdatePlayerStatPayload {
+"""The output of our update `CarballPlayerStat` mutation."""
+type UpdateCarballPlayerStatPayload {
   """
   The exact same `clientMutationId` that was provided in the mutation input,
   unchanged and unused. May be used by a client to track mutations.
   """
   clientMutationId: String
 
-  """The `PlayerStat` that was updated by this mutation."""
-  playerStat: PlayerStat
+  """The `CarballPlayerStat` that was updated by this mutation."""
+  carballPlayerStat: CarballPlayerStat
 
   """
   Our root query field type. Allows us to run any query from our mutation payload.
   """
   query: Query
-
-  """Reads a single `ReplayMeta` that is related to this `PlayerStat`."""
-  replay: ReplayMeta
 }
 
-"""All input for the `updateReplayMetaByNodeId` mutation."""
-input UpdateReplayMetaByNodeIdInput {
+"""All input for the `updateCarballReplayMetaByNodeId` mutation."""
+input UpdateCarballReplayMetaByNodeIdInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -1126,18 +1218,18 @@ input UpdateReplayMetaByNodeIdInput {
   clientMutationId: String
 
   """
-  The globally unique `ID` which will identify a single `ReplayMeta` to be updated.
+  The globally unique `ID` which will identify a single `CarballReplayMeta` to be updated.
   """
   nodeId: ID!
 
   """
-  An object where the defined keys will be set on the `ReplayMeta` being updated.
+  An object where the defined keys will be set on the `CarballReplayMeta` being updated.
   """
-  patch: ReplayMetaPatch!
+  patch: CarballReplayMetaPatch!
 }
 
-"""All input for the `updateReplayMeta` mutation."""
-input UpdateReplayMetaInput {
+"""All input for the `updateCarballReplayMeta` mutation."""
+input UpdateCarballReplayMetaInput {
   """
   An arbitrary string value with no semantic meaning. Will be included in the
   payload verbatim. May be used to track mutations by the client.
@@ -1145,22 +1237,22 @@ input UpdateReplayMetaInput {
   clientMutationId: String
 
   """
-  An object where the defined keys will be set on the `ReplayMeta` being updated.
+  An object where the defined keys will be set on the `CarballReplayMeta` being updated.
   """
-  patch: ReplayMetaPatch!
+  patch: CarballReplayMetaPatch!
   replayId: String!
 }
 
-"""The output of our update `ReplayMeta` mutation."""
-type UpdateReplayMetaPayload {
+"""The output of our update `CarballReplayMeta` mutation."""
+type UpdateCarballReplayMetaPayload {
   """
   The exact same `clientMutationId` that was provided in the mutation input,
   unchanged and unused. May be used by a client to track mutations.
   """
   clientMutationId: String
 
-  """The `ReplayMeta` that was updated by this mutation."""
-  replayMeta: ReplayMeta
+  """The `CarballReplayMeta` that was updated by this mutation."""
+  carballReplayMeta: CarballReplayMeta
 
   """
   Our root query field type. Allows us to run any query from our mutation payload.

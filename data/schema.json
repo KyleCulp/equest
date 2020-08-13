@@ -76,8 +76,8 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStatsList",
-              "description": "Reads a set of `PlayerStat`.",
+              "name": "carballPlayerStatsList",
+              "description": "Reads a set of `CarballPlayerStat`.",
               "args": [
                 {
                   "name": "first",
@@ -101,7 +101,7 @@
                 },
                 {
                   "name": "orderBy",
-                  "description": "The method to use when ordering `PlayerStat`.",
+                  "description": "The method to use when ordering `CarballPlayerStat`.",
                   "type": {
                     "kind": "LIST",
                     "name": null,
@@ -110,7 +110,7 @@
                       "name": null,
                       "ofType": {
                         "kind": "ENUM",
-                        "name": "PlayerStatsOrderBy",
+                        "name": "CarballPlayerStatsOrderBy",
                         "ofType": null
                       }
                     }
@@ -122,7 +122,7 @@
                   "description": "A condition to be used in determining which values should be returned by the collection.",
                   "type": {
                     "kind": "INPUT_OBJECT",
-                    "name": "PlayerStatCondition",
+                    "name": "CarballPlayerStatCondition",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -136,7 +136,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "PlayerStat",
+                    "name": "CarballPlayerStat",
                     "ofType": null
                   }
                 }
@@ -145,8 +145,8 @@
               "deprecationReason": null
             },
             {
-              "name": "replayMetasList",
-              "description": "Reads a set of `ReplayMeta`.",
+              "name": "carballReplayMetasList",
+              "description": "Reads a set of `CarballReplayMeta`.",
               "args": [
                 {
                   "name": "first",
@@ -170,7 +170,7 @@
                 },
                 {
                   "name": "orderBy",
-                  "description": "The method to use when ordering `ReplayMeta`.",
+                  "description": "The method to use when ordering `CarballReplayMeta`.",
                   "type": {
                     "kind": "LIST",
                     "name": null,
@@ -179,7 +179,7 @@
                       "name": null,
                       "ofType": {
                         "kind": "ENUM",
-                        "name": "ReplayMetasOrderBy",
+                        "name": "CarballReplayMetasOrderBy",
                         "ofType": null
                       }
                     }
@@ -191,7 +191,7 @@
                   "description": "A condition to be used in determining which values should be returned by the collection.",
                   "type": {
                     "kind": "INPUT_OBJECT",
-                    "name": "ReplayMetaCondition",
+                    "name": "CarballReplayMetaCondition",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -205,7 +205,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "ReplayMeta",
+                    "name": "CarballReplayMeta",
                     "ofType": null
                   }
                 }
@@ -268,7 +268,7 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStat",
+              "name": "carballPlayerStat",
               "description": null,
               "args": [
                 {
@@ -302,14 +302,14 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "PlayerStat",
+                "name": "CarballPlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "replayMeta",
+              "name": "carballReplayMeta",
               "description": null,
               "args": [
                 {
@@ -329,7 +329,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "ReplayMeta",
+                "name": "CarballReplayMeta",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -398,12 +398,12 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStatByNodeId",
-              "description": "Reads a single `PlayerStat` using its globally unique `ID`.",
+              "name": "carballPlayerStatByNodeId",
+              "description": "Reads a single `CarballPlayerStat` using its globally unique `ID`.",
               "args": [
                 {
                   "name": "nodeId",
-                  "description": "The globally unique `ID` to be used in selecting a single `PlayerStat`.",
+                  "description": "The globally unique `ID` to be used in selecting a single `CarballPlayerStat`.",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -418,19 +418,19 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "PlayerStat",
+                "name": "CarballPlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "replayMetaByNodeId",
-              "description": "Reads a single `ReplayMeta` using its globally unique `ID`.",
+              "name": "carballReplayMetaByNodeId",
+              "description": "Reads a single `CarballReplayMeta` using its globally unique `ID`.",
               "args": [
                 {
                   "name": "nodeId",
-                  "description": "The globally unique `ID` to be used in selecting a single `ReplayMeta`.",
+                  "description": "The globally unique `ID` to be used in selecting a single `CarballReplayMeta`.",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -445,7 +445,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "ReplayMeta",
+                "name": "CarballReplayMeta",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -496,12 +496,12 @@
             },
             {
               "kind": "OBJECT",
-              "name": "PlayerStat",
+              "name": "CarballPlayerStat",
               "ofType": null
             },
             {
               "kind": "OBJECT",
-              "name": "ReplayMeta",
+              "name": "CarballReplayMeta",
               "ofType": null
             },
             {
@@ -533,8 +533,8 @@
         },
         {
           "kind": "ENUM",
-          "name": "PlayerStatsOrderBy",
-          "description": "Methods to use when ordering `PlayerStat`.",
+          "name": "CarballPlayerStatsOrderBy",
+          "description": "Methods to use when ordering `CarballPlayerStat`.",
           "fields": null,
           "inputFields": null,
           "interfaces": null,
@@ -574,8 +574,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "PlayerStatCondition",
-          "description": "A condition to be used against `PlayerStat` object types. All fields are tested for equality and combined with a logical ‘and.’",
+          "name": "CarballPlayerStatCondition",
+          "description": "A condition to be used against `CarballPlayerStat` object types. All fields are tested for equality and combined with a logical ‘and.’",
           "fields": null,
           "inputFields": [
             {
@@ -605,7 +605,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "PlayerStat",
+          "name": "CarballPlayerStat",
           "description": null,
           "fields": [
             {
@@ -669,12 +669,24 @@
               "deprecationReason": null
             },
             {
+              "name": "titleid",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "score",
               "description": null,
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -686,7 +698,7 @@
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -698,7 +710,7 @@
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -710,7 +722,7 @@
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -722,7 +734,547 @@
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "camerasettingsStiffness",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "camerasettingsHeight",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "camerasettingsTransitionspeed",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "camerasettingsPitch",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "camerasettingsSwivelspeed",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "camerasettingsFieldofview",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "camerasettingsDistance",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutBanner",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutBoost",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutCar",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutGoalexplosion",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutSkin",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutTrail",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutWheels",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutVersion",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutTopper",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutAntenna",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutEngineaudio",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutGoalexplosionpaint",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutWheelspaint",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutPrimarycolor",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutAccentcolor",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutPrimaryfinish",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutAccentfinish",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "loadoutAvatarborderusercolor",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "boostusage",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "numsmallboosts",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "numlargeboosts",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "wastedcollection",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "wastedusage",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timefullboost",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timelowboost",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timenoboost",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "numstolenboosts",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averageboostlevel",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "wastedbig",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "wastedsmall",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ballhitforward",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ballhitbackward",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeclosesttoball",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timefurthestfromball",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeclosetoball",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timeclosesttoteamcenter",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timefurthestfromteamcenter",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "possessiontime",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -741,7 +1293,7 @@
               "deprecationReason": null
             },
             {
-              "name": "turnoversOnMyHalf",
+              "name": "turnoversonmyhalf",
               "description": null,
               "args": [],
               "type": {
@@ -753,7 +1305,7 @@
               "deprecationReason": null
             },
             {
-              "name": "turnoversOnTheirHalf",
+              "name": "turnoversontheirhalf",
               "description": null,
               "args": [],
               "type": {
@@ -765,7 +1317,7 @@
               "deprecationReason": null
             },
             {
-              "name": "wastedCollection",
+              "name": "wonturnovers",
               "description": null,
               "args": [],
               "type": {
@@ -777,7 +1329,7 @@
               "deprecationReason": null
             },
             {
-              "name": "wonTurnovers",
+              "name": "timeonground",
               "description": null,
               "args": [],
               "type": {
@@ -789,7 +1341,7 @@
               "deprecationReason": null
             },
             {
-              "name": "averageSpeed",
+              "name": "timelowinair",
               "description": null,
               "args": [],
               "type": {
@@ -801,7 +1353,7 @@
               "deprecationReason": null
             },
             {
-              "name": "averageHitDistance",
+              "name": "timehighinair",
               "description": null,
               "args": [],
               "type": {
@@ -813,7 +1365,7 @@
               "deprecationReason": null
             },
             {
-              "name": "averageDistanceFromCenter",
+              "name": "timeindefendinghalf",
               "description": null,
               "args": [],
               "type": {
@@ -825,7 +1377,7 @@
               "deprecationReason": null
             },
             {
-              "name": "averageBoostLevel",
+              "name": "timeinattackinghalf",
               "description": null,
               "args": [],
               "type": {
@@ -837,7 +1389,7 @@
               "deprecationReason": null
             },
             {
-              "name": "averageBoostUsed",
+              "name": "timeindefendingthird",
               "description": null,
               "args": [],
               "type": {
@@ -849,7 +1401,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeOnGround",
+              "name": "timeinneutralthird",
               "description": null,
               "args": [],
               "type": {
@@ -861,7 +1413,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeOnWall",
+              "name": "timeinattackingthird",
               "description": null,
               "args": [],
               "type": {
@@ -873,7 +1425,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeLowInAir",
+              "name": "timebehindball",
               "description": null,
               "args": [],
               "type": {
@@ -885,7 +1437,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeHighInAir",
+              "name": "timeinfrontball",
               "description": null,
               "args": [],
               "type": {
@@ -897,7 +1449,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInDefendingHalf",
+              "name": "timenearwall",
               "description": null,
               "args": [],
               "type": {
@@ -909,7 +1461,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInAttackingHalf",
+              "name": "timeincorner",
               "description": null,
               "args": [],
               "type": {
@@ -921,7 +1473,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInDefendingThird",
+              "name": "timeonwall",
               "description": null,
               "args": [],
               "type": {
@@ -933,7 +1485,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInNeutralThird",
+              "name": "averagespeed",
               "description": null,
               "args": [],
               "type": {
@@ -945,7 +1497,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInAttackingThird",
+              "name": "averagehitdistance",
               "description": null,
               "args": [],
               "type": {
@@ -957,7 +1509,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeBehindBall",
+              "name": "averagedistancefromcenter",
               "description": null,
               "args": [],
               "type": {
@@ -969,7 +1521,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInFrontBall",
+              "name": "totalhits",
               "description": null,
               "args": [],
               "type": {
@@ -981,7 +1533,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeNearWall",
+              "name": "totalpasses",
               "description": null,
               "args": [],
               "type": {
@@ -993,7 +1545,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInCorner",
+              "name": "totaldribbles",
               "description": null,
               "args": [],
               "type": {
@@ -1005,7 +1557,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeAtSlowSpeed",
+              "name": "totaldribbleconts",
               "description": null,
               "args": [],
               "type": {
@@ -1017,7 +1569,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeAtSuperSonic",
+              "name": "totalaerials",
               "description": null,
               "args": [],
               "type": {
@@ -1029,7 +1581,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeAtBoostSpeed",
+              "name": "totalclears",
               "description": null,
               "args": [],
               "type": {
@@ -1041,7 +1593,19 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInFrontOfCenterOfMass",
+              "name": "iskeyboard",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "analoguesteeringinputpercent",
               "description": null,
               "args": [],
               "type": {
@@ -1053,7 +1617,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeMostForwardPlayer",
+              "name": "analoguethrottleinputpercent",
               "description": null,
               "args": [],
               "type": {
@@ -1065,7 +1629,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeMostBackPlayer",
+              "name": "timeatslowspeed",
               "description": null,
               "args": [],
               "type": {
@@ -1077,7 +1641,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeBetweenPlayers",
+              "name": "timeatsupersonic",
               "description": null,
               "args": [],
               "type": {
@@ -1089,7 +1653,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeFullBoost",
+              "name": "timeatboostspeed",
               "description": null,
               "args": [],
               "type": {
@@ -1101,7 +1665,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeLowBoost",
+              "name": "timeinfrontofcenterofmass",
               "description": null,
               "args": [],
               "type": {
@@ -1113,7 +1677,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeNoBoost",
+              "name": "timebehindcenterofmass",
               "description": null,
               "args": [],
               "type": {
@@ -1125,7 +1689,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeClosestToBall",
+              "name": "timemostforwardplayer",
               "description": null,
               "args": [],
               "type": {
@@ -1137,7 +1701,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeCloseToBall",
+              "name": "timemostbackplayer",
               "description": null,
               "args": [],
               "type": {
@@ -1149,7 +1713,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeInGame",
+              "name": "timebetweenplayers",
               "description": null,
               "args": [],
               "type": {
@@ -1161,7 +1725,7 @@
               "deprecationReason": null
             },
             {
-              "name": "timeFurthestFromBall",
+              "name": "pass",
               "description": null,
               "args": [],
               "type": {
@@ -1173,7 +1737,7 @@
               "deprecationReason": null
             },
             {
-              "name": "numTimeBoost",
+              "name": "shot",
               "description": null,
               "args": [],
               "type": {
@@ -1185,7 +1749,7 @@
               "deprecationReason": null
             },
             {
-              "name": "numTimeCheat",
+              "name": "goal",
               "description": null,
               "args": [],
               "type": {
@@ -1197,7 +1761,7 @@
               "deprecationReason": null
             },
             {
-              "name": "numTimeGoToBall",
+              "name": "assist",
               "description": null,
               "args": [],
               "type": {
@@ -1209,7 +1773,7 @@
               "deprecationReason": null
             },
             {
-              "name": "numTimeDefend",
+              "name": "assisted",
               "description": null,
               "args": [],
               "type": {
@@ -1221,67 +1785,7 @@
               "deprecationReason": null
             },
             {
-              "name": "numTimeAfk",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "numTimeFirstTouch",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "numSmallBoosts",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "numLargeBoosts",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "ballHitForward",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "possessionTime",
+              "name": "save",
               "description": null,
               "args": [],
               "type": {
@@ -1305,7 +1809,7 @@
               "deprecationReason": null
             },
             {
-              "name": "boostUsage",
+              "name": "totalcarries",
               "description": null,
               "args": [],
               "type": {
@@ -1317,7 +1821,175 @@
               "deprecationReason": null
             },
             {
-              "name": "totalHits",
+              "name": "longestcarry",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "furthestcarry",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "totalcarrytime",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averagecarrytime",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "fastestcarryspeed",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "totalcarrydistance",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averagezdistance",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averagexydistance",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averageballzvelocity",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "variancexydistance",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "variancezdistance",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "varianceballzvelocity",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "averagecarryspeed",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "distancealongpath",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "totalkickoffs",
               "description": null,
               "args": [],
               "type": {
@@ -1329,7 +2001,7 @@
               "deprecationReason": null
             },
             {
-              "name": "totalPasses",
+              "name": "numtimeboost",
               "description": null,
               "args": [],
               "type": {
@@ -1341,7 +2013,7 @@
               "deprecationReason": null
             },
             {
-              "name": "totalDribbles",
+              "name": "numtimegotoball",
               "description": null,
               "args": [],
               "type": {
@@ -1353,7 +2025,7 @@
               "deprecationReason": null
             },
             {
-              "name": "totalDribbleConts",
+              "name": "numtimefirsttouch",
               "description": null,
               "args": [],
               "type": {
@@ -1365,223 +2037,19 @@
               "deprecationReason": null
             },
             {
-              "name": "totalAerials",
+              "name": "averageboostused",
               "description": null,
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "BigFloat",
+                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "totalClears",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "totalKickoffs",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "totalCarries",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "totalFlicks",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "totalCarryTime",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "totalCarryDistance",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "longestCarry",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "furthestCarry",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "averageCarryTime",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "fastestCarrySpeed",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "averageZDistance",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "averageBallZVelocity",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "varianceZDistance",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "varianceBallZVelocity",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "averageCarrySpeed",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "distanceAlongPath",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "firstFrameInGame",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "isBot",
+              "name": "isbot",
               "description": null,
               "args": [],
               "type": {
@@ -1593,60 +2061,36 @@
               "deprecationReason": null
             },
             {
-              "name": "cameraSettings",
+              "name": "timeingame",
               "description": null,
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
+                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "controlConfig",
+              "name": "firstframeingame",
               "description": null,
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
+                "name": "BigFloat",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "playerItems",
+              "name": "team",
               "description": null,
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "isOrange",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "replay",
-              "description": "Reads a single `ReplayMeta` that is related to this `PlayerStat`.",
-              "args": [],
-              "type": {
-                "kind": "OBJECT",
-                "name": "ReplayMeta",
+                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1685,18 +2129,70 @@
           "possibleTypes": null
         },
         {
-          "kind": "SCALAR",
-          "name": "JSON",
-          "description": "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).",
+          "kind": "ENUM",
+          "name": "CarballReplayMetasOrderBy",
+          "description": "Methods to use when ordering `CarballReplayMeta`.",
           "fields": null,
           "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "NATURAL",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "REPLAY_ID_ASC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "REPLAY_ID_DESC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PRIMARY_KEY_ASC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PRIMARY_KEY_DESC",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "CarballReplayMetaCondition",
+          "description": "A condition to be used against `CarballReplayMeta` object types. All fields are tested for equality and combined with a logical ‘and.’",
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "replayId",
+              "description": "Checks for equality with the object’s `replayId` field.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
           "interfaces": null,
           "enumValues": null,
           "possibleTypes": null
         },
         {
           "kind": "OBJECT",
-          "name": "ReplayMeta",
+          "name": "CarballReplayMeta",
           "description": null,
           "fields": [
             {
@@ -1773,7 +2269,7 @@
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1786,6 +2282,110 @@
               "type": {
                 "kind": "SCALAR",
                 "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "goals",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "demos",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "primaryplayer",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "length",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "servername",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "gameserverid",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "matchguid",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "playlist",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1828,98 +2428,6 @@
               "deprecationReason": null
             },
             {
-              "name": "team0Players",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "team1Players",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "length",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "gameServerId",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "serverName",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "matchGuid",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "playlist",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "createdAt",
               "description": null,
               "args": [],
@@ -1942,79 +2450,6 @@
               },
               "isDeprecated": false,
               "deprecationReason": null
-            },
-            {
-              "name": "playerStatsByReplayIdList",
-              "description": "Reads and enables pagination through a set of `PlayerStat`.",
-              "args": [
-                {
-                  "name": "first",
-                  "description": "Only read the first `n` values of the set.",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                },
-                {
-                  "name": "offset",
-                  "description": "Skip the first `n` values.",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                },
-                {
-                  "name": "orderBy",
-                  "description": "The method to use when ordering `PlayerStat`.",
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "PlayerStatsOrderBy",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "defaultValue": null
-                },
-                {
-                  "name": "condition",
-                  "description": "A condition to be used in determining which values should be returned by the collection.",
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "PlayerStatCondition",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                }
-              ],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "PlayerStat",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
             }
           ],
           "inputFields": null,
@@ -2030,8 +2465,8 @@
         },
         {
           "kind": "SCALAR",
-          "name": "Datetime",
-          "description": "A point in time as described by the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard. May or may not include a timezone.",
+          "name": "JSON",
+          "description": "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).",
           "fields": null,
           "inputFields": null,
           "interfaces": null,
@@ -2039,63 +2474,11 @@
           "possibleTypes": null
         },
         {
-          "kind": "ENUM",
-          "name": "ReplayMetasOrderBy",
-          "description": "Methods to use when ordering `ReplayMeta`.",
+          "kind": "SCALAR",
+          "name": "Datetime",
+          "description": "A point in time as described by the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard. May or may not include a timezone.",
           "fields": null,
           "inputFields": null,
-          "interfaces": null,
-          "enumValues": [
-            {
-              "name": "NATURAL",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "REPLAY_ID_ASC",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "REPLAY_ID_DESC",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "PRIMARY_KEY_ASC",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "PRIMARY_KEY_DESC",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "possibleTypes": null
-        },
-        {
-          "kind": "INPUT_OBJECT",
-          "name": "ReplayMetaCondition",
-          "description": "A condition to be used against `ReplayMeta` object types. All fields are tested for equality and combined with a logical ‘and.’",
-          "fields": null,
-          "inputFields": [
-            {
-              "name": "replayId",
-              "description": "Checks for equality with the object’s `replayId` field.",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            }
-          ],
           "interfaces": null,
           "enumValues": null,
           "possibleTypes": null
@@ -2244,8 +2627,8 @@
               "deprecationReason": null
             },
             {
-              "name": "createPlayerStat",
-              "description": "Creates a single `PlayerStat`.",
+              "name": "createCarballPlayerStat",
+              "description": "Creates a single `CarballPlayerStat`.",
               "args": [
                 {
                   "name": "input",
@@ -2255,7 +2638,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "CreatePlayerStatInput",
+                      "name": "CreateCarballPlayerStatInput",
                       "ofType": null
                     }
                   },
@@ -2264,15 +2647,15 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "CreatePlayerStatPayload",
+                "name": "CreateCarballPlayerStatPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "createReplayMeta",
-              "description": "Creates a single `ReplayMeta`.",
+              "name": "createCarballReplayMeta",
+              "description": "Creates a single `CarballReplayMeta`.",
               "args": [
                 {
                   "name": "input",
@@ -2282,7 +2665,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "CreateReplayMetaInput",
+                      "name": "CreateCarballReplayMetaInput",
                       "ofType": null
                     }
                   },
@@ -2291,7 +2674,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "CreateReplayMetaPayload",
+                "name": "CreateCarballReplayMetaPayload",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2379,8 +2762,8 @@
               "deprecationReason": null
             },
             {
-              "name": "updatePlayerStatByNodeId",
-              "description": "Updates a single `PlayerStat` using its globally unique id and a patch.",
+              "name": "updateCarballPlayerStatByNodeId",
+              "description": "Updates a single `CarballPlayerStat` using its globally unique id and a patch.",
               "args": [
                 {
                   "name": "input",
@@ -2390,7 +2773,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "UpdatePlayerStatByNodeIdInput",
+                      "name": "UpdateCarballPlayerStatByNodeIdInput",
                       "ofType": null
                     }
                   },
@@ -2399,15 +2782,15 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "UpdatePlayerStatPayload",
+                "name": "UpdateCarballPlayerStatPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "updatePlayerStat",
-              "description": "Updates a single `PlayerStat` using a unique key and a patch.",
+              "name": "updateCarballPlayerStat",
+              "description": "Updates a single `CarballPlayerStat` using a unique key and a patch.",
               "args": [
                 {
                   "name": "input",
@@ -2417,7 +2800,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "UpdatePlayerStatInput",
+                      "name": "UpdateCarballPlayerStatInput",
                       "ofType": null
                     }
                   },
@@ -2426,15 +2809,15 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "UpdatePlayerStatPayload",
+                "name": "UpdateCarballPlayerStatPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "updateReplayMetaByNodeId",
-              "description": "Updates a single `ReplayMeta` using its globally unique id and a patch.",
+              "name": "updateCarballReplayMetaByNodeId",
+              "description": "Updates a single `CarballReplayMeta` using its globally unique id and a patch.",
               "args": [
                 {
                   "name": "input",
@@ -2444,7 +2827,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "UpdateReplayMetaByNodeIdInput",
+                      "name": "UpdateCarballReplayMetaByNodeIdInput",
                       "ofType": null
                     }
                   },
@@ -2453,15 +2836,15 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "UpdateReplayMetaPayload",
+                "name": "UpdateCarballReplayMetaPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "updateReplayMeta",
-              "description": "Updates a single `ReplayMeta` using a unique key and a patch.",
+              "name": "updateCarballReplayMeta",
+              "description": "Updates a single `CarballReplayMeta` using a unique key and a patch.",
               "args": [
                 {
                   "name": "input",
@@ -2471,7 +2854,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "UpdateReplayMetaInput",
+                      "name": "UpdateCarballReplayMetaInput",
                       "ofType": null
                     }
                   },
@@ -2480,7 +2863,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "UpdateReplayMetaPayload",
+                "name": "UpdateCarballReplayMetaPayload",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2568,8 +2951,8 @@
               "deprecationReason": null
             },
             {
-              "name": "deletePlayerStatByNodeId",
-              "description": "Deletes a single `PlayerStat` using its globally unique id.",
+              "name": "deleteCarballPlayerStatByNodeId",
+              "description": "Deletes a single `CarballPlayerStat` using its globally unique id.",
               "args": [
                 {
                   "name": "input",
@@ -2579,7 +2962,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "DeletePlayerStatByNodeIdInput",
+                      "name": "DeleteCarballPlayerStatByNodeIdInput",
                       "ofType": null
                     }
                   },
@@ -2588,15 +2971,15 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "DeletePlayerStatPayload",
+                "name": "DeleteCarballPlayerStatPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "deletePlayerStat",
-              "description": "Deletes a single `PlayerStat` using a unique key.",
+              "name": "deleteCarballPlayerStat",
+              "description": "Deletes a single `CarballPlayerStat` using a unique key.",
               "args": [
                 {
                   "name": "input",
@@ -2606,7 +2989,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "DeletePlayerStatInput",
+                      "name": "DeleteCarballPlayerStatInput",
                       "ofType": null
                     }
                   },
@@ -2615,15 +2998,15 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "DeletePlayerStatPayload",
+                "name": "DeleteCarballPlayerStatPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "deleteReplayMetaByNodeId",
-              "description": "Deletes a single `ReplayMeta` using its globally unique id.",
+              "name": "deleteCarballReplayMetaByNodeId",
+              "description": "Deletes a single `CarballReplayMeta` using its globally unique id.",
               "args": [
                 {
                   "name": "input",
@@ -2633,7 +3016,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "DeleteReplayMetaByNodeIdInput",
+                      "name": "DeleteCarballReplayMetaByNodeIdInput",
                       "ofType": null
                     }
                   },
@@ -2642,15 +3025,15 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "DeleteReplayMetaPayload",
+                "name": "DeleteCarballReplayMetaPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "deleteReplayMeta",
-              "description": "Deletes a single `ReplayMeta` using a unique key.",
+              "name": "deleteCarballReplayMeta",
+              "description": "Deletes a single `CarballReplayMeta` using a unique key.",
               "args": [
                 {
                   "name": "input",
@@ -2660,7 +3043,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "DeleteReplayMetaInput",
+                      "name": "DeleteCarballReplayMetaInput",
                       "ofType": null
                     }
                   },
@@ -2669,7 +3052,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "DeleteReplayMetaPayload",
+                "name": "DeleteCarballReplayMetaPayload",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2911,8 +3294,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "CreatePlayerStatInput",
-          "description": "All input for the create `PlayerStat` mutation.",
+          "name": "CreateCarballPlayerStatInput",
+          "description": "All input for the create `CarballPlayerStat` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -2926,14 +3309,14 @@
               "defaultValue": null
             },
             {
-              "name": "playerStat",
-              "description": "The `PlayerStat` to be created by this mutation.",
+              "name": "carballPlayerStat",
+              "description": "The `CarballPlayerStat` to be created by this mutation.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "PlayerStatInput",
+                  "name": "CarballPlayerStatInput",
                   "ofType": null
                 }
               },
@@ -2946,8 +3329,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "PlayerStatInput",
-          "description": "An input for mutations affecting `PlayerStat`",
+          "name": "CarballPlayerStatInput",
+          "description": "An input for mutations affecting `CarballPlayerStat`",
           "fields": null,
           "inputFields": [
             {
@@ -2989,11 +3372,21 @@
               "defaultValue": null
             },
             {
+              "name": "titleid",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "score",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -3003,7 +3396,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -3013,7 +3406,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -3023,7 +3416,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -3033,7 +3426,457 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsStiffness",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsHeight",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsTransitionspeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsPitch",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsSwivelspeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsFieldofview",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsDistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutBanner",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutBoost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutCar",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutGoalexplosion",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutSkin",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutTrail",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutWheels",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutVersion",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutTopper",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutAntenna",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutEngineaudio",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutGoalexplosionpaint",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutWheelspaint",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutPrimarycolor",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutAccentcolor",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutPrimaryfinish",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutAccentfinish",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutAvatarborderusercolor",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "boostusage",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "numsmallboosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "numlargeboosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedcollection",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedusage",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timefullboost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timelowboost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timenoboost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "numstolenboosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageboostlevel",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedbig",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedsmall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ballhitforward",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ballhitbackward",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeclosesttoball",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timefurthestfromball",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeclosetoball",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeclosesttoteamcenter",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timefurthestfromteamcenter",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "possessiontime",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -3049,7 +3892,7 @@
               "defaultValue": null
             },
             {
-              "name": "turnoversOnMyHalf",
+              "name": "turnoversonmyhalf",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3059,7 +3902,7 @@
               "defaultValue": null
             },
             {
-              "name": "turnoversOnTheirHalf",
+              "name": "turnoversontheirhalf",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3069,7 +3912,7 @@
               "defaultValue": null
             },
             {
-              "name": "wastedCollection",
+              "name": "wonturnovers",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3079,7 +3922,7 @@
               "defaultValue": null
             },
             {
-              "name": "wonTurnovers",
+              "name": "timeonground",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3089,7 +3932,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageSpeed",
+              "name": "timelowinair",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3099,7 +3942,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageHitDistance",
+              "name": "timehighinair",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3109,7 +3952,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageDistanceFromCenter",
+              "name": "timeindefendinghalf",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3119,7 +3962,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageBoostLevel",
+              "name": "timeinattackinghalf",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3129,7 +3972,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageBoostUsed",
+              "name": "timeindefendingthird",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3139,7 +3982,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeOnGround",
+              "name": "timeinneutralthird",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3149,7 +3992,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeOnWall",
+              "name": "timeinattackingthird",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3159,7 +4002,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeLowInAir",
+              "name": "timebehindball",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3169,7 +4012,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeHighInAir",
+              "name": "timeinfrontball",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3179,7 +4022,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInDefendingHalf",
+              "name": "timenearwall",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3189,7 +4032,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInAttackingHalf",
+              "name": "timeincorner",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3199,7 +4042,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInDefendingThird",
+              "name": "timeonwall",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3209,7 +4052,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInNeutralThird",
+              "name": "averagespeed",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3219,7 +4062,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInAttackingThird",
+              "name": "averagehitdistance",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3229,7 +4072,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeBehindBall",
+              "name": "averagedistancefromcenter",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3239,7 +4082,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInFrontBall",
+              "name": "totalhits",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3249,7 +4092,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeNearWall",
+              "name": "totalpasses",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3259,7 +4102,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInCorner",
+              "name": "totaldribbles",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3269,7 +4112,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeAtSlowSpeed",
+              "name": "totaldribbleconts",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3279,7 +4122,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeAtSuperSonic",
+              "name": "totalaerials",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3289,7 +4132,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeAtBoostSpeed",
+              "name": "totalclears",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3299,7 +4142,17 @@
               "defaultValue": null
             },
             {
-              "name": "timeInFrontOfCenterOfMass",
+              "name": "iskeyboard",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "analoguesteeringinputpercent",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3309,7 +4162,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeMostForwardPlayer",
+              "name": "analoguethrottleinputpercent",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3319,7 +4172,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeMostBackPlayer",
+              "name": "timeatslowspeed",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3329,7 +4182,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeBetweenPlayers",
+              "name": "timeatsupersonic",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3339,7 +4192,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeFullBoost",
+              "name": "timeatboostspeed",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3349,7 +4202,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeLowBoost",
+              "name": "timeinfrontofcenterofmass",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3359,7 +4212,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeNoBoost",
+              "name": "timebehindcenterofmass",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3369,7 +4222,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeClosestToBall",
+              "name": "timemostforwardplayer",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3379,7 +4232,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeCloseToBall",
+              "name": "timemostbackplayer",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3389,7 +4242,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInGame",
+              "name": "timebetweenplayers",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3399,7 +4252,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeFurthestFromBall",
+              "name": "pass",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3409,7 +4262,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeBoost",
+              "name": "shot",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3419,7 +4272,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeCheat",
+              "name": "goal",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3429,7 +4282,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeGoToBall",
+              "name": "assist",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3439,7 +4292,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeDefend",
+              "name": "assisted",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3449,57 +4302,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeAfk",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "numTimeFirstTouch",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "numSmallBoosts",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "numLargeBoosts",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "ballHitForward",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "possessionTime",
+              "name": "save",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3519,7 +4322,7 @@
               "defaultValue": null
             },
             {
-              "name": "boostUsage",
+              "name": "totalcarries",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3529,7 +4332,147 @@
               "defaultValue": null
             },
             {
-              "name": "totalHits",
+              "name": "longestcarry",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "furthestcarry",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalcarrytime",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averagecarrytime",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "fastestcarryspeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalcarrydistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averagezdistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averagexydistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageballzvelocity",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "variancexydistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "variancezdistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "varianceballzvelocity",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averagecarryspeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "distancealongpath",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalkickoffs",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3539,7 +4482,7 @@
               "defaultValue": null
             },
             {
-              "name": "totalPasses",
+              "name": "numtimeboost",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3549,7 +4492,7 @@
               "defaultValue": null
             },
             {
-              "name": "totalDribbles",
+              "name": "numtimegotoball",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3559,7 +4502,7 @@
               "defaultValue": null
             },
             {
-              "name": "totalDribbleConts",
+              "name": "numtimefirsttouch",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3569,187 +4512,17 @@
               "defaultValue": null
             },
             {
-              "name": "totalAerials",
+              "name": "averageboostused",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "BigFloat",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
             },
             {
-              "name": "totalClears",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalKickoffs",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalCarries",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalFlicks",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalCarryTime",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalCarryDistance",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "longestCarry",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "furthestCarry",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "averageCarryTime",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "fastestCarrySpeed",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "averageZDistance",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "averageBallZVelocity",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "varianceZDistance",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "varianceBallZVelocity",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "averageCarrySpeed",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "distanceAlongPath",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "firstFrameInGame",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "isBot",
+              "name": "isbot",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3759,41 +4532,31 @@
               "defaultValue": null
             },
             {
-              "name": "cameraSettings",
+              "name": "timeingame",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
             },
             {
-              "name": "controlConfig",
+              "name": "firstframeingame",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
             },
             {
-              "name": "playerItems",
+              "name": "team",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "isOrange",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Boolean",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
@@ -3805,8 +4568,8 @@
         },
         {
           "kind": "OBJECT",
-          "name": "CreatePlayerStatPayload",
-          "description": "The output of our create `PlayerStat` mutation.",
+          "name": "CreateCarballPlayerStatPayload",
+          "description": "The output of our create `CarballPlayerStat` mutation.",
           "fields": [
             {
               "name": "clientMutationId",
@@ -3821,12 +4584,12 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStat",
-              "description": "The `PlayerStat` that was created by this mutation.",
+              "name": "carballPlayerStat",
+              "description": "The `CarballPlayerStat` that was created by this mutation.",
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "PlayerStat",
+                "name": "CarballPlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -3843,18 +4606,6 @@
               },
               "isDeprecated": false,
               "deprecationReason": null
-            },
-            {
-              "name": "replay",
-              "description": "Reads a single `ReplayMeta` that is related to this `PlayerStat`.",
-              "args": [],
-              "type": {
-                "kind": "OBJECT",
-                "name": "ReplayMeta",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
             }
           ],
           "inputFields": null,
@@ -3864,8 +4615,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "CreateReplayMetaInput",
-          "description": "All input for the create `ReplayMeta` mutation.",
+          "name": "CreateCarballReplayMetaInput",
+          "description": "All input for the create `CarballReplayMeta` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -3879,14 +4630,14 @@
               "defaultValue": null
             },
             {
-              "name": "replayMeta",
-              "description": "The `ReplayMeta` to be created by this mutation.",
+              "name": "carballReplayMeta",
+              "description": "The `CarballReplayMeta` to be created by this mutation.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "ReplayMetaInput",
+                  "name": "CarballReplayMetaInput",
                   "ofType": null
                 }
               },
@@ -3899,8 +4650,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ReplayMetaInput",
-          "description": "An input for mutations affecting `ReplayMeta`",
+          "name": "CarballReplayMetaInput",
+          "description": "An input for mutations affecting `CarballReplayMeta`",
           "fields": null,
           "inputFields": [
             {
@@ -3952,7 +4703,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
@@ -3963,6 +4714,94 @@
               "type": {
                 "kind": "SCALAR",
                 "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "goals",
+              "description": null,
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "demos",
+              "description": null,
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "primaryplayer",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "length",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "servername",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "gameserverid",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "matchguid",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playlist",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
@@ -3998,84 +4837,6 @@
               "defaultValue": null
             },
             {
-              "name": "team0Players",
-              "description": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "team1Players",
-              "description": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "length",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "gameServerId",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "serverName",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "matchGuid",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "playlist",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
               "name": "createdAt",
               "description": null,
               "type": {
@@ -4102,8 +4863,8 @@
         },
         {
           "kind": "OBJECT",
-          "name": "CreateReplayMetaPayload",
-          "description": "The output of our create `ReplayMeta` mutation.",
+          "name": "CreateCarballReplayMetaPayload",
+          "description": "The output of our create `CarballReplayMeta` mutation.",
           "fields": [
             {
               "name": "clientMutationId",
@@ -4118,12 +4879,12 @@
               "deprecationReason": null
             },
             {
-              "name": "replayMeta",
-              "description": "The `ReplayMeta` that was created by this mutation.",
+              "name": "carballReplayMeta",
+              "description": "The `CarballReplayMeta` that was created by this mutation.",
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "ReplayMeta",
+                "name": "CarballReplayMeta",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -4408,8 +5169,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "UpdatePlayerStatByNodeIdInput",
-          "description": "All input for the `updatePlayerStatByNodeId` mutation.",
+          "name": "UpdateCarballPlayerStatByNodeIdInput",
+          "description": "All input for the `updateCarballPlayerStatByNodeId` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -4424,7 +5185,7 @@
             },
             {
               "name": "nodeId",
-              "description": "The globally unique `ID` which will identify a single `PlayerStat` to be updated.",
+              "description": "The globally unique `ID` which will identify a single `CarballPlayerStat` to be updated.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -4438,13 +5199,13 @@
             },
             {
               "name": "patch",
-              "description": "An object where the defined keys will be set on the `PlayerStat` being updated.",
+              "description": "An object where the defined keys will be set on the `CarballPlayerStat` being updated.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "PlayerStatPatch",
+                  "name": "CarballPlayerStatPatch",
                   "ofType": null
                 }
               },
@@ -4457,8 +5218,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "PlayerStatPatch",
-          "description": "Represents an update to a `PlayerStat`. Fields that are set will be updated.",
+          "name": "CarballPlayerStatPatch",
+          "description": "Represents an update to a `CarballPlayerStat`. Fields that are set will be updated.",
           "fields": null,
           "inputFields": [
             {
@@ -4492,11 +5253,21 @@
               "defaultValue": null
             },
             {
+              "name": "titleid",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "score",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -4506,7 +5277,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -4516,7 +5287,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -4526,7 +5297,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -4536,7 +5307,457 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsStiffness",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsHeight",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsTransitionspeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsPitch",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsSwivelspeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsFieldofview",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "camerasettingsDistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutBanner",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutBoost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutCar",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutGoalexplosion",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutSkin",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutTrail",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutWheels",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutVersion",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutTopper",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutAntenna",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutEngineaudio",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutGoalexplosionpaint",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutWheelspaint",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutPrimarycolor",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutAccentcolor",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutPrimaryfinish",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutAccentfinish",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "loadoutAvatarborderusercolor",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "boostusage",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "numsmallboosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "numlargeboosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedcollection",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedusage",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timefullboost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timelowboost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timenoboost",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "numstolenboosts",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageboostlevel",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedbig",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "wastedsmall",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ballhitforward",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ballhitbackward",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeclosesttoball",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timefurthestfromball",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeclosetoball",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timeclosesttoteamcenter",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timefurthestfromteamcenter",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "possessiontime",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
@@ -4552,7 +5773,7 @@
               "defaultValue": null
             },
             {
-              "name": "turnoversOnMyHalf",
+              "name": "turnoversonmyhalf",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4562,7 +5783,7 @@
               "defaultValue": null
             },
             {
-              "name": "turnoversOnTheirHalf",
+              "name": "turnoversontheirhalf",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4572,7 +5793,7 @@
               "defaultValue": null
             },
             {
-              "name": "wastedCollection",
+              "name": "wonturnovers",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4582,7 +5803,7 @@
               "defaultValue": null
             },
             {
-              "name": "wonTurnovers",
+              "name": "timeonground",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4592,7 +5813,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageSpeed",
+              "name": "timelowinair",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4602,7 +5823,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageHitDistance",
+              "name": "timehighinair",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4612,7 +5833,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageDistanceFromCenter",
+              "name": "timeindefendinghalf",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4622,7 +5843,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageBoostLevel",
+              "name": "timeinattackinghalf",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4632,7 +5853,7 @@
               "defaultValue": null
             },
             {
-              "name": "averageBoostUsed",
+              "name": "timeindefendingthird",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4642,7 +5863,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeOnGround",
+              "name": "timeinneutralthird",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4652,7 +5873,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeOnWall",
+              "name": "timeinattackingthird",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4662,7 +5883,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeLowInAir",
+              "name": "timebehindball",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4672,7 +5893,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeHighInAir",
+              "name": "timeinfrontball",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4682,7 +5903,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInDefendingHalf",
+              "name": "timenearwall",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4692,7 +5913,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInAttackingHalf",
+              "name": "timeincorner",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4702,7 +5923,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInDefendingThird",
+              "name": "timeonwall",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4712,7 +5933,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInNeutralThird",
+              "name": "averagespeed",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4722,7 +5943,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInAttackingThird",
+              "name": "averagehitdistance",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4732,7 +5953,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeBehindBall",
+              "name": "averagedistancefromcenter",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4742,7 +5963,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInFrontBall",
+              "name": "totalhits",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4752,7 +5973,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeNearWall",
+              "name": "totalpasses",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4762,7 +5983,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInCorner",
+              "name": "totaldribbles",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4772,7 +5993,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeAtSlowSpeed",
+              "name": "totaldribbleconts",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4782,7 +6003,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeAtSuperSonic",
+              "name": "totalaerials",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4792,7 +6013,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeAtBoostSpeed",
+              "name": "totalclears",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4802,7 +6023,17 @@
               "defaultValue": null
             },
             {
-              "name": "timeInFrontOfCenterOfMass",
+              "name": "iskeyboard",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "analoguesteeringinputpercent",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4812,7 +6043,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeMostForwardPlayer",
+              "name": "analoguethrottleinputpercent",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4822,7 +6053,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeMostBackPlayer",
+              "name": "timeatslowspeed",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4832,7 +6063,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeBetweenPlayers",
+              "name": "timeatsupersonic",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4842,7 +6073,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeFullBoost",
+              "name": "timeatboostspeed",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4852,7 +6083,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeLowBoost",
+              "name": "timeinfrontofcenterofmass",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4862,7 +6093,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeNoBoost",
+              "name": "timebehindcenterofmass",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4872,7 +6103,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeClosestToBall",
+              "name": "timemostforwardplayer",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4882,7 +6113,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeCloseToBall",
+              "name": "timemostbackplayer",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4892,7 +6123,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeInGame",
+              "name": "timebetweenplayers",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4902,7 +6133,7 @@
               "defaultValue": null
             },
             {
-              "name": "timeFurthestFromBall",
+              "name": "pass",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4912,7 +6143,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeBoost",
+              "name": "shot",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4922,7 +6153,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeCheat",
+              "name": "goal",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4932,7 +6163,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeGoToBall",
+              "name": "assist",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4942,7 +6173,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeDefend",
+              "name": "assisted",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4952,57 +6183,7 @@
               "defaultValue": null
             },
             {
-              "name": "numTimeAfk",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "numTimeFirstTouch",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "numSmallBoosts",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "numLargeBoosts",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "ballHitForward",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "possessionTime",
+              "name": "save",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -5022,7 +6203,7 @@
               "defaultValue": null
             },
             {
-              "name": "boostUsage",
+              "name": "totalcarries",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -5032,7 +6213,147 @@
               "defaultValue": null
             },
             {
-              "name": "totalHits",
+              "name": "longestcarry",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "furthestcarry",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalcarrytime",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averagecarrytime",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "fastestcarryspeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalcarrydistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averagezdistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averagexydistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averageballzvelocity",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "variancexydistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "variancezdistance",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "varianceballzvelocity",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "averagecarryspeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "distancealongpath",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "totalkickoffs",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -5042,7 +6363,7 @@
               "defaultValue": null
             },
             {
-              "name": "totalPasses",
+              "name": "numtimeboost",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -5052,7 +6373,7 @@
               "defaultValue": null
             },
             {
-              "name": "totalDribbles",
+              "name": "numtimegotoball",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -5062,7 +6383,7 @@
               "defaultValue": null
             },
             {
-              "name": "totalDribbleConts",
+              "name": "numtimefirsttouch",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -5072,187 +6393,17 @@
               "defaultValue": null
             },
             {
-              "name": "totalAerials",
+              "name": "averageboostused",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "BigFloat",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
             },
             {
-              "name": "totalClears",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalKickoffs",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalCarries",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalFlicks",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalCarryTime",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "totalCarryDistance",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "longestCarry",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "furthestCarry",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "averageCarryTime",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "fastestCarrySpeed",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "averageZDistance",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "averageBallZVelocity",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "varianceZDistance",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "varianceBallZVelocity",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "averageCarrySpeed",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "distanceAlongPath",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "firstFrameInGame",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "isBot",
+              "name": "isbot",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -5262,41 +6413,31 @@
               "defaultValue": null
             },
             {
-              "name": "cameraSettings",
+              "name": "timeingame",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
             },
             {
-              "name": "controlConfig",
+              "name": "firstframeingame",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
+                "name": "BigFloat",
                 "ofType": null
               },
               "defaultValue": null
             },
             {
-              "name": "playerItems",
+              "name": "team",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "JSON",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "isOrange",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Boolean",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
@@ -5308,8 +6449,8 @@
         },
         {
           "kind": "OBJECT",
-          "name": "UpdatePlayerStatPayload",
-          "description": "The output of our update `PlayerStat` mutation.",
+          "name": "UpdateCarballPlayerStatPayload",
+          "description": "The output of our update `CarballPlayerStat` mutation.",
           "fields": [
             {
               "name": "clientMutationId",
@@ -5324,12 +6465,12 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStat",
-              "description": "The `PlayerStat` that was updated by this mutation.",
+              "name": "carballPlayerStat",
+              "description": "The `CarballPlayerStat` that was updated by this mutation.",
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "PlayerStat",
+                "name": "CarballPlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -5346,18 +6487,6 @@
               },
               "isDeprecated": false,
               "deprecationReason": null
-            },
-            {
-              "name": "replay",
-              "description": "Reads a single `ReplayMeta` that is related to this `PlayerStat`.",
-              "args": [],
-              "type": {
-                "kind": "OBJECT",
-                "name": "ReplayMeta",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
             }
           ],
           "inputFields": null,
@@ -5367,8 +6496,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "UpdatePlayerStatInput",
-          "description": "All input for the `updatePlayerStat` mutation.",
+          "name": "UpdateCarballPlayerStatInput",
+          "description": "All input for the `updateCarballPlayerStat` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -5383,13 +6512,13 @@
             },
             {
               "name": "patch",
-              "description": "An object where the defined keys will be set on the `PlayerStat` being updated.",
+              "description": "An object where the defined keys will be set on the `CarballPlayerStat` being updated.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "PlayerStatPatch",
+                  "name": "CarballPlayerStatPatch",
                   "ofType": null
                 }
               },
@@ -5430,8 +6559,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "UpdateReplayMetaByNodeIdInput",
-          "description": "All input for the `updateReplayMetaByNodeId` mutation.",
+          "name": "UpdateCarballReplayMetaByNodeIdInput",
+          "description": "All input for the `updateCarballReplayMetaByNodeId` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -5446,7 +6575,7 @@
             },
             {
               "name": "nodeId",
-              "description": "The globally unique `ID` which will identify a single `ReplayMeta` to be updated.",
+              "description": "The globally unique `ID` which will identify a single `CarballReplayMeta` to be updated.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -5460,13 +6589,13 @@
             },
             {
               "name": "patch",
-              "description": "An object where the defined keys will be set on the `ReplayMeta` being updated.",
+              "description": "An object where the defined keys will be set on the `CarballReplayMeta` being updated.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "ReplayMetaPatch",
+                  "name": "CarballReplayMetaPatch",
                   "ofType": null
                 }
               },
@@ -5479,8 +6608,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ReplayMetaPatch",
-          "description": "Represents an update to a `ReplayMeta`. Fields that are set will be updated.",
+          "name": "CarballReplayMetaPatch",
+          "description": "Represents an update to a `CarballReplayMeta`. Fields that are set will be updated.",
           "fields": null,
           "inputFields": [
             {
@@ -5528,7 +6657,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
@@ -5539,6 +6668,94 @@
               "type": {
                 "kind": "SCALAR",
                 "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "goals",
+              "description": null,
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "demos",
+              "description": null,
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "primaryplayer",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "length",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigFloat",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "servername",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "gameserverid",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "matchguid",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "playlist",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
                 "ofType": null
               },
               "defaultValue": null
@@ -5574,84 +6791,6 @@
               "defaultValue": null
             },
             {
-              "name": "team0Players",
-              "description": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "team1Players",
-              "description": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "length",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigFloat",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "gameServerId",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "serverName",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "matchGuid",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "playlist",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
               "name": "createdAt",
               "description": null,
               "type": {
@@ -5678,8 +6817,8 @@
         },
         {
           "kind": "OBJECT",
-          "name": "UpdateReplayMetaPayload",
-          "description": "The output of our update `ReplayMeta` mutation.",
+          "name": "UpdateCarballReplayMetaPayload",
+          "description": "The output of our update `CarballReplayMeta` mutation.",
           "fields": [
             {
               "name": "clientMutationId",
@@ -5694,12 +6833,12 @@
               "deprecationReason": null
             },
             {
-              "name": "replayMeta",
-              "description": "The `ReplayMeta` that was updated by this mutation.",
+              "name": "carballReplayMeta",
+              "description": "The `CarballReplayMeta` that was updated by this mutation.",
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "ReplayMeta",
+                "name": "CarballReplayMeta",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -5725,8 +6864,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "UpdateReplayMetaInput",
-          "description": "All input for the `updateReplayMeta` mutation.",
+          "name": "UpdateCarballReplayMetaInput",
+          "description": "All input for the `updateCarballReplayMeta` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -5741,13 +6880,13 @@
             },
             {
               "name": "patch",
-              "description": "An object where the defined keys will be set on the `ReplayMeta` being updated.",
+              "description": "An object where the defined keys will be set on the `CarballReplayMeta` being updated.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "ReplayMetaPatch",
+                  "name": "CarballReplayMetaPatch",
                   "ofType": null
                 }
               },
@@ -5938,8 +7077,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "DeletePlayerStatByNodeIdInput",
-          "description": "All input for the `deletePlayerStatByNodeId` mutation.",
+          "name": "DeleteCarballPlayerStatByNodeIdInput",
+          "description": "All input for the `deleteCarballPlayerStatByNodeId` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -5954,7 +7093,7 @@
             },
             {
               "name": "nodeId",
-              "description": "The globally unique `ID` which will identify a single `PlayerStat` to be deleted.",
+              "description": "The globally unique `ID` which will identify a single `CarballPlayerStat` to be deleted.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -5973,8 +7112,8 @@
         },
         {
           "kind": "OBJECT",
-          "name": "DeletePlayerStatPayload",
-          "description": "The output of our delete `PlayerStat` mutation.",
+          "name": "DeleteCarballPlayerStatPayload",
+          "description": "The output of our delete `CarballPlayerStat` mutation.",
           "fields": [
             {
               "name": "clientMutationId",
@@ -5989,19 +7128,19 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStat",
-              "description": "The `PlayerStat` that was deleted by this mutation.",
+              "name": "carballPlayerStat",
+              "description": "The `CarballPlayerStat` that was deleted by this mutation.",
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "PlayerStat",
+                "name": "CarballPlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "deletedPlayerStatNodeId",
+              "name": "deletedCarballPlayerStatNodeId",
               "description": null,
               "args": [],
               "type": {
@@ -6023,18 +7162,6 @@
               },
               "isDeprecated": false,
               "deprecationReason": null
-            },
-            {
-              "name": "replay",
-              "description": "Reads a single `ReplayMeta` that is related to this `PlayerStat`.",
-              "args": [],
-              "type": {
-                "kind": "OBJECT",
-                "name": "ReplayMeta",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
             }
           ],
           "inputFields": null,
@@ -6044,8 +7171,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "DeletePlayerStatInput",
-          "description": "All input for the `deletePlayerStat` mutation.",
+          "name": "DeleteCarballPlayerStatInput",
+          "description": "All input for the `deleteCarballPlayerStat` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -6093,8 +7220,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "DeleteReplayMetaByNodeIdInput",
-          "description": "All input for the `deleteReplayMetaByNodeId` mutation.",
+          "name": "DeleteCarballReplayMetaByNodeIdInput",
+          "description": "All input for the `deleteCarballReplayMetaByNodeId` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -6109,7 +7236,7 @@
             },
             {
               "name": "nodeId",
-              "description": "The globally unique `ID` which will identify a single `ReplayMeta` to be deleted.",
+              "description": "The globally unique `ID` which will identify a single `CarballReplayMeta` to be deleted.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -6128,8 +7255,8 @@
         },
         {
           "kind": "OBJECT",
-          "name": "DeleteReplayMetaPayload",
-          "description": "The output of our delete `ReplayMeta` mutation.",
+          "name": "DeleteCarballReplayMetaPayload",
+          "description": "The output of our delete `CarballReplayMeta` mutation.",
           "fields": [
             {
               "name": "clientMutationId",
@@ -6144,19 +7271,19 @@
               "deprecationReason": null
             },
             {
-              "name": "replayMeta",
-              "description": "The `ReplayMeta` that was deleted by this mutation.",
+              "name": "carballReplayMeta",
+              "description": "The `CarballReplayMeta` that was deleted by this mutation.",
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "ReplayMeta",
+                "name": "CarballReplayMeta",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "deletedReplayMetaNodeId",
+              "name": "deletedCarballReplayMetaNodeId",
               "description": null,
               "args": [],
               "type": {
@@ -6187,8 +7314,8 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "DeleteReplayMetaInput",
-          "description": "All input for the `deleteReplayMeta` mutation.",
+          "name": "DeleteCarballReplayMetaInput",
+          "description": "All input for the `deleteCarballReplayMeta` mutation.",
           "fields": null,
           "inputFields": [
             {
@@ -6537,8 +7664,8 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStatsList",
-              "description": "Reads a set of `PlayerStat`. (live)",
+              "name": "carballPlayerStatsList",
+              "description": "Reads a set of `CarballPlayerStat`. (live)",
               "args": [
                 {
                   "name": "first",
@@ -6562,7 +7689,7 @@
                 },
                 {
                   "name": "orderBy",
-                  "description": "The method to use when ordering `PlayerStat`.",
+                  "description": "The method to use when ordering `CarballPlayerStat`.",
                   "type": {
                     "kind": "LIST",
                     "name": null,
@@ -6571,7 +7698,7 @@
                       "name": null,
                       "ofType": {
                         "kind": "ENUM",
-                        "name": "PlayerStatsOrderBy",
+                        "name": "CarballPlayerStatsOrderBy",
                         "ofType": null
                       }
                     }
@@ -6583,7 +7710,7 @@
                   "description": "A condition to be used in determining which values should be returned by the collection.",
                   "type": {
                     "kind": "INPUT_OBJECT",
-                    "name": "PlayerStatCondition",
+                    "name": "CarballPlayerStatCondition",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -6597,7 +7724,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "PlayerStat",
+                    "name": "CarballPlayerStat",
                     "ofType": null
                   }
                 }
@@ -6606,8 +7733,8 @@
               "deprecationReason": null
             },
             {
-              "name": "replayMetasList",
-              "description": "Reads a set of `ReplayMeta`. (live)",
+              "name": "carballReplayMetasList",
+              "description": "Reads a set of `CarballReplayMeta`. (live)",
               "args": [
                 {
                   "name": "first",
@@ -6631,7 +7758,7 @@
                 },
                 {
                   "name": "orderBy",
-                  "description": "The method to use when ordering `ReplayMeta`.",
+                  "description": "The method to use when ordering `CarballReplayMeta`.",
                   "type": {
                     "kind": "LIST",
                     "name": null,
@@ -6640,7 +7767,7 @@
                       "name": null,
                       "ofType": {
                         "kind": "ENUM",
-                        "name": "ReplayMetasOrderBy",
+                        "name": "CarballReplayMetasOrderBy",
                         "ofType": null
                       }
                     }
@@ -6652,7 +7779,7 @@
                   "description": "A condition to be used in determining which values should be returned by the collection.",
                   "type": {
                     "kind": "INPUT_OBJECT",
-                    "name": "ReplayMetaCondition",
+                    "name": "CarballReplayMetaCondition",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -6666,7 +7793,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "ReplayMeta",
+                    "name": "CarballReplayMeta",
                     "ofType": null
                   }
                 }
@@ -6729,7 +7856,7 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStat",
+              "name": "carballPlayerStat",
               "description": " (live)",
               "args": [
                 {
@@ -6763,14 +7890,14 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "PlayerStat",
+                "name": "CarballPlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "replayMeta",
+              "name": "carballReplayMeta",
               "description": " (live)",
               "args": [
                 {
@@ -6790,7 +7917,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "ReplayMeta",
+                "name": "CarballReplayMeta",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -6859,12 +7986,12 @@
               "deprecationReason": null
             },
             {
-              "name": "playerStatByNodeId",
-              "description": "Reads a single `PlayerStat` using its globally unique `ID`. (live)",
+              "name": "carballPlayerStatByNodeId",
+              "description": "Reads a single `CarballPlayerStat` using its globally unique `ID`. (live)",
               "args": [
                 {
                   "name": "nodeId",
-                  "description": "The globally unique `ID` to be used in selecting a single `PlayerStat`.",
+                  "description": "The globally unique `ID` to be used in selecting a single `CarballPlayerStat`.",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -6879,19 +8006,19 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "PlayerStat",
+                "name": "CarballPlayerStat",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "replayMetaByNodeId",
-              "description": "Reads a single `ReplayMeta` using its globally unique `ID`. (live)",
+              "name": "carballReplayMetaByNodeId",
+              "description": "Reads a single `CarballReplayMeta` using its globally unique `ID`. (live)",
               "args": [
                 {
                   "name": "nodeId",
-                  "description": "The globally unique `ID` to be used in selecting a single `ReplayMeta`.",
+                  "description": "The globally unique `ID` to be used in selecting a single `CarballReplayMeta`.",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -6906,7 +8033,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "ReplayMeta",
+                "name": "CarballReplayMeta",
                 "ofType": null
               },
               "isDeprecated": false,

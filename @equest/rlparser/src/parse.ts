@@ -3,6 +3,7 @@ import { exec } from 'child_process';
 // Choosing interface names isn't easy alright
 export interface parseRocketLeagueReplay {
   time: number;
+  stderr?: string;
 }
 
 /*
@@ -17,28 +18,23 @@ export const parseRocketLeagueReplay = async (
   outputFilePath: string
 ): Promise<parseRocketLeagueReplay> => {
   const start = Date.now();
+  return new Promise((resolve, reject) => {
+    exec(`carball -i ${filePath} --json ${outputFilePath}`, {}, async (err, stdout, stderr) => {
+      if (err) {
+        console.log('Error: ', err);
+        reject(err);
+      }
+      const end = Date.now();
+      resolve({ time: end - start, stderr });
+    });
+  });
   // return new Promise((resolve, reject) => {
-  //   exec(`carball -i ${filePath} --json ${outputFilePath}`, {}, async (err, stdout, stderr) => {
-  //     if (err) {
-  //       console.log('Error: ', err);
-  //       reject(err);
-  //     }
-  //     if (stderr) {
-  //       console.log('Stderror: ', stderr);
-  //       reject(stderr);
-  //     }
+  //   exec(`parser/rocketquest.py -i ${filePath} -o ${outputFilePath}`, {}, async (err, stdout, stderr) => {
+  //     if (err) reject(err);
+  //     if (stderr) reject(stderr);
 
   //     const end = Date.now();
   //     resolve({ time: end - start });
   //   });
   // });
-  return new Promise((resolve, reject) => {
-    exec(`parser/rocketquest.py -i ${filePath} -o ${outputFilePath}`, {}, async (err, stdout, stderr) => {
-      if (err) reject(err);
-      if (stderr) reject(stderr);
-
-      const end = Date.now();
-      resolve({ time: end - start });
-    });
-  });
 };

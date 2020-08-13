@@ -21,6 +21,21 @@ if (isDev) {
   importEnv(process.cwd() + '/secrets.env');
 }
 
+// const quickParse = async () => {
+//   const files = await fs.promises.readdir('replays');
+//   // Loop them all with the new for...of
+//   for(const file of files) {
+//     const replayJsonOutput = join(PARSER_DATA_FOLDER!, `${file}.json`);
+
+//     // Step #2
+//     console.log('Parsing replay: ', 'replays/' + file);
+//     const parserResults = await parseRocketLeagueReplay('replays/' + file, replayJsonOutput);
+//     console.log('Replay ', file, 'successfully parsed in ', parserResults.time / 1000, ' seconds.');
+   
+//   }
+// }
+// quickParse();
+
 const {
   S3_ACCESS_KEY_ID,
   S3_SECRET_ACCESS_KEY,
@@ -48,7 +63,7 @@ const s3 = new S3({
  * 5.) Split apart and normalize the data
  * 6.) Upload the data + logs into postgresql/s3
  * 6.) Compress the outputs of the files using zlib
- * 7.) Upload compressed files into S3
+//  * 7.) Upload compressed files into S3  (not until we need too)
  * 8.) Delete the files on this machine, saving up space.
  */
 const rlReplaysWorker = async (job: Job) => {
@@ -60,39 +75,40 @@ const rlReplaysWorker = async (job: Job) => {
     Bucket: S3_REPLAYS_BUCKET!,
     Key: job.data['replayPath'],
   };
-  await downloadFileFromS3(replayPath, params, s3);
+  // await downloadFileFromS3(replayPath, params, s3);
 
-  const replayJsonOutput = join(PARSER_DATA_FOLDER!, `${job.data['replay_name']}.json`);
+  // const replayJsonOutput = join(PARSER_DATA_FOLDER!, `${job.data['replay_name']}.json`);
+  const replayJsonOutput = join(PARSER_DATA_FOLDER!, `0B133C064B0D270818BCE6BC7948FEC9.replay.json`);
 
   // Step #2
   console.log('Parsing replay: ', job.data['replay_name']);
   const parserResults = await parseRocketLeagueReplay(replayPath, replayJsonOutput);
   console.log('Replay ', job.data['replay_name'], 'successfully parsed in ', parserResults.time / 1000, ' seconds.');
+  const parsedFile: ParsedReplay = require(replayJsonOutput);
+  const replay_id = parsedFile['gameMetadata']['id'];
 
-  const parsedFile: any = require(replayJsonOutput);
-  const replay_id = parsedFile['match_guid'];
-
-  // // Step #3
+  //Step #3
   const validationResults = await validateReplayJson(parsedFile);
-  if (validationResults.valid) {
+  if (validationResults) {
     console.log('Replay valid: ', job.data['replay_name'], ' ', replay_id);
   } else {
     console.log('Replay failed: ', job.data['replay_name'], ' ', replay_id, validationResults);
   }
 
-  // // Step #4
+  // Step #4
   // const isDuplicate = await isReplayDuplicate(replay_id);
   // if (isDuplicate) {
   //   throw Error('Duplicate replay');
   // }
 
-  // // Step #5
-  // Deep duplicate the object, cause the object's memory location is currently the json file
-  const replayData = Object.assign({}, parsedFile);
-  const replay_meta = extractReplayMeta(replayData);
-  const player_stats = extractPlayerStats(replayData);
-  console.log('Stats: ', player_stats.length);
+  //  Step #5
+  const replayMeta = extractReplayMeta(parsedFile);
+  const playerStats = extractPlayerStats(parsedFile);
 
+  // Step #6
+  await uploadDataToPG({ replayMeta, playerStats /*parserResults,*/ });
+
+  //
   // const results = await uploadDataToPG(parsedFile, {
   //   parserResults,
   //   validationResults,

@@ -1,74 +1,127 @@
-import { ParsedReplay, CameraSettings, PlayerItems, ControlConfig, PlayerStats } from './types';
+import { ParsedReplay, CameraSettings, PlayerStats, Player } from './types';
 import { cameraSettingsList, playerItemsList, controlConfigList } from './lists';
+import { isArray } from 'util';
 
-//https://jetrockets.pro/blog/rmvzzosmz9-rename-the-key-name-in-the-javascript-object#:~:text=How%20to%20rename%20the%20key,%3D%20targetKey%3B%20return%20clonedObj%3B%20%7D%3B
-const clone = (obj: any) => Object.assign({}, obj);
-const renameKey = (object: any, key: string, newKey: string) => {
-  const clonedObj = clone(object);
+const nestIdList = ['playerId', 'primaryPlayer', 'victimId', 'attackerId'];
 
-  const targetKey = clonedObj[key];
-
-  delete clonedObj[key];
-
-  clonedObj[newKey] = targetKey;
-
-  return clonedObj;
+const fixId = (arr: Array<{ [index: string]: any }>) => {
+  // dont even remember writing this code but
+  // this if is for arrays of objects to fix
+  if (isArray(arr)) {
+    arr.forEach((element: { [index: string]: any }) => {
+      for (let x in element) {
+        if (nestIdList.includes(x)) {
+          element[x] = element[x]['id'];
+        }
+      }
+      arr.push(element);
+    });
+  }
+  return arr;
 };
 
-/*
- * Extract exact data pertaining to table replay_meta
- */
-export const extractReplayMeta = (data: ParsedReplay): Partial<ParsedReplay> => {
-  let newData = Object.assign({}, data);
-  const omitList = ['player_stats', 'team_0_stats', 'team_1_stats'];
-  newData = renameKey(newData, 'id', 'replay_id');
-  for (let [key, value] of Object.entries(newData)) {
-    if (omitList.includes(key)) {
-      delete newData[key];
-    }
-  }
+export const extractReplayMeta = (data: any) => {
+  // Deep duplicate the object, cause the object's memory location is currently the json file
+  const replayData = Object.assign({}, data);
+  let normalizedObject: Record<string, any> = replayData['gameMetadata'];
+  Object.assign(
+    // https://stackoverflow.com/questions/33036487/one-liner-to-flatten-nested-object
+    {},
+    ...(function _flatten(o): any {
+      return [].concat(...Object.keys(o).map((k) => (typeof o[k] === 'object' ? _flatten(o[k]) : { [k]: o[k] })));
+    })(normalizedObject)
+  );
+  normalizedObject['replayId'] = normalizedObject['id'];
+  delete normalizedObject['id'];
 
-  return newData;
+  normalizedObject['team0Score'] = normalizedObject['score']['team0Score'];
+  normalizedObject['team1Score'] = normalizedObject['score']['team1Score'];
+  delete normalizedObject['score'];
+
+  normalizedObject['goals'] = fixId(normalizedObject['goals']);
+  normalizedObject['demos'] = fixId(normalizedObject['demos']);
+  normalizedObject['primaryPlayer'] = normalizedObject['primaryPlayer']['id'];
+
+  return normalizedObject;
 };
 
-// Loop through player_stats array, grab the data & insert it
-// Return an array of query results containing each insert result
-export const extractPlayerStats = (data: ParsedReplay): Array<Partial<ParsedReplay>> => {
-  let newData = Object.assign({}, data);
-  let playerData: Array<Partial<ParsedReplay>> = [];
-  for (let player of newData['player_stats']) {
-    // The replays are outputted with the uploader having their id being replaced by their tm8s
-    // And the base 'id' field is the uploaders platform_id
-    const duplicate = playerData.filter((x) => (x.id == player['id'] && x.id != data['id']));
-    if (duplicate) {
-      throw new Error('This replay contains duplicate player_ids');
-    }
+const omitList = [
+  'numStolenBoosts',
+  'wastedBig',
+  'wastedSmall',
+  'ballHitBackward',
+  'pass_',
+  'passed',
+  'dribble',
+  'dribbleContinuation',
+  'shot',
+  'goal',
+  'assist',
+  'assisted',
+  'save',
+  'aerial',
+  'averageDuration',
+  'wastedUsage',
+  'totalShots',
+  'perPossessionStats',
+];
 
-    let cameraSettings = <CameraSettings>{};
-    let controlConfig = <ControlConfig>{};
-    let playerItems = <PlayerItems>{};
-    for (let [key, value] of Object.entries(player)) {
-      if (cameraSettingsList.includes(key)) {
-        cameraSettings[key] = player[key];
-        delete player[key];
-      }
-      if (controlConfigList.includes(key)) {
-        controlConfig[key] = player[key];
-        delete player[key];
-      }
-      if (playerItemsList.includes(key)) {
-        playerItems[key] = player[key];
-        delete player[key];
-      }
-    }
-    player['replay_id'] = newData['id'];
-    player['camera_settings'] = cameraSettings;
-    player['control_config'] = controlConfig;
-    player['player_items'] = playerItems;
-    player = renameKey(player, 'id', 'platform_id');
-    console.log('test 2');
+// When flattening objects, anything on this list will have
+// its parent object name append to it in front, such as
+// 'loadout_titleid'
+const appendKeyList = ['loadout', 'cameraSettings'];
 
-    playerData.push(player);
+const flattenObject = (obj: any) => {
+  let newObj: { [index: string]: any } = {};
+
+  for (let i in obj) {
+    if (!obj.hasOwnProperty(i)) continue; // ?
+
+    if (typeof obj[i] == 'object') {
+      let flatObject = flattenObject(obj[i]);
+      if (appendKeyList.includes(i)) {
+        for (let x in flatObject) {
+          if (!flatObject.hasOwnProperty(x)) continue;
+          newObj[i + '_' + x] = flatObject[x];
+        }
+      } else {
+        for (let x in flatObject) {
+          if (!flatObject.hasOwnProperty(x)) continue;
+          newObj[x] = flatObject[x];
+        }
+      }
+    } else {
+      newObj[i] = obj[i];
+    }
   }
-  return playerData;
+  return newObj;
+};
+
+const extractPlayerStat = (player: any) => {
+  let normalizedObject = Object.assign({}, player);
+  normalizedObject = flattenObject(normalizedObject);
+  for (const [key, value] of Object.entries(normalizedObject)) {
+    if (omitList.includes(key)) delete normalizedObject[key];
+  }
+
+  if (normalizedObject['isOrange'] == 0) normalizedObject['team'] = 'blue';
+  else normalizedObject['team'] = 'orange';
+  delete normalizedObject['isOrange'];
+
+  normalizedObject['platform_id'] = normalizedObject['id'];
+  delete normalizedObject['id'];
+
+  return normalizedObject;
+};
+
+export const extractPlayerStats = (data: any): Array<{ [index: string]: any }> => {
+  // Deep duplicate the object, cause the object's memory location is currently the json file
+  const replayData: Array<any> = data['players'];
+  let normalizedArray: Array<any> = [];
+  // normalizedArray.push(extractPlayerStat(replayData[0]));
+  for (let player of replayData) {
+    normalizedArray.push(extractPlayerStat(player));
+  }
+
+  return normalizedArray;
 };

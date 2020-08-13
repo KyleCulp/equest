@@ -1,0 +1,1027 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "AverageCounts": {
+            "properties": {
+                "aerial": {
+                    "type": "number"
+                },
+                "assist": {
+                    "type": "number"
+                },
+                "assisted": {
+                    "type": "number"
+                },
+                "dribble": {
+                    "type": "number"
+                },
+                "dribbleContinuation": {
+                    "type": "number"
+                },
+                "goal": {
+                    "type": "number"
+                },
+                "pass": {
+                    "type": "number"
+                },
+                "passed": {
+                    "type": "number"
+                },
+                "save": {
+                    "type": "number"
+                },
+                "shot": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "BallCarries": {
+            "properties": {
+                "averageCarryTime": {
+                    "type": "number"
+                },
+                "carryStats": {
+                    "$ref": "#/definitions/CarryStats"
+                },
+                "fastestCarrySpeed": {
+                    "type": "number"
+                },
+                "furthestCarry": {
+                    "type": "number"
+                },
+                "longestCarry": {
+                    "type": "number"
+                },
+                "totalCarries": {
+                    "type": "number"
+                },
+                "totalCarryDistance": {
+                    "type": "number"
+                },
+                "totalCarryTime": {
+                    "type": "number"
+                },
+                "totalFlicks": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "BallCarry": {
+            "properties": {
+                "carryStats": {
+                    "$ref": "#/definitions/CarryStats"
+                },
+                "carryTime": {
+                    "type": "number"
+                },
+                "endFrameNumber": {
+                    "type": "number"
+                },
+                "hasFlick": {
+                    "type": "boolean"
+                },
+                "playerId": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "startFrameNumber": {
+                    "type": "number"
+                },
+                "straightLineDistance": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "BallData": {
+            "properties": {
+                "posX": {
+                    "type": "number"
+                },
+                "posY": {
+                    "type": "number"
+                },
+                "posZ": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "BallStats": {
+            "properties": {
+                "averages": {
+                    "$ref": "#/definitions/BallStatsAverages"
+                },
+                "positionalTendencies": {
+                    "$ref": "#/definitions/PositionalTendencies"
+                }
+            },
+            "type": "object"
+        },
+        "BallStatsAverages": {
+            "properties": {
+                "averageSpeed": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Boost": {
+            "properties": {
+                "averageBoostLevel": {
+                    "type": "number"
+                },
+                "boostUsage": {
+                    "type": "number"
+                },
+                "numLargeBoosts": {
+                    "type": "number"
+                },
+                "numSmallBoosts": {
+                    "type": "number"
+                },
+                "numStolenBoosts": {
+                    "type": "number"
+                },
+                "timeFullBoost": {
+                    "type": "number"
+                },
+                "timeLowBoost": {
+                    "type": "number"
+                },
+                "timeNoBoost": {
+                    "type": "number"
+                },
+                "wastedBig": {
+                    "type": "number"
+                },
+                "wastedCollection": {
+                    "type": "number"
+                },
+                "wastedSmall": {
+                    "type": "number"
+                },
+                "wastedUsage": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "CameraSettings": {
+            "properties": {
+                "distance": {
+                    "type": "number"
+                },
+                "fieldOfView": {
+                    "type": "number"
+                },
+                "height": {
+                    "type": "number"
+                },
+                "pitch": {
+                    "type": "number"
+                },
+                "stiffness": {
+                    "type": "number"
+                },
+                "swivelSpeed": {
+                    "type": "number"
+                },
+                "transitionSpeed": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "CarryStats": {
+            "properties": {
+                "averageBallZVelocity": {
+                    "type": "number"
+                },
+                "averageCarrySpeed": {
+                    "type": "number"
+                },
+                "averageXyDistance": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "averageZDistance": {
+                    "type": "number"
+                },
+                "distanceAlongPath": {
+                    "type": "number"
+                },
+                "varianceBallZVelocity": {
+                    "type": "number"
+                },
+                "varianceXyDistance": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "varianceZDistance": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "CenterOfMass": {
+            "properties": {
+                "averageDistanceFromCenter": {
+                    "type": "number"
+                },
+                "averageMaxDistanceFromCenter": {
+                    "type": "number"
+                },
+                "positionalTendencies": {
+                    "$ref": "#/definitions/PositionalTendencies"
+                },
+                "timeBoondocks": {
+                    "type": "number"
+                },
+                "timeClumped": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Controller": {
+            "properties": {
+                "analogueSteeringInputPercent": {
+                    "type": "number"
+                },
+                "analogueThrottleInputPercent": {
+                    "type": "number"
+                },
+                "isKeyboard": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "Demo": {
+            "properties": {
+                "attackerId": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "frameNumber": {
+                    "type": "number"
+                },
+                "isDemo": {
+                    "type": "boolean"
+                },
+                "victimId": {
+                    "$ref": "#/definitions/PlatformID"
+                }
+            },
+            "type": "object"
+        },
+        "Distance": {
+            "properties": {
+                "ballHitBackward": {
+                    "type": "number"
+                },
+                "ballHitForward": {
+                    "type": "number"
+                },
+                "timeCloseToBall": {
+                    "type": "number"
+                },
+                "timeClosestToBall": {
+                    "type": "number"
+                },
+                "timeClosestToTeamCenter": {
+                    "type": "number"
+                },
+                "timeFurthestFromBall": {
+                    "type": "number"
+                },
+                "timeFurthestFromTeamCenter": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "GameMetadata": {
+            "properties": {
+                "demos": {
+                    "items": {
+                        "$ref": "#/definitions/Demo"
+                    },
+                    "type": "array"
+                },
+                "frames": {
+                    "type": "number"
+                },
+                "gameServerId": {
+                    "type": "string"
+                },
+                "goals": {
+                    "items": {
+                        "$ref": "#/definitions/Goal"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "length": {
+                    "type": "number"
+                },
+                "map": {
+                    "type": "string"
+                },
+                "matchGuid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "playlist": {
+                    "type": "string"
+                },
+                "primaryPlayer": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "score": {
+                    "$ref": "#/definitions/Score"
+                },
+                "serverName": {
+                    "type": "string"
+                },
+                "teamSize": {
+                    "type": "number"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "GameStats": {
+            "properties": {
+                "ballCarries": {
+                    "items": {
+                        "$ref": "#/definitions/BallCarry"
+                    },
+                    "type": "array"
+                },
+                "ballStats": {
+                    "$ref": "#/definitions/BallStats"
+                },
+                "bumps": {
+                    "items": {
+                        "$ref": "#/definitions/Demo"
+                    },
+                    "type": "array"
+                },
+                "hits": {
+                    "items": {
+                        "$ref": "#/definitions/Hit"
+                    },
+                    "type": "array"
+                },
+                "kickoffStats": {
+                    "items": {
+                        "$ref": "#/definitions/KickoffStat"
+                    },
+                    "type": "array"
+                },
+                "kickoffs": {
+                    "items": {
+                        "$ref": "#/definitions/Kickoff"
+                    },
+                    "type": "array"
+                },
+                "neutralPossessionTime": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Goal": {
+            "properties": {
+                "frameNumber": {
+                    "type": "number"
+                },
+                "playerId": {
+                    "$ref": "#/definitions/PlatformID"
+                }
+            },
+            "type": "object"
+        },
+        "Hit": {
+            "properties": {
+                "aerial": {
+                    "type": "boolean"
+                },
+                "assist": {
+                    "type": "boolean"
+                },
+                "assisted": {
+                    "type": "boolean"
+                },
+                "ballData": {
+                    "$ref": "#/definitions/BallData"
+                },
+                "clear": {
+                    "type": "boolean"
+                },
+                "collisionDistance": {
+                    "type": "number"
+                },
+                "distance": {
+                    "type": "number"
+                },
+                "distanceToGoal": {
+                    "type": "number"
+                },
+                "dribble": {
+                    "type": "boolean"
+                },
+                "dribbleContinuation": {
+                    "type": "boolean"
+                },
+                "frameNumber": {
+                    "type": "number"
+                },
+                "goal": {
+                    "type": "boolean"
+                },
+                "goalNumber": {
+                    "type": "number"
+                },
+                "isKickoff": {
+                    "type": "boolean"
+                },
+                "nextHitFrameNumber": {
+                    "type": "number"
+                },
+                "pass": {
+                    "type": "boolean"
+                },
+                "passed": {
+                    "type": "boolean"
+                },
+                "playerId": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "previousHitFrameNumber": {
+                    "type": "number"
+                },
+                "save": {
+                    "type": "boolean"
+                },
+                "shot": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "HitCounts": {
+            "properties": {
+                "totalAerials": {
+                    "type": "number"
+                },
+                "totalClears": {
+                    "type": "number"
+                },
+                "totalDribbleConts": {
+                    "type": "number"
+                },
+                "totalDribbles": {
+                    "type": "number"
+                },
+                "totalHits": {
+                    "type": "number"
+                },
+                "totalPasses": {
+                    "type": "number"
+                },
+                "totalSaves": {
+                    "type": "number"
+                },
+                "totalShots": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Kickoff": {
+            "properties": {
+                "endFrameNumber": {
+                    "type": "number"
+                },
+                "startFrameNumber": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "KickoffStat": {
+            "properties": {
+                "startFrame": {
+                    "type": "number"
+                },
+                "touch": {
+                    "$ref": "#/definitions/Touch"
+                },
+                "touchFrame": {
+                    "type": "number"
+                },
+                "touchTime": {
+                    "type": "number"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "KickoffStats": {
+            "properties": {
+                "averageBoostUsed": {
+                    "type": "number"
+                },
+                "numTimeAfk": {
+                    "type": "number"
+                },
+                "numTimeBoost": {
+                    "type": "number"
+                },
+                "numTimeCheat": {
+                    "type": "number"
+                },
+                "numTimeDefend": {
+                    "type": "number"
+                },
+                "numTimeFirstTouch": {
+                    "type": "number"
+                },
+                "numTimeGoToBall": {
+                    "type": "number"
+                },
+                "totalKickoffs": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Loadout": {
+            "properties": {
+                "accentColor": {
+                    "type": "number"
+                },
+                "accentFinish": {
+                    "type": "number"
+                },
+                "antenna": {
+                    "type": "number"
+                },
+                "avatarBorderUserColor": {
+                    "type": "string"
+                },
+                "banner": {
+                    "type": "number"
+                },
+                "boost": {
+                    "type": "number"
+                },
+                "boostPaint": {
+                    "type": "number"
+                },
+                "car": {
+                    "type": "number"
+                },
+                "engineAudio": {
+                    "type": "number"
+                },
+                "goalExplosion": {
+                    "type": "number"
+                },
+                "goalExplosionPaint": {
+                    "type": "number"
+                },
+                "primaryColor": {
+                    "type": "number"
+                },
+                "primaryFinish": {
+                    "type": "number"
+                },
+                "skin": {
+                    "type": "number"
+                },
+                "topper": {
+                    "type": "number"
+                },
+                "trail": {
+                    "type": "number"
+                },
+                "trailPaint": {
+                    "type": "number"
+                },
+                "version": {
+                    "type": "number"
+                },
+                "wheels": {
+                    "type": "number"
+                },
+                "wheelsPaint": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Mutators": {
+            "properties": {
+                "ballType": {
+                    "type": "string"
+                },
+                "gameMutatorIndex": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Party": {
+            "properties": {
+                "leaderId": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "members": {
+                    "items": {
+                        "$ref": "#/definitions/PlatformID"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "PerPossessionStats": {
+            "properties": {
+                "averageCounts": {
+                    "$ref": "#/definitions/AverageCounts"
+                },
+                "averageDuration": {
+                    "type": "number"
+                },
+                "averageHits": {
+                    "type": "number"
+                },
+                "count": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "PlatformID": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Player": {
+            "properties": {
+                "assists": {
+                    "type": "number"
+                },
+                "cameraSettings": {
+                    "$ref": "#/definitions/CameraSettings"
+                },
+                "firstFrameInGame": {
+                    "type": "number"
+                },
+                "goals": {
+                    "type": "number"
+                },
+                "id": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "isBot": {
+                    "type": "boolean"
+                },
+                "isOrange": {
+                    "type": "number"
+                },
+                "loadout": {
+                    "$ref": "#/definitions/Loadout"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "partyLeader": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "saves": {
+                    "type": "number"
+                },
+                "score": {
+                    "type": "number"
+                },
+                "shots": {
+                    "type": "number"
+                },
+                "stats": {
+                    "$ref": "#/definitions/PlayerStats"
+                },
+                "timeInGame": {
+                    "type": "number"
+                },
+                "titleId": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "PlayerStats": {
+            "properties": {
+                "averages": {
+                    "$ref": "#/definitions/StatsAverages"
+                },
+                "ballCarries": {
+                    "$ref": "#/definitions/BallCarries"
+                },
+                "boost": {
+                    "$ref": "#/definitions/Boost"
+                },
+                "controller": {
+                    "$ref": "#/definitions/Controller"
+                },
+                "distance": {
+                    "$ref": "#/definitions/Distance"
+                },
+                "hitCounts": {
+                    "$ref": "#/definitions/HitCounts"
+                },
+                "kickoffStats": {
+                    "$ref": "#/definitions/KickoffStats"
+                },
+                "perPossessionStats": {
+                    "$ref": "#/definitions/PerPossessionStats"
+                },
+                "positionalTendencies": {
+                    "$ref": "#/definitions/PositionalTendencies"
+                },
+                "possession": {
+                    "$ref": "#/definitions/Possession"
+                },
+                "relativePositioning": {
+                    "$ref": "#/definitions/RelativePositioning"
+                },
+                "speed": {
+                    "$ref": "#/definitions/Speed"
+                }
+            },
+            "type": "object"
+        },
+        "PositionalTendencies": {
+            "properties": {
+                "timeBehindBall": {
+                    "type": "number"
+                },
+                "timeHighInAir": {
+                    "type": "number"
+                },
+                "timeInAttackingHalf": {
+                    "type": "number"
+                },
+                "timeInAttackingThird": {
+                    "type": "number"
+                },
+                "timeInCorner": {
+                    "type": "number"
+                },
+                "timeInDefendingHalf": {
+                    "type": "number"
+                },
+                "timeInDefendingThird": {
+                    "type": "number"
+                },
+                "timeInFrontBall": {
+                    "type": "number"
+                },
+                "timeInNeutralThird": {
+                    "type": "number"
+                },
+                "timeLowInAir": {
+                    "type": "number"
+                },
+                "timeNearWall": {
+                    "type": "number"
+                },
+                "timeOnGround": {
+                    "type": "number"
+                },
+                "timeOnWall": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Possession": {
+            "properties": {
+                "possessionTime": {
+                    "type": "number"
+                },
+                "turnovers": {
+                    "type": "number"
+                },
+                "turnoversOnMyHalf": {
+                    "type": "number"
+                },
+                "turnoversOnTheirHalf": {
+                    "type": "number"
+                },
+                "wonTurnovers": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "RelativePositioning": {
+            "properties": {
+                "timeBehindCenterOfMass": {
+                    "type": "number"
+                },
+                "timeBetweenPlayers": {
+                    "type": "number"
+                },
+                "timeInFrontOfCenterOfMass": {
+                    "type": "number"
+                },
+                "timeMostBackPlayer": {
+                    "type": "number"
+                },
+                "timeMostForwardPlayer": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Score": {
+            "properties": {
+                "team0Score": {
+                    "type": "number"
+                },
+                "team1Score": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Speed": {
+            "properties": {
+                "timeAtBoostSpeed": {
+                    "type": "number"
+                },
+                "timeAtSlowSpeed": {
+                    "type": "number"
+                },
+                "timeAtSuperSonic": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "StatsAverages": {
+            "properties": {
+                "averageDistanceFromCenter": {
+                    "type": "number"
+                },
+                "averageHitDistance": {
+                    "type": "number"
+                },
+                "averageSpeed": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Team": {
+            "properties": {
+                "isOrange": {
+                    "type": "boolean"
+                },
+                "playerIds": {
+                    "items": {
+                        "$ref": "#/definitions/PlatformID"
+                    },
+                    "type": "array"
+                },
+                "score": {
+                    "type": "number"
+                },
+                "stats": {
+                    "$ref": "#/definitions/TeamStats"
+                }
+            },
+            "type": "object"
+        },
+        "TeamStats": {
+            "properties": {
+                "centerOfMass": {
+                    "$ref": "#/definitions/CenterOfMass"
+                },
+                "hitCounts": {
+                    "$ref": "#/definitions/HitCounts"
+                },
+                "possession": {
+                    "$ref": "#/definitions/Possession"
+                }
+            },
+            "type": "object"
+        },
+        "Touch": {
+            "properties": {
+                "firstTouchPlayer": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "kickoffGoal": {
+                    "type": "number"
+                },
+                "players": {
+                    "items": {
+                        "$ref": "#/definitions/TouchPlayer"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "TouchPlayer": {
+            "properties": {
+                "ballDist": {
+                    "type": "number"
+                },
+                "boost": {
+                    "type": "number"
+                },
+                "boostTime": {
+                    "type": "number"
+                },
+                "kickoffPosition": {
+                    "type": "string"
+                },
+                "player": {
+                    "$ref": "#/definitions/PlatformID"
+                },
+                "playerPosition": {
+                    "$ref": "#/definitions/BallData"
+                },
+                "startLeft": {
+                    "type": "boolean"
+                },
+                "startPosition": {
+                    "$ref": "#/definitions/BallData"
+                },
+                "touchPosition": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "properties": {
+        "gameMetadata": {
+            "$ref": "#/definitions/GameMetadata"
+        },
+        "gameStats": {
+            "$ref": "#/definitions/GameStats"
+        },
+        "mutators": {
+            "$ref": "#/definitions/Mutators"
+        },
+        "parties": {
+            "items": {
+                "$ref": "#/definitions/Party"
+            },
+            "type": "array"
+        },
+        "players": {
+            "items": {
+                "$ref": "#/definitions/Player"
+            },
+            "type": "array"
+        },
+        "teams": {
+            "items": {
+                "$ref": "#/definitions/Team"
+            },
+            "type": "array"
+        },
+        "version": {
+            "type": "number"
+        }
+    },
+    "type": "object"
+}
+

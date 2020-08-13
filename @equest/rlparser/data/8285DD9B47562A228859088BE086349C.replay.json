@@ -1,0 +1,6258 @@
+{
+  "gameMetadata": {
+    "id": "8285DD9B47562A228859088BE086349C",
+    "name": "Scri8ms",
+    "map": "EuroStadium_Night_P",
+    "version": 8,
+    "time": "1568052693",
+    "frames": 11326,
+    "score": {
+      "team0Score": 5,
+      "team1Score": 4
+    },
+    "goals": [
+      {
+        "frameNumber": 589,
+        "playerId": {
+          "id": "76561198438115102"
+        }
+      },
+      {
+        "frameNumber": 1616,
+        "playerId": {
+          "id": "76561198098789110"
+        }
+      },
+      {
+        "frameNumber": 2767,
+        "playerId": {
+          "id": "76561198098789110"
+        }
+      },
+      {
+        "frameNumber": 4296,
+        "playerId": {
+          "id": "76561198098789110"
+        }
+      },
+      {
+        "frameNumber": 4979,
+        "playerId": {
+          "id": "76561198098789110"
+        }
+      },
+      {
+        "frameNumber": 5369,
+        "playerId": {
+          "id": "76561198419149425"
+        }
+      },
+      {
+        "frameNumber": 7968,
+        "playerId": {
+          "id": "76561198419149425"
+        }
+      },
+      {
+        "frameNumber": 10228,
+        "playerId": {
+          "id": "76561198438115102"
+        }
+      },
+      {
+        "frameNumber": 11243,
+        "playerId": {
+          "id": "76561198438115102"
+        }
+      }
+    ],
+    "demos": [
+      {
+        "frameNumber": 2435,
+        "attackerId": {
+          "id": "76561198419149425"
+        },
+        "victimId": {
+          "id": "76561198061293649"
+        }
+      },
+      {
+        "frameNumber": 2639,
+        "attackerId": {
+          "id": "76561198250691782"
+        },
+        "victimId": {
+          "id": "76561198070918114"
+        }
+      },
+      {
+        "frameNumber": 3091,
+        "attackerId": {
+          "id": "76561198419149425"
+        },
+        "victimId": {
+          "id": "76561198061293649"
+        }
+      },
+      {
+        "frameNumber": 4591,
+        "attackerId": {
+          "id": "76561198438115102"
+        },
+        "victimId": {
+          "id": "76561198061293649"
+        }
+      },
+      {
+        "frameNumber": 5833,
+        "attackerId": {
+          "id": "76561198419149425"
+        },
+        "victimId": {
+          "id": "76561198061293649"
+        }
+      },
+      {
+        "frameNumber": 8284,
+        "attackerId": {
+          "id": "76561198419149425"
+        },
+        "victimId": {
+          "id": "76561198098789110"
+        }
+      }
+    ],
+    "primaryPlayer": {
+      "id": "76561198419149425"
+    },
+    "length": 347.6441650390625,
+    "gameServerId": "494315",
+    "serverName": "USE736140",
+    "matchGuid": "23955DC011E9D36F197E359784162B4C",
+    "teamSize": 3,
+    "playlist": "CUSTOM_LOBBY"
+  },
+  "players": [
+    {
+      "id": {
+        "id": "76561198070918114"
+      },
+      "name": "Typheos",
+      "titleId": 58,
+      "score": 128,
+      "goals": 0,
+      "assists": 0,
+      "saves": 1,
+      "shots": 1,
+      "cameraSettings": {
+        "stiffness": 0.4000000059604645,
+        "height": 110.0,
+        "transitionSpeed": 1.0,
+        "pitch": -6.0,
+        "swivelSpeed": 3.9000000953674316,
+        "fieldOfView": 110.0,
+        "distance": 250.0
+      },
+      "loadout": {
+        "banner": 4423,
+        "boost": 64,
+        "car": 23,
+        "goalExplosion": 2044,
+        "skin": 0,
+        "trail": 3224,
+        "wheels": 3512,
+        "version": 24,
+        "topper": 0,
+        "antenna": 0,
+        "engineAudio": 0,
+        "trailPaint": 12,
+        "wheelsPaint": 3,
+        "primaryColor": 68,
+        "accentColor": 0,
+        "primaryFinish": 273,
+        "accentFinish": 273,
+        "avatarBorderUserColor": "-12632257"
+      },
+      "isOrange": 0,
+      "stats": {
+        "boost": {
+          "boostUsage": 2582.6277340511606,
+          "numSmallBoosts": 51,
+          "numLargeBoosts": 22,
+          "wastedCollection": 525.087646484375,
+          "wastedUsage": 379.88653564453125,
+          "timeFullBoost": 7.310040473937988,
+          "timeLowBoost": 111.37781524658203,
+          "timeNoBoost": 44.688209533691406,
+          "numStolenBoosts": 2,
+          "averageBoostLevel": 40.52419662475586,
+          "wastedBig": 511.9981689453125,
+          "wastedSmall": 13.089468955993652
+        },
+        "distance": {
+          "ballHitForward": 56146.82895565033,
+          "ballHitBackward": 1223.5399975776672,
+          "timeClosestToBall": 55.66642379760742,
+          "timeFurthestFromBall": 66.21136474609375,
+          "timeCloseToBall": 21.20610237121582,
+          "timeClosestToTeamCenter": 90.36984252929688,
+          "timeFurthestFromTeamCenter": 19.021316528320312
+        },
+        "possession": {
+          "possessionTime": 42.41190269216895,
+          "turnovers": 5,
+          "turnoversOnMyHalf": 2,
+          "turnoversOnTheirHalf": 1,
+          "wonTurnovers": 6
+        },
+        "positionalTendencies": {
+          "timeOnGround": 186.02999877929688,
+          "timeLowInAir": 131.87677001953125,
+          "timeHighInAir": 12.78097152709961,
+          "timeInDefendingHalf": 204.6432342529297,
+          "timeInAttackingHalf": 139.8676300048828,
+          "timeInDefendingThird": 148.97105407714844,
+          "timeInNeutralThird": 115.99002838134766,
+          "timeInAttackingThird": 79.54977416992188,
+          "timeBehindBall": 240.60781860351562,
+          "timeInFrontBall": 103.90304565429688,
+          "timeNearWall": 89.61731719970703,
+          "timeInCorner": 2.9522786140441895,
+          "timeOnWall": 89.61731719970703
+        },
+        "averages": {
+          "averageSpeed": 16386.087890625,
+          "averageHitDistance": 2989.521240234375,
+          "averageDistanceFromCenter": 2175.67236328125
+        },
+        "hitCounts": {
+          "totalHits": 25,
+          "totalPasses": 5,
+          "totalSaves": 2,
+          "totalShots": 1,
+          "totalDribbles": 5,
+          "totalDribbleConts": 5,
+          "totalAerials": 6,
+          "totalClears": 5
+        },
+        "controller": {
+          "isKeyboard": false,
+          "analogueSteeringInputPercent": 13.402381896972656,
+          "analogueThrottleInputPercent": 25.396167755126953
+        },
+        "speed": {
+          "timeAtSlowSpeed": 18.289634704589844,
+          "timeAtSuperSonic": 48.20640182495117,
+          "timeAtBoostSpeed": 227.01954650878906
+        },
+        "relativePositioning": {
+          "timeInFrontOfCenterOfMass": 149.98309326171875,
+          "timeBehindCenterOfMass": 194.52777099609375,
+          "timeMostForwardPlayer": 107.64204406738281,
+          "timeMostBackPlayer": 120.38951110839844,
+          "timeBetweenPlayers": 116.47930908203125
+        },
+        "perPossessionStats": {
+          "averageCounts": {
+            "pass": 0.0,
+            "passed": 0.25,
+            "dribble": 1.0,
+            "dribbleContinuation": 1.0,
+            "shot": 0.0,
+            "goal": 0.0,
+            "assist": 0.0,
+            "assisted": 0.0,
+            "save": 0.0,
+            "aerial": 0.5
+          },
+          "averageDuration": 4.020915985107422,
+          "averageHits": 2.25,
+          "count": 4
+        },
+        "kickoffStats": {
+          "totalKickoffs": 10,
+          "numTimeBoost": 7,
+          "numTimeGoToBall": 3,
+          "numTimeFirstTouch": 2,
+          "averageBoostUsed": 155.78060913085938
+        }
+      },
+      "partyLeader": {
+        "id": "76561198419149425"
+      },
+      "isBot": false,
+      "timeInGame": 344.5108642578125,
+      "firstFrameInGame": 1
+    },
+    {
+      "id": {
+        "id": "76561198438115102"
+      },
+      "name": "Arvo",
+      "titleId": 59,
+      "score": 634,
+      "goals": 3,
+      "assists": 2,
+      "saves": 0,
+      "shots": 4,
+      "cameraSettings": {
+        "stiffness": 0.4000000059604645,
+        "height": 150.0,
+        "transitionSpeed": 1.0,
+        "pitch": -3.0,
+        "swivelSpeed": 3.0,
+        "fieldOfView": 110.0,
+        "distance": 290.0
+      },
+      "loadout": {
+        "banner": 2508,
+        "boost": 1452,
+        "car": 23,
+        "goalExplosion": 1903,
+        "skin": 3570,
+        "trail": 1948,
+        "wheels": 2472,
+        "version": 24,
+        "topper": 4231,
+        "antenna": 0,
+        "engineAudio": 0,
+        "primaryColor": 37,
+        "accentColor": 15,
+        "primaryFinish": 270,
+        "accentFinish": 270,
+        "avatarBorderUserColor": "880639"
+      },
+      "isOrange": 0,
+      "stats": {
+        "boost": {
+          "boostUsage": 1976.1220590238395,
+          "numSmallBoosts": 69,
+          "numLargeBoosts": 14,
+          "wastedCollection": 257.9308166503906,
+          "wastedUsage": 197.89590454101562,
+          "timeFullBoost": 22.394765853881836,
+          "timeLowBoost": 88.77217864990234,
+          "timeNoBoost": 28.371299743652344,
+          "numStolenBoosts": 1,
+          "averageBoostLevel": 50.04368209838867,
+          "wastedBig": 241.36831665039062,
+          "wastedSmall": 16.5625
+        },
+        "distance": {
+          "ballHitForward": 30902.449836730957,
+          "ballHitBackward": 14544.780151367188,
+          "timeClosestToBall": 45.696556091308594,
+          "timeFurthestFromBall": 77.01527404785156,
+          "timeCloseToBall": 18.397480010986328,
+          "timeClosestToTeamCenter": 76.70064544677734,
+          "timeFurthestFromTeamCenter": 31.217954635620117
+        },
+        "possession": {
+          "possessionTime": 59.351485799998045,
+          "turnovers": 7,
+          "turnoversOnMyHalf": 1,
+          "turnoversOnTheirHalf": 3,
+          "wonTurnovers": 10
+        },
+        "positionalTendencies": {
+          "timeOnGround": 222.8406524658203,
+          "timeLowInAir": 95.59589385986328,
+          "timeHighInAir": 11.628866195678711,
+          "timeInDefendingHalf": 209.06503295898438,
+          "timeInAttackingHalf": 138.50636291503906,
+          "timeInDefendingThird": 144.7285919189453,
+          "timeInNeutralThird": 130.0116729736328,
+          "timeInAttackingThird": 72.83113098144531,
+          "timeBehindBall": 245.26194763183594,
+          "timeInFrontBall": 102.3094482421875,
+          "timeNearWall": 60.271305084228516,
+          "timeInCorner": 5.3289594650268555,
+          "timeOnWall": 60.271305084228516
+        },
+        "averages": {
+          "averageSpeed": 14054.45703125,
+          "averageHitDistance": 2823.627685546875,
+          "averageDistanceFromCenter": 2303.683349609375
+        },
+        "hitCounts": {
+          "totalHits": 28,
+          "totalGoals": 1,
+          "totalPasses": 8,
+          "totalSaves": 1,
+          "totalShots": 1,
+          "totalDribbles": 5,
+          "totalDribbleConts": 5,
+          "totalAerials": 8,
+          "totalClears": 1
+        },
+        "controller": {
+          "isKeyboard": false,
+          "analogueSteeringInputPercent": 55.256343841552734,
+          "analogueThrottleInputPercent": 25.51009750366211
+        },
+        "speed": {
+          "timeAtSlowSpeed": 31.400297164916992,
+          "timeAtSuperSonic": 22.56894874572754,
+          "timeAtBoostSpeed": 164.75070190429688
+        },
+        "relativePositioning": {
+          "timeInFrontOfCenterOfMass": 157.8708953857422,
+          "timeBehindCenterOfMass": 189.70050048828125,
+          "timeMostForwardPlayer": 114.0346450805664,
+          "timeMostBackPlayer": 130.65122985839844,
+          "timeBetweenPlayers": 102.88553619384766
+        },
+        "perPossessionStats": {
+          "averageCounts": {
+            "pass": 0.0,
+            "passed": 0.3333333432674408,
+            "dribble": 1.6666666269302368,
+            "dribbleContinuation": 1.6666666269302368,
+            "shot": 0.0,
+            "goal": 0.0,
+            "assist": 0.0,
+            "assisted": 0.0,
+            "save": 0.0,
+            "aerial": 0.6666666865348816
+          },
+          "averageDuration": 5.7728400230407715,
+          "averageHits": 3.3333332538604736,
+          "count": 3
+        },
+        "kickoffStats": {
+          "totalKickoffs": 10,
+          "numTimeBoost": 3,
+          "numTimeCheat": 4,
+          "numTimeGoToBall": 3,
+          "numTimeFirstTouch": 1,
+          "averageBoostUsed": 62.080604553222656
+        }
+      },
+      "partyLeader": {
+        "id": "76561198419149425"
+      },
+      "isBot": false,
+      "timeInGame": 347.5714111328125,
+      "firstFrameInGame": 1
+    },
+    {
+      "id": {
+        "id": "76561198098789110"
+      },
+      "name": "Harps",
+      "titleId": 60,
+      "score": 762,
+      "goals": 4,
+      "assists": 0,
+      "saves": 2,
+      "shots": 5,
+      "cameraSettings": {
+        "stiffness": 0.4000000059604645,
+        "height": 100.0,
+        "transitionSpeed": 1.0,
+        "pitch": -5.0,
+        "swivelSpeed": 7.0,
+        "fieldOfView": 110.0,
+        "distance": 260.0
+      },
+      "loadout": {
+        "banner": 3167,
+        "boost": 63,
+        "car": 403,
+        "goalExplosion": 3975,
+        "skin": 4226,
+        "trail": 3224,
+        "wheels": 359,
+        "version": 24,
+        "topper": 0,
+        "antenna": 0,
+        "engineAudio": 0,
+        "boostPaint": 3,
+        "goalExplosionPaint": 3,
+        "trailPaint": 12,
+        "wheelsPaint": 3,
+        "primaryColor": 37,
+        "accentColor": 90,
+        "primaryFinish": 270,
+        "accentFinish": 270,
+        "avatarBorderUserColor": "-12632257"
+      },
+      "isOrange": 1,
+      "stats": {
+        "boost": {
+          "boostUsage": 2673.3812129927346,
+          "numSmallBoosts": 68,
+          "numLargeBoosts": 25,
+          "wastedCollection": 569.7000122070312,
+          "wastedUsage": 193.36740112304688,
+          "timeFullBoost": 18.22222137451172,
+          "timeLowBoost": 109.71001434326172,
+          "timeNoBoost": 31.017719268798828,
+          "numStolenBoosts": 6,
+          "averageBoostLevel": 44.629634857177734,
+          "wastedBig": 556.1062622070312,
+          "wastedSmall": 13.59375
+        },
+        "distance": {
+          "ballHitForward": 49193.54996109009,
+          "ballHitBackward": 13.110000610351562,
+          "timeClosestToBall": 63.88141632080078,
+          "timeFurthestFromBall": 28.010488510131836,
+          "timeCloseToBall": 26.491849899291992,
+          "timeClosestToTeamCenter": 98.05408477783203,
+          "timeFurthestFromTeamCenter": 9.649004936218262
+        },
+        "possession": {
+          "possessionTime": 43.721751406788826,
+          "turnovers": 8,
+          "turnoversOnMyHalf": 3,
+          "turnoversOnTheirHalf": 3,
+          "wonTurnovers": 6
+        },
+        "positionalTendencies": {
+          "timeOnGround": 210.46554565429688,
+          "timeLowInAir": 111.570068359375,
+          "timeHighInAir": 12.531620979309082,
+          "timeInDefendingHalf": 217.81407165527344,
+          "timeInAttackingHalf": 126.69708251953125,
+          "timeInDefendingThird": 152.36056518554688,
+          "timeInNeutralThird": 116.36910247802734,
+          "timeInAttackingThird": 75.78147888183594,
+          "timeBehindBall": 249.5540313720703,
+          "timeInFrontBall": 94.95711517333984,
+          "timeNearWall": 59.96050262451172,
+          "timeInCorner": 4.93248987197876,
+          "timeOnWall": 59.96050262451172
+        },
+        "averages": {
+          "averageSpeed": 15138.7900390625,
+          "averageHitDistance": 2327.7060546875,
+          "averageDistanceFromCenter": 1944.08837890625
+        },
+        "hitCounts": {
+          "totalHits": 32,
+          "totalPasses": 3,
+          "totalSaves": 2,
+          "totalShots": 1,
+          "totalDribbles": 8,
+          "totalDribbleConts": 9,
+          "totalAerials": 17,
+          "totalClears": 3
+        },
+        "controller": {
+          "isKeyboard": false,
+          "analogueSteeringInputPercent": 51.21698760986328,
+          "analogueThrottleInputPercent": 58.4463996887207
+        },
+        "speed": {
+          "timeAtSlowSpeed": 22.802658081054688,
+          "timeAtSuperSonic": 35.07154846191406,
+          "timeAtBoostSpeed": 189.6521453857422
+        },
+        "relativePositioning": {
+          "timeInFrontOfCenterOfMass": 188.9900665283203,
+          "timeBehindCenterOfMass": 155.5210723876953,
+          "timeMostForwardPlayer": 116.15979766845703,
+          "timeMostBackPlayer": 99.60840606689453,
+          "timeBetweenPlayers": 128.74293518066406
+        },
+        "perPossessionStats": {
+          "averageCounts": {
+            "pass": 0.2857142984867096,
+            "passed": 0.2857142984867096,
+            "dribble": 1.1428571939468384,
+            "dribbleContinuation": 1.1428571939468384,
+            "shot": 0.1428571492433548,
+            "goal": 0.1428571492433548,
+            "assist": 0.0,
+            "assisted": 0.0,
+            "save": 0.1428571492433548,
+            "aerial": 1.4285714626312256
+          },
+          "averageDuration": 2.3337435722351074,
+          "averageHits": 2.2857143878936768,
+          "count": 7
+        },
+        "kickoffStats": {
+          "totalKickoffs": 10,
+          "numTimeBoost": 2,
+          "numTimeCheat": 5,
+          "numTimeGoToBall": 3,
+          "numTimeFirstTouch": 2,
+          "averageBoostUsed": 77.39938354492188
+        }
+      },
+      "isBot": false,
+      "timeInGame": 344.5111389160156,
+      "firstFrameInGame": 1
+    },
+    {
+      "id": {
+        "id": "76561198061293649"
+      },
+      "name": "Swank",
+      "titleId": 61,
+      "score": 168,
+      "goals": 0,
+      "assists": 1,
+      "saves": 0,
+      "shots": 3,
+      "cameraSettings": {
+        "stiffness": 0.4000000059604645,
+        "height": 110.0,
+        "transitionSpeed": 1.600000023841858,
+        "pitch": -5.0,
+        "swivelSpeed": 5.0,
+        "fieldOfView": 110.0,
+        "distance": 270.0
+      },
+      "loadout": {
+        "banner": 4240,
+        "boost": 63,
+        "car": 23,
+        "goalExplosion": 3951,
+        "skin": 4227,
+        "trail": 1948,
+        "wheels": 386,
+        "version": 24,
+        "topper": 0,
+        "antenna": 0,
+        "engineAudio": 0,
+        "bannerPaint": 1,
+        "primaryColor": 37,
+        "accentColor": 90,
+        "primaryFinish": 270,
+        "accentFinish": 270,
+        "avatarBorderUserColor": "-12632257"
+      },
+      "isOrange": 1,
+      "stats": {
+        "boost": {
+          "boostUsage": 2578.9632955332427,
+          "numSmallBoosts": 80,
+          "numLargeBoosts": 21,
+          "wastedCollection": 463.1699523925781,
+          "wastedUsage": 384.43670654296875,
+          "timeFullBoost": 23.150102615356445,
+          "timeLowBoost": 90.4501724243164,
+          "timeNoBoost": 35.787086486816406,
+          "numStolenBoosts": 1,
+          "averageBoostLevel": 47.65811538696289,
+          "wastedBig": 422.7793273925781,
+          "wastedSmall": 40.390625
+        },
+        "distance": {
+          "ballHitForward": 51010.14909362793,
+          "ballHitBackward": 3914.010883331299,
+          "timeClosestToBall": 60.59627151489258,
+          "timeFurthestFromBall": 50.096900939941406,
+          "timeCloseToBall": 25.16635513305664,
+          "timeClosestToTeamCenter": 69.12694549560547,
+          "timeFurthestFromTeamCenter": 23.59726905822754
+        },
+        "possession": {
+          "possessionTime": 66.64724598824978,
+          "turnovers": 7,
+          "turnoversOnMyHalf": 3,
+          "turnoversOnTheirHalf": 2,
+          "wonTurnovers": 10
+        },
+        "positionalTendencies": {
+          "timeOnGround": 179.73117065429688,
+          "timeLowInAir": 120.56712341308594,
+          "timeHighInAir": 11.628946304321289,
+          "timeInDefendingHalf": 226.3660125732422,
+          "timeInAttackingHalf": 109.0361328125,
+          "timeInDefendingThird": 166.567626953125,
+          "timeInNeutralThird": 100.42644500732422,
+          "timeInAttackingThird": 68.40806579589844,
+          "timeBehindBall": 243.5050811767578,
+          "timeInFrontBall": 91.89705657958984,
+          "timeNearWall": 91.92098236083984,
+          "timeInCorner": 2.0522236824035645,
+          "timeOnWall": 91.92098236083984
+        },
+        "averages": {
+          "averageSpeed": 14938.7275390625,
+          "averageHitDistance": 2531.42529296875,
+          "averageDistanceFromCenter": 2195.43310546875
+        },
+        "hitCounts": {
+          "totalHits": 33,
+          "totalPasses": 10,
+          "totalShots": 3,
+          "totalDribbles": 6,
+          "totalDribbleConts": 6,
+          "totalAerials": 11,
+          "totalClears": 4
+        },
+        "controller": {
+          "isKeyboard": false,
+          "analogueSteeringInputPercent": 69.52873992919922,
+          "analogueThrottleInputPercent": 55.90885543823242
+        },
+        "speed": {
+          "timeAtSlowSpeed": 37.9173583984375,
+          "timeAtSuperSonic": 47.678466796875,
+          "timeAtBoostSpeed": 191.64138793945312
+        },
+        "relativePositioning": {
+          "timeInFrontOfCenterOfMass": 167.11570739746094,
+          "timeBehindCenterOfMass": 168.2864227294922,
+          "timeMostForwardPlayer": 116.52613830566406,
+          "timeMostBackPlayer": 132.45614624023438,
+          "timeBetweenPlayers": 86.41984558105469
+        },
+        "perPossessionStats": {
+          "averageCounts": {
+            "pass": 0.6000000238418579,
+            "passed": 0.20000000298023224,
+            "dribble": 1.2000000476837158,
+            "dribbleContinuation": 1.2000000476837158,
+            "shot": 0.20000000298023224,
+            "goal": 0.0,
+            "assist": 0.0,
+            "assisted": 0.0,
+            "save": 0.0,
+            "aerial": 1.2000000476837158
+          },
+          "averageDuration": 5.563940525054932,
+          "averageHits": 3.0,
+          "count": 5
+        },
+        "kickoffStats": {
+          "totalKickoffs": 10,
+          "numTimeBoost": 1,
+          "numTimeCheat": 5,
+          "numTimeGoToBall": 4,
+          "numTimeFirstTouch": 3,
+          "averageBoostUsed": 63.090301513671875
+        }
+      },
+      "partyLeader": {
+        "id": "76561198061293649"
+      },
+      "isBot": false,
+      "timeInGame": 335.4021301269531,
+      "firstFrameInGame": 1
+    },
+    {
+      "id": {
+        "id": "76561198250691782"
+      },
+      "name": "powerful.",
+      "titleId": 62,
+      "score": 264,
+      "goals": 0,
+      "assists": 2,
+      "saves": 0,
+      "shots": 1,
+      "cameraSettings": {
+        "stiffness": 1.0,
+        "height": 100.0,
+        "transitionSpeed": 1.2000000476837158,
+        "pitch": -3.0,
+        "swivelSpeed": 2.5,
+        "fieldOfView": 110.0,
+        "distance": 280.0
+      },
+      "loadout": {
+        "banner": 4423,
+        "boost": 63,
+        "car": 23,
+        "goalExplosion": 4218,
+        "skin": 3852,
+        "trail": 3577,
+        "wheels": 386,
+        "version": 24,
+        "topper": 0,
+        "antenna": 0,
+        "engineAudio": 0,
+        "boostPaint": 12,
+        "trailPaint": 12,
+        "primaryColor": 37,
+        "accentColor": 0,
+        "primaryFinish": 270,
+        "accentFinish": 270,
+        "avatarBorderUserColor": "-1"
+      },
+      "isOrange": 1,
+      "stats": {
+        "boost": {
+          "boostUsage": 2732.0458543167456,
+          "numSmallBoosts": 47,
+          "numLargeBoosts": 24,
+          "wastedCollection": 292.2190246582031,
+          "wastedUsage": 295.76702880859375,
+          "timeFullBoost": 29.350656509399414,
+          "timeLowBoost": 122.5210189819336,
+          "timeNoBoost": 49.06531524658203,
+          "numStolenBoosts": 4,
+          "averageBoostLevel": 46.584197998046875,
+          "wastedBig": 286.2815246582031,
+          "wastedSmall": 5.9375
+        },
+        "distance": {
+          "ballHitForward": 42114.500091552734,
+          "ballHitBackward": 8507.009736537933,
+          "timeClosestToBall": 57.383975982666016,
+          "timeFurthestFromBall": 64.70811462402344,
+          "timeCloseToBall": 23.34268569946289,
+          "timeClosestToTeamCenter": 83.28410339355469,
+          "timeFurthestFromTeamCenter": 14.801371574401855
+        },
+        "possession": {
+          "possessionTime": 49.44458228722215,
+          "turnovers": 6,
+          "turnoversOnMyHalf": 2,
+          "turnoversOnTheirHalf": 2,
+          "wonTurnovers": 7
+        },
+        "positionalTendencies": {
+          "timeOnGround": 178.34185791015625,
+          "timeLowInAir": 138.55435180664062,
+          "timeHighInAir": 13.249141693115234,
+          "timeInDefendingHalf": 221.81704711914062,
+          "timeInAttackingHalf": 125.75434875488281,
+          "timeInDefendingThird": 166.91342163085938,
+          "timeInNeutralThird": 107.57637023925781,
+          "timeInAttackingThird": 73.08160400390625,
+          "timeBehindBall": 246.98138427734375,
+          "timeInFrontBall": 100.59001159667969,
+          "timeNearWall": 81.37945556640625,
+          "timeInCorner": 4.500317573547363,
+          "timeOnWall": 81.37945556640625
+        },
+        "averages": {
+          "averageSpeed": 14647.3125,
+          "averageHitDistance": 2790.171142578125,
+          "averageDistanceFromCenter": 2063.403564453125
+        },
+        "hitCounts": {
+          "totalHits": 25,
+          "totalPasses": 8,
+          "totalDribbles": 4,
+          "totalDribbleConts": 4,
+          "totalAerials": 10,
+          "totalClears": 4
+        },
+        "controller": {
+          "isKeyboard": false,
+          "analogueSteeringInputPercent": 61.24287796020508,
+          "analogueThrottleInputPercent": 40.43500900268555
+        },
+        "speed": {
+          "timeAtSlowSpeed": 40.528038024902344,
+          "timeAtSuperSonic": 48.192535400390625,
+          "timeAtBoostSpeed": 191.0687713623047
+        },
+        "relativePositioning": {
+          "timeInFrontOfCenterOfMass": 152.44944763183594,
+          "timeBehindCenterOfMass": 195.1219482421875,
+          "timeMostForwardPlayer": 114.88545989990234,
+          "timeMostBackPlayer": 115.50684356689453,
+          "timeBetweenPlayers": 117.17910766601562
+        },
+        "perPossessionStats": {
+          "averageCounts": {
+            "pass": 0.0,
+            "passed": 0.25,
+            "dribble": 1.0,
+            "dribbleContinuation": 1.0,
+            "shot": 0.0,
+            "goal": 0.0,
+            "assist": 0.0,
+            "assisted": 0.0,
+            "save": 0.0,
+            "aerial": 0.75
+          },
+          "averageDuration": 3.7510147094726562,
+          "averageHits": 2.0,
+          "count": 4
+        },
+        "kickoffStats": {
+          "totalKickoffs": 10,
+          "numTimeBoost": 7,
+          "numTimeGoToBall": 3,
+          "numTimeFirstTouch": 1,
+          "averageBoostUsed": 82.69999694824219
+        }
+      },
+      "partyLeader": {
+        "id": "76561198061293649"
+      },
+      "isBot": false,
+      "timeInGame": 347.5714111328125,
+      "firstFrameInGame": 1
+    },
+    {
+      "id": {
+        "id": "76561198419149425"
+      },
+      "name": "Fitzy \u30c3 | LFScrims",
+      "titleId": 56,
+      "score": 544,
+      "goals": 2,
+      "assists": 2,
+      "saves": 0,
+      "shots": 3,
+      "cameraSettings": {
+        "stiffness": 0.44999998807907104,
+        "height": 100.0,
+        "transitionSpeed": 1.2999999523162842,
+        "pitch": -4.0,
+        "swivelSpeed": 7.199999809265137,
+        "fieldOfView": 110.0,
+        "distance": 270.0
+      },
+      "loadout": {
+        "banner": 2734,
+        "boost": 32,
+        "car": 23,
+        "goalExplosion": 3951,
+        "skin": 3994,
+        "trail": 1948,
+        "wheels": 363,
+        "version": 24,
+        "topper": 0,
+        "antenna": 0,
+        "engineAudio": 0,
+        "wheelsPaint": 3,
+        "primaryColor": 35,
+        "accentColor": 0,
+        "primaryFinish": 270,
+        "accentFinish": 270,
+        "avatarBorderUserColor": "-256"
+      },
+      "isOrange": 0,
+      "stats": {
+        "boost": {
+          "boostUsage": 2570.7931589431814,
+          "numSmallBoosts": 85,
+          "numLargeBoosts": 17,
+          "wastedCollection": 316.7989196777344,
+          "wastedUsage": 260.98101806640625,
+          "timeFullBoost": 25.67462730407715,
+          "timeLowBoost": 133.11598205566406,
+          "timeNoBoost": 52.64762878417969,
+          "numStolenBoosts": 4,
+          "averageBoostLevel": 43.09337615966797,
+          "wastedBig": 289.6895446777344,
+          "wastedSmall": 27.109375
+        },
+        "distance": {
+          "ballHitForward": 61813.94962692261,
+          "ballHitBackward": 3350.960117340088,
+          "timeClosestToBall": 64.34675598144531,
+          "timeFurthestFromBall": 61.529266357421875,
+          "timeCloseToBall": 20.449613571166992,
+          "timeClosestToTeamCenter": 74.01171875,
+          "timeFurthestFromTeamCenter": 17.353437423706055
+        },
+        "possession": {
+          "possessionTime": 54.90815831720829,
+          "turnovers": 11,
+          "turnoversOnMyHalf": 5,
+          "turnoversOnTheirHalf": 4,
+          "wonTurnovers": 5
+        },
+        "positionalTendencies": {
+          "timeOnGround": 216.92738342285156,
+          "timeLowInAir": 98.74404907226562,
+          "timeHighInAir": 14.474623680114746,
+          "timeInDefendingHalf": 205.0080108642578,
+          "timeInAttackingHalf": 142.56338500976562,
+          "timeInDefendingThird": 142.2826385498047,
+          "timeInNeutralThird": 130.84893798828125,
+          "timeInAttackingThird": 74.43983459472656,
+          "timeBehindBall": 242.66226196289062,
+          "timeInFrontBall": 104.90913391113281,
+          "timeNearWall": 70.46156311035156,
+          "timeInCorner": 3.20422101020813,
+          "timeOnWall": 70.46156311035156
+        },
+        "averages": {
+          "averageSpeed": 15434.60546875,
+          "averageHitDistance": 2744.58056640625,
+          "averageDistanceFromCenter": 2157.41650390625
+        },
+        "hitCounts": {
+          "totalHits": 31,
+          "totalGoals": 1,
+          "totalPasses": 4,
+          "totalShots": 2,
+          "totalDribbles": 6,
+          "totalDribbleConts": 5,
+          "totalAerials": 10,
+          "totalClears": 3
+        },
+        "controller": {
+          "isKeyboard": false,
+          "analogueSteeringInputPercent": 13.537027359008789,
+          "analogueThrottleInputPercent": 59.647850036621094
+        },
+        "speed": {
+          "timeAtSlowSpeed": 31.15589141845703,
+          "timeAtSuperSonic": 52.86348342895508,
+          "timeAtBoostSpeed": 207.19485473632812
+        },
+        "relativePositioning": {
+          "timeInFrontOfCenterOfMass": 178.4643096923828,
+          "timeBehindCenterOfMass": 169.10708618164062,
+          "timeMostForwardPlayer": 125.89471435546875,
+          "timeMostBackPlayer": 96.53064727783203,
+          "timeBetweenPlayers": 125.14604949951172
+        },
+        "perPossessionStats": {
+          "averageCounts": {
+            "pass": 0.0,
+            "passed": 0.6666666865348816,
+            "dribble": 1.0,
+            "dribbleContinuation": 1.0,
+            "shot": 0.3333333432674408,
+            "goal": 0.1666666716337204,
+            "assist": 0.0,
+            "assisted": 0.1666666716337204,
+            "save": 0.0,
+            "aerial": 0.8333333134651184
+          },
+          "averageDuration": 3.6722412109375,
+          "averageHits": 2.1666667461395264,
+          "count": 6
+        },
+        "kickoffStats": {
+          "totalKickoffs": 10,
+          "numTimeBoost": 1,
+          "numTimeCheat": 5,
+          "numTimeGoToBall": 4,
+          "numTimeFirstTouch": 1,
+          "averageBoostUsed": 55.14484786987305
+        }
+      },
+      "partyLeader": {
+        "id": "76561198419149425"
+      },
+      "isBot": false,
+      "timeInGame": 347.5714111328125,
+      "firstFrameInGame": 1
+    }
+  ],
+  "teams": [
+    {
+      "playerIds": [
+        {
+          "id": "76561198098789110"
+        },
+        {
+          "id": "76561198061293649"
+        },
+        {
+          "id": "76561198250691782"
+        }
+      ],
+      "score": 4,
+      "isOrange": true,
+      "stats": {
+        "possession": {
+          "possessionTime": 165.40826262906194,
+          "turnovers": 23,
+          "turnoversOnMyHalf": 8,
+          "turnoversOnTheirHalf": 8,
+          "wonTurnovers": 21
+        },
+        "hitCounts": {
+          "totalHits": 84,
+          "totalGoals": 2,
+          "totalPasses": 17,
+          "totalSaves": 3,
+          "totalShots": 4,
+          "totalDribbles": 16,
+          "totalDribbleConts": 15,
+          "totalAerials": 24,
+          "totalClears": 9
+        },
+        "centerOfMass": {
+          "positionalTendencies": {
+            "timeOnGround": 57.60969924926758,
+            "timeLowInAir": 287.7295227050781,
+            "timeHighInAir": 1.8001257181167603,
+            "timeInDefendingHalf": 230.99700927734375,
+            "timeInAttackingHalf": 116.57438659667969,
+            "timeInDefendingThird": 153.3746337890625,
+            "timeInNeutralThird": 138.97329711914062,
+            "timeInAttackingThird": 55.22346496582031,
+            "timeBehindBall": 261.93585205078125,
+            "timeInFrontBall": 85.63555908203125,
+            "timeNearWall": 11.954404830932617,
+            "timeInCorner": 0.0,
+            "timeOnWall": 11.954404830932617
+          },
+          "averageDistanceFromCenter": 2067.6416015625,
+          "averageMaxDistanceFromCenter": 4871.7802734375,
+          "timeClumped": 41.85590362548828,
+          "timeBoondocks": 34.31901931762695
+        }
+      }
+    },
+    {
+      "playerIds": [
+        {
+          "id": "76561198419149425"
+        },
+        {
+          "id": "76561198438115102"
+        },
+        {
+          "id": "76561198070918114"
+        }
+      ],
+      "score": 5,
+      "isOrange": false,
+      "stats": {
+        "possession": {
+          "possessionTime": 157.78911450505257,
+          "turnovers": 21,
+          "turnoversOnMyHalf": 8,
+          "turnoversOnTheirHalf": 7,
+          "wonTurnovers": 23
+        },
+        "hitCounts": {
+          "totalHits": 90,
+          "totalPasses": 21,
+          "totalSaves": 2,
+          "totalShots": 4,
+          "totalDribbles": 18,
+          "totalDribbleConts": 19,
+          "totalAerials": 38,
+          "totalClears": 11
+        },
+        "centerOfMass": {
+          "positionalTendencies": {
+            "timeOnGround": 76.55286407470703,
+            "timeLowInAir": 267.8142395019531,
+            "timeHighInAir": 3.2042958736419678,
+            "timeInDefendingHalf": 206.1941680908203,
+            "timeInAttackingHalf": 141.37722778320312,
+            "timeInDefendingThird": 136.77432250976562,
+            "timeInNeutralThird": 146.87144470214844,
+            "timeInAttackingThird": 63.925636291503906,
+            "timeBehindBall": 248.74459838867188,
+            "timeInFrontBall": 98.8268051147461,
+            "timeNearWall": 7.959629535675049,
+            "timeInCorner": 0.0,
+            "timeOnWall": 7.959629535675049
+          },
+          "averageDistanceFromCenter": 2212.25732421875,
+          "averageMaxDistanceFromCenter": 4746.6142578125,
+          "timeClumped": 55.75624084472656,
+          "timeBoondocks": 38.41875457763672
+        }
+      }
+    }
+  ],
+  "gameStats": {
+    "hits": [
+      {
+        "frameNumber": 169,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 111.79737091064453,
+        "ballData": {
+          "posX": 8.510000228881836,
+          "posY": -9.300000190734863,
+          "posZ": 92.77999877929688
+        },
+        "distance": 33.778621673583984,
+        "distanceToGoal": 5209.81982421875,
+        "nextHitFrameNumber": 170,
+        "goalNumber": 0,
+        "isKickoff": true
+      },
+      {
+        "frameNumber": 170,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 107.20262145996094,
+        "ballData": {
+          "posX": 40.130001068115234,
+          "posY": 2.4800000190734863,
+          "posZ": 94.33000183105469
+        },
+        "pass": true,
+        "distance": 4084.67919921875,
+        "distanceToGoal": 5222.11181640625,
+        "previousHitFrameNumber": 169,
+        "nextHitFrameNumber": 233,
+        "goalNumber": 0,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 233,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 189.88189697265625,
+        "ballData": {
+          "posX": 3961.139892578125,
+          "posY": -580.4299926757812,
+          "posZ": 1079.469970703125
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 6680.1259765625,
+        "distanceToGoal": 7504.34033203125,
+        "previousHitFrameNumber": 170,
+        "nextHitFrameNumber": 315,
+        "goalNumber": 0,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 315,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 107.72248840332031,
+        "ballData": {
+          "posX": -302.8599853515625,
+          "posY": 4557.6298828125,
+          "posZ": 872.760009765625
+        },
+        "dribble": true,
+        "aerial": true,
+        "distance": 2648.072265625,
+        "distanceToGoal": 9715.751953125,
+        "previousHitFrameNumber": 233,
+        "nextHitFrameNumber": 353,
+        "goalNumber": 0,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 353,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 250.29849243164062,
+        "ballData": {
+          "posX": 2102.510009765625,
+          "posY": 3456.43994140625,
+          "posZ": 755.02001953125
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 697.1525268554688,
+        "distanceToGoal": 9104.3857421875,
+        "previousHitFrameNumber": 315,
+        "nextHitFrameNumber": 360,
+        "goalNumber": 0,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 360,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 245.15802001953125,
+        "ballData": {
+          "posX": 2724.159912109375,
+          "posY": 3165.510009765625,
+          "posZ": 632.8200073242188
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 1517.1165771484375,
+        "distanceToGoal": 4123.611328125,
+        "previousHitFrameNumber": 353,
+        "nextHitFrameNumber": 405,
+        "goalNumber": 0,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 405,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 196.03553771972656,
+        "ballData": {
+          "posX": 1487.489990234375,
+          "posY": 2412.97998046875,
+          "posZ": 178.9600067138672
+        },
+        "pass": true,
+        "passed": true,
+        "distance": 707.1793212890625,
+        "distanceToGoal": 3621.831298828125,
+        "previousHitFrameNumber": 360,
+        "nextHitFrameNumber": 481,
+        "goalNumber": 0,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 481,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 182.06619262695312,
+        "ballData": {
+          "posX": 1080.25,
+          "posY": 1838.0999755859375,
+          "posZ": 117.55000305175781
+        },
+        "pass": true,
+        "passed": true,
+        "assist": true,
+        "distance": 2011.4012451171875,
+        "distanceToGoal": 3848.13037109375,
+        "previousHitFrameNumber": 405,
+        "nextHitFrameNumber": 568,
+        "goalNumber": 0,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 568,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 162.90048217773438,
+        "ballData": {
+          "posX": 150.8000030517578,
+          "posY": 3576.02001953125,
+          "posZ": 519.4099731445312
+        },
+        "pass": true,
+        "passed": true,
+        "shot": true,
+        "goal": true,
+        "assisted": true,
+        "aerial": true,
+        "distance": 3640.645263671875,
+        "distanceToGoal": 1881.973388671875,
+        "previousHitFrameNumber": 481,
+        "goalNumber": 0,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 842,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 90.65736389160156,
+        "ballData": {
+          "posX": -14.75,
+          "posY": -36.40999984741211,
+          "posZ": 98.41000366210938
+        },
+        "passed": true,
+        "distance": 38.88705825805664,
+        "distanceToGoal": 5250.8876953125,
+        "nextHitFrameNumber": 843,
+        "goalNumber": 1,
+        "isKickoff": true
+      },
+      {
+        "frameNumber": 843,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 116.52513885498047,
+        "ballData": {
+          "posX": -18.670000076293945,
+          "posY": -66.66000366210938,
+          "posZ": 122.52999877929688
+        },
+        "distance": 36.26301193237305,
+        "distanceToGoal": 5148.63916015625,
+        "previousHitFrameNumber": 842,
+        "nextHitFrameNumber": 844,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 844,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 68.86042785644531,
+        "ballData": {
+          "posX": -39.599998474121094,
+          "posY": -75.7300033569336,
+          "posZ": 150.72000122070312
+        },
+        "distance": 31.758752822875977,
+        "distanceToGoal": 5285.57080078125,
+        "previousHitFrameNumber": 843,
+        "nextHitFrameNumber": 845,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 845,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 110.14200592041016,
+        "ballData": {
+          "posX": -63.15999984741211,
+          "posY": -76.26000213623047,
+          "posZ": 172.00999450683594
+        },
+        "pass": true,
+        "distance": 1322.4901123046875,
+        "distanceToGoal": 5131.77197265625,
+        "previousHitFrameNumber": 844,
+        "nextHitFrameNumber": 892,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 892,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 148.02310180664062,
+        "ballData": {
+          "posX": -923.5999755859375,
+          "posY": -994.5999755859375,
+          "posZ": 578.5499877929688
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 3937.2548828125,
+        "distanceToGoal": 4145.49169921875,
+        "previousHitFrameNumber": 845,
+        "nextHitFrameNumber": 940,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 940,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 134.07461547851562,
+        "ballData": {
+          "posX": -1138.43994140625,
+          "posY": -4916.27978515625,
+          "posZ": 854.6799926757812
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 6738.5029296875,
+        "distanceToGoal": 10059.2021484375,
+        "previousHitFrameNumber": 892,
+        "nextHitFrameNumber": 1015,
+        "goalNumber": 1,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 1015,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 149.0988311767578,
+        "ballData": {
+          "posX": 2829.5400390625,
+          "posY": 529.1699829101562,
+          "posZ": 756.52001953125
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 4470.76904296875,
+        "distanceToGoal": 5927.849609375,
+        "previousHitFrameNumber": 940,
+        "nextHitFrameNumber": 1073,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1073,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 138.23672485351562,
+        "ballData": {
+          "posX": 2821.949951171875,
+          "posY": 4982.39990234375,
+          "posZ": 360.9700012207031
+        },
+        "dribble": true,
+        "distance": 1060.005126953125,
+        "distanceToGoal": 10783.6044921875,
+        "previousHitFrameNumber": 1015,
+        "nextHitFrameNumber": 1099,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1099,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 136.885009765625,
+        "ballData": {
+          "posX": 3525.22998046875,
+          "posY": 4396.85009765625,
+          "posZ": 895.8900146484375
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 1346.1678466796875,
+        "distanceToGoal": 10511.83984375,
+        "previousHitFrameNumber": 1073,
+        "nextHitFrameNumber": 1125,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1125,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 159.56936645507812,
+        "ballData": {
+          "posX": 3924.93994140625,
+          "posY": 3206.679931640625,
+          "posZ": 1381.5799560546875
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 9555.7685546875,
+        "distanceToGoal": 9638.9072265625,
+        "previousHitFrameNumber": 1099,
+        "nextHitFrameNumber": 1259,
+        "goalNumber": 1,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 1259,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 84.45301055908203,
+        "ballData": {
+          "posX": -1156.4599609375,
+          "posY": -4846.8701171875,
+          "posZ": 586.3300170898438
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 553.069091796875,
+        "distanceToGoal": 392.1282043457031,
+        "previousHitFrameNumber": 1125,
+        "nextHitFrameNumber": 1284,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1284,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 204.33718872070312,
+        "ballData": {
+          "posX": -989.72998046875,
+          "posY": -4426.080078125,
+          "posZ": 268.489990234375
+        },
+        "distance": 3246.8203125,
+        "distanceToGoal": 9566.5390625,
+        "previousHitFrameNumber": 1259,
+        "nextHitFrameNumber": 1344,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1344,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 228.1966094970703,
+        "ballData": {
+          "posX": -3991.25,
+          "posY": -3189.8701171875,
+          "posZ": 201.3699951171875
+        },
+        "distance": 92.88050079345703,
+        "distanceToGoal": 3658.357421875,
+        "previousHitFrameNumber": 1284,
+        "nextHitFrameNumber": 1345,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1345,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 76.26242065429688,
+        "ballData": {
+          "posX": -3956.340087890625,
+          "posY": -3251.570068359375,
+          "posZ": 261.3800048828125
+        },
+        "pass": true,
+        "distance": 3923.203369140625,
+        "distanceToGoal": 8932.1962890625,
+        "previousHitFrameNumber": 1344,
+        "nextHitFrameNumber": 1417,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1417,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 137.67042541503906,
+        "ballData": {
+          "posX": -318.0400085449219,
+          "posY": -4233.97998046875,
+          "posZ": 1351.8699951171875
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 4710.10009765625,
+        "distanceToGoal": 9391.7802734375,
+        "previousHitFrameNumber": 1345,
+        "nextHitFrameNumber": 1479,
+        "goalNumber": 1,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 1479,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 190.38381958007812,
+        "ballData": {
+          "posX": 107.54000091552734,
+          "posY": 302.9599914550781,
+          "posZ": 160.19000244140625
+        },
+        "pass": true,
+        "distance": 5463.05810546875,
+        "distanceToGoal": 5534.7001953125,
+        "previousHitFrameNumber": 1417,
+        "nextHitFrameNumber": 1564,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1564,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 138.9878387451172,
+        "ballData": {
+          "posX": 1307.449951171875,
+          "posY": -4975.22021484375,
+          "posZ": 899.1300048828125
+        },
+        "pass": true,
+        "passed": true,
+        "assist": true,
+        "aerial": true,
+        "distance": 1733.8026123046875,
+        "distanceToGoal": 2209.602783203125,
+        "previousHitFrameNumber": 1479,
+        "nextHitFrameNumber": 1596,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1596,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 112.4390640258789,
+        "ballData": {
+          "posX": 1179.3399658203125,
+          "posY": -3376.760009765625,
+          "posZ": 239.89999389648438
+        },
+        "passed": true,
+        "dribble": true,
+        "shot": true,
+        "goal": true,
+        "assisted": true,
+        "distance": 3541.798828125,
+        "distanceToGoal": 2723.24267578125,
+        "previousHitFrameNumber": 1564,
+        "goalNumber": 1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1869,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 175.78311157226562,
+        "ballData": {
+          "posX": -3.2899999618530273,
+          "posY": -41.349998474121094,
+          "posZ": 95.80000305175781
+        },
+        "dribbleContinuation": true,
+        "shot": true,
+        "distance": 64.69577026367188,
+        "distanceToGoal": 5176.21142578125,
+        "nextHitFrameNumber": 1872,
+        "goalNumber": 2,
+        "isKickoff": true
+      },
+      {
+        "frameNumber": 1872,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 64.78214263916016,
+        "ballData": {
+          "posX": 2.2300000190734863,
+          "posY": -86.25,
+          "posZ": 142.0500030517578
+        },
+        "save": true,
+        "distance": 14.42587947845459,
+        "distanceToGoal": 5302.876953125,
+        "previousHitFrameNumber": 1869,
+        "nextHitFrameNumber": 1873,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1873,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 44.82550811767578,
+        "ballData": {
+          "posX": 7.849999904632568,
+          "posY": -75.29000091552734,
+          "posZ": 149.55999755859375
+        },
+        "distance": 67.04859161376953,
+        "distanceToGoal": 5144.728515625,
+        "previousHitFrameNumber": 1872,
+        "nextHitFrameNumber": 1874,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1874,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 75.18321228027344,
+        "ballData": {
+          "posX": 66.0,
+          "posY": -67.06999969482422,
+          "posZ": 181.91000366210938
+        },
+        "distance": 615.7461547851562,
+        "distanceToGoal": 5295.1884765625,
+        "previousHitFrameNumber": 1873,
+        "nextHitFrameNumber": 1896,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 1896,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 197.28054809570312,
+        "ballData": {
+          "posX": 548.8699951171875,
+          "posY": 295.57000732421875,
+          "posZ": 302.2099914550781
+        },
+        "dribble": true,
+        "distance": 5754.22509765625,
+        "distanceToGoal": 5624.32861328125,
+        "previousHitFrameNumber": 1874,
+        "nextHitFrameNumber": 2001,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2001,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 179.35797119140625,
+        "ballData": {
+          "posX": 2799.1298828125,
+          "posY": -4995.64013671875,
+          "posZ": 527.0
+        },
+        "pass": true,
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 5730.06689453125,
+        "distanceToGoal": 3697.94873046875,
+        "previousHitFrameNumber": 1896,
+        "nextHitFrameNumber": 2081,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2081,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 142.28453063964844,
+        "ballData": {
+          "posX": -2900.719970703125,
+          "posY": -4587.3798828125,
+          "posZ": 104.2699966430664
+        },
+        "passed": true,
+        "distance": 147.33358764648438,
+        "distanceToGoal": 2079.492919921875,
+        "previousHitFrameNumber": 2001,
+        "nextHitFrameNumber": 2082,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2082,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 203.49569702148438,
+        "ballData": {
+          "posX": -2997.330078125,
+          "posY": -4688.89013671875,
+          "posZ": 149.75999450683594
+        },
+        "pass": true,
+        "distance": 1893.659912109375,
+        "distanceToGoal": 10051.0029296875,
+        "previousHitFrameNumber": 2081,
+        "nextHitFrameNumber": 2157,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2157,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 220.3109130859375,
+        "ballData": {
+          "posX": -2428.070068359375,
+          "posY": -2882.840087890625,
+          "posZ": 158.3699951171875
+        },
+        "pass": true,
+        "passed": true,
+        "distance": 2861.079345703125,
+        "distanceToGoal": 8167.81494140625,
+        "previousHitFrameNumber": 2082,
+        "nextHitFrameNumber": 2189,
+        "goalNumber": 2,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 2189,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 98.803466796875,
+        "ballData": {
+          "posX": -3644.47998046875,
+          "posY": -319.7099914550781,
+          "posZ": 527.8099975585938
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 3515.0498046875,
+        "distanceToGoal": 6112.4931640625,
+        "previousHitFrameNumber": 2157,
+        "nextHitFrameNumber": 2229,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2229,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 203.6767120361328,
+        "ballData": {
+          "posX": -1544.5400390625,
+          "posY": 2494.409912109375,
+          "posZ": 364.8500061035156
+        },
+        "distance": 3969.280517578125,
+        "distanceToGoal": 7661.9072265625,
+        "previousHitFrameNumber": 2189,
+        "nextHitFrameNumber": 2304,
+        "goalNumber": 2,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 2304,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 79.51140594482422,
+        "ballData": {
+          "posX": 1133.9000244140625,
+          "posY": -181.7100067138672,
+          "posZ": 1556.2900390625
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 3291.603759765625,
+        "distanceToGoal": 5695.7080078125,
+        "previousHitFrameNumber": 2229,
+        "nextHitFrameNumber": 2375,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2375,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 32.66814041137695,
+        "ballData": {
+          "posX": 277.8699951171875,
+          "posY": 2806.56005859375,
+          "posZ": 473.6499938964844
+        },
+        "passed": true,
+        "dribble": true,
+        "aerial": true,
+        "distance": 3062.10595703125,
+        "distanceToGoal": 2612.070556640625,
+        "previousHitFrameNumber": 2304,
+        "nextHitFrameNumber": 2479,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2479,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 225.69949340820312,
+        "ballData": {
+          "posX": 1748.93994140625,
+          "posY": 147.2100067138672,
+          "posZ": 99.08000183105469
+        },
+        "dribbleContinuation": true,
+        "distance": 6967.78369140625,
+        "distanceToGoal": 5650.1025390625,
+        "previousHitFrameNumber": 2375,
+        "nextHitFrameNumber": 2598,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2598,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 173.3186798095703,
+        "ballData": {
+          "posX": -3041.43994140625,
+          "posY": -4852.08984375,
+          "posZ": 879.6400146484375
+        },
+        "pass": true,
+        "assist": true,
+        "aerial": true,
+        "distance": 6330.01513671875,
+        "distanceToGoal": 2164.671875,
+        "previousHitFrameNumber": 2479,
+        "nextHitFrameNumber": 2736,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 2736,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 248.61212158203125,
+        "ballData": {
+          "posX": 3128.25,
+          "posY": -3547.820068359375,
+          "posZ": 329.2799987792969
+        },
+        "passed": true,
+        "shot": true,
+        "goal": true,
+        "assisted": true,
+        "distance": 4756.38818359375,
+        "distanceToGoal": 4327.7734375,
+        "previousHitFrameNumber": 2598,
+        "goalNumber": 2,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3022,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 94.21260833740234,
+        "ballData": {
+          "posX": -14.239999771118164,
+          "posY": 14.710000038146973,
+          "posZ": 91.87000274658203
+        },
+        "dribble": true,
+        "distance": 437.1116027832031,
+        "distanceToGoal": 5200.58642578125,
+        "nextHitFrameNumber": 3032,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3032,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 247.11825561523438,
+        "ballData": {
+          "posX": -267.3399963378906,
+          "posY": 371.0899963378906,
+          "posZ": 92.36000061035156
+        },
+        "dribbleContinuation": true,
+        "distance": 387.5050048828125,
+        "distanceToGoal": 4810.16796875,
+        "previousHitFrameNumber": 3022,
+        "nextHitFrameNumber": 3041,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3041,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 233.3391876220703,
+        "ballData": {
+          "posX": -551.8800048828125,
+          "posY": 632.75,
+          "posZ": 119.4000015258789
+        },
+        "pass": true,
+        "distance": 2510.8896484375,
+        "distanceToGoal": 5782.99755859375,
+        "previousHitFrameNumber": 3032,
+        "nextHitFrameNumber": 3132,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3132,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 124.44874572753906,
+        "ballData": {
+          "posX": -2223.070068359375,
+          "posY": -1241.0799560546875,
+          "posZ": 140.6699981689453
+        },
+        "passed": true,
+        "dribble": true,
+        "distance": 1079.78759765625,
+        "distanceToGoal": 4118.5791015625,
+        "previousHitFrameNumber": 3041,
+        "nextHitFrameNumber": 3154,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3154,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 125.65931701660156,
+        "ballData": {
+          "posX": -1459.9200439453125,
+          "posY": -2004.97998046875,
+          "posZ": 141.00999450683594
+        },
+        "dribbleContinuation": true,
+        "distance": 200.91363525390625,
+        "distanceToGoal": 3185.33447265625,
+        "previousHitFrameNumber": 3132,
+        "nextHitFrameNumber": 3161,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3161,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 147.1807403564453,
+        "ballData": {
+          "posX": -1362.4300537109375,
+          "posY": -2179.25,
+          "posZ": 118.83000183105469
+        },
+        "distance": 2890.42431640625,
+        "distanceToGoal": 7334.0966796875,
+        "previousHitFrameNumber": 3154,
+        "nextHitFrameNumber": 3243,
+        "goalNumber": 3,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 3243,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 99.75732421875,
+        "ballData": {
+          "posX": -3958.5400390625,
+          "posY": -972.6199951171875,
+          "posZ": 517.3400268554688
+        },
+        "aerial": true,
+        "distance": 1924.3001708984375,
+        "distanceToGoal": 5171.67333984375,
+        "previousHitFrameNumber": 3161,
+        "nextHitFrameNumber": 3296,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3296,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 239.15248107910156,
+        "ballData": {
+          "posX": -2055.780029296875,
+          "posY": -1060.5799560546875,
+          "posZ": 244.02999877929688
+        },
+        "distance": 5492.1435546875,
+        "distanceToGoal": 6308.1123046875,
+        "previousHitFrameNumber": 3243,
+        "nextHitFrameNumber": 3373,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3373,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 248.71165466308594,
+        "ballData": {
+          "posX": -2733.989990234375,
+          "posY": 4386.1298828125,
+          "posZ": 436.45001220703125
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 2056.6123046875,
+        "distanceToGoal": 9701.822265625,
+        "previousHitFrameNumber": 3296,
+        "nextHitFrameNumber": 3406,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3406,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 157.28884887695312,
+        "ballData": {
+          "posX": -3942.25,
+          "posY": 2727.81005859375,
+          "posZ": 295.9599914550781
+        },
+        "pass": true,
+        "passed": true,
+        "distance": 2401.31005859375,
+        "distanceToGoal": 8436.947265625,
+        "previousHitFrameNumber": 3373,
+        "nextHitFrameNumber": 3458,
+        "goalNumber": 3,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 3458,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 222.02017211914062,
+        "ballData": {
+          "posX": -2338.72998046875,
+          "posY": 948.27001953125,
+          "posZ": 464.0400085449219
+        },
+        "pass": true,
+        "passed": true,
+        "aerial": true,
+        "distance": 5124.12646484375,
+        "distanceToGoal": 6256.87646484375,
+        "previousHitFrameNumber": 3406,
+        "nextHitFrameNumber": 3549,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3549,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 89.99757385253906,
+        "ballData": {
+          "posX": -657.9000244140625,
+          "posY": -3880.610107421875,
+          "posZ": 127.29000091552734
+        },
+        "passed": true,
+        "distance": 1680.117919921875,
+        "distanceToGoal": 1281.6998291015625,
+        "previousHitFrameNumber": 3458,
+        "nextHitFrameNumber": 3629,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3629,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 140.49911499023438,
+        "ballData": {
+          "posX": -2264.27001953125,
+          "posY": -3388.9599609375,
+          "posZ": 101.76000213623047
+        },
+        "dribble": true,
+        "distance": 4942.58349609375,
+        "distanceToGoal": 8638.015625,
+        "previousHitFrameNumber": 3549,
+        "nextHitFrameNumber": 3708,
+        "goalNumber": 3,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 3708,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 100.77487182617188,
+        "ballData": {
+          "posX": -3646.590087890625,
+          "posY": 1356.3800048828125,
+          "posZ": 93.19999694824219
+        },
+        "dribbleContinuation": true,
+        "distance": 5270.005859375,
+        "distanceToGoal": 4677.76953125,
+        "previousHitFrameNumber": 3629,
+        "nextHitFrameNumber": 3781,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3781,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 216.08863830566406,
+        "ballData": {
+          "posX": 1496.260009765625,
+          "posY": 2507.0400390625,
+          "posZ": 99.27999877929688
+        },
+        "pass": true,
+        "distance": 3978.493408203125,
+        "distanceToGoal": 8012.49853515625,
+        "previousHitFrameNumber": 3708,
+        "nextHitFrameNumber": 3821,
+        "goalNumber": 3,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 3821,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 139.62710571289062,
+        "ballData": {
+          "posX": -1791.510009765625,
+          "posY": 266.739990234375,
+          "posZ": 93.41000366210938
+        },
+        "pass": true,
+        "passed": true,
+        "distance": 6276.99267578125,
+        "distanceToGoal": 5480.3994140625,
+        "previousHitFrameNumber": 3781,
+        "nextHitFrameNumber": 3919,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3919,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 159.03695678710938,
+        "ballData": {
+          "posX": 3136.010009765625,
+          "posY": -3621.489990234375,
+          "posZ": 136.47000122070312
+        },
+        "passed": true,
+        "dribble": true,
+        "distance": 1027.4622802734375,
+        "distanceToGoal": 4308.4775390625,
+        "previousHitFrameNumber": 3821,
+        "nextHitFrameNumber": 3938,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3938,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 137.17543029785156,
+        "ballData": {
+          "posX": 2193.22998046875,
+          "posY": -4025.02001953125,
+          "posZ": 199.77999877929688
+        },
+        "dribbleContinuation": true,
+        "shot": true,
+        "distance": 2681.784912109375,
+        "distanceToGoal": 3284.2841796875,
+        "previousHitFrameNumber": 3919,
+        "nextHitFrameNumber": 3977,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 3977,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 202.31692504882812,
+        "ballData": {
+          "posX": -252.38999938964844,
+          "posY": -5122.0400390625,
+          "posZ": 113.41000366210938
+        },
+        "distance": 226.39378356933594,
+        "distanceToGoal": 643.8605346679688,
+        "previousHitFrameNumber": 3938,
+        "nextHitFrameNumber": 4032,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4032,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 150.3793182373047,
+        "ballData": {
+          "posX": -100.37000274658203,
+          "posY": -5050.259765625,
+          "posZ": 265.0400085449219
+        },
+        "distance": 24.06606101989746,
+        "distanceToGoal": 10221.2734375,
+        "previousHitFrameNumber": 3977,
+        "nextHitFrameNumber": 4033,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4033,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 150.35646057128906,
+        "ballData": {
+          "posX": -88.02999877929688,
+          "posY": -5045.27001953125,
+          "posZ": 285.0899963378906
+        },
+        "distance": 2135.729248046875,
+        "distanceToGoal": 813.5043334960938,
+        "previousHitFrameNumber": 4032,
+        "nextHitFrameNumber": 4111,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4111,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 146.8835906982422,
+        "ballData": {
+          "posX": 1472.050048828125,
+          "posY": -4582.580078125,
+          "posZ": 1668.3499755859375
+        },
+        "aerial": true,
+        "distance": 3173.076171875,
+        "distanceToGoal": 10006.80859375,
+        "previousHitFrameNumber": 4033,
+        "nextHitFrameNumber": 4203,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4203,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 171.27427673339844,
+        "ballData": {
+          "posX": 3976.080078125,
+          "posY": -2750.77001953125,
+          "posZ": 1002.97998046875
+        },
+        "dribble": true,
+        "aerial": true,
+        "distance": 2781.657958984375,
+        "distanceToGoal": 5426.37841796875,
+        "previousHitFrameNumber": 4111,
+        "nextHitFrameNumber": 4269,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4269,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 277.4471740722656,
+        "ballData": {
+          "posX": 1665.449951171875,
+          "posY": -4272.41015625,
+          "posZ": 1291.4599609375
+        },
+        "pass": true,
+        "dribbleContinuation": true,
+        "shot": true,
+        "goal": true,
+        "aerial": true,
+        "distance": 4743.61962890625,
+        "distanceToGoal": 2704.392333984375,
+        "previousHitFrameNumber": 4203,
+        "goalNumber": 3,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4548,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 88.25838470458984,
+        "ballData": {
+          "posX": 19.68000030517578,
+          "posY": 15.15999984741211,
+          "posZ": 103.9800033569336
+        },
+        "passed": true,
+        "distance": 3989.506103515625,
+        "distanceToGoal": 5235.85205078125,
+        "nextHitFrameNumber": 4618,
+        "goalNumber": 4,
+        "isKickoff": true
+      },
+      {
+        "frameNumber": 4618,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 295.52294921875,
+        "ballData": {
+          "posX": 3968.820068359375,
+          "posY": 564.7100219726562,
+          "posZ": 239.8000030517578
+        },
+        "distance": 4518.0498046875,
+        "distanceToGoal": 6678.3046875,
+        "previousHitFrameNumber": 4548,
+        "nextHitFrameNumber": 4670,
+        "goalNumber": 4,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4670,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 96.26838684082031,
+        "ballData": {
+          "posX": 2959.610107421875,
+          "posY": 4895.759765625,
+          "posZ": 1037.469970703125
+        },
+        "aerial": true,
+        "distance": 4600.4775390625,
+        "distanceToGoal": 10750.916015625,
+        "previousHitFrameNumber": 4618,
+        "nextHitFrameNumber": 4757,
+        "goalNumber": 4,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 4757,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 106.19146728515625,
+        "ballData": {
+          "posX": 3860.81005859375,
+          "posY": 484.30999755859375,
+          "posZ": 93.36000061035156
+        },
+        "distance": 2841.07080078125,
+        "distanceToGoal": 6656.02685546875,
+        "previousHitFrameNumber": 4670,
+        "nextHitFrameNumber": 4799,
+        "goalNumber": 4,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4799,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 106.29886627197266,
+        "ballData": {
+          "posX": 1186.760009765625,
+          "posY": 1444.0,
+          "posZ": 104.98999786376953
+        },
+        "dribble": true,
+        "distance": 3748.07666015625,
+        "distanceToGoal": 6905.57373046875,
+        "previousHitFrameNumber": 4757,
+        "nextHitFrameNumber": 4857,
+        "goalNumber": 4,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4857,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 125.80479431152344,
+        "ballData": {
+          "posX": 2954.820068359375,
+          "posY": -1860.8399658203125,
+          "posZ": 96.31999969482422
+        },
+        "dribbleContinuation": true,
+        "distance": 2801.915283203125,
+        "distanceToGoal": 5057.8359375,
+        "previousHitFrameNumber": 4799,
+        "nextHitFrameNumber": 4911,
+        "goalNumber": 4,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4911,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 130.89480590820312,
+        "ballData": {
+          "posX": 2104.469970703125,
+          "posY": -4513.5,
+          "posZ": 398.0299987792969
+        },
+        "pass": true,
+        "distance": 600.5578002929688,
+        "distanceToGoal": 3065.178955078125,
+        "previousHitFrameNumber": 4857,
+        "nextHitFrameNumber": 4921,
+        "goalNumber": 4,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4921,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 204.99356079101562,
+        "ballData": {
+          "posX": 1755.9200439453125,
+          "posY": -4997.419921875,
+          "posZ": 468.7699890136719
+        },
+        "pass": true,
+        "passed": true,
+        "assist": true,
+        "aerial": true,
+        "distance": 1606.0394287109375,
+        "distanceToGoal": 2655.750244140625,
+        "previousHitFrameNumber": 4911,
+        "nextHitFrameNumber": 4956,
+        "goalNumber": 4,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 4956,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 102.31560516357422,
+        "ballData": {
+          "posX": 717.9500122070312,
+          "posY": -3831.179931640625,
+          "posZ": 92.12000274658203
+        },
+        "passed": true,
+        "dribble": true,
+        "shot": true,
+        "goal": true,
+        "assisted": true,
+        "distance": 3866.209716796875,
+        "distanceToGoal": 2077.9423828125,
+        "previousHitFrameNumber": 4921,
+        "goalNumber": 4,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5233,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 104.47673034667969,
+        "ballData": {
+          "posX": 16.350000381469727,
+          "posY": -29.81999969482422,
+          "posZ": 162.80999755859375
+        },
+        "dribbleContinuation": true,
+        "distance": 56.34025573730469,
+        "distanceToGoal": 5190.98486328125,
+        "nextHitFrameNumber": 5235,
+        "goalNumber": 5,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5235,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 167.73519897460938,
+        "ballData": {
+          "posX": 22.850000381469727,
+          "posY": -24.93000030517578,
+          "posZ": 218.55999755859375
+        },
+        "pass": true,
+        "assist": true,
+        "distance": 2263.881103515625,
+        "distanceToGoal": 5246.02587890625,
+        "previousHitFrameNumber": 5233,
+        "nextHitFrameNumber": 5316,
+        "goalNumber": 5,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5316,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 40.763675689697266,
+        "ballData": {
+          "posX": 633.72998046875,
+          "posY": 2051.360107421875,
+          "posZ": 882.6400146484375
+        },
+        "passed": true,
+        "dribble": true,
+        "aerial": true,
+        "distance": 1148.9232177734375,
+        "distanceToGoal": 3446.704345703125,
+        "previousHitFrameNumber": 5235,
+        "nextHitFrameNumber": 5339,
+        "goalNumber": 5,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5339,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 145.5309295654297,
+        "ballData": {
+          "posX": 599.7100219726562,
+          "posY": 3145.929931640625,
+          "posZ": 535.0999755859375
+        },
+        "dribbleContinuation": true,
+        "shot": true,
+        "goal": true,
+        "assisted": true,
+        "aerial": true,
+        "distance": 3184.76904296875,
+        "distanceToGoal": 2492.68212890625,
+        "previousHitFrameNumber": 5316,
+        "goalNumber": 5,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5623,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 117.8875961303711,
+        "ballData": {
+          "posX": -26.0,
+          "posY": 49.08000183105469,
+          "posZ": 134.14999389648438
+        },
+        "distance": 73.56719970703125,
+        "distanceToGoal": 5164.72314453125,
+        "nextHitFrameNumber": 5624,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5624,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 171.74749755859375,
+        "ballData": {
+          "posX": -87.91999816894531,
+          "posY": 72.33000183105469,
+          "posZ": 166.36000061035156
+        },
+        "distance": 2560.326416015625,
+        "distanceToGoal": 5274.59716796875,
+        "previousHitFrameNumber": 5623,
+        "nextHitFrameNumber": 5705,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5705,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 135.60520935058594,
+        "ballData": {
+          "posX": -2598.639892578125,
+          "posY": 573.1599731445312,
+          "posZ": 139.41000366210938
+        },
+        "dribble": true,
+        "distance": 1751.03564453125,
+        "distanceToGoal": 4873.9111328125,
+        "previousHitFrameNumber": 5624,
+        "nextHitFrameNumber": 5729,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5729,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 210.60069274902344,
+        "ballData": {
+          "posX": -1309.3399658203125,
+          "posY": 1757.1800537109375,
+          "posZ": 95.5
+        },
+        "dribbleContinuation": true,
+        "distance": 485.3450012207031,
+        "distanceToGoal": 3407.97900390625,
+        "previousHitFrameNumber": 5705,
+        "nextHitFrameNumber": 5737,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5737,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 122.67787170410156,
+        "ballData": {
+          "posX": -967.6900024414062,
+          "posY": 2101.89990234375,
+          "posZ": 97.31999969482422
+        },
+        "distance": 3331.262451171875,
+        "distanceToGoal": 7242.2548828125,
+        "previousHitFrameNumber": 5729,
+        "nextHitFrameNumber": 5774,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5774,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 223.7339630126953,
+        "ballData": {
+          "posX": -1762.31005859375,
+          "posY": -1130.280029296875,
+          "posZ": 234.8000030517578
+        },
+        "shot": true,
+        "distance": 6089.1865234375,
+        "distanceToGoal": 6329.84228515625,
+        "previousHitFrameNumber": 5737,
+        "nextHitFrameNumber": 5844,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5844,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 142.60511779785156,
+        "ballData": {
+          "posX": -1777.719970703125,
+          "posY": 4957.91015625,
+          "posZ": 125.7300033569336
+        },
+        "dribble": true,
+        "save": true,
+        "distance": 2124.823486328125,
+        "distanceToGoal": 10136.33203125,
+        "previousHitFrameNumber": 5774,
+        "nextHitFrameNumber": 5897,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5897,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 105.1648941040039,
+        "ballData": {
+          "posX": -3683.889892578125,
+          "posY": 4183.509765625,
+          "posZ": 656.47998046875
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 718.5640869140625,
+        "distanceToGoal": 9731.4013671875,
+        "previousHitFrameNumber": 5844,
+        "nextHitFrameNumber": 5910,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5910,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 158.68130493164062,
+        "ballData": {
+          "posX": -3975.929931640625,
+          "posY": 3540.360107421875,
+          "posZ": 524.5499877929688
+        },
+        "dribble": true,
+        "aerial": true,
+        "distance": 1755.1673583984375,
+        "distanceToGoal": 9210.5712890625,
+        "previousHitFrameNumber": 5897,
+        "nextHitFrameNumber": 5935,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5935,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 288.95220947265625,
+        "ballData": {
+          "posX": -3832.239990234375,
+          "posY": 1841.1199951171875,
+          "posZ": 109.16000366210938
+        },
+        "dribbleContinuation": true,
+        "distance": 154.41114807128906,
+        "distanceToGoal": 7573.47607421875,
+        "previousHitFrameNumber": 5910,
+        "nextHitFrameNumber": 5939,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5939,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 257.2071838378906,
+        "ballData": {
+          "posX": -3838.320068359375,
+          "posY": 1701.699951171875,
+          "posZ": 175.25
+        },
+        "distance": 3567.43701171875,
+        "distanceToGoal": 4525.39013671875,
+        "previousHitFrameNumber": 5935,
+        "nextHitFrameNumber": 5999,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 5999,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 194.45562744140625,
+        "ballData": {
+          "posX": -2526.1298828125,
+          "posY": 5018.93017578125,
+          "posZ": 147.9199981689453
+        },
+        "dribble": true,
+        "distance": 2527.858154296875,
+        "distanceToGoal": 10288.88671875,
+        "previousHitFrameNumber": 5939,
+        "nextHitFrameNumber": 6045,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6045,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 239.95069885253906,
+        "ballData": {
+          "posX": -407.5,
+          "posY": 4103.35009765625,
+          "posZ": 1179.030029296875
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 8857.8544921875,
+        "distanceToGoal": 9256.2490234375,
+        "previousHitFrameNumber": 5999,
+        "nextHitFrameNumber": 6178,
+        "goalNumber": 6,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 6178,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 208.29214477539062,
+        "ballData": {
+          "posX": 2551.409912109375,
+          "posY": -4218.169921875,
+          "posZ": 501.7200012207031
+        },
+        "aerial": true,
+        "distance": 1738.8546142578125,
+        "distanceToGoal": 9972.962890625,
+        "previousHitFrameNumber": 6045,
+        "nextHitFrameNumber": 6238,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6238,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 147.51197814941406,
+        "ballData": {
+          "posX": 1687.3699951171875,
+          "posY": -2710.090087890625,
+          "posZ": 554.1199951171875
+        },
+        "shot": true,
+        "aerial": true,
+        "distance": 2569.028076171875,
+        "distanceToGoal": 3546.584716796875,
+        "previousHitFrameNumber": 6178,
+        "nextHitFrameNumber": 6279,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6279,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 175.64920043945312,
+        "ballData": {
+          "posX": 55.15999984741211,
+          "posY": -4667.9599609375,
+          "posZ": 233.89999389648438
+        },
+        "save": true,
+        "distance": 4778.43994140625,
+        "distanceToGoal": 9853.97265625,
+        "previousHitFrameNumber": 6238,
+        "nextHitFrameNumber": 6363,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6363,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 149.56048583984375,
+        "ballData": {
+          "posX": -3874.169921875,
+          "posY": -2029.0899658203125,
+          "posZ": 889.8099975585938
+        },
+        "dribble": true,
+        "aerial": true,
+        "distance": 2346.80078125,
+        "distanceToGoal": 4306.65283203125,
+        "previousHitFrameNumber": 6279,
+        "nextHitFrameNumber": 6432,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6432,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 104.31614685058594,
+        "ballData": {
+          "posX": -1916.4200439453125,
+          "posY": -3283.300048828125,
+          "posZ": 1208.6300048828125
+        },
+        "pass": true,
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 425.5659484863281,
+        "distanceToGoal": 2118.629638671875,
+        "previousHitFrameNumber": 6363,
+        "nextHitFrameNumber": 6441,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6441,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 61.494873046875,
+        "ballData": {
+          "posX": -1613.4300537109375,
+          "posY": -3525.93994140625,
+          "posZ": 1034.18994140625
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 1987.5167236328125,
+        "distanceToGoal": 1766.3226318359375,
+        "previousHitFrameNumber": 6432,
+        "nextHitFrameNumber": 6542,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6542,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 165.02548217773438,
+        "ballData": {
+          "posX": -1884.8299560546875,
+          "posY": -1768.3199462890625,
+          "posZ": 146.8699951171875
+        },
+        "dribble": true,
+        "distance": 769.4727783203125,
+        "distanceToGoal": 6978.72998046875,
+        "previousHitFrameNumber": 6441,
+        "nextHitFrameNumber": 6555,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6555,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 150.27297973632812,
+        "ballData": {
+          "posX": -1649.8499755859375,
+          "posY": -1035.77001953125,
+          "posZ": 131.27000427246094
+        },
+        "dribbleContinuation": true,
+        "distance": 739.9573364257812,
+        "distanceToGoal": 6221.609375,
+        "previousHitFrameNumber": 6542,
+        "nextHitFrameNumber": 6566,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6566,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 169.77349853515625,
+        "ballData": {
+          "posX": -1509.25,
+          "posY": -310.0299987792969,
+          "posZ": 98.55999755859375
+        },
+        "dribble": true,
+        "distance": 1068.0284423828125,
+        "distanceToGoal": 5484.423828125,
+        "previousHitFrameNumber": 6555,
+        "nextHitFrameNumber": 6584,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6584,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 160.31040954589844,
+        "ballData": {
+          "posX": -1319.510009765625,
+          "posY": 741.0,
+          "posZ": 94.16000366210938
+        },
+        "dribbleContinuation": true,
+        "distance": 731.5275268554688,
+        "distanceToGoal": 4419.33935546875,
+        "previousHitFrameNumber": 6566,
+        "nextHitFrameNumber": 6598,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6598,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 117.53650665283203,
+        "ballData": {
+          "posX": -1198.3299560546875,
+          "posY": 1462.4200439453125,
+          "posZ": 93.12999725341797
+        },
+        "dribble": true,
+        "distance": 374.83050537109375,
+        "distanceToGoal": 3689.986083984375,
+        "previousHitFrameNumber": 6584,
+        "nextHitFrameNumber": 6606,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6606,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 88.22589111328125,
+        "ballData": {
+          "posX": -1120.8199462890625,
+          "posY": 1823.5,
+          "posZ": 157.25
+        },
+        "dribbleContinuation": true,
+        "distance": 69.1427001953125,
+        "distanceToGoal": 3324.111328125,
+        "previousHitFrameNumber": 6598,
+        "nextHitFrameNumber": 6607,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6607,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 132.0928955078125,
+        "ballData": {
+          "posX": -1074.0799560546875,
+          "posY": 1821.699951171875,
+          "posZ": 208.1699981689453
+        },
+        "pass": true,
+        "distance": 5509.99853515625,
+        "distanceToGoal": 6963.97705078125,
+        "previousHitFrameNumber": 6606,
+        "nextHitFrameNumber": 6747,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6747,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 153.21090698242188,
+        "ballData": {
+          "posX": 3965.6298828125,
+          "posY": -382.17999267578125,
+          "posZ": 531.1599731445312
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 3426.252197265625,
+        "distanceToGoal": 6802.37451171875,
+        "previousHitFrameNumber": 6607,
+        "nextHitFrameNumber": 6787,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6787,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 123.11225891113281,
+        "ballData": {
+          "posX": 3638.7900390625,
+          "posY": -3768.75,
+          "posZ": 126.77999877929688
+        },
+        "distance": 1469.4532470703125,
+        "distanceToGoal": 9996.5068359375,
+        "previousHitFrameNumber": 6747,
+        "nextHitFrameNumber": 6843,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6843,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 146.4808349609375,
+        "ballData": {
+          "posX": 3203.3798828125,
+          "posY": -2513.14990234375,
+          "posZ": 753.8200073242188
+        },
+        "aerial": true,
+        "distance": 2663.5498046875,
+        "distanceToGoal": 4868.8046875,
+        "previousHitFrameNumber": 6787,
+        "nextHitFrameNumber": 6916,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6916,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 131.63076782226562,
+        "ballData": {
+          "posX": 1199.77001953125,
+          "posY": -4199.7001953125,
+          "posZ": 268.44000244140625
+        },
+        "dribble": true,
+        "distance": 2854.3681640625,
+        "distanceToGoal": 9571.951171875,
+        "previousHitFrameNumber": 6843,
+        "nextHitFrameNumber": 6993,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 6993,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 251.47006225585938,
+        "ballData": {
+          "posX": 3710.75,
+          "posY": -2844.090087890625,
+          "posZ": 337.1300048828125
+        },
+        "dribbleContinuation": true,
+        "distance": 1758.025146484375,
+        "distanceToGoal": 9217.7998046875,
+        "previousHitFrameNumber": 6916,
+        "nextHitFrameNumber": 7046,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7046,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 164.93429565429688,
+        "ballData": {
+          "posX": 3023.60009765625,
+          "posY": -4235.22021484375,
+          "posZ": 1163.7099609375
+        },
+        "shot": true,
+        "aerial": true,
+        "distance": 201.8292694091797,
+        "distanceToGoal": 4022.672119140625,
+        "previousHitFrameNumber": 6993,
+        "nextHitFrameNumber": 7049,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7049,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 179.0885009765625,
+        "ballData": {
+          "posX": 2822.02001953125,
+          "posY": -4245.10986328125,
+          "posZ": 1162.06005859375
+        },
+        "save": true,
+        "aerial": true,
+        "distance": 5985.1982421875,
+        "distanceToGoal": 10094.7490234375,
+        "previousHitFrameNumber": 7046,
+        "nextHitFrameNumber": 7121,
+        "goalNumber": 6,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 7121,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 119.983154296875,
+        "ballData": {
+          "posX": -716.6400146484375,
+          "posY": 472.42999267578125,
+          "posZ": 139.66000366210938
+        },
+        "distance": 1295.9830322265625,
+        "distanceToGoal": 5615.29541015625,
+        "previousHitFrameNumber": 7049,
+        "nextHitFrameNumber": 7148,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7148,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 181.77294921875,
+        "ballData": {
+          "posX": -1358.239990234375,
+          "posY": -653.2000122070312,
+          "posZ": 110.0199966430664
+        },
+        "dribble": true,
+        "distance": 4087.903076171875,
+        "distanceToGoal": 5811.61181640625,
+        "previousHitFrameNumber": 7121,
+        "nextHitFrameNumber": 7206,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7206,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 125.97435760498047,
+        "ballData": {
+          "posX": -1069.02001953125,
+          "posY": 3317.8798828125,
+          "posZ": 1036.2099609375
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 4652.94091796875,
+        "distanceToGoal": 1830.3162841796875,
+        "previousHitFrameNumber": 7148,
+        "nextHitFrameNumber": 7341,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7341,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 125.86097717285156,
+        "ballData": {
+          "posX": 2818.010009765625,
+          "posY": 913.1400146484375,
+          "posZ": 165.52999877929688
+        },
+        "distance": 336.5464172363281,
+        "distanceToGoal": 7101.71630859375,
+        "previousHitFrameNumber": 7206,
+        "nextHitFrameNumber": 7345,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7345,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 183.64102172851562,
+        "ballData": {
+          "posX": 2959.909912109375,
+          "posY": 609.5499877929688,
+          "posZ": 196.52999877929688
+        },
+        "pass": true,
+        "distance": 3035.143310546875,
+        "distanceToGoal": 5949.203125,
+        "previousHitFrameNumber": 7341,
+        "nextHitFrameNumber": 7406,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7406,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 173.598388671875,
+        "ballData": {
+          "posX": 233.0399932861328,
+          "posY": -649.719970703125,
+          "posZ": 633.010009765625
+        },
+        "passed": true,
+        "dribble": true,
+        "aerial": true,
+        "distance": 5784.07470703125,
+        "distanceToGoal": 5898.77880859375,
+        "previousHitFrameNumber": 7345,
+        "nextHitFrameNumber": 7482,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7482,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 54.48706817626953,
+        "ballData": {
+          "posX": -3841.919921875,
+          "posY": 3442.64990234375,
+          "posZ": 312.489990234375
+        },
+        "dribbleContinuation": true,
+        "distance": 2129.733154296875,
+        "distanceToGoal": 3399.91796875,
+        "previousHitFrameNumber": 7406,
+        "nextHitFrameNumber": 7520,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7520,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 290.9510803222656,
+        "ballData": {
+          "posX": -2418.3798828125,
+          "posY": 5026.669921875,
+          "posZ": 299.1600036621094
+        },
+        "distance": 6.55003547668457,
+        "distanceToGoal": 1526.5924072265625,
+        "previousHitFrameNumber": 7482,
+        "nextHitFrameNumber": 7521,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7521,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 121.7112045288086,
+        "ballData": {
+          "posX": -2415.669921875,
+          "posY": 5021.56982421875,
+          "posZ": 302.25
+        },
+        "distance": 17.371444702148438,
+        "distanceToGoal": 10274.5751953125,
+        "previousHitFrameNumber": 7520,
+        "nextHitFrameNumber": 7522,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7522,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 156.6929931640625,
+        "ballData": {
+          "posX": -2421.77001953125,
+          "posY": 5007.06005859375,
+          "posZ": 309.6000061035156
+        },
+        "distance": 73.69548797607422,
+        "distanceToGoal": 1531.550537109375,
+        "previousHitFrameNumber": 7521,
+        "nextHitFrameNumber": 7523,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7523,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 123.13172912597656,
+        "ballData": {
+          "posX": -2381.1201171875,
+          "posY": 4946.41015625,
+          "posZ": 319.6099853515625
+        },
+        "distance": 3712.876708984375,
+        "distanceToGoal": 10195.158203125,
+        "previousHitFrameNumber": 7522,
+        "nextHitFrameNumber": 7577,
+        "goalNumber": 6,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 7577,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 162.39454650878906,
+        "ballData": {
+          "posX": -2637.199951171875,
+          "posY": 1242.3800048828125,
+          "posZ": 313.5
+        },
+        "pass": true,
+        "distance": 4105.7109375,
+        "distanceToGoal": 4268.8662109375,
+        "previousHitFrameNumber": 7523,
+        "nextHitFrameNumber": 7747,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7747,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 158.01141357421875,
+        "ballData": {
+          "posX": 1463.1300048828125,
+          "posY": 1351.0,
+          "posZ": 133.6199951171875
+        },
+        "passed": true,
+        "distance": 2773.10693359375,
+        "distanceToGoal": 4463.40869140625,
+        "previousHitFrameNumber": 7577,
+        "nextHitFrameNumber": 7788,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7788,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 189.60049438476562,
+        "ballData": {
+          "posX": 1710.4000244140625,
+          "posY": 4113.06005859375,
+          "posZ": 135.44000244140625
+        },
+        "distance": 4960.01416015625,
+        "distanceToGoal": 9613.138671875,
+        "previousHitFrameNumber": 7747,
+        "nextHitFrameNumber": 7868,
+        "goalNumber": 6,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 7868,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 173.45054626464844,
+        "ballData": {
+          "posX": 2878.75,
+          "posY": -637.0,
+          "posZ": 956.1900024414062
+        },
+        "pass": true,
+        "assist": true,
+        "aerial": true,
+        "distance": 3460.84130859375,
+        "distanceToGoal": 6900.9033203125,
+        "previousHitFrameNumber": 7788,
+        "nextHitFrameNumber": 7913,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7913,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 136.02618408203125,
+        "ballData": {
+          "posX": -502.260009765625,
+          "posY": -207.6199951171875,
+          "posZ": 354.6700134277344
+        },
+        "passed": true,
+        "shot": true,
+        "goal": true,
+        "assisted": true,
+        "distance": 5012.33837890625,
+        "distanceToGoal": 5362.095703125,
+        "previousHitFrameNumber": 7868,
+        "nextHitFrameNumber": 7963,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 7963,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 125.13797760009766,
+        "ballData": {
+          "posX": 40.15999984741211,
+          "posY": 4773.02001953125,
+          "posZ": 204.52999877929688
+        },
+        "pass": true,
+        "distance": 4831.5859375,
+        "distanceToGoal": 9957.1259765625,
+        "previousHitFrameNumber": 7913,
+        "goalNumber": 6,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8222,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 239.5559844970703,
+        "ballData": {
+          "posX": -146.9600067138672,
+          "posY": -53.84000015258789,
+          "posZ": 101.43000030517578
+        },
+        "passed": true,
+        "distance": 4020.765869140625,
+        "distanceToGoal": 5141.02001953125,
+        "nextHitFrameNumber": 8263,
+        "goalNumber": 7,
+        "isKickoff": true
+      },
+      {
+        "frameNumber": 8263,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 114.98824310302734,
+        "ballData": {
+          "posX": -3907.760009765625,
+          "posY": -1476.030029296875,
+          "posZ": 119.23999786376953
+        },
+        "distance": 6650.88427734375,
+        "distanceToGoal": 7269.2880859375,
+        "previousHitFrameNumber": 8222,
+        "nextHitFrameNumber": 8340,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8340,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 155.32516479492188,
+        "ballData": {
+          "posX": -2444.409912109375,
+          "posY": 4998.47998046875,
+          "posZ": 535.8800048828125
+        },
+        "dribble": true,
+        "aerial": true,
+        "distance": 722.2894287109375,
+        "distanceToGoal": 10256.0400390625,
+        "previousHitFrameNumber": 8263,
+        "nextHitFrameNumber": 8372,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8372,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 172.8860626220703,
+        "ballData": {
+          "posX": -2044.949951171875,
+          "posY": 4542.10986328125,
+          "posZ": 928.1300048828125
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 850.4790649414062,
+        "distanceToGoal": 9750.04296875,
+        "previousHitFrameNumber": 8340,
+        "nextHitFrameNumber": 8391,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8391,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 136.56985473632812,
+        "ballData": {
+          "posX": -1704.3499755859375,
+          "posY": 3765.06005859375,
+          "posZ": 868.969970703125
+        },
+        "dribble": true,
+        "aerial": true,
+        "distance": 3985.677978515625,
+        "distanceToGoal": 8941.673828125,
+        "previousHitFrameNumber": 8372,
+        "nextHitFrameNumber": 8444,
+        "goalNumber": 7,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 8444,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 173.621337890625,
+        "ballData": {
+          "posX": -291.760009765625,
+          "posY": 78.79000091552734,
+          "posZ": 319.760009765625
+        },
+        "dribbleContinuation": true,
+        "distance": 5325.7158203125,
+        "distanceToGoal": 5253.6533203125,
+        "previousHitFrameNumber": 8391,
+        "nextHitFrameNumber": 8507,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8507,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 164.74734497070312,
+        "ballData": {
+          "posX": 2426.469970703125,
+          "posY": -4495.83984375,
+          "posZ": 102.41999816894531
+        },
+        "dribble": true,
+        "distance": 2685.48046875,
+        "distanceToGoal": 10192.556640625,
+        "previousHitFrameNumber": 8444,
+        "nextHitFrameNumber": 8555,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8555,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 107.56880187988281,
+        "ballData": {
+          "posX": 3361.18994140625,
+          "posY": -2005.1800537109375,
+          "posZ": 469.4599914550781
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 4665.3486328125,
+        "distanceToGoal": 8317.287109375,
+        "previousHitFrameNumber": 8507,
+        "nextHitFrameNumber": 8614,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8614,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 132.96141052246094,
+        "ballData": {
+          "posX": 3714.139892578125,
+          "posY": 2635.169921875,
+          "posZ": 140.74000549316406
+        },
+        "distance": 2982.234619140625,
+        "distanceToGoal": 9039.173828125,
+        "previousHitFrameNumber": 8555,
+        "nextHitFrameNumber": 8646,
+        "goalNumber": 7,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 8646,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 135.80172729492188,
+        "ballData": {
+          "posX": 3850.4599609375,
+          "posY": -283.5799865722656,
+          "posZ": 737.4299926757812
+        },
+        "aerial": true,
+        "distance": 4251.65625,
+        "distanceToGoal": 7207.2255859375,
+        "previousHitFrameNumber": 8614,
+        "nextHitFrameNumber": 8719,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8719,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 142.52896118164062,
+        "ballData": {
+          "posX": 3386.929931640625,
+          "posY": 3903.68994140625,
+          "posZ": 164.2899932861328
+        },
+        "distance": 1962.870849609375,
+        "distanceToGoal": 10006.5888671875,
+        "previousHitFrameNumber": 8646,
+        "nextHitFrameNumber": 8808,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8808,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 83.11790466308594,
+        "ballData": {
+          "posX": 2134.4599609375,
+          "posY": 2666.27001953125,
+          "posZ": 1032.030029296875
+        },
+        "aerial": true,
+        "distance": 2540.08642578125,
+        "distanceToGoal": 3911.908447265625,
+        "previousHitFrameNumber": 8719,
+        "nextHitFrameNumber": 8850,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8850,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 103.98628234863281,
+        "ballData": {
+          "posX": 1542.8399658203125,
+          "posY": 5025.85986328125,
+          "posZ": 301.0299987792969
+        },
+        "dribble": true,
+        "distance": 1521.7655029296875,
+        "distanceToGoal": 10454.3125,
+        "previousHitFrameNumber": 8808,
+        "nextHitFrameNumber": 8906,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8906,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 135.62965393066406,
+        "ballData": {
+          "posX": 3004.800048828125,
+          "posY": 4647.1298828125,
+          "posZ": 113.93000030517578
+        },
+        "dribbleContinuation": true,
+        "distance": 43.666202545166016,
+        "distanceToGoal": 10535.8505859375,
+        "previousHitFrameNumber": 8850,
+        "nextHitFrameNumber": 8907,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8907,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 140.97874450683594,
+        "ballData": {
+          "posX": 3023.8798828125,
+          "posY": 4623.31005859375,
+          "posZ": 145.16000366210938
+        },
+        "pass": true,
+        "distance": 1852.478271484375,
+        "distanceToGoal": 3953.786376953125,
+        "previousHitFrameNumber": 8906,
+        "nextHitFrameNumber": 8987,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8987,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 103.74845123291016,
+        "ballData": {
+          "posX": 1683.260009765625,
+          "posY": 3980.030029296875,
+          "posZ": 1249.969970703125
+        },
+        "passed": true,
+        "shot": true,
+        "aerial": true,
+        "distance": 246.81121826171875,
+        "distanceToGoal": 2828.093505859375,
+        "previousHitFrameNumber": 8907,
+        "nextHitFrameNumber": 8991,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 8991,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 145.65972900390625,
+        "ballData": {
+          "posX": 1510.6600341796875,
+          "posY": 4066.320068359375,
+          "posZ": 1096.0899658203125
+        },
+        "save": true,
+        "aerial": true,
+        "distance": 2524.913818359375,
+        "distanceToGoal": 9515.689453125,
+        "previousHitFrameNumber": 8987,
+        "nextHitFrameNumber": 9050,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9050,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 134.21719360351562,
+        "ballData": {
+          "posX": 2351.110107421875,
+          "posY": 1685.81005859375,
+          "posZ": 1051.31005859375
+        },
+        "aerial": true,
+        "distance": 2183.85791015625,
+        "distanceToGoal": 4740.79638671875,
+        "previousHitFrameNumber": 8991,
+        "nextHitFrameNumber": 9103,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9103,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 193.09762573242188,
+        "ballData": {
+          "posX": 850.2000122070312,
+          "posY": 3029.06005859375,
+          "posZ": 207.39999389648438
+        },
+        "pass": true,
+        "distance": 2873.615478515625,
+        "distanceToGoal": 8353.607421875,
+        "previousHitFrameNumber": 9050,
+        "nextHitFrameNumber": 9148,
+        "goalNumber": 7,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 9148,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 145.99850463867188,
+        "ballData": {
+          "posX": 2049.64990234375,
+          "posY": 417.79998779296875,
+          "posZ": 189.8800048828125
+        },
+        "passed": true,
+        "distance": 5932.20556640625,
+        "distanceToGoal": 6290.150390625,
+        "previousHitFrameNumber": 9103,
+        "nextHitFrameNumber": 9200,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9200,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 190.14198303222656,
+        "ballData": {
+          "posX": -1448.4000244140625,
+          "posY": -4372.8798828125,
+          "posZ": 125.87999725341797
+        },
+        "distance": 3936.93359375,
+        "distanceToGoal": 9528.9052734375,
+        "previousHitFrameNumber": 9148,
+        "nextHitFrameNumber": 9262,
+        "goalNumber": 7,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 9262,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 164.6139373779297,
+        "ballData": {
+          "posX": -3773.860107421875,
+          "posY": -1248.0,
+          "posZ": 697.5499877929688
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 1173.9488525390625,
+        "distanceToGoal": 4840.427734375,
+        "previousHitFrameNumber": 9200,
+        "nextHitFrameNumber": 9335,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9335,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 175.25897216796875,
+        "ballData": {
+          "posX": -2927.489990234375,
+          "posY": -2041.2900390625,
+          "posZ": 517.260009765625
+        },
+        "pass": true,
+        "passed": true,
+        "aerial": true,
+        "distance": 3392.553466796875,
+        "distanceToGoal": 3705.260498046875,
+        "previousHitFrameNumber": 9262,
+        "nextHitFrameNumber": 9406,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9406,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 190.84730529785156,
+        "ballData": {
+          "posX": -3173.489990234375,
+          "posY": 1342.3299560546875,
+          "posZ": 512.9600219726562
+        },
+        "passed": true,
+        "aerial": true,
+        "distance": 4368.12109375,
+        "distanceToGoal": 6870.77587890625,
+        "previousHitFrameNumber": 9335,
+        "nextHitFrameNumber": 9454,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9454,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 109.37347412109375,
+        "ballData": {
+          "posX": -3986.64990234375,
+          "posY": -2947.530029296875,
+          "posZ": 640.8400268554688
+        },
+        "dribble": true,
+        "aerial": true,
+        "distance": 3365.463134765625,
+        "distanceToGoal": 8657.958984375,
+        "previousHitFrameNumber": 9406,
+        "nextHitFrameNumber": 9525,
+        "goalNumber": 7,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 9525,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 193.0791473388672,
+        "ballData": {
+          "posX": -3186.3701171875,
+          "posY": 304.6300048828125,
+          "posZ": 310.1600036621094
+        },
+        "dribbleContinuation": true,
+        "distance": 5145.3515625,
+        "distanceToGoal": 5350.3828125,
+        "previousHitFrameNumber": 9454,
+        "nextHitFrameNumber": 9602,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9602,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 109.45777893066406,
+        "ballData": {
+          "posX": -1062.030029296875,
+          "posY": 4990.52978515625,
+          "posZ": 245.63999938964844
+        },
+        "dribble": true,
+        "distance": 880.0980224609375,
+        "distanceToGoal": 10131.890625,
+        "previousHitFrameNumber": 9525,
+        "nextHitFrameNumber": 9633,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9633,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 140.0035858154297,
+        "ballData": {
+          "posX": -230.52999877929688,
+          "posY": 4807.4501953125,
+          "posZ": 468.489990234375
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 186.24526977539062,
+        "distanceToGoal": 9969.6845703125,
+        "previousHitFrameNumber": 9602,
+        "nextHitFrameNumber": 9641,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9641,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 126.63055419921875,
+        "ballData": {
+          "posX": -150.24000549316406,
+          "posY": 4640.490234375,
+          "posZ": 449.3800048828125
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 4126.359375,
+        "distanceToGoal": 897.590087890625,
+        "previousHitFrameNumber": 9633,
+        "nextHitFrameNumber": 9771,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9771,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 160.79946899414062,
+        "ballData": {
+          "posX": -3714.429931640625,
+          "posY": 2584.199951171875,
+          "posZ": 141.05999755859375
+        },
+        "passed": true,
+        "dribble": true,
+        "distance": 926.8689575195312,
+        "distanceToGoal": 3804.689453125,
+        "previousHitFrameNumber": 9641,
+        "nextHitFrameNumber": 9798,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9798,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 145.50656127929688,
+        "ballData": {
+          "posX": -3688.090087890625,
+          "posY": 3476.139892578125,
+          "posZ": 391.7300109863281
+        },
+        "dribbleContinuation": true,
+        "distance": 1644.5906982421875,
+        "distanceToGoal": 3250.26123046875,
+        "previousHitFrameNumber": 9771,
+        "nextHitFrameNumber": 9834,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9834,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 94.84596252441406,
+        "ballData": {
+          "posX": -2869.889892578125,
+          "posY": 4893.2099609375,
+          "posZ": 556.469970703125
+        },
+        "aerial": true,
+        "distance": 1274.3931884765625,
+        "distanceToGoal": 1989.2578125,
+        "previousHitFrameNumber": 9798,
+        "nextHitFrameNumber": 9862,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9862,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 137.34410095214844,
+        "ballData": {
+          "posX": -1657.9100341796875,
+          "posY": 4866.7099609375,
+          "posZ": 163.42999267578125
+        },
+        "dribble": true,
+        "distance": 2998.511962890625,
+        "distanceToGoal": 10035.673828125,
+        "previousHitFrameNumber": 9834,
+        "nextHitFrameNumber": 9965,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9965,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 134.53196716308594,
+        "ballData": {
+          "posX": -3770.929931640625,
+          "posY": 2739.27001953125,
+          "posZ": 148.5800018310547
+        },
+        "dribbleContinuation": true,
+        "distance": 654.2000122070312,
+        "distanceToGoal": 8387.37890625,
+        "previousHitFrameNumber": 9862,
+        "nextHitFrameNumber": 9985,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 9985,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 136.15943908691406,
+        "ballData": {
+          "posX": -3219.590087890625,
+          "posY": 2423.6201171875,
+          "posZ": 304.67999267578125
+        },
+        "distance": 2679.62060546875,
+        "distanceToGoal": 3574.603515625,
+        "previousHitFrameNumber": 9965,
+        "nextHitFrameNumber": 10041,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10041,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 164.16537475585938,
+        "ballData": {
+          "posX": -2068.60009765625,
+          "posY": 4796.72021484375,
+          "posZ": 777.9500122070312
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 1287.8126220703125,
+        "distanceToGoal": 10005.66796875,
+        "previousHitFrameNumber": 9985,
+        "nextHitFrameNumber": 10084,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10084,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 239.30909729003906,
+        "ballData": {
+          "posX": -2400.93994140625,
+          "posY": 3623.530029296875,
+          "posZ": 363.6600036621094
+        },
+        "passed": true,
+        "dribble": true,
+        "distance": 1397.7890625,
+        "distanceToGoal": 8891.810546875,
+        "previousHitFrameNumber": 10041,
+        "nextHitFrameNumber": 10110,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10110,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 176.53367614746094,
+        "ballData": {
+          "posX": -3762.989990234375,
+          "posY": 3311.800048828125,
+          "posZ": 401.8500061035156
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 1444.20947265625,
+        "distanceToGoal": 8924.828125,
+        "previousHitFrameNumber": 10084,
+        "nextHitFrameNumber": 10159,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10159,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 153.4737548828125,
+        "ballData": {
+          "posX": -2467.080078125,
+          "posY": 2703.330078125,
+          "posZ": 591.9099731445312
+        },
+        "pass": true,
+        "shot": true,
+        "goal": true,
+        "aerial": true,
+        "distance": 3655.35546875,
+        "distanceToGoal": 2899.25048828125,
+        "previousHitFrameNumber": 10110,
+        "goalNumber": 7,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10480,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 99.77283477783203,
+        "ballData": {
+          "posX": -18.139999389648438,
+          "posY": 35.75,
+          "posZ": 93.58000183105469
+        },
+        "passed": true,
+        "distance": 2776.237060546875,
+        "distanceToGoal": 5179.18994140625,
+        "nextHitFrameNumber": 10524,
+        "goalNumber": 8,
+        "isKickoff": true
+      },
+      {
+        "frameNumber": 10524,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 136.55836486816406,
+        "ballData": {
+          "posX": -2390.64990234375,
+          "posY": 1477.1800537109375,
+          "posZ": 124.69999694824219
+        },
+        "distance": 6117.955078125,
+        "distanceToGoal": 6783.8818359375,
+        "previousHitFrameNumber": 10480,
+        "nextHitFrameNumber": 10611,
+        "goalNumber": 8,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10611,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 105.64766693115234,
+        "ballData": {
+          "posX": -1082.1300048828125,
+          "posY": -4380.60009765625,
+          "posZ": 1309.4200439453125
+        },
+        "pass": true,
+        "aerial": true,
+        "distance": 4709.26904296875,
+        "distanceToGoal": 9522.4189453125,
+        "previousHitFrameNumber": 10524,
+        "goalNumber": 8,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10815,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 139.95254516601562,
+        "ballData": {
+          "posX": -81.41999816894531,
+          "posY": 60.2599983215332,
+          "posZ": 103.37000274658203
+        },
+        "passed": true,
+        "distance": 188.79441833496094,
+        "distanceToGoal": 5144.6376953125,
+        "nextHitFrameNumber": 10816,
+        "goalNumber": -1,
+        "isKickoff": true
+      },
+      {
+        "frameNumber": 10816,
+        "playerId": {
+          "id": "76561198061293649"
+        },
+        "collisionDistance": 232.34454345703125,
+        "ballData": {
+          "posX": -268.739990234375,
+          "posY": 78.97000122070312,
+          "posZ": 117.66999816894531
+        },
+        "pass": true,
+        "distance": 2563.224609375,
+        "distanceToGoal": 5256.52978515625,
+        "previousHitFrameNumber": 10815,
+        "nextHitFrameNumber": 10920,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10920,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 159.2510223388672,
+        "ballData": {
+          "posX": -2604.760009765625,
+          "posY": 372.45001220703125,
+          "posZ": 1131.0799560546875
+        },
+        "passed": true,
+        "dribble": true,
+        "aerial": true,
+        "distance": 3096.19140625,
+        "distanceToGoal": 5771.21875,
+        "previousHitFrameNumber": 10816,
+        "nextHitFrameNumber": 10968,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10968,
+        "playerId": {
+          "id": "76561198250691782"
+        },
+        "collisionDistance": 278.1899719238281,
+        "ballData": {
+          "posX": -2473.929931640625,
+          "posY": -2644.860107421875,
+          "posZ": 449.0799865722656
+        },
+        "dribbleContinuation": true,
+        "aerial": true,
+        "distance": 871.222900390625,
+        "distanceToGoal": 2952.217041015625,
+        "previousHitFrameNumber": 10920,
+        "nextHitFrameNumber": 10978,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 10978,
+        "playerId": {
+          "id": "76561198438115102"
+        },
+        "collisionDistance": 151.6300048828125,
+        "ballData": {
+          "posX": -2408.47998046875,
+          "posY": -3465.989990234375,
+          "posZ": 165.3699951171875
+        },
+        "pass": true,
+        "goal": true,
+        "distance": 785.6422119140625,
+        "distanceToGoal": 8737.88671875,
+        "previousHitFrameNumber": 10968,
+        "nextHitFrameNumber": 11024,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 11024,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 124.32520294189453,
+        "ballData": {
+          "posX": -2033.2099609375,
+          "posY": -4154.35009765625,
+          "posZ": 114.70999908447266
+        },
+        "passed": true,
+        "dribble": true,
+        "distance": 638.54052734375,
+        "distanceToGoal": 9363.6630859375,
+        "previousHitFrameNumber": 10978,
+        "nextHitFrameNumber": 11042,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 11042,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 117.3707275390625,
+        "ballData": {
+          "posX": -2204.840087890625,
+          "posY": -3545.02001953125,
+          "posZ": 198.33999633789062
+        },
+        "dribbleContinuation": true,
+        "distance": 3743.51953125,
+        "distanceToGoal": 8783.087890625,
+        "previousHitFrameNumber": 11024,
+        "nextHitFrameNumber": 11095,
+        "goalNumber": -1,
+        "isKickoff": false,
+        "clear": true
+      },
+      {
+        "frameNumber": 11095,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 110.40196990966797,
+        "ballData": {
+          "posX": -2140.4599609375,
+          "posY": 190.3300018310547,
+          "posZ": 436.989990234375
+        },
+        "aerial": true,
+        "distance": 1011.1753540039062,
+        "distanceToGoal": 5473.67333984375,
+        "previousHitFrameNumber": 11042,
+        "nextHitFrameNumber": 11132,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 11132,
+        "playerId": {
+          "id": "76561198070918114"
+        },
+        "collisionDistance": 233.6516876220703,
+        "ballData": {
+          "posX": -3092.75,
+          "posY": -144.99000549316406,
+          "posZ": 380.6000061035156
+        },
+        "pass": true,
+        "distance": 2669.454833984375,
+        "distanceToGoal": 5723.3583984375,
+        "previousHitFrameNumber": 11095,
+        "nextHitFrameNumber": 11165,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 11165,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 159.09068298339844,
+        "ballData": {
+          "posX": -3564.1201171875,
+          "posY": 2454.080078125,
+          "posZ": 766.1300048828125
+        },
+        "passed": true,
+        "dribble": true,
+        "aerial": true,
+        "distance": 4267.0654296875,
+        "distanceToGoal": 3785.89892578125,
+        "previousHitFrameNumber": 11132,
+        "nextHitFrameNumber": 11231,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 11231,
+        "playerId": {
+          "id": "76561198419149425"
+        },
+        "collisionDistance": 164.00743103027344,
+        "ballData": {
+          "posX": 368.510009765625,
+          "posY": 4028.68994140625,
+          "posZ": 253.4199981689453
+        },
+        "dribbleContinuation": true,
+        "shot": true,
+        "distance": 1095.4710693359375,
+        "distanceToGoal": 1683.447509765625,
+        "previousHitFrameNumber": 11165,
+        "nextHitFrameNumber": 11241,
+        "goalNumber": -1,
+        "isKickoff": false
+      },
+      {
+        "frameNumber": 11241,
+        "playerId": {
+          "id": "76561198098789110"
+        },
+        "collisionDistance": 173.1882781982422,
+        "ballData": {
+          "posX": 62.459999084472656,
+          "posY": 5074.58984375,
+          "posZ": 141.69000244140625
+        },
+        "save": true,
+        "distanceToGoal": 10259.458984375,
+        "previousHitFrameNumber": 11231,
+        "goalNumber": -1,
+        "isKickoff": false
+      }
+    ],
+    "neutralPossessionTime": 150.13833618164062,
+    "bumps": [
+      {
+        "frameNumber": 2435,
+        "attackerId": {
+          "id": "76561198419149425"
+        },
+        "victimId": {
+          "id": "76561198061293649"
+        },
+        "isDemo": true
+      },
+      {
+        "frameNumber": 2639,
+        "attackerId": {
+          "id": "76561198250691782"
+        },
+        "victimId": {
+          "id": "76561198070918114"
+        },
+        "isDemo": true
+      },
+      {
+        "frameNumber": 3091,
+        "attackerId": {
+          "id": "76561198419149425"
+        },
+        "victimId": {
+          "id": "76561198061293649"
+        },
+        "isDemo": true
+      },
+      {
+        "frameNumber": 4591,
+        "attackerId": {
+          "id": "76561198438115102"
+        },
+        "victimId": {
+          "id": "76561198061293649"
+        },
+        "isDemo": true
+      },
+      {
+        "frameNumber": 5833,
+        "attackerId": {
+          "id": "76561198419149425"
+        },
+        "victimId": {
+          "id": "76561198061293649"
+        },
+        "isDemo": true
+      },
+      {
+        "frameNumber": 8284,
+        "attackerId": {
+          "id": "76561198419149425"
+        },
+        "victimId": {
+          "id": "76561198098789110"
+        },
+        "isDemo": true
+      }
+    ],
+    "ballStats": {
+      "positionalTendencies": {
+        "timeOnGround": 35.7868766784668,
+        "timeLowInAir": 240.8719940185547,
+        "timeHighInAir": 101.10401916503906,
+        "timeInDefendingHalf": 151.3914794921875,
+        "timeInAttackingHalf": 171.80589294433594,
+        "timeInDefendingThird": 105.63182067871094,
+        "timeInNeutralThird": 129.39881896972656,
+        "timeInAttackingThird": 112.61353302001953,
+        "timeBehindBall": 0.0,
+        "timeInFrontBall": 0.0,
+        "timeNearWall": 82.60868835449219,
+        "timeInCorner": 4.068424224853516,
+        "timeOnWall": 82.60868835449219
+      },
+      "averages": {
+        "averageSpeed": 17637.013671875
+      }
+    },
+    "kickoffs": [
+      {
+        "startFrameNumber": 112,
+        "endFrameNumber": 169
+      },
+      {
+        "startFrameNumber": 785,
+        "endFrameNumber": 842
+      },
+      {
+        "startFrameNumber": 1812,
+        "endFrameNumber": 1869
+      },
+      {
+        "startFrameNumber": 2963,
+        "endFrameNumber": 3021
+      },
+      {
+        "startFrameNumber": 4491,
+        "endFrameNumber": 4548
+      },
+      {
+        "startFrameNumber": 5175,
+        "endFrameNumber": 5232
+      },
+      {
+        "startFrameNumber": 5566,
+        "endFrameNumber": 5622
+      },
+      {
+        "startFrameNumber": 8164,
+        "endFrameNumber": 8222
+      },
+      {
+        "startFrameNumber": 10424,
+        "endFrameNumber": 10480
+      },
+      {
+        "startFrameNumber": 10758,
+        "endFrameNumber": 10815
+      }
+    ],
+    "kickoffStats": [
+      {
+        "startFrame": 112,
+        "touchFrame": 169,
+        "touchTime": 2.051912307739258,
+        "type": "THREES_DIAG_DIAG_OFFCENT",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 35.130001068115234,
+                "posY": -170.02000427246094,
+                "posZ": 70.20999908447266
+              },
+              "boost": 0.0,
+              "ballDist": 187.2708282470703,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 2047.6199951171875,
+                "posY": -2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -3017.610107421875,
+                "posY": -4031.06005859375,
+                "posZ": 17.0
+              },
+              "boost": 248.80606079101562,
+              "ballDist": 5035.44482421875,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -2048.18994140625,
+                "posY": -2560.18994140625,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -23.8799991607666,
+                "posY": 2113.18994140625,
+                "posZ": 17.049999237060547
+              },
+              "boost": 116.0,
+              "ballDist": 2113.3935546875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -256.0,
+                "posY": 3839.669921875,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 2779.929931640625,
+                "posY": 4329.83984375,
+                "posZ": 16.8799991607666
+              },
+              "boost": 251.9030303955078,
+              "ballDist": 5145.46484375,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 2048.27001953125,
+                "posY": 2560.179931640625,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -85.18000030517578,
+                "posY": 127.37999725341797,
+                "posZ": 136.30999755859375
+              },
+              "boost": 0.0,
+              "ballDist": 205.0895233154297,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -2047.6500244140625,
+                "posY": 2559.64990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 2698.2900390625,
+                "posY": -3990.530029296875,
+                "posZ": 17.010000228881836
+              },
+              "boost": 0.0,
+              "ballDist": 4817.197265625,
+              "boostTime": 0.0,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 256.0899963378906,
+                "posY": -3839.489990234375,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 15.123003005981445,
+          "firstTouchPlayer": {
+            "id": "76561198070918114"
+          }
+        }
+      },
+      {
+        "startFrame": 785,
+        "touchFrame": 842,
+        "touchTime": 2.0529022216796875,
+        "type": "THREES_DIAG_OFFCENT_GOAL",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -2846.550048828125,
+                "posY": -4199.5400390625,
+                "posZ": 15.600000381469727
+              },
+              "boost": 255.0,
+              "ballDist": 5073.38427734375,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -0.09000000357627869,
+                "posY": -4607.490234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -8.319999694824219,
+                "posY": -1813.06005859375,
+                "posZ": 17.010000228881836
+              },
+              "boost": 93.0,
+              "ballDist": 1813.158935546875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 255.91000366210938,
+                "posY": -3839.489990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": 18.549999237060547,
+                "posY": 2106.18994140625,
+                "posZ": 17.049999237060547
+              },
+              "boost": 116.0,
+              "ballDist": 2106.340576171875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -256.0,
+                "posY": 3840.0,
+                "posZ": 16.600000381469727
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -25.530000686645508,
+                "posY": 114.38999938964844,
+                "posZ": 81.55000305175781
+              },
+              "boost": 0.0,
+              "ballDist": 142.78395080566406,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 2047.6199951171875,
+                "posY": 2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 2865.06005859375,
+                "posY": 4180.52978515625,
+                "posZ": 16.489999771118164
+              },
+              "boost": 31.0,
+              "ballDist": 5068.10302734375,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 0.07000000029802322,
+                "posY": 4607.52978515625,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -12.09000015258789,
+                "posY": -210.11000061035156,
+                "posZ": 66.69000244140625
+              },
+              "boost": 16.64250373840332,
+              "ballDist": 220.77122497558594,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -2047.6199951171875,
+                "posY": -2559.610107421875,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 27.869583129882812,
+          "firstTouchPlayer": {
+            "id": "76561198061293649"
+          }
+        }
+      },
+      {
+        "startFrame": 1812,
+        "touchFrame": 1869,
+        "touchTime": 2.0508956909179688,
+        "type": "THREES_DIAG_OFFCENT_GOAL",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -3103.159912109375,
+                "posY": -4019.39990234375,
+                "posZ": 20.399999618530273
+              },
+              "boost": 255.0,
+              "ballDist": 5077.95166015625,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -256.0299987792969,
+                "posY": -3839.830078125,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -57.56999969482422,
+                "posY": -310.1700134277344,
+                "posZ": 97.88999938964844
+              },
+              "boost": 0.0,
+              "ballDist": 330.30621337890625,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -2047.8800048828125,
+                "posY": -2559.8798828125,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 17.0,
+                "posY": 216.85000610351562,
+                "posZ": 67.7300033569336
+              },
+              "boost": 0.0,
+              "ballDist": 227.8163299560547,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 2047.8900146484375,
+                "posY": 2559.889892578125,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -16.239999771118164,
+                "posY": 1888.5400390625,
+                "posZ": 17.010000228881836
+              },
+              "boost": 98.0,
+              "ballDist": 1888.6865234375,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 0.0,
+                "posY": 4607.81982421875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 2948.280029296875,
+                "posY": 4103.2099609375,
+                "posZ": 17.860000610351562
+              },
+              "boost": 255.0,
+              "ballDist": 5052.62353515625,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 256.0199890136719,
+                "posY": 3839.85009765625,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -3.0399999618530273,
+                "posY": -2601.7099609375,
+                "posZ": 16.530000686645508
+              },
+              "boost": 146.0,
+              "ballDist": 2601.76416015625,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 0.0,
+                "posY": -4607.89013671875,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 32.31559753417969,
+          "firstTouchPlayer": {
+            "id": "76561198098789110"
+          }
+        }
+      },
+      {
+        "startFrame": 2963,
+        "touchFrame": 3021,
+        "touchTime": 2.0869140625,
+        "type": "THREES_DIAG_OFFCENT_GOAL",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 80.7699966430664,
+                "posY": -284.2799987792969,
+                "posZ": 72.83999633789062
+              },
+              "boost": 0.0,
+              "ballDist": 304.3757019042969,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 2047.6199951171875,
+                "posY": -2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 2710.2900390625,
+                "posY": -4187.72998046875,
+                "posZ": 17.010000228881836
+              },
+              "boost": 22.0,
+              "ballDist": 4988.29052734375,
+              "boostTime": 0.0,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 0.0,
+                "posY": -4607.47021484375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -2883.6298828125,
+                "posY": 4154.39013671875,
+                "posZ": 16.270000457763672
+              },
+              "boost": 255.0,
+              "ballDist": 5057.1279296875,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 0.0,
+                "posY": 4607.56005859375,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -32.4900016784668,
+                "posY": 1588.010009765625,
+                "posZ": 17.010000228881836
+              },
+              "boost": 69.0,
+              "ballDist": 1588.4334716796875,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 256.0,
+                "posY": 3839.52001953125,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -38.349998474121094,
+                "posY": 226.27999877929688,
+                "posZ": 112.20999908447266
+              },
+              "boost": 0.0,
+              "ballDist": 255.4690704345703,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -2047.6600341796875,
+                "posY": 2559.64990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -54.220001220703125,
+                "posY": -1470.6800537109375,
+                "posZ": 18.479999542236328
+              },
+              "boost": 83.0,
+              "ballDist": 1471.795166015625,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -255.94000244140625,
+                "posY": -3839.679931640625,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 45.874664306640625,
+          "firstTouchPlayer": {
+            "id": "76561198250691782"
+          }
+        }
+      },
+      {
+        "startFrame": 4491,
+        "touchFrame": 4548,
+        "touchTime": 2.050933837890625,
+        "type": "THREES_DIAG_OFFCENT_OFFCENT",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 3122.760009765625,
+                "posY": -3927.659912109375,
+                "posZ": 34.900001525878906
+              },
+              "boost": 255.0,
+              "ballDist": 5017.90380859375,
+              "boostTime": 0.0,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 256.0899963378906,
+                "posY": -3839.489990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": 15.010000228881836,
+                "posY": -1683.2099609375,
+                "posZ": 17.010000228881836
+              },
+              "boost": 74.0,
+              "ballDist": 1683.36279296875,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -256.0,
+                "posY": -3839.4599609375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -22.780000686645508,
+                "posY": 2153.64990234375,
+                "posZ": 17.049999237060547
+              },
+              "boost": 116.0,
+              "ballDist": 2153.837890625,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 256.0,
+                "posY": 3839.669921875,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -53.290000915527344,
+                "posY": 159.4600067138672,
+                "posZ": 85.18000030517578
+              },
+              "boost": 0.0,
+              "ballDist": 188.47532653808594,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -2047.6300048828125,
+                "posY": 2559.6298828125,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -2900.60009765625,
+                "posY": 4168.85009765625,
+                "posZ": 23.68000030517578
+              },
+              "boost": 255.0,
+              "ballDist": 5078.7158203125,
+              "boostTime": 0.0,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -256.07000732421875,
+                "posY": 3839.530029296875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 38.25,
+                "posY": -214.97000122070312,
+                "posZ": 61.650001525878906
+              },
+              "boost": 0.0,
+              "ballDist": 226.8829803466797,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 2047.6199951171875,
+                "posY": -2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 15.508193969726562,
+          "firstTouchPlayer": {
+            "id": "76561198061293649"
+          }
+        }
+      },
+      {
+        "startFrame": 5175,
+        "touchFrame": 5232,
+        "touchTime": 2.0509033203125,
+        "type": "THREES_DIAG_DIAG_OFFCENT",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -3218.39990234375,
+                "posY": -3796.530029296875,
+                "posZ": 16.5
+              },
+              "boost": 34.0,
+              "ballDist": 4977.14892578125,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -2048.159912109375,
+                "posY": -2560.27001953125,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 110.0,
+                "posY": -240.2100067138672,
+                "posZ": 54.779998779296875
+              },
+              "boost": 0.0,
+              "ballDist": 269.8179016113281,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 2047.699951171875,
+                "posY": -2559.580078125,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -55.380001068115234,
+                "posY": 144.89999389648438,
+                "posZ": 72.58000183105469
+              },
+              "boost": 1.5455139875411987,
+              "ballDist": 171.2624053955078,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -2047.6500244140625,
+                "posY": 2559.64990234375,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -28.850000381469727,
+                "posY": 1652.050048828125,
+                "posZ": 17.010000228881836
+              },
+              "boost": 78.0,
+              "ballDist": 1652.3895263671875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -255.92999267578125,
+                "posY": 3839.510009765625,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 3275.739990234375,
+                "posY": 4465.60009765625,
+                "posZ": 20.43000030517578
+              },
+              "boost": 255.0,
+              "ballDist": 5538.2734375,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 2048.239990234375,
+                "posY": 2560.239990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": 17.8799991607666,
+                "posY": -1863.969970703125,
+                "posZ": 63.65999984741211
+              },
+              "boost": 116.0,
+              "ballDist": 1865.1424560546875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 256.0,
+                "posY": -3839.669921875,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 4.9302978515625,
+          "firstTouchPlayer": {
+            "id": "76561198098789110"
+          }
+        }
+      },
+      {
+        "startFrame": 5566,
+        "touchFrame": 5622,
+        "touchTime": 2.01495361328125,
+        "type": "THREES_DIAG_OFFCENT_GOAL",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -2904.72998046875,
+                "posY": -3988.080078125,
+                "posZ": 20.399999618530273
+              },
+              "boost": 251.9030303955078,
+              "ballDist": 4933.82763671875,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -0.09000000357627869,
+                "posY": -4607.490234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": 24.93000030517578,
+                "posY": -1751.3800048828125,
+                "posZ": 17.010000228881836
+              },
+              "boost": 79.0,
+              "ballDist": 1751.6400146484375,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 256.0,
+                "posY": -3839.4599609375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -47.66999816894531,
+                "posY": 1737.5999755859375,
+                "posZ": 17.049999237060547
+              },
+              "boost": 59.0,
+              "ballDist": 1738.33740234375,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -256.0,
+                "posY": 3839.889892578125,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 94.2699966430664,
+                "posY": 186.72000122070312,
+                "posZ": 76.77999877929688
+              },
+              "boost": 0.0,
+              "ballDist": 222.81463623046875,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 2047.6400146484375,
+                "posY": 2559.639892578125,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 2779.489990234375,
+                "posY": 4341.27978515625,
+                "posZ": 15.569999694824219
+              },
+              "boost": 31.0,
+              "ballDist": 5154.853515625,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 0.07000000029802322,
+                "posY": 4607.52978515625,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -71.33000183105469,
+                "posY": -215.02999877929688,
+                "posZ": 42.31999969482422
+              },
+              "boost": 0.0,
+              "ballDist": 230.47093200683594,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -2047.6199951171875,
+                "posY": -2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 84.45339965820312,
+          "firstTouchPlayer": {
+            "id": "76561198061293649"
+          }
+        }
+      },
+      {
+        "startFrame": 8164,
+        "touchFrame": 8222,
+        "touchTime": 2.086883544921875,
+        "type": "THREES_DIAG_OFFCENT_GOAL",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -3205.080078125,
+                "posY": -4044.389892578125,
+                "posZ": 18.0
+              },
+              "boost": 251.90298461914062,
+              "ballDist": 5160.421875,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -256.0899963378906,
+                "posY": -3839.489990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 31.979999542236328,
+                "posY": -109.94000244140625,
+                "posZ": 95.79000091552734
+              },
+              "boost": 0.0,
+              "ballDist": 149.28244018554688,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -2047.6199951171875,
+                "posY": -2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 84.5199966430664,
+                "posY": 107.95999908447266,
+                "posZ": 73.66000366210938
+              },
+              "boost": 0.44827526807785034,
+              "ballDist": 155.6431427001953,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 2047.6199951171875,
+                "posY": 2559.6201171875,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": 0.0,
+                "posY": 1788.050048828125,
+                "posZ": 17.010000228881836
+              },
+              "boost": 89.0,
+              "ballDist": 1788.1309814453125,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 0.0,
+                "posY": 4607.5,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 2831.47998046875,
+                "posY": 4137.85009765625,
+                "posZ": 17.010000228881836
+              },
+              "boost": 0.0,
+              "ballDist": 5013.91796875,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 256.07000732421875,
+                "posY": 3839.530029296875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -86.91000366210938,
+                "posY": -1575.4200439453125,
+                "posZ": 16.739999771118164
+              },
+              "boost": 73.8060073852539,
+              "ballDist": 1577.904296875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 0.0,
+                "posY": -4607.669921875,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 72.18295288085938,
+          "firstTouchPlayer": {
+            "id": "76561198438115102"
+          }
+        }
+      },
+      {
+        "startFrame": 10424,
+        "touchFrame": 10480,
+        "touchTime": 2.014892578125,
+        "type": "THREES_DIAG_OFFCENT_GOAL",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 30.1200008392334,
+                "posY": -129.80999755859375,
+                "posZ": 73.73999786376953
+              },
+              "boost": 0.0,
+              "ballDist": 152.30047607421875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 2047.6199951171875,
+                "posY": -2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 2501.409912109375,
+                "posY": -4201.39013671875,
+                "posZ": 17.010000228881836
+              },
+              "boost": 22.0,
+              "ballDist": 4889.68505859375,
+              "boostTime": 0.0,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 0.0,
+                "posY": -4607.4599609375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "GOALIE",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -2652.909912109375,
+                "posY": 4218.33984375,
+                "posZ": 16.540000915527344
+              },
+              "boost": 31.0,
+              "ballDist": 4983.2314453125,
+              "boostTime": 0.0,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 0.0,
+                "posY": 4607.4599609375,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": 29.059999465942383,
+                "posY": 1332.3299560546875,
+                "posZ": 17.010000228881836
+              },
+              "boost": 45.0,
+              "ballDist": 1332.75537109375,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 255.91000366210938,
+                "posY": 3839.489990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": -85.69999694824219,
+                "posY": 331.3599853515625,
+                "posZ": 90.37999725341797
+              },
+              "boost": 0.0,
+              "ballDist": 353.9950256347656,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -2047.6500244140625,
+                "posY": 2559.64990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -95.45999908447266,
+                "posY": -1867.56005859375,
+                "posZ": 40.91999816894531
+              },
+              "boost": 116.0,
+              "ballDist": 1870.44580078125,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -256.0,
+                "posY": -3839.669921875,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "kickoffGoal": 27.451904296875,
+          "firstTouchPlayer": {
+            "id": "76561198070918114"
+          }
+        }
+      },
+      {
+        "startFrame": 10758,
+        "touchFrame": 10815,
+        "touchTime": 2.050933837890625,
+        "type": "THREES_DIAG_OFFCENT_OFFCENT",
+        "touch": {
+          "players": [
+            {
+              "player": {
+                "id": "76561198070918114"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": 3015.47998046875,
+                "posY": -4044.300048828125,
+                "posZ": 41.68000030517578
+              },
+              "boost": 255.0,
+              "ballDist": 5044.92041015625,
+              "boostTime": 0.0,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 256.0899963378906,
+                "posY": -3839.489990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198438115102"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": -20.56999969482422,
+                "posY": -1749.0799560546875,
+                "posZ": 17.010000228881836
+              },
+              "boost": 82.0,
+              "ballDist": 1749.2835693359375,
+              "startLeft": false,
+              "startPosition": {
+                "posX": -255.91000366210938,
+                "posY": -3839.489990234375,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198098789110"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "CHEAT",
+              "playerPosition": {
+                "posX": 0.6899999976158142,
+                "posY": 1725.3699951171875,
+                "posZ": 17.049999237060547
+              },
+              "boost": 79.0,
+              "ballDist": 1725.454345703125,
+              "startLeft": false,
+              "startPosition": {
+                "posX": 256.0,
+                "posY": 3839.669921875,
+                "posZ": 17.049999237060547
+              }
+            },
+            {
+              "player": {
+                "id": "76561198061293649"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 17.020000457763672,
+                "posY": 185.75,
+                "posZ": 90.16999816894531
+              },
+              "boost": 0.0,
+              "ballDist": 207.1795654296875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -2047.6199951171875,
+                "posY": 2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198250691782"
+              },
+              "kickoffPosition": "OFFCENTER",
+              "touchPosition": "BOOST",
+              "playerPosition": {
+                "posX": -2770.739990234375,
+                "posY": 4069.719970703125,
+                "posZ": 17.010000228881836
+              },
+              "boost": 0.0,
+              "ballDist": 4923.404296875,
+              "boostTime": 0.0,
+              "startLeft": true,
+              "startPosition": {
+                "posX": -256.07000732421875,
+                "posY": 3839.530029296875,
+                "posZ": 17.010000228881836
+              }
+            },
+            {
+              "player": {
+                "id": "76561198419149425"
+              },
+              "kickoffPosition": "DIAGONAL",
+              "touchPosition": "BALL",
+              "playerPosition": {
+                "posX": 39.47999954223633,
+                "posY": -92.44999694824219,
+                "posZ": 69.52999877929688
+              },
+              "boost": 0.0,
+              "ballDist": 122.22967529296875,
+              "startLeft": true,
+              "startPosition": {
+                "posX": 2047.6199951171875,
+                "posY": -2559.6201171875,
+                "posZ": 17.010000228881836
+              }
+            }
+          ],
+          "firstTouchPlayer": {
+            "id": "76561198419149425"
+          }
+        }
+      }
+    ]
+  },
+  "parties": [
+    {
+      "leaderId": {
+        "id": "76561198419149425"
+      },
+      "members": [
+        {
+          "id": "76561198419149425"
+        },
+        {
+          "id": "76561198070918114"
+        },
+        {
+          "id": "76561198438115102"
+        }
+      ]
+    },
+    {
+      "leaderId": {
+        "id": "76561198061293649"
+      },
+      "members": [
+        {
+          "id": "76561198061293649"
+        },
+        {
+          "id": "76561198250691782"
+        }
+      ]
+    }
+  ],
+  "version": 7,
+  "mutators": {
+    "ballType": "DEFAULT",
+    "gameMutatorIndex": -1
+  }
+}

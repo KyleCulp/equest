@@ -60,16 +60,16 @@ export class RocketLeagueService {
       Body: fileStream,
     };
 
-    s3.putObject(params, async (err, data) => {
-      if (err) console.log('Error', err);
-      if (data) {
-        await rlReplaysQueue.add('replay', {
-          replay_name: file.originalname,
-          replayPath: 'replays/rocketleague/' + file.originalname,
-        });
-        console.log('Upload Success', data);
-      }
+    // s3.putObject(params, async (err, data) => {
+    //   if (err) console.log('Error', err);
+    //   if (data) {
+    await rlReplaysQueue.add('replay', {
+      replay_name: file.originalname,
+      replayPath: 'replays/rocketleague/' + file.originalname,
     });
+    console.log('Upload Success', file.originalname); // was data
+    //   }
+    // });
 
     return {
       status: 200,

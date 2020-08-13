@@ -9,6 +9,17 @@
       "port": 9676,
       "args": ["${workspaceFolder}/@equest/rlparser/src/main.ts"],
       "console": "integratedTerminal"
+    },
+    {
+      "name": "RLParser",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node-dev",
+      "runtimeArgs": ["--inspect", "NODE_ENV=development"],
+      "args": ["${workspaceRoot}/@equest/rlparser/src/main.ts"],
+      "restart": true
     }
   ]
 }
